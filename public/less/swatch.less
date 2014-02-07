@@ -1,0 +1,95 @@
+.swatches {
+  margin-bottom: 4em;  
+}
+
+.swatch {
+  position: relative;
+  height: 252px;
+  margin-bottom: 4em;
+  background-color: #fff;
+  .border-radius(3px);
+
+  h6 {
+    margin: 0;
+    padding: 65px 15px;
+    font-size: 40px;
+    box-sizing: border-box;
+  }
+
+  /* uses box-sizing. use extra div for backward-compatibility */
+  p {
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 13px;
+    padding: 15px;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    .border-bottom-radius(3px);
+
+    span {
+      display: block;
+      font-weight: 700;
+    }
+  }
+}
+
+.bg-brand1 {
+  background-color: @base;
+}
+
+.bg-brand2 {
+  background-color: @firm;
+}
+
+.bg-brand3 {
+  background-color: @lightgray;
+}
+
+.bg-brand4 {
+  background-color: @clouds;
+}
+
+.bg-brand5 {
+  background-color: white;
+}
+
+.bg-success {
+  background-color: @success;
+}
+
+.bg-danger {
+  background-color: @danger;
+}
+
+.bg-warning {
+  background-color: @warning;
+}
+
+.bg-info {
+  background-color: #4EB1DB;
+}
+
+.swatches.typography .swatch {
+  p {
+    background: @lightgray;
+    padding: 26px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .swatch {
+    height: 186px;
+
+    p {
+      top: 110px;
+      font-size: 12px;
+
+      span {
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

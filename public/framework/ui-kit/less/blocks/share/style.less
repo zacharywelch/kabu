@@ -1,0 +1,56 @@
+.share {
+  .avatar {
+    float: left;
+  }
+
+  .form-horizontal .controls {
+    margin-left: 110px;
+  }
+
+  .share-content {
+    margin: 1em 0 2em 110px;
+    height: 200px;
+    overflow-y: scroll;
+
+    h4 {
+      font-size: 18px;
+    }
+
+    img {
+      width: 456px;
+    }
+  }
+
+  .control-group .control-label {
+    width: 85px;
+    font-size: 15px;
+    padding-top: 9px;
+  }
+
+  .control-group .controls {
+    margin-left: 110px;
+  }
+
+  .control-group .tagsinput {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 480px) {
+    .avatar {
+      display: none;
+    }
+
+    .control-group .controls {
+      margin-left: 0;
+    }
+
+    .share-content {
+      margin-left: 0;
+
+      img {
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+  }  
+}
