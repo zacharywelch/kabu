@@ -1,17 +1,159 @@
 @import '../framework/flat-ui/less/config.less';
 @import '../framework/flat-ui/less/mixins.less';
-@import '../framework/ui-kit/common-files/less/mixins.less';
-@import '../framework/ui-kit/common-files/less/common.less';
-@import '../framework/ui-kit/common-files/less/helper.less';
+/*only fo flat-ui free*/ @import '../framework/common-files/less/flat-ui-free2.0.0-fix.less'; /* end only for flat-ui free*/
+@import '../framework/common-files/less/mixins.less';
+@import '../framework/common-files/less/common.less';
+@import '../framework/common-files/less/navbar.less';
+@import '../framework/common-files/less/helper.less';
 
-/* styleguide specific */
-@import 'ui-kit/content-14.less';
-@import 'ui-kit/footer-3.less';
+/* header */
+@import 'ui-kit/ui-kit-header/less/header-2.less';
+
+/* content */
+@import 'ui-kit/ui-kit-content/less/content-3.less';
+@import 'ui-kit/ui-kit-content/less/content-10.less';
+@import 'ui-kit/ui-kit-content/less/content-11.less';
+@import 'ui-kit/ui-kit-content/less/content-23.less';
+@import 'ui-kit/ui-kit-content/less/content-31.less';
+
+/* footer */
+@import 'ui-kit/ui-kit-footer/less/footer-3.less';
+
+/* local */
+@import 'subnav.less';
 @import 'swatch.less';
 @import 'icons.less';
 @import 'components.less';
 @import 'examples.less';
-@import 'list-horizontal.less';
+@import 'ui-kit/ui-kit-content/less/content-7.less';
+@import 'ui-kit/ui-kit-content/less/content-14.less';
+
+
+.header-2 .navbar {
+  //top: 25px;
+  top: 0;
+  margin-bottom: 0;
+
+  .brand {
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    letter-spacing: .8px;    
+  }
+
+  .nav > li a {
+    font-weight: 300;
+  }
+
+  .nav > li.active a {
+    font-weight: 500;
+  }
+}
+
+.header-2-sub {
+  padding-top: 165px;
+}
+
+.header-2-sub .hero-unit h1 {
+  max-width: 550px;
+  margin: 0 auto 18px;
+}
+
+.header-2-sub-collapsed {
+  padding-bottom: 0;
+  padding-top: 79px;
+}
+
+.content-10 {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.content-10 h3,
+.content-3 h3,
+.content-11 {
+  font-weight: normal;
+}
+
+body > section {
+  &.v-center {
+    > div {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      @media (max-width: 768px) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+    }
+  }
+}
+
+.content-3.bg-clouds .delimiter{
+  border-color: rgba(189, 195, 199, 0.4);
+}
+
+.content-23{
+  background-color: @midnight-blue;
+  &.custom-bg {
+    background-image:url('../img/atlanta4.jpg');
+    //background-image:url('../framework/common-files/img/Italy_001.png');
+    // background-image:url('../framework/common-files/img/NY_001.png');
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+
+    @media (max-width: 768px) {
+      background-image: none;
+    }
+  }
+}
+
+.content-11 {
+  background: #fff;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.device-frame {
+  background: url('../img/iphone.png') no-repeat;
+  margin: 0 auto;
+  width: 311px;
+  height: 642px;
+  padding: 90px 23px 90px 25px;
+  .box-sizing(border-box);
+
+  .image-holder {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    
+    img {
+      position: absolute;
+      width: 100%;
+      .border-radius(4px);
+    }
+  }
+
+  @media (max-width: 351px) {
+    margin: 0 -20px;
+  }
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+  .content-10 .carousel {
+    margin-left: -90px;
+  }
+}
+
+
+
+
+
+
+/* old styles */
+
+
 
 /* bootstrap override */
 
@@ -49,7 +191,7 @@
 
 /* general styles */
 
-section {
+section.centered {
   padding: 120px 20px;
   clear: both;
   text-align: center;
@@ -260,14 +402,4 @@ section {
 @-o-keyframes fadein { /* Opera */
   from { opacity: 0.3; }
   to { opacity: 1; }
-}
-
-
-/* responsive */
-
-@media (max-width: 979px) {
-
-  .subnav {
-    display: none;
-  }
 }
