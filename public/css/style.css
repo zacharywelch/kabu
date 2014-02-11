@@ -2326,7 +2326,7 @@ section * {
   }
 }
 .content-14 h3 {
-  margin: 0 0 5px;
+  margin: 0 0 50px;
   text-align: center;
   font-size: 35px;
   font-weight: normal;
@@ -2577,6 +2577,10 @@ body > section.v-center > div {
     background-image: none;
   }
 }
+.content-23.v-center > div {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .content-11 {
   background: #fff;
   padding-top: 150px;
@@ -2680,8 +2684,7 @@ section.centered.clear {
   text-align: inherit;
 }
 .content-14 {
-  padding-top: 60px;
-  padding-bottom: 200px;
+  padding: 60px 20px 200px 20px;
   text-align: left;
 }
 .content-14 .features h6 {

@@ -12,7 +12,7 @@
         }
       }).scroll(function() {
         if (!el.hasClass('ani-processed')) {
-          //if ($(window).scrollTop() >= el.eq(0).data('scrollPos')) {
+          if ($(window).scrollTop() >= el.eq(0).data('scrollPos')) {
             
             el.addClass('ani-processed');
             
@@ -46,9 +46,9 @@
             }
             
             carouselAnimation();
-          //}
+          }
         }
       });
-    })($('.image-holder img'));
+    })($('.image-scroll .image-holder img'));
   });
 })(jQuery);
