@@ -2563,23 +2563,37 @@ body > section.v-center > div {
 .content-3.bg-clouds .delimiter {
   border-color: rgba(189, 195, 199, 0.4);
 }
+.content-3 .features {
+  text-align: center;
+}
+.content-3 .features img {
+  height: 100px;
+}
+.content-3 .features h6 {
+  margin-top: 37px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
 .content-23 {
   background-color: #2c3e50;
-}
-.content-23.custom-bg {
-  background-image: url('../img/atlanta4.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-@media (max-width: 768px) {
-  .content-23.custom-bg {
-    background-image: none;
-  }
+.content-23.custom-bg {
+  background-image: url('../img/atlanta4.jpg');
+}
+.content-23.process {
+  background-image: url('../img/sketch-book.jpg');
 }
 .content-23.v-center > div {
   padding-top: 0;
   padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .content-23 {
+    background-image: none;
+  }
 }
 .content-11 {
   background: #fff;
