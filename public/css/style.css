@@ -2584,7 +2584,8 @@ body > section.v-center > div {
   background-image: url('../img/atlanta4.jpg');
 }
 .content-23.process {
-  background-image: url('../img/sketch-book.jpg');
+  background-image: url('../img/macbook-and-sketch.jpg');
+  background-attachment: intial;
 }
 .content-23.v-center > div {
   padding-top: 0;
