@@ -6,7 +6,7 @@ function fadedEls(el, shift) {
     shift = 0
     break;
   case 'h':
-    shift = el.eq(0).outerHeight() - 50;
+    shift = el.eq(0).outerHeight() - 75;
     break;
   case 'h/2':
     shift = el.eq(0).outerHeight() / 2;
