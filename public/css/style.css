@@ -2585,7 +2585,6 @@ body > section.v-center > div {
 }
 .content-23.process {
   background-image: url('../img/macbook-and-sketch.jpg');
-  background-attachment: intial;
 }
 .content-23.v-center > div {
   padding-top: 0;
@@ -2593,7 +2592,7 @@ body > section.v-center > div {
 }
 @media (max-width: 768px) {
   .content-23 {
-    background-image: none;
+    background-image: none !important;
   }
 }
 .content-11 {
