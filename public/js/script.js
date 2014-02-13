@@ -111,6 +111,24 @@ $(function() {
   });
 
 
+  (function(el) {
+      el.css('left', '-100%');
+
+      $(window).resize(function() {
+          if (!el.hasClass('ani-processed')) {
+              el.data('scrollPos', el.offset().top - $(window).height() + el.outerHeight());
+          }
+      }).scroll(function() {
+          if (!el.hasClass('ani-processed')) {
+              if ($(window).scrollTop() >= el.data('scrollPos')) {
+                  el.addClass('ani-processed');
+                  el.animate({
+                      left : 0
+                  }, 500);
+              }
+          }
+      });
+  })($('.content-11 > .container'));
 
 
 
