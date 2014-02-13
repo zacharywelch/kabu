@@ -404,6 +404,12 @@ section.centered {
   }
 }
 
+.content-31 {
+  .ticket img {
+    margin-top: 30px;
+  }
+}
+
 #sg-guidelines {
   .control-btn {
     width: 53px; height: 53px;
@@ -543,47 +549,6 @@ section.centered {
   opacity: 0;
   .animation(fadein 0.5s ease-in 1 forwards);
 }
-
-/* scroll button */
-
-.scroll-btn {
-  display: block;
-  position: absolute;
-  left: 0; right: 0; bottom: 80px;
-  text-align: center;
-  
-  > * {
-    display: inline-block;
-    .line-height(18px);
-    .font(13px); .a-color(white, white); font-family: @h-font-family;
-    letter-spacing: 2px;
-    &:hover,&:focus, &:active,&.active {.opacity(80);}
-  }
-  
-  .mouse {
-    position: relative;
-    display: block;
-    width: 46px; height: 73px;
-    margin: 0 auto 20px;
-    .box-sizing(border-box);
-    border: 2px solid white; border-radius: 23px;
-    > * {
-      position: absolute;
-      display: block;
-      top: 29%; left: 50%;
-      width: 8px; height: 8px;
-      margin: -4px 0 0 -4px;
-      background: white;
-      border-radius: 50%;
-      -webkit-animation: ani-mouse 4s linear infinite;
-      -moz-animation: ani-mouse 4s linear infinite;
-      animation: ani-mouse 4s linear infinite;
-    }
-  }
-  
-  @media (max-width: 480px) {bottom: 41px;}
-}
-
 
 /* fade in */
 

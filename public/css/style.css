@@ -2863,6 +2863,9 @@ section.centered.clear {
     margin-top: 15px;
   }
 }
+.content-31 .ticket img {
+  margin-top: 30px;
+}
 #sg-guidelines .control-btn {
   width: 53px;
   height: 53px;
@@ -2995,73 +2998,6 @@ section.centered.clear {
   -moz-animation: fadein 0.5s ease-in 1 forwards;
   -o-animation: fadein 0.5s ease-in 1 forwards;
   animation: fadein 0.5s ease-in 1 forwards;
-}
-/* scroll button */
-.scroll-btn {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 80px;
-  text-align: center;
-}
-.scroll-btn > * {
-  display: inline-block;
-  line-height: 18px;
-  font-size: 13px;
-  font-weight: normal;
-  color: #7f8c8d;
-  color: #ffffff;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 2px;
-}
-.scroll-btn > *:hover,
-.scroll-btn > *:focus,
-.scroll-btn > *.active {
-  color: #ffffff;
-}
-.scroll-btn > *:hover,
-.scroll-btn > *:focus,
-.scroll-btn > *.active {
-  color: #ffffff;
-}
-.scroll-btn > *:hover,
-.scroll-btn > *:focus,
-.scroll-btn > *:active,
-.scroll-btn > *.active {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-}
-.scroll-btn .mouse {
-  position: relative;
-  display: block;
-  width: 46px;
-  height: 73px;
-  margin: 0 auto 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 2px solid white;
-  border-radius: 23px;
-}
-.scroll-btn .mouse > * {
-  position: absolute;
-  display: block;
-  top: 29%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  margin: -4px 0 0 -4px;
-  background: white;
-  border-radius: 50%;
-  -webkit-animation: ani-mouse 4s linear infinite;
-  -moz-animation: ani-mouse 4s linear infinite;
-  animation: ani-mouse 4s linear infinite;
-}
-@media (max-width: 480px) {
-  .scroll-btn {
-    bottom: 41px;
-  }
 }
 /* fade in */
 @keyframes fadein {
