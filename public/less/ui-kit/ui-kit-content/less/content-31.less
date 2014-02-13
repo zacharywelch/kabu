@@ -163,7 +163,7 @@
     @media (max-width: 767px) {
       padding-left: 50px;
     }
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       > * {
         padding: 40px 0;
         .opacity(100);
@@ -173,6 +173,11 @@
       }
       h3 {
         color: @firm;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h3 {
         font-size: 30px;
       }
       .img {
@@ -190,7 +195,8 @@
       }
       .box {
         margin: 0 0 30px;
-      }
+      }    
     }
+  
   }
 }

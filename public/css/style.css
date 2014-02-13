@@ -1573,7 +1573,7 @@ section * {
     padding-left: 50px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .content-31 .container > * {
     padding: 40px 0;
     opacity: 1;
@@ -1584,6 +1584,10 @@ section * {
   }
   .content-31 .container h3 {
     color: #3498db;
+  }
+}
+@media (max-width: 480px) {
+  .content-31 .container h3 {
     font-size: 30px;
   }
   .content-31 .container .img img:first-child {
@@ -2867,6 +2871,12 @@ section.centered.clear {
 }
 .content-31 #pt-2 .pt-controls {
   bottom: 195px;
+}
+@media (max-width: 768px) {
+  .content-31 .container > * {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
 }
 #sg-guidelines .control-btn {
   width: 53px;
