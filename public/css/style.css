@@ -3014,6 +3014,7 @@ section.centered.clear {
 }
 .fade-in {
   opacity: 0;
+  filter: alpha(opacity=0);
   -webkit-animation: fadein 0.5s ease-in 1 forwards;
   -moz-animation: fadein 0.5s ease-in 1 forwards;
   -o-animation: fadein 0.5s ease-in 1 forwards;
