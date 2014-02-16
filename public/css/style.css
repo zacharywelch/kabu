@@ -2037,7 +2037,8 @@ section * {
   font-size: 12px;
 }
 .component hr {
-  margin: 14px 0;
+  margin: 14px -20px;
+  border-top-color: #ebedef;
 }
 @media (max-width: 767px) {
   .component-list {
@@ -2057,6 +2058,15 @@ section * {
   }
   .component-examples .offset2 {
     margin-left: 100px;
+  }
+}
+@media (max-width: 639px) {
+  .component {
+    padding-bottom: 0;
+    margin-bottom: 40px;
+  }
+  .component pre {
+    display: none;
   }
 }
 @media (max-width: 480px) {
