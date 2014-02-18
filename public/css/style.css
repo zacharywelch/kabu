@@ -1853,7 +1853,7 @@ section * {
 }
 .swatches.typography .swatch p {
   background: #bdc3c7;
-  padding: 26px;
+  padding: 26px 10px;
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .swatch {
@@ -1867,6 +1867,21 @@ section * {
     padding-bottom: 5px;
   }
 }
+@media (max-width: 480px) {
+  .swatches > div {
+    display: inline-block;
+    margin: 10px;
+    width: 110px;
+    height: 180px;
+  }
+  .swatches > div .swatch {
+    margin-bottom: 0;
+    height: 180px;
+  }
+  .swatches > div .swatch h6 {
+    padding: 30px 15px;
+  }
+}
 .toggle-bg {
   padding: 14px;
 }
@@ -1878,7 +1893,7 @@ section * {
   color: #bdc3c7;
   border: none;
   border-radius: 8px;
-  padding: 32% 0%;
+  padding: 10px;
   font-size: 32px;
 }
 #sg-icons .custom-icons .thumbnail {
@@ -1904,9 +1919,31 @@ section * {
     font-size: 1.8em;
   }
 }
-@media (max-width: 480px) {
-  #sg-icons .thumbnail {
-    font-size: 6.5em;
+@media (max-width: 768px) {
+  #sg-icons .thumbnail > img {
+    height: 76px;
+  }
+}
+@media (max-width: 351px) {
+  #sg-icons .thumbnails {
+    margin-bottom: 0;
+  }
+  #sg-icons .thumbnails > li {
+    width: 50px;
+    display: inline-block;
+    margin: 8px 5px 8px;
+  }
+  #sg-icons .thumbnails > li .thumbnail {
+    font-size: 25px;
+    padding: 5px;
+  }
+  #sg-icons .thumbnails > li .thumbnail > img {
+    max-height: 37px;
+  }
+  #sg-icons .thumbnails p {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 .component-list {

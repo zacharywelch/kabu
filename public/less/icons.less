@@ -13,7 +13,7 @@
     color: @silver;
     border: none;
     border-radius: 8px;
-    padding: 32% 0%;
+    padding: 10px;
     font-size: 32px;
   }
 
@@ -45,9 +45,36 @@
     }
   }
 
-  @media (max-width: 480px) {
-    .thumbnail {
-      font-size: 6.5em;
+  @media (max-width: 768px) {
+    .thumbnail > img {
+      height: 76px;
+    }
+  }
+
+  @media (max-width: 351px) {
+    .thumbnails {
+      margin-bottom: 0;
+
+      > li {
+        width: 50px;
+        display: inline-block;
+        margin: 8px 5px 8px;
+
+        .thumbnail {
+          font-size: 25px;
+          padding: 5px;
+
+          > img {
+            max-height: 37px;
+          }
+        }
+      }
+
+      p {
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+      }
     }
   }
 }
