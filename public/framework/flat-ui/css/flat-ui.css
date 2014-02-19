@@ -367,12 +367,12 @@ you can use the generic selector below, but it's slower:
 .fui-list-bulleted:before {
   content: "\e053";
 }
-/* 62px */
-/* 52px */
+/* 48px */
 /* 40px */
-/* 29px */
-/* 28px */
-/* 24px */
+/* 36px */
+/* 26px */
+/* 20px */
+/* 18px */
 .inline-block {
   display: inline-block;
   zoom: 1;
@@ -424,27 +424,27 @@ a:hover {
 }
 h1,
 .h1 {
-  font-size: 62.006px /* 64px */;
+  font-size: 47.999994px /* 64px */;
 }
 h2,
 .h2 {
-  font-size: 51.996px /* 52px */;
+  font-size: 39.999988px /* 52px */;
 }
 h3,
 .h3 {
-  font-size: 39.998000000000005px /* 40px */;
+  font-size: 35.999992px /* 40px */;
 }
 h4,
 .h4 {
-  font-size: 28.994000000000003px /* 29px */;
+  font-size: 25.999988000000002px /* 29px */;
 }
 h5,
 .h5 {
-  font-size: 28px /* 28px */;
+  font-size: 19.999994px /* 28px */;
 }
 h6,
 .h6 {
-  font-size: 23.996px /* 24px */;
+  font-size: 17.999996px /* 24px */;
 }
 h1,
 .h1,

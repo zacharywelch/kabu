@@ -1,10 +1,10 @@
 /* flat ui variables and mixins */
-/* 62px */
-/* 52px */
+/* 48px */
 /* 40px */
-/* 29px */
-/* 28px */
-/* 24px */
+/* 36px */
+/* 26px */
+/* 20px */
+/* 18px */
 .inline-block {
   display: inline-block;
   zoom: 1;
@@ -314,9 +314,6 @@ section * {
 .nav-visible .nav-collapse .navbar-search a.btn:focus {
   color: #7f8c8d;
   background-color: white;
-}
-header[role="banner"] {
-  padding: 0;
 }
 /* custom blocks */
 /* blank slate styles
