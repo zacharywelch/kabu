@@ -586,7 +586,7 @@ section * {
   margin-bottom: 1em;
 }
 .contact-us {
-  background: #34495e url(/../../common-files/img/map.png) 50% 50% no-repeat;
+  background: #34495e;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 20px;

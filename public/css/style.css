@@ -2192,6 +2192,7 @@ section * {
   margin-right: -20px;
   margin-top: -30px;
   margin-bottom: -30px;
+  background: #34495e url(/../img/map.png) 50% 50% no-repeat;
 }
 .examples .component .price-1 {
   padding: 20px 0;
