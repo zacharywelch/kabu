@@ -6255,7 +6255,7 @@ input.search-query {
 /* list item styles
 --------------------------------------------- */
 .form > ul > li {
-  margin: 0 0 22px 0;
+  margin: 0 0 10px 0;
   padding: 0;
   clear: both;
   background-color: transparent;
@@ -6282,8 +6282,16 @@ input.search-query {
   float: left;
 }
 .form li.leftHalf,
-.form li.rightHalf {
+.form li.rightHalf,
+.form li.complex > div > span.left,
+.form li.complex > div > span.right,
+.form > ul > li > span.leftHalf,
+.form > ul > li > span.rightHalf {
   width: 49% !important;
+}
+.form > ul > li > span.leftHalf,
+.form > ul > li > span.rightHalf {
+  margin: 0;
 }
 .form li.leftThird,
 .form li.rightThird {
@@ -6309,13 +6317,15 @@ input.search-query {
 .form li.leftHalf,
 .form li.leftThird,
 .form li.leftFourth,
-.form li.leftFifth {
+.form li.leftFifth,
+.form li > span.leftHalf {
   padding-right: 1% !important;
 }
 .form li.rightHalf,
 .form li.rightThird,
 .form li.rightFourth,
-.form li.rightFifth {
+.form li.rightFifth,
+.form li > span.rightHalf {
   padding-left: 1% !important;
 }
 .form li.middleThird,
@@ -6429,7 +6439,7 @@ input.search-query {
   font-size: 100%;
   color: #34495e;
   line-height: 1.2em;
-  margin: 0 0 11px;
+  margin: 0 0 18px;
   font-weight: 500;
   padding: 0;
   display: block;
@@ -6740,6 +6750,14 @@ input.button {
   font-size: 95%;
   line-height: 135%;
   color: #555;
+}
+.form-actions .actions {
+  list-style: none;
+  margin: 0;
+}
+.form-actions .actions > li {
+  margin-right: 15px;
+  display: inline-block;
 }
 .nav-links {
   list-style: none;
