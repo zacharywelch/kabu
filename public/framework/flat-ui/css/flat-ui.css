@@ -6255,7 +6255,7 @@ input.search-query {
 /* list item styles
 --------------------------------------------- */
 .form > ul > li {
-  margin: 0 0 10px 0;
+  margin: 0 0 22px 0;
   padding: 0;
   clear: both;
   background-color: transparent;
@@ -6282,16 +6282,8 @@ input.search-query {
   float: left;
 }
 .form li.leftHalf,
-.form li.rightHalf,
-.form li.complex > div > span.left,
-.form li.complex > div > span.right,
-.form > ul > li > span.leftHalf,
-.form > ul > li > span.rightHalf {
+.form li.rightHalf {
   width: 49% !important;
-}
-.form > ul > li > span.leftHalf,
-.form > ul > li > span.rightHalf {
-  margin: 0;
 }
 .form li.leftThird,
 .form li.rightThird {
@@ -6317,15 +6309,13 @@ input.search-query {
 .form li.leftHalf,
 .form li.leftThird,
 .form li.leftFourth,
-.form li.leftFifth,
-.form li > span.leftHalf {
+.form li.leftFifth {
   padding-right: 1% !important;
 }
 .form li.rightHalf,
 .form li.rightThird,
 .form li.rightFourth,
-.form li.rightFifth,
-.form li > span.rightHalf {
+.form li.rightFifth {
   padding-left: 1% !important;
 }
 .form li.middleThird,
@@ -6439,7 +6429,7 @@ input.search-query {
   font-size: 100%;
   color: #34495e;
   line-height: 1.2em;
-  margin: 0 0 18px;
+  margin: 0 0 11px;
   font-weight: 500;
   padding: 0;
   display: block;
@@ -6758,6 +6748,23 @@ input.button {
 .form-actions .actions > li {
   margin-right: 15px;
   display: inline-block;
+}
+.alert-error-summary {
+  text-align: center;
+  border-color: #eed3d7;
+  background: rgba(218, 77, 15, 0.1);
+}
+.alert-error-summary h3 {
+  margin: 0 0 8px 0;
+  padding: 0;
+  color: #e74c3c;
+  font-size: 20px;
+  font-weight: bold;
+}
+.alert-error-summary em {
+  color: #e74c3c;
+  font-style: normal;
+  font-weight: bold;
 }
 .nav-links {
   list-style: none;
