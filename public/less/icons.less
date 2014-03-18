@@ -8,6 +8,10 @@
 
 #sg-icons {
   
+  .row > div {
+    margin-bottom: 30px;
+  }
+
   .thumbnail {
     background: @base;
     color: @silver;
@@ -15,23 +19,26 @@
     border-radius: 8px;
     padding: 10px;
     font-size: 32px;
+    line-height: 1.48;
   }
 
   .custom-icons .thumbnail {
     padding: 13%;
   }
 
-  .thumbnails p {
+  .thumbnail + p {
     margin: 8px 0 0;
     font-size: 12px;
     line-height: 1;
     text-transform: capitalize;
     letter-spacing: .1em;
+    white-space: nowrap;    
   }
 
   .custom-icons p {
     margin-top: 12px;
     font-size: 14px;
+    white-space: nowrap;
   }
 
   &.bg-clouds .thumbnail {
@@ -39,16 +46,44 @@
     color: inherit;
   }
 
-  @media (min-width: 768px) and (max-width: 979px) {
+  .compass {
+    margin-bottom: 1px; 
+  }
+
+  // @media (min-width: 768px) and (max-width: 979px) {
+  //   .thumbnail {
+  //     font-size: 1.8em;
+  //   }
+  // }
+
+  @media (max-width: 430px) {
     .thumbnail {
-      font-size: 1.8em;
+      padding: 4px;
     }
   }
 
-  @media (max-width: 768px) {
-    .thumbnail > img {
-      height: 76px;
+  @media (max-width: 440px) {
+    .custom-icons img {
+      height: 75px;
     }
+  }
+
+  @media (min-width: 441px) and (max-width: @screen-xs-max) {
+    .custom-icons img {
+      height: 100px;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .custom-icons img {
+      height: 65px;
+    }
+  }
+  
+  @media (min-width: @screen-md-min) {
+    .custom-icons img {
+      height: 100px;
+    }    
   }
 
   @media (max-width: 351px) {

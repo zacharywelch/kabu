@@ -1,3 +1,7 @@
+.components .page-wrapper {
+  background-color: @clouds;
+}
+
 .component-list {
   padding-top: 36px;
   padding-bottom: 36px;
@@ -49,6 +53,7 @@
     background: #f9fafb;
     text-align: center;
     position: relative;
+    .clearfix();
 
     &.left {
       text-align: left;
@@ -67,15 +72,35 @@
       }
     }
 
+    .modal {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      margin: 0 auto 20px;
+      z-index: 1;
+      display: block;
+    }    
+
+    .modal-dialog {
+      max-width: 100%;            
+      border-radius: 7px;
+      .box-shadow(-14px 14px 0 0 rgba(0, 0, 0, 0.35));
+    }
+
     &.static-modal-backdrop {
       background-color: #243342 !important;
       border: none;
     }
 
+    &.labels {
+      font-size: 18px;
+    }
+
     .narrow {
       text-align: left;
       padding: 40px 20px;
-      max-width: 620px;
+      max-width: 680px;
       margin: 0 auto;
       overflow: auto;
     }
@@ -86,7 +111,7 @@
     }
 
     .nav-pills {
-      width: 315px;
+      width: 319px;
       margin: 0 auto;
     }
 
@@ -95,10 +120,6 @@
       margin: 0 13px 0 -3px;
       position: relative;
       width: auto;
-    }
-
-    .ui-spinner-down {
-      bottom: 10px;
     }
 
     .input-append .add-on {
@@ -156,6 +177,9 @@
   }
 }
 
+#typeahead-demo-01 {
+  background: #fff !important;
+}
 
 
 @media (max-width: 767px) {
@@ -173,17 +197,17 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
-  .component-examples {
-    .span8 {
-      width: 564px;
-    }
+// @media (min-width: 768px) and (max-width: 979px) {
+//   .component-examples {
+//     .col-sm-8 {
+//       width: 564px;
+//     }
 
-    .offset2 {
-      margin-left: 100px;
-    }
-  }
-}
+//     .col-sm-offset-2 {
+//       margin-left: 100px;
+//     }
+//   }
+// }
 
 @media (max-width: 639px) {
   .component {
@@ -205,10 +229,6 @@
       .nav-list,
       .nav-pills {
         width: auto;
-      }
-
-      .ui-spinner-down {
-        bottom: 9px;
       }
 
       .form-search {

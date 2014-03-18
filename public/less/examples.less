@@ -1,7 +1,6 @@
-// .component-preview > section {
-//   padding: 0;
-//   text-align: left;
-// }
+.examples .page-wrapper {
+  background-color: @clouds;
+}
 
 .examples .component { 
   margin-bottom: 40px;
@@ -56,14 +55,6 @@
     }   
   }
 
-  .contact-us {
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-top: -30px;
-    margin-bottom: -30px;
-    background: @base url(~"/../img/map.png") 50% 50% no-repeat;
-  }
-
   .price-1 {
     padding: 20px 0;
   }
@@ -79,11 +70,15 @@
 
   .cart {
     padding-right: 40px;
-  } 
+
+    @media (max-width: @screen-xs-max) {
+      padding-right: 0;
+    }
+  }
 }
 
 #sg-sidebar .component-preview {
-  min-height: 450px;
+  min-height: 550px;
 }
 
 #sg-product .component-preview {

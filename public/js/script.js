@@ -75,6 +75,11 @@ $(function() {
       });
     });
 
+    // Parallax
+    $('.content-23').each(function() {
+        $(this).parallax('50%', 0.3, true);
+    });
+
     $('.page-transitions', el).each(function() {
       var pt = PageTransitions();
       pt.init(this);

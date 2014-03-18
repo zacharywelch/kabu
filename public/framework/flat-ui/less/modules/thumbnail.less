@@ -1,13 +1,15 @@
-.thumbnail {
+.card {
   background: #fff;
   padding: 0;
   margin: 0;
   border: none;
   line-height: 1.48;
-  .border-radius(6px);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  .box-shadow(0 1px 3px rgba(0, 0, 0, 0.055));
 
   > img {
-    .border-radius(6px 6px 0 0);
+    border-radius: 6px 6px 0 0;
   }
 
   .caption {
@@ -28,7 +30,7 @@
       left: 0;
       bottom: 0;
       width: 48px;
-      border-top: 3px solid @firm;
+      border-top: 3px solid @brand-secondary;
     }
   }
 
@@ -39,13 +41,13 @@
 
     .amount {
       font-size: 25px;
-      color: @wet-asphalt;
+      color: @brand-primary;
       line-height: 41px;
     }
   }
 }
 
-.thumbnail.product {
+.card.product {
   .meta { 
     padding: 15px 20px;
     border-top: 1px solid #ebedee;

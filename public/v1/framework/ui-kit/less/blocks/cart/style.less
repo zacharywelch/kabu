@@ -1,0 +1,146 @@
+.cart {
+  .clearfix();
+
+  .cart-items {
+    list-style: none;
+    margin: 0;
+    .clearfix();
+
+    > li {
+      position: relative;
+      margin-bottom: 36px;
+      .clearfix();
+
+      h3 {
+        font-size: 16px;
+        margin-top: 0;
+        display: inline-block;
+      }
+
+      .meta {
+        display: block;
+      }
+
+      > img {
+        width: 100px;
+        float: left;
+        margin-right: 10px;
+      }
+
+      .fui-cross-inverted {
+        color: @silver;
+        margin-left: 5px;        
+      }
+
+      .total {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 20px;
+        color: @wet-asphalt;
+      }
+
+      .spinner {
+        font-size: 14px !important;
+        padding: 0;
+        height: 26px;
+      }
+
+      .ui-spinner {
+        position: absolute;
+        top: 0;
+        right: 22%;
+        padding-right: 22px;
+      }
+
+      .ui-spinner-button {
+        height: 14px;
+        width: 22px;
+
+        span:before {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+
+      .ui-spinner-up {
+        border-bottom: 1px solid #d1d5d8;
+      }
+
+      .ui-spinner-down {
+        border-top: 1px solid #d1d5d8;
+      }
+    }
+  }
+
+  .cart-totals {
+    position: relative;
+    .clearfix();
+
+    .btn.continue {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      i {
+        margin-left: -10px;
+      }
+    }
+
+    .btn.coupon {
+      position: absolute;
+      top: 25%;
+    }
+  }
+
+  .receipt {
+    float: right;
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px dotted #ccc;
+
+    li {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    p,
+    span {
+      font-size: 16px;
+      line-height: 1.722169;
+    }
+
+    p {
+      display: inline-block;
+      margin: 0;
+    }
+
+    span {
+      float: right;
+    }
+
+    li.total {
+      border-top: 1px dotted #ccc;
+      padding-top: 20px;
+      margin-top: 15px;
+
+      p, span { font-size: 20px; }
+      p { color: @wet-asphalt; }
+      span { color: @turquoise; }
+    }
+  }
+
+  .btn-primary {
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) { 
+  .cart .cart-items > li h3 { width: 230px; }
+  .cart .cart-items > li .ui-spinner { right: 15%; }
+}

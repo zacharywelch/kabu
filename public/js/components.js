@@ -30,6 +30,7 @@ $(function() {
     });
   });
 
+  // jQuery UI Datepicker
   var datepickerSelector = '#datepicker-01';
   if ($(datepickerSelector).length > 0) {
     $(datepickerSelector).datepicker({
@@ -41,15 +42,23 @@ $(function() {
       e && e.preventDefault();
       $(datepickerSelector).focus();
     });
+
     $.extend($.datepicker, {_checkOffset:function(inst,offset,isFixed){return offset}});
 
     // Now let's align datepicker with the prepend button
-    $(datepickerSelector).datepicker('widget').css({'margin-left': -$(datepickerSelector).prev('.btn').outerWidth() - 2});
+    $(datepickerSelector).datepicker('widget').css({'margin-left': -$(datepickerSelector).prev('.input-group-btn').find('.btn').outerWidth()});
   }
 
+  // Focus state for append/prepend inputs
+  $('.input-group').on('focus', '.form-control', function () {
+    $(this).closest('.input-group, .form-group').addClass('focus');
+  }).on('blur', '.form-control', function () {
+    $(this).closest('.input-group, .form-group').removeClass('focus');
+  });
+
   // Custom Selects
-  if ($(".form select").length > 0)
-    $(".form select").selectpicker({style: 'btn-wide'});  
+  if ($(".form-group select").length > 0)
+    $(".form-group select").selectpicker({style: 'btn-default'});  
   
   if ($("select").length > 0)
     $("select").selectpicker({style: 'btn-wide btn-primary', menuStyle: 'dropdown-inverse'});  
@@ -94,7 +103,6 @@ $(function() {
       .text("$" + slider2Options.values[1] * slider2ValueMultiplier);
   }
 
-  // jQuery UI spinner
   $.widget( "ui.customspinner", $.ui.spinner, {
     widgetEventPrefix: $.ui.spinner.prototype.widgetEventPrefix,
     _buttonHtml: function() { // Remove arrows on the buttons
@@ -108,7 +116,7 @@ $(function() {
     }
   });
 
-  $('.spinner').customspinner({
+  $('#spinner-01, #spinner-02, .spinner').customspinner({
     min: -99,
     max: 99
   }).on('focus', function () {
@@ -156,11 +164,41 @@ $(function() {
     }
   });
 
+  // Typeahead
+  if($('#typeahead-demo-01').length) {
+    $('#typeahead-demo-01').typeahead({
+      name: 'states',
+      limit: 4,
+      local: ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+      "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky",
+      "Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri",
+      "Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota",
+      "North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina",
+      "South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+    });
+  }    
+
+
   // add click functionality to list-check
   $('.list-check > li h3 a').on('click', function() {
     selector = '> .checkbox [data-toggle="checkbox"]'
     $(this).closest('li').find(selector).checkbox('toggle');
   });
+
+  // Typeahead
+  if($('.typeahead').length) {
+    $('.typeahead').typeahead({
+      name: 'states',
+      limit: 4,
+      local: ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+      "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky",
+      "Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri",
+      "Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota",
+      "North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina",
+      "South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+    });
+  }    
+
 
   window.prettyPrint && prettyPrint()         
 });

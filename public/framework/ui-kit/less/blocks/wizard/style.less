@@ -16,6 +16,7 @@
   ol.steps {
     list-style: none;
     margin: 0;
+    padding: 0;
     position: relative;
 
     li {
@@ -49,10 +50,20 @@
         color: @belize-hole;
 
         h3 {
-          color: @h-text-color;
+          color: @midnight-blue;
         }
       }
     }
+
+    @media (max-width: @screen-xs-max) {
+      h3 {
+        display: none;
+      }
+
+      li.step-active h3 {
+        display: block;
+      }
+    }    
   }
 
   ol.steps li.step-1 {

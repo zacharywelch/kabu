@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Product Style Guide for CareerBuilder - Corp Apps</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
   <link rel="shortcut icon" href="framework/flat-ui/images/favicon.ico">
 
   <link rel="stylesheet" href="framework/flat-ui/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="framework/flat-ui/bootstrap/css/bootstrap-responsive.css">
   <link rel="stylesheet" href="framework/flat-ui/css/flat-ui.css">
   
   <link rel="stylesheet" href="framework/common-files/css/icon-font.css">
@@ -22,22 +23,24 @@
 
 <body>
 
+  <div class="page-wrapper">
+
   <!-- header-2 -->
   <header class="header-2">
     <div class="container">
       <div class="row">
-        <div class="navbar span12">
-          <div class="navbar-inner">
-            <button type="button" class="btn btn-navbar"> </button>
+        <div class="navbar col-sm-12" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle"> </button>
             <a class="brand" href="/">CareerBuilder</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav pull-right">
-                <li class="active"><a href="index.html">Overview</a></li>
-                <li><a href="style.html">Style</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li><a href="examples.html">Examples</a></li>
-              </ul>
-            </div>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav pull-right">
+              <li class="active"><a href="index.html">Overview</a></li>
+              <li><a href="style.html">Style</a></li>
+              <li><a href="components.html">Components</a></li>
+              <li><a href="examples.html">Examples</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -48,7 +51,7 @@
     <div class="background">&nbsp;</div>
     <div class="container">
       <div class="row">
-        <div class="span8 offset2">
+        <div class="col-sm-8 col-sm-offset-2">
           <div class="hero-unit">
             <h1>
               A responsive front-end framework for faster and easier web development.
@@ -67,7 +70,7 @@
   <section class="content-10">
     <div class="container">
       <div class="row">
-        <div class="span6">
+        <div class="col-sm-6">
           <h3>
             Introducing the first design framework for CareerBuilder products, 
             services, and apps
@@ -79,14 +82,14 @@
           </p>
           <div class="features">
             <div class="box">
-              <img src="framework/common-files/icons/Responsive_2x.png" width="100" height="100" alt="" >
+              <img src="framework/common-files/icons/Responsive1@2x.png" width="100" height="100" alt="" >
               <h6>Responsive Layout</h6>
               <p>
                 Expand your audience. Create a website with full mobile device support.
               </p>
             </div>
             <div class="box">
-              <img src="framework/common-files/icons/Watches_2x.png" width="100" height="100" alt="">
+              <img src="framework/common-files/icons/Watches@2x.png" width="100" height="100" alt="">
               <h6>Save Time</h6>
               <p>
                 Spend your time creating, not reinventing the wheel. Each block 
@@ -94,7 +97,7 @@
               </p>
             </div>
             <div class="box">
-              <img src="framework/common-files/icons/Letter-Symbol_2x.png" width="100" height="100" alt="" >
+              <img src="framework/common-files/icons/Letter-Symbol@2x.png" width="100" height="100" alt="" >
               <h6>Based on Bootstrap</h6>
               <p>
                 Layout and components based on Bootstrap framework. Bootstrap is a trusted, reliable and proven tool for developers.
@@ -102,7 +105,7 @@
             </div>
           </div>
         </div>
-        <div class="span4 offset2 text-center">                        
+        <div class="col-sm-4 col-sm-offset-2 text-center">                        
           <div id="c-10_myCarousel" class="carousel slide hidden-phone">
             <div class="carousel-inner">
               <div class="item active">
@@ -143,7 +146,7 @@
     <div>                
       <div class="container">
         <div class="row">
-          <div class="span6 aligment">
+          <div class="col-sm-6 aligment">
             <h3>Packed with features that help you deliver software quickly and easily</h3>
             <p>
               All components are made in the same style, allowing you to create 
@@ -151,7 +154,7 @@
               component and see living examples of how to connect and use them.
             </p>
           </div>
-          <div class="span6 img">
+          <div class="col-sm-6 img">
             <img width="397" height="193" alt="" src="framework/common-files/img/content/ps-wire-imac@2x.png">
           </div>
         </div>
@@ -161,18 +164,18 @@
 
       <div class="container">
         <div class="row features">
-          <div class="span3">
-            <img src="framework/common-files/icons/Retina-Ready_2x.png">
+          <div class="col-sm-3">
+            <img src="framework/common-files/icons/Retina-Ready@2x.png">
             <h6>Retina Ready</h6>
             <p>Works on devices supporting Retina Display. Feel the clarity in each pixel.</p>
           </div>
-          <div class="span4 offset1">
-            <img src="framework/common-files/icons/Infinity-Loop_2x.png">
+          <div class="col-sm-4 col-sm-offset-1">
+            <img src="framework/common-files/icons/Infinity-Loop@2x.png">
             <h6>Many Useful Components</h6>
             <p>You'll find all the elements contained in Bootstrap plus more.</p>
           </div>
-          <div class="span3 offset1">
-            <img src="framework/common-files/icons/Yin-and-Yang_2x.png">
+          <div class="col-sm-3 col-sm-offset-1">
+            <img src="framework/common-files/icons/Yin-and-Yang@2x.png">
             <h6>Perfect Matching</h6>
             <p>Components use the same style and match each other 
               wonderfully.</p>
@@ -201,7 +204,7 @@
     <div class="container">
       <div class="row">
         <div class="number">1</div>
-        <div class="span8 offset2">
+        <div class="col-sm-8 col-sm-offset-2">
           <div id="pt-1" class="page-transitions pt-perspective pt-item-1 pt-first">
             <div class="pt-page pt-page-current">
               <h3>It's time to get started</h3>
@@ -240,7 +243,7 @@
       
       <div class="row">
         <div class="number">2</div>
-        <div class="span8 offset2">
+        <div class="col-sm-8 col-sm-offset-2">
           <div id="pt-2" class="page-transitions pt-perspective pt-item-1 pt-first">
 
             <div class="pt-page pt-page-current">
@@ -261,7 +264,7 @@
               <h3>Based on Twitter Bootstrap and Flat UI</h3>
               <p>
                 HTML layout is based on today's most popular framework, 
-                Bootstrap 2.3.2. Bootstrap components are then given a stunning flat-style 
+                Bootstrap 3. Bootstrap components are then given a stunning flat-style 
                 using the Flat UI toolkit.
               </p>
               <div class="box">
@@ -295,7 +298,7 @@
       
       <div class="row">
         <div class="number">3</div>
-        <div class="span8 offset2">
+        <div class="col-sm-8 col-sm-offset-2">
           <div id="pt-3" class="page-transitions pt-perspective pt-item-1 pt-first">
             <div class="pt-page pt-page-current">
               <h3>Stay current</h3>
@@ -344,32 +347,32 @@
   <footer class="footer-3">
     <div class="container">
       <div class="row v-center">
-        <div class="span3 brand">
+        <div class="col-sm-3 brand">
           <strong>Career </strong>Builder <em>UX</em>
           <div class="copyright">
             made with <span class="fui-heart pulse"></span> by 
             <a href="mailto:zachary.welch@careerbuilder.com?Subject=Style%20Guide" target="_top">Zachary Welch</a>
           </div>
         </div>
-        <div class="span7">
+        <div class="col-sm-6">
         </div>
-        <div class="span3">
-          <div class="span3">
-            <h6>CareerBuilder LLC</h6>
-            <div class="address">
-              5550 Peachtree Pkwy<br>Norcross, GA, 30092
-            </div>
-            <div class="version">
-              Version 0.1. Last Updated on 02/14/2014.
-            </div>
+        <div class="col-sm-3">
+          <h6>CareerBuilder LLC</h6>
+          <div class="address">
+            5550 Peachtree Pkwy<br>Norcross, GA, 30092
+          </div>
+          <div class="version">
+            Version 2. Last Updated on 03/16/2014.
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  </div><!-- ./page-wrapper -->
     
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="framework/flat-ui/js/jquery-1.8.3.min.js"></script>
+  <script src="framework/flat-ui/js/jquery-1.10.2.min.js"></script>
   <script src="framework/flat-ui/js/bootstrap.min.js"></script>
   <script src="framework/common-files/js/easing.min.js"></script>
   <!--[if lt IE 8]>
@@ -378,8 +381,11 @@
   <script src="framework/common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script>
   <script src="framework/common-files/js/modernizr.custom.js"></script>
   <script src="framework/common-files/js/page-transitions.js"></script>
+  <script src="framework/common-files/js/jquery.parallax.min.js"></script>
   <script src="framework/common-files/js/startup-kit.js"></script>
+
   <script src="js/scroll.js"></script>
   <script src="js/script.js"></script>
+
 </body>
 </html>

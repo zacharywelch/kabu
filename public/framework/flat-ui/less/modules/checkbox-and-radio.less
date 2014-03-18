@@ -8,7 +8,10 @@
   padding-left: 32px;
   position: relative;
   .transition(color .25s linear);
-
+  font-size: ceil(@component-font-size-base * 0.933); // ~14px
+  line-height: 1.5; // 21px;
+  cursor: pointer;
+  
   input {
     outline: none !important;
     display: none;
@@ -17,7 +20,7 @@
   // Replace icons
   // --------------------------------------------------
   .icons {
-    color: @lightgray;
+    color: @gray-light;
     display: block;
     height: 20px;
     left: 0;
@@ -27,6 +30,7 @@
     text-align: center;
     line-height: 21px;
     font-size: 20px;
+    cursor: pointer;    
     .transition(color .25s linear);
 
     .first-icon,
@@ -35,8 +39,9 @@
       position: absolute;
       left: 0;
       top: 0;
-      .opacity(100);
-      background-color: @inverse;
+      background-color: transparent;
+      margin: 0;
+      .opacity(1);
     }
     .second-icon {
       .opacity(0);
@@ -48,55 +53,54 @@
 
   // Hover State
   &:hover {
-    color: @lightgray;
-    .transition(color .25s linear);
+   .transition(color .25s linear);
 
     .first-icon {
       .opacity(0);
     }
     .second-icon {
-      .opacity(100);
+      .opacity(1);
     }
   }
 
   // Checked State
   &.checked {
-    color: @link-color;
+    color: @brand-secondary;
 
     .first-icon {
       .opacity(0);
     }
     .second-icon {
-      .opacity(100);
-      color: @link-color;
-      .transition(color .25s linear);
+      .opacity(1);
+      color: @brand-secondary;
+     .transition(color .25s linear);
     }
   }
 
   // Disabled state
   &.disabled {
     cursor: default;
-    color: mix(@lightgray, white, 38%);
+    color: mix(@gray-light, white, 38%);
 
     .icons {
-      color: mix(@lightgray, white, 38%);
+      color: mix(@gray-light, white, 38%);
     }
     .first-icon {
-      .opacity(100);
+      .opacity(1);
     }
     .second-icon {
       .opacity(0);
     }
     &.checked {
       .icons {
-        color: mix(@lightgray, white, 38%);
+        color: mix(@gray-light, white, 38%);
       }
       .first-icon {
         .opacity(0);
       }
       .second-icon {
-        .opacity(100);
-        color: mix(@lightgray, white, 38%);
+        .opacity(1);
+        color: mix(@gray-light, white, 38%);
       }
     }
   }
@@ -107,29 +111,34 @@
   // Primary
   &.primary {
     .icons {
-      color: @base;
+      color: @brand-primary;
     }
     // Checked State
     &.checked {
-      color: @link-color;
+      color: @brand-secondary;
 
       .icons {
-        color: @firm;
+        color: @brand-secondary;
       }
     }
     // Disabled state
     &.disabled {
       cursor: default;
-      color: @lightgray;
+      color: @gray-light;
 
       .icons {
-        color: @lightgray;
+        color: @gray-light;
       }
       &.checked {
         .icons {
-          color: @lightgray;
+          color: @gray-light;
         }
       }
     }
   }
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: 10px;
 }

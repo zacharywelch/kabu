@@ -1,10 +1,12 @@
-@import '../framework/flat-ui/less/config.less';
-@import '../framework/flat-ui/less/mixins.less';
-/*only fo flat-ui free*/ @import '../framework/common-files/less/flat-ui-free2.0.0-fix.less'; /* end only for flat-ui free*/
-@import '../framework/common-files/less/mixins.less';
-@import '../framework/common-files/less/common.less';
-@import '../framework/common-files/less/navbar.less';
-@import '../framework/common-files/less/helper.less';
+// There is a path to Startup framework
+@framework-basePath: "../framework/";
+
+@import '@{framework-basePath}flat-ui/less/variables.less';
+@import '@{framework-basePath}flat-ui/less/mixins.less';
+@import '@{framework-basePath}common-files/less/mixins.less';
+@import '@{framework-basePath}common-files/less/common.less';
+@import '@{framework-basePath}common-files/less/header-navbar.less';
+@import '@{framework-basePath}common-files/less/helper.less';
 
 /* header */
 @import 'ui-kit/ui-kit-header/less/header-2.less';
@@ -25,14 +27,16 @@
 @import 'icons.less';
 @import 'components.less';
 @import 'examples.less';
-@import 'ui-kit/ui-kit-content/less/content-7.less';
 @import 'ui-kit/ui-kit-content/less/content-14.less';
 
 
+/* header-2 overrides */
 .header-2 .navbar {
-  //top: 25px;
   top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 1170px;
+  .translate3d(0, 0, 0);
+  .transition(all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1));
 
   .brand {
     -webkit-font-smoothing: antialiased;
@@ -74,7 +78,8 @@
   font-weight: normal;
 }
 
-body > section {
+body > section,
+.page-wrapper > section {
   &.v-center {
     > div {
       padding-top: 200px;
@@ -116,10 +121,11 @@ body > section {
 }
 
 .content-23{
+  overflow: hidden;
   background-color: @midnight-blue;
   background-position: 50% 50%;
-  background-repeat:no-repeat;
-  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
 
   &.custom-bg {
     background-image: url('../img/atlanta4.jpg');
@@ -205,10 +211,10 @@ body > section {
   }
 
   @media (max-width: 768px) {
-    width: 352px;
+    width: 345px;
     height: 459px;
-    background-size: 352px 459px;
-    padding: 44px 37px 42px 37px;
+    background-size: 345px 459px;
+    padding: 44px 32px 42px 32px;
   }
 
   @media (max-width: 351px) {
@@ -254,13 +260,13 @@ body > section {
   h3 {
     margin: 0 0 8px 0;
     padding: 0;
-    color: @danger;
+    color: @brand-danger;
     font-size: 20px;
     font-weight: bold;
   }
 
   em {
-    color: @danger;
+    color: @brand-danger;
     font-style: normal;
     font-weight: bold;
   }
@@ -269,6 +275,7 @@ body > section {
 /* general styles */
 
 section.centered {
+  //padding: 120px 0px;
   padding: 120px 20px;
   clear: both;
   text-align: center;
@@ -280,7 +287,7 @@ section.centered {
   }
 
   .lead {
-    max-width: 36rem;
+    max-width: 36em;
     margin: 0 auto;
     margin-bottom: 50px;
     font-weight: normal;
@@ -313,7 +320,8 @@ section.centered {
 }
 
 .content-14 {
-  padding: 60px 20px 200px 20px;
+  padding-top: 60px;
+  padding-bottom: 200px;
   text-align: left;
 
   .features {
@@ -321,13 +329,17 @@ section.centered {
       color: #34495e;
     }
 
+    .col-left {
+      z-index: 5;
+    }
+
     @media (min-width: 481px) {
       .box-1 {
         .animation-delay(2s);
 
         img {
-          left: 126%;
-          top: 58%;
+          left: 105%;
+          top: 68%;
         }
       }
 
@@ -335,8 +347,8 @@ section.centered {
         .animation-delay(4s);
 
         img {
-          left: 126%;
-          top: 50%;
+          left: 105%;
+          top: 57%;
         }
       }
 
@@ -344,7 +356,7 @@ section.centered {
         .animation-delay(1s);
 
         img {
-          right: 126%;
+          right: 113%;
           top: 17%;
         }
       }
@@ -353,7 +365,7 @@ section.centered {
         .animation-delay(3s);
 
         img {
-          right: 126%;
+          right: 113%;
           top: 9%;
         }
       }
@@ -362,44 +374,44 @@ section.centered {
     @media (min-width: 980px) and (max-width: 1199px) {
       .box-1, .box-5 { top: 85px; }
       .box-2, .box-6 { top: 348px; }
-      .box-1 img, .box-2 img { left: 104%; }
+      .box-1 img, .box-2 img { left: 97%; }
       .box-5 img, .box-6 img { right: 104%; }
 
       .box-1 img { top: 60%; }
-      .box-2 img { top: 39%; }
+      .box-2 img { top: 43%; }
       .box-5 img { top: 26%; }
       .box-6 img { top: 7%; }
     }
 
     @media (max-width: 768px) {
-      .box-1 img, .box-2 img { left: 112%; }
+      .box-1 img, .box-2 img { left: 99%; }
       .box-5 img, .box-6 img { right: 112%; }
       
       .box-1 { 
         top: 0; 
         img {
-          top: 59%;
+          top: 70%;
         }
       }
 
       .box-2 {
         top: 253px;
         img { 
-          top: 27%;
+          top: 36%;
         }
       }
 
       .box-5 {
         top: 0px;
         img {
-          top: 45%;
+          top: 48%;
         }
       }
 
       .box-6 {
         top: 253px;
         img {
-          top: 9%;
+          top: 11%;
         }
       }
     }

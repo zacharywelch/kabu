@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>Product Style Guide for CareerBuilder - Corp Apps</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
   <link rel="shortcut icon" href="framework/flat-ui/images/favicon.ico">
   <link rel="stylesheet" href="framework/flat-ui/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="framework/flat-ui/bootstrap/css/bootstrap-responsive.css">
   <link rel="stylesheet" href="framework/flat-ui/bootstrap/css/prettify.css">
   <link rel="stylesheet" href="framework/flat-ui/css/flat-ui.css">
+  <link rel="stylesheet" href="framework/common-files/css/icon-font.css">
   <link rel="stylesheet" href="framework/ui-kit/css/ui-kit.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/style.css">
@@ -24,24 +27,26 @@
   <![endif]-->
 </head>
 
-<body class="bg-clouds examples">
+<body class="examples">
+
+  <div class="page-wrapper">
 
   <!-- header-2 -->
   <header class="header-2">
     <div class="container">
       <div class="row">
-        <div class="navbar span12">
-          <div class="navbar-inner">
-            <button type="button" class="btn btn-navbar"> </button>
+        <div class="navbar col-sm-12" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle"> </button>
             <a class="brand" href="/">CareerBuilder</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav pull-right">
-                <li><a href="index.html">Overview</a></li>
-                <li><a href="style.html">Style</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li class="active"><a href="examples.html">Examples</a></li>
-              </ul>
-            </div>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav pull-right">
+              <li><a href="index.html">Overview</a></li>
+              <li><a href="style.html">Style</a></li>
+              <li><a href="components.html">Components</a></li>
+              <li class="active"><a href="examples.html">Examples</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -51,13 +56,12 @@
   <section class="header-2-sub bg-midnight-blue header-2-sub-collapsed">
   </section>
 
-
   <div class="fade-in">
 
   <section class="component-list">
     <div class="container">
       <div class="row">
-        <div class="span2 offset2">
+        <div class="col-sm-2 col-sm-offset-2">
           <ul>
             <li><a href="#sg-activity-log">Activity Log</a></li>
             <li><a href="#sg-address">Address</a></li>
@@ -66,7 +70,7 @@
             <li><a href="#sg-comments">Comments</a></li>
           </ul>
         </div>
-        <div class="span2">
+        <div class="col-sm-2">
           <ul>
             <li><a href="#sg-contact-info">Contact Info</a></li>
             <li><a href="#sg-contact-us">Contact Us</a></li>
@@ -75,7 +79,7 @@
             <li><a href="#sg-gallery">Gallery</a></li>
           </ul>
         </div>
-        <div class="span2">
+        <div class="col-sm-2">
           <ul>
             <li><a href="#sg-pricing-table">Pricing Table</a></li>
             <li><a href="#sg-product">Product</a></li>
@@ -84,7 +88,7 @@
             <li><a href="#sg-share">Share</a></li>
           </ul>
         </div>
-        <div class="span2">
+        <div class="col-sm-2">
           <ul>
             <li><a href="#sg-shopping-cart">Shopping Cart</a></li>
             <li><a href="#sg-sidebar">Sidebar</a></li>
@@ -100,7 +104,7 @@
   <div class="container component-examples">
     
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-activity-log" class="component">
           <h2>Activity Log</h2>
           <hr />
@@ -127,7 +131,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-address" class="component">
           <h2>Address</h2>
           <hr />
@@ -136,56 +140,48 @@
             information. Consistent interfaces reduce the cognitive load on users, 
             letting them fill out forms more quickly.
           </p>
-          <div class="component-preview">
-            <form class="form">
-              <ul>
-                <li class="complex">
-                  <label for="address_street" class="desc">
-                    Shipping Address
-                  </label>
-                  <div>
-                    <span class="form-control full addr1">
-                      <input id="address_street" type="text" 
-                        class="text addr">
-                      <label for="address_street">Street Address</label>
-                    </span>
-                    <span class="form-control full addr2">
-                      <input id="address_line_2" type="text" 
-                        class="text addr">
-                      <label for="address_line_2">Address Line 2</label>
-                    </span>
-                    <span class="form-control left city">
-                      <input id="address_city" type="text" class="text addr">
-                      <label for="address_city">City</label>
-                    </span>
-                    <span class="form-control right state">
-                      <input id="address_state" type="text" 
-                        class="text addr">
-                      <label for="address_state">State / Province / Region</label>
-                    </span>
-                    <span class="form-control left zip">
-                      <input id="address_zip" type="text" class="text addr"   maxlength="15">
-                      <label for="address_zip">Postal / Zip Code</label>
-                    </span>
-                    <span class="form-control right country">
-                      <select id="address_country" name="info" 
-                        class="select-block field select addr">
-                        <option value="0" selected>United States</option>
-                        <option value="1">Brazil</option>
-                        <option value="2">Germany</option>
-                        <option value="3">France</option>
-                        <option value="4">China</option>
-                      </select>
-                      <label for="address_country">Country</label>
-                    </span>
+          <div class="component-preview">            
+            <form role="form">
+              <fieldset>
+                <legend>Shipping address</legend>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="address-street">
+                  <p class="help-block">Street address</p>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="address-line2">
+                  <p class="help-block">Address line 2</p>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="address-city">
+                    <p class="help-block">City</p>
                   </div>
-                </li>
-              </ul>
-              <div class="form-actions">
-                <button type="submit" class="btn btn-wide btn-large 
-                  btn-primary pull-left">Place order</button>
-              </div>
-            </form>
+                  <div class="form-group col-sm-6">
+                    <input class="form-control typeahead" type="text" 
+                      id="address-state" />
+                    <p class="help-block">State / Province / Region</p>
+                  </div>
+                </div>              
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="address-zip">
+                    <p class="help-block">Postal / Zip Code</p>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <select id="address-country" class="select-block">
+                      <option value="0" selected>United States</option>
+                      <option value="1">Brazil</option>
+                      <option value="2">Germany</option>
+                      <option value="3">France</option>
+                      <option value="4">China</option>
+                    </select>
+                    <p class="help-block">Country</p>
+                  </div>
+                </div>              
+              </fieldset>
+              <button type="submit" class="btn btn-primary btn-wide btn-block-xs">Save</button>
+            </form>            
           </div>
           <div class="components-used collapsed">  
             <ul class="inline">
@@ -203,7 +199,7 @@
     </div><!-- /.address -->   
         
     <div class="row">
-      <div class="span8 offset2">    
+      <div class="col-sm-8 col-sm-offset-2">    
         <article id="sg-billing" class="component">
           <h2>Billing Information</h2>
           <hr />
@@ -212,69 +208,97 @@
             capturing credit card information from a user.
           </p>
           <div class="component-preview">
-            <form class="form">
-              <ul>
-                <li class="leftHalf">
-                  <label class="desc" for="billing_first_name">Name</label>
-                  <span class="left">
-                    <input type="text" id="billing_first_name" size="8">
-                    <label for="billing_first_name">First</label>
-                  </span>
-                  <span class="right">
-                    <input type="text" id="billing_last_name" size="14">
-                    <label for="billing_last_name">Last</label>
-                  </span>
-                </li>
-                <li class="leftHalf">
-                  <label class="desc" for="billing_card_number">Card Number</label>
-                  <div class="control-group control-with-icon">
-                    <input type="text" id="billing_card_number" class="medium" placeholder="1234 5678 9012 3456">
-                    <i class="input-icon fui-credit-card"></i>
+            <form role="form">
+              <fieldset>
+                <legend>Credit Card Information</legend>
+                <div class="form-group">
+                  <label for="card-number">Credit card number</label>
+                  <input type="text" class="form-control" id="card-number">
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label for="security-code">Security code</label>
+                    <input type="text" class="form-control" id="security-code">
+                    <span class="input-icon fui-credit-card"></span>
+                  </div>                  
+                  <div class="form-group col-sm-6">
+                    <label for="expiration-month">Expiration</label>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <select class="select-block" id="expiration-month">
+                          <option value="1">01 - Jan</option>
+                          <option value="2">02 - Feb</option>
+                          <option value="3">03 - Mar</option>
+                          <option value="4">04 - Apr</option>
+                          <option value="5">05 - May</option>
+                          <option value="6">06 - Jun</option>
+                          <option value="7">07 - Jul</option>
+                          <option value="8">08 - Aug</option>
+                          <option value="9">09 - Sep</option>
+                          <option value="10">10 - Oct</option>
+                          <option value="11">11 - Nov</option>
+                          <option value="12">12 - Dec</option>
+                        </select>                        
+                      </div>
+                      <div class="col-sm-6">
+                        <select class="select-block" id="expiration-year">
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                          <option value="2017">2017</option>
+                          <option value="2018">2018</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
-                </li>
-                <li class="leftHalf">
-                  <label class="desc" for="billing_expires_on">Expires On</label>
-                  <span class="left">
-                    <select id="billing_expires_on" class="full">
-                      <option value="1">
-                        1 - January
-                      </option>
-                      <option value="Second Choice">
-                        2 - February
-                      </option>
-                      <option value="Third Choice">
-                        3 - March
-                      </option>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Billing Address</legend>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="address-street">
+                  <p class="help-block">Street address</p>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="address-line2">
+                  <p class="help-block">Address line 2</p>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="address-city">
+                    <p class="help-block">City</p>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <input class="form-control typeahead" type="text" 
+                      id="address-state" />
+                    <p class="help-block">State / Province / Region</p>
+                  </div>
+                </div>              
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="address-zip">
+                    <p class="help-block">Postal / Zip Code</p>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <select id="address-country" class="select-block">
+                      <option value="0" selected>United States</option>
+                      <option value="1">Brazil</option>
+                      <option value="2">Germany</option>
+                      <option value="3">France</option>
+                      <option value="4">China</option>
                     </select>
-                  </span>
-                  <span class="right">
-                    <select id="billing_expires_on" class="full">
-                      <option value="2014">
-                        2014
-                      </option>
-                      <option value="2015">
-                        2015
-                      </option>
-                      <option value="2016">
-                        2016
-                      </option>
-                    </select>
-                  </span>
-                </li>
-                <li class="leftHalf">
-                  <label class="desc" for="billing_code">Security Code</label>
-                  <span class="left">
-                    <input type="text" id="billing_code" size="6">
-                  </span>
-                  <span class="right">
-                    <a href="#fakelink"><small>what is this?</small></a>
-                  </span>
-                </li>
-              </ul>
-              <div class="form-actions">
-                <button type="submit" class="btn btn-wide btn-large 
-                  btn-primary pull-left">Place order</button>
-              </div>
+                    <p class="help-block">Country</p>
+                  </div>
+                </div>              
+              </fieldset>
+
+              <button type="submit" class="btn btn-primary btn-wide btn-block-xs">Save</button>
             </form>
           </div>
           <div class="components-used collapsed">  
@@ -294,7 +318,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-blank-slate" class="component">
           <h2>Blank Slate</h2>
           <hr />
@@ -325,7 +349,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-comments" class="component">
           <h2>Comments</h2>
           <hr />
@@ -377,8 +401,9 @@
               <li>
                 <img src="img/chan-avatar.jpg" class="avatar" title="Jackie Chan">
                 <div class="comment">
-                  <textarea rows="3" placeholder="Leave a comment..."></textarea>
-                  <button class="btn btn-primary btn-wide">Post</button>
+                  <textarea class="form-control" rows="3" 
+                    placeholder="Leave a comment..."></textarea>
+                  <button class="btn btn-primary btn-wide btn-block-xs">Post</button>
                 </div>
               </li>
             </ol>
@@ -399,7 +424,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-contact-info" class="component">
           <h2>Contact Info</h2>
           <hr />
@@ -408,77 +433,77 @@
             personal information.
           </p>
           <div class="component-preview">
-            <form class="form">
-              <ul>
-                <li class="leftHalf">
-                  <label class="desc" for="contact_first_name">Name</label>
-                  <span class="left">
-                    <input type="text" id="contact_first_name" size="8">
-                    <label for="contact_first_name">First</label>
-                  </span>
-                  <span class="right">
-                    <input type="text" id="contact_last_name" size="14">
-                    <label for="contact_last_name">Last</label>
-                  </span>
-                </li>
-                <li class="leftHalf">
-                  <label class="desc" for="contact_email">Email</label>
-                  <div class="control-group control-with-icon">
-                    <input type="text" id="contact_email" class="medium" placeholder="email@example.com">
-                    <i class="input-icon fui-mail"></i>
+            <form role="form">
+              <fieldset>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label for="contact-first">First Name</label>
+                    <input type="text" class="form-control" id="contact-first">
                   </div>
-                </li>
-                <li class="leftHalf">
-                  <label class="desc" for="contact_phone">Phone</label>
-                  <input type="text" id="contact_phone" class="medium" placeholder="555-555-5555">
-                </li>
-                <li class="complex">
-                  <label for="contact_address_street" class="desc">
-                    Address
-                  </label>
-                  <div>
-                    <span class="form-control full addr1">
-                      <input id="contact_address_street" type="text" 
-                        class="text addr">
-                      <label for="contact_address_street">Street Address</label>
-                    </span>
-                    <span class="form-control full addr2">
-                      <input id="contact_address_line_2" type="text" 
-                        class="text addr">
-                      <label for="contact_address_line_2">Address Line 2</label>
-                    </span>
-                    <span class="form-control left city">
-                      <input id="contact_address_city" type="text" class="text addr">
-                      <label for="contact_address_city">City</label>
-                    </span>
-                    <span class="form-control right state">
-                      <input id="contact_address_state" type="text" 
-                        class="text addr">
-                      <label for="contact_address_state">State / Province / Region</label>
-                    </span>
-                    <span class="form-control left zip">
-                      <input id="contact_address_zip" type="text" class="text addr" maxlength="15">
-                      <label for="contact_address_zip">Postal / Zip Code</label>
-                    </span>
-                    <span class="form-control right country">
-                      <select id="contact_address_country" name="info" 
-                        class="select-block field select addr">
-                        <option value="0" selected>United States</option>
-                        <option value="1">Brazil</option>
-                        <option value="2">Germany</option>
-                        <option value="3">France</option>
-                        <option value="4">China</option>
-                      </select>
-                      <label for="contact_address_country">Country</label>
-                    </span>
+                  <div class="form-group col-sm-6">
+                    <label for="contact-last">Last Name</label>
+                    <input type="text" class="form-control" id="contact-last" />
                   </div>
-                </li>
-              </ul>
-              <div class="form-actions">
-                <button type="submit" class="btn btn-wide 
-                  btn-primary pull-left">Save</button>
-              </div>
-            </form>            
+                </div>              
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label for="contact-email">Email</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="fui-mail"></i>
+                      </span>
+                      <input type="email" class="form-control" id="contact-email">
+                    </div>                    
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label for="contact-phone">Phone</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="fui-phone"></i>
+                      </span>
+                      <input type="tel" class="form-control" id="contact-phone">
+                    </div>                    
+                  </div>
+                </div>              
+                <label for="contact-street">Address</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="contact-street">
+                  <p class="help-block">Street address</p>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="contact-line2">
+                  <p class="help-block">Address line 2</p>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="contact-city">
+                    <p class="help-block">City</p>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <input class="form-control typeahead" type="text" 
+                      id="contact-state" />
+                    <p class="help-block">State / Province / Region</p>
+                  </div>
+                </div>              
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="contact-zip">
+                    <p class="help-block">Postal / Zip Code</p>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <select id="contact-country" class="select-block">
+                      <option value="0" selected>United States</option>
+                      <option value="1">Brazil</option>
+                      <option value="2">Germany</option>
+                      <option value="3">France</option>
+                      <option value="4">China</option>
+                    </select>
+                    <p class="help-block">Country</p>
+                  </div>
+                </div>              
+              </fieldset>
+              <button type="submit" class="btn btn-primary btn-wide btn-block-xs">Save</button>
+            </form>  
           </div>
           <div class="components-used collapsed">  
             <ul class="inline">
@@ -497,7 +522,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-contact-us" class="component">
           <h2>Contact Us</h2>
           <hr />
@@ -509,36 +534,39 @@
           <div class="component-preview bg-midnight-blue">
             <section class="contact-us">
               <div class="row">
-                <div class="span4">
-                  <h3>Contact Us</h3>
+                <div class="col-sm-6">
+                  <h3>You can mail us</h3>
                   <p>
-                    Please describe what you need help with and our Support team will reply to you over email shortly.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
                   </p>
                   <form>
-                    <div class="controls controls-row">
-                      <input class="span4" type="text" placeholder="Name">
+                    <div class="form-group">
+                      <label for="contacts-name">Name</label>
+                      <input type="text" class="form-control" 
+                        id="contacts-name" />
                     </div>
-                    <div class="controls controls-row">
-                      <input type="text" placeholder="Email" class="span4">
+                    <div class="form-group">
+                      <label for="contacts-email">Email</label>
+                      <input type="email" class="form-control" 
+                        id="contacts-email" />
                     </div>
-                    <div class="controls controls-row">
-                      <textarea placeholder="Message" rows="6" class="span4"></textarea>
+                    <div class="form-group">
+                      <label for="contacts-message">Message</label>
+                      <textarea rows="7" class="form-control" 
+                        id="contacts-message"></textarea>
                     </div>
-                    <div class="controls controls-row">
-                      <button type="submit" class="btn btn-primary btn-block btn-huge">Send</button>
-                    </div>
+                    <button type="submit" class="btn btn-primary btn-hg btn-block"><span class="fui-mail"></button>
                   </form>
-                </div>
-                <div class="span3 offset1">
-                  <h6>Get in touch</h6>
+                </div>                
+                <div class="col-sm-5 col-sm-offset-1">
+                  <h6>Where to find us</h6>
                   <p>
-                    5550 Peachtree Pkwy<br />
-                    Norcross, GA 30092<br />
-                    <big>
-                      770 349 2400
-                      <span class="contact-us-hours">Available 9AM - 6PM</span>
-                    </big>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   </p>
+                  <div class="map">
+                    <!--map-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3308.9532453717975!2d-84.2203093!3d33.9680412!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x15a8b69641e77f90!2sCareerBuilder+LLC!5e0!3m2!1sen!2sus!4v1394765478349" width="400" height="300" frameborder="0" style="border:0"></iframe>
+                  </div>
                 </div>
               </div>
             </section>
@@ -559,7 +587,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-delete-confirmation" class="component">
           <h2>Delete Confirmation</h2>
           <hr />
@@ -569,22 +597,24 @@
             the <em>btn-danger</em> class to draw attention to its permanent effect.
           </p>
           <div class="component-preview static-modal-backdrop">
-            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
-              <div class="modal-header">
-                <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
-                <h3>Delete this item</h3>
-              </div>
-              <div class="modal-body">
-                <p>
-                  Are you sure you want to delete <strong>Foo Bar</strong>? 
-                  <strong>All contained data will be deleted</strong>.
-                </p>
-              </div>
-              <div class="modal-footer">
-                <a href="#fakelink" class="btn btn-wide">Cancel</a>
-                <a href="#fakelink" class="btn btn-wide btn-danger">Delete</a>
-              </div>
-            </div>     
+            <div class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">Delete this item</h4>
+                  </div>
+                  <div class="modal-body">
+                    Are you sure you want to delete <strong>Foo Bar</strong>? 
+                    <strong>All contained data will be deleted</strong>.
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn btn-default btn-wide">Cancel</a>
+                    <a href="#" class="btn btn-danger btn-wide">Delete</a>
+                  </div>
+                </div>
+              </div>        
+            </div>  
           </div>
           <div class="components-used collapsed">  
             <ul class="inline">
@@ -602,7 +632,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-field-level-errors" class="component">
           <h2>Field Level Errors</h2>
           <hr />
@@ -617,35 +647,29 @@
               <p class="message">
                 Errors have been <em>highlighted</em> below.
               </p>
-            </div>            
-            <form class="form">
-              <ul>
-                <li class="error">
-                  <label class="desc" for="field_errors_name">Name</label>
-                  <div>
-                    <input type="text" id="field_errors_name" class="input-block-level">
-                  </div>
-                  <p class="error">
-                    This field is required. Please enter a value.
-                  </p>
-                </li>
-                <li>
-                  <label class="desc" for="field_errors_email">Email</label>
-                  <div>
-                    <input type="text" id="field_errors_email" class="input-block-level">
-                  </div>
-                </li>
-                <li class="error">
-                  <label class="desc" for="field_errors_message">Message</label>
-                  <div>
-                    <textarea rows="6" id="field_errors_message" class="input-block-level"></textarea>
-                  </div>
-                  <p class="error">
-                    This field is required. Please enter a value.
-                  </p>
-                </li>
-              </ul>
-            </form>            
+            </div>      
+
+            <form>
+              <div class="form-group has-error">
+                <label for="errors-name" class="control-label">Name</label>
+                <input type="text" class="form-control" id="errors-name" />
+                <p class="form-control-feedback">
+                  This field is required. Please enter a value.
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="errors-email" class="control-label">Email</label>
+                <input type="email" class="form-control" id="errors-email" />
+              </div>
+              <div class="form-group has-error">
+                <label for="errors-message" class="control-label">Message</label>
+                <textarea rows="7" class="form-control" id="errors-message">
+                </textarea>
+                <p class="form-control-feedback">
+                  This field is required. Please enter a value.
+                </p>
+              </div>
+            </form>         
           </div>
           <div class="components-used collapsed">  
             <ul class="inline">
@@ -663,7 +687,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-gallery" class="component">
           <h2>Gallery</h2>
           <hr />
@@ -725,7 +749,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-pricing-table" class="component">
           <h2>Pricing Table</h2>
           <hr />
@@ -736,29 +760,39 @@
 
             <section class="price-1">
               <div class="row plans">
-                <div class="span4 plan">
-                  <div class="title">Starter</div>
-                  <div class="price">19$/month</div>
-                  <div class="description">
-                    10,000 messages<br>
-                    <b>unlimited</b> data<br>
-                    <b>unlimited</b> users<br>
-                    first 10 days free
+                <div class="col-sm-6">
+                  <div class="plan">
+                    <div class="title">Starter</div>
+                    <div class="price">19$/month</div>
+                    <div class="description">
+                      10,000 messages
+                      <br>
+                      <b>unlimited</b> data
+                      <br>
+                      <b>unlimited</b> users
+                      <br>
+                      first 10 days free
+                    </div>
+                    <a class="btn disabled" href="#fakelink">Your Current Plan</a>
                   </div>
-                  <a class="btn disabled" href="#fakelink">Your Current Plan</a>
                 </div>
-                <div class="span4 plan">
-                  <div class="title">Professional</div>
-                  <div class="price">39$/month</div>
-                  <div class="description">
-                    10,000 messages<br>
-                    <b>unlimited</b> data<br>
-                    <b>unlimited</b> users<br>
-                    first 30 days free
+                <div class="col-sm-6">
+                  <div class="plan">
+                    <div class="title">Professional</div>
+                    <div class="price">39$/month</div>
+                    <div class="description">
+                      10,000 messages
+                      <br>
+                      <b>unlimited</b> data
+                      <br>
+                      <b>unlimited</b> users
+                      <br>
+                      first 30 days free
+                    </div>
+                    <a class="btn btn-primary" href="#fakelink">Change to this Plan</a>
+                    <div class="ribbon">NEW</div>
                   </div>
-                  <a class="btn btn-primary" href="#fakelink">Change to this Plan</a>
-                  <div class="ribbon">NEW</div>
-                </div>
+                </div>             
               </div>
             </section>
 
@@ -769,47 +803,49 @@
                 <div class="plan">
                   <div class="title">
                     FREE PLAN
-                    <div class="price"><span class="currency">$</span>0<span class="period">/ MO</span></div>
-                    <a class="btn btn-clear btn-small" href="#fakelink">AND GET FREE MONTH</a>
+                    <div class="price"><span class="currency">$</span>0<span class="period">/ MO</span>
+                    </div>
+                    <a class="btn btn-clear btn-small" href="#">AND GET FREE MONTH</a>
                   </div>
                   <div class="description">
                     <div class="description-box">
-                      <span class="fui-cmd"></span> 10,000 messages
+                      <span class="fui-cmd"></span> 1,000 messages
                     </div>
                     <div class="description-box">
-                      <span class="fui-mic"></span> <b>unlimited</b> data
+                      <span class="fui-mic"></span>  <b>unlimited</b> data
                     </div>
                     <div class="description-box">
-                      <span class="fui-user"></span> <b>unlimited</b> users
+                      <span class="fui-user"></span>  <b>unlimited</b> users
                     </div>
                     <div class="description-box">
-                      <span class="fui-windows"></span> first 10 days free
+                      <span class="fui-windows"></span> first 10 day free
                     </div>
                   </div>
                 </div>
                 <div class="plan plan-2">
                   <div class="title">
                     BUSINESS PLAN
-                    <div class="price"><span class="currency">$</span>29<span class="period">/ MO</span></div>
-                    <a class="btn btn-clear btn-small" href="#fakelink">AND GET FREE MONTH</a>
+                    <div class="price"><span class="currency">$</span>29<span class="period">/ MO</span>
+                    </div>
+                    <a class="btn btn-clear btn-small" href="#">AND GET FREE MONTH</a>
                     <div class="ribbon">NEW</div>
                   </div>
                   <div class="description">
                     <div class="description-box">
-                      <span class="fui-cmd"></span> 10,000 messages
+                      <span class="fui-cmd"></span> 1,000 messages
                     </div>
                     <div class="description-box">
-                      <span class="fui-mic"></span> <b>unlimited</b> data
+                      <span class="fui-mic"></span>  <b>unlimited</b> data
                     </div>
                     <div class="description-box">
-                      <span class="fui-user"></span> <b>unlimited</b> users
+                      <span class="fui-user"></span>  <b>unlimited</b> users
                     </div>
                     <div class="description-box">
-                      <span class="fui-windows"></span> first 10 days free
+                      <span class="fui-windows"></span> first 10 day free
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>              
             </section>            
 
           </div>
@@ -828,7 +864,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-product" class="component">
           <h2>Product</h2>
           <hr />
@@ -836,10 +872,9 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <div class="component-preview">
-
-            <ul class="thumbnails">
-              <li class="span4">
-                <div class="thumbnail product">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="thumbnail card product">
                   <img src="img/cat.jpg">
                   <div class="caption">
                     <h3>Widely distributed in southern Australia</h3>
@@ -850,7 +885,9 @@
                     </p>
                     <p class="clearfix">
                       <strong class="amount">$34.50</strong>
-                      <a href="#fakelink" class="btn btn-primary pull-right">Buy Now</a> 
+                      <a href="#fakelink" class="btn btn-primary pull-right">
+                        Buy Now
+                      </a> 
                     </p>
                   </div>
                   <div class="meta">
@@ -858,9 +895,10 @@
                     <a href="#fakelink" class="product-reviews">10 reviews</a>
                   </div>
                 </div>
-              </li>
-              <li class="span4">
-                <div class="thumbnail product">
+              </div>
+
+              <div class="col-sm-6">
+                <div class="thumbnail card product">
                   <img src="img/monkey.jpg">
                   <div class="caption">
                     <h3>He decried the gold standard, concluding</h3>
@@ -879,9 +917,8 @@
                     <a href="#fakelink" class="product-reviews">10 reviews</a>
                   </div>
                 </div>
-              </li>
-            </ul>
-
+              </div>            
+            </div>
           </div>
           <div class="components-used collapsed">  
             <ul class="inline">
@@ -899,7 +936,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-related-links" class="component">
           <h2>Related Links</h2>
           <hr />
@@ -938,7 +975,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-search" class="component">
           <h2>Search</h2>
           <hr />
@@ -965,7 +1002,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-share" class="component">
           <h2>Share</h2>
           <hr />
@@ -974,39 +1011,49 @@
           </p>
           <div class="component-preview static-modal-backdrop">
 
-            <div class="modal share" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
-              <div class="modal-header">
-                <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
-                <h3>Share this post</h3>
-              </div>
-              <div class="modal-body">
-                <form class="form-horizontal">
-                  <div class="control-group">
-                    <img class="avatar avatar-xlarge" src="img/chan-avatar.jpg" />
-                    <div class="controls">
-                      <textarea rows="3" placeholder="Add a comment..." class="span12"></textarea>
-                    </div>
+            <div class="modal share">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">Share this post</h4>
                   </div>
-                  <div class="share-content">
-                    <h4>Lorem Ipsum Dolor sit Amet</h4>
-                    <img src="img/Italy_001.png" class="img-polaroid">
+                  <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <div class="col-sm-2 hidden-xs">
+                          <img src="img/chan-avatar.jpg" alt="" class="avatar">
+                        </div>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" rows="3" 
+                            placeholder="Add a comment..."></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group share-content">
+                        <div class="col-sm-10 col-sm-offset-2">
+                          <h4>Lorem Ipsum Dolor sit Amet</h4>
+                          <img src="img/Italy_001.png" class="img-thumbnail">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label" for="shareTo">To:
+                        </label>
+                        <div class="col-sm-10">
+                          <input name="tagsinput" class="tagsinput tagsinput-primary" value="rgosling,mdamon" />
+                        </div>
+                      </div>
+                    </form>
                   </div>
-                  <div class="control-group">
-                    <label class="control-label" for="shareTo">To:</label>
-                    <div class="controls">
-                      <input name="tagsinput" class="tagsinput tagsinput-primary" value="rgosling,mdamon" />
-                    </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-default btn-wide btn-block-xs" data-dismiss="modal">
+                      Cancel
+                    </button>
+                    <button class="btn btn-primary btn-wide btn-block-xs" data-dismiss="modal">Share
+                    </button>
                   </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-wide" data-dismiss="modal" 
-                  aria-hidden="true">Cancel</button>
-                <button class="btn btn-primary btn-wide" data-dismiss="modal" 
-                  aria-hidden="true">Share</button>
-              </div>
+                </div>
+              </div>        
             </div><!-- /share modal -->   
-
           </div>
           <div class="components-used collapsed">  
             <ul class="inline">
@@ -1026,7 +1073,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-shopping-cart" class="component">
           <h2>Shopping Cart</h2>
           <hr />
@@ -1035,60 +1082,84 @@
           </p>
           <div class="component-preview">
             <div class="cart">
-              <ul class="cart-items">
-                <li>
-                  <img src="img/journal.jpg">
-                  <h3>
-                    <a href="#fakelink">Premium Leather Refillable Journal</a>
-                    <a href="#fakelink"><i class="fui-cross-inverted"></i></a>
-                  </h3>
-                  <span class="meta">Natural</span>
-                  <input type="text" value="1" class="spinner">
-                  <span class="total">$58</span>
-                </li>
-                <li>
-                  <img src="img/green-shirt.jpg">
-                  <h3>
-                    <a href="#fakelink">Perception</a>
-                    <a href="#fakelink"><i class="fui-cross-inverted"></i></a>                    
-                  </h3>
-                  <span class="meta">Mint - Mens - Small</span>
-                  <input type="text" value="1" class="spinner">
-                  <span class="total">$26</span>
-                </li>
-                <li>
+              <div class="row">
+                <div class="col-sm-7 col-xs-12 cart-product">
                   <img src="img/mousepad.jpg">
                   <h3>
                     <a href="#fakelink">Premium Leather Mousepad</a>
                     <a href="#fakelink"><i class="fui-cross-inverted"></i></a>
                   </h3>
                   <span class="meta">Natural</span>
-                  <input type="text" value="1" class="spinner">
+                </div>
+                <div class="col-sm-3 col-xs-5 cart-quantity">
+                  <input type="text" value="1" class="form-control input-sm spinner" />
+                </div>
+                <div class="col-xs-5 col-xs-offset-2 col-sm-2 col-sm-offset-0 cart-price">
                   <span class="total">$34</span>
-                </li>
-              </ul>
-              <div class="cart-totals">
-                <ol class="receipt">
-                  <li>
-                    <p>Subtotal</p>
-                    <span>$118</span>
-                  </li>
-                  <li>
-                    <p>Tax</p>
-                    <span>$8</span>
-                  </li>
-                  <li class="total">
-                    <p>Total</p>
-                    <span>$126</span>
-                  </li>
-                  <li>
-                    <a href="#fakelink" class="btn btn-primary btn-block">Checkout</a>
-                  </li>
-                </ol>
-                <a href="#fakelink" class="btn btn-clear coupon">Apply Coupon</a>
-                <a href="#fakelink" class="btn btn-wide continue">
-                  <i class="fui-arrow-left"></i>Continue Shopping
-                </a>
+                </div>
+              </div>  
+
+              <div class="row">
+                <div class="col-sm-7 col-xs-12 cart-product">
+                  <img src="img/green-shirt.jpg">
+                  <h3>
+                    <a href="#fakelink">Perception</a>
+                    <a href="#fakelink"><i class="fui-cross-inverted"></i></a>
+                  </h3>
+                  <span class="meta">Mint - Mens - Small</span>
+                </div>
+                <div class="col-sm-3 col-xs-5 cart-quantity">
+                  <input type="text" value="1" class="form-control input-sm spinner" />
+                </div>
+                <div class="col-xs-5 col-xs-offset-2 col-sm-2 col-sm-offset-0 cart-price">
+                  <span class="total">$26</span>
+                </div>
+              </div>  
+
+              <div class="row">
+                <div class="col-sm-7 col-xs-12 cart-product">
+                  <img src="img/journal.jpg">
+                  <h3>
+                    <a href="#fakelink">Premium Leather Refillable Journal</a>
+                    <a href="#fakelink"><i class="fui-cross-inverted"></i></a>
+                  </h3>
+                  <span class="meta">Natural</span>
+                </div>
+                <div class="col-sm-3 col-xs-5 cart-quantity">
+                  <input type="text" value="1" class="form-control input-sm spinner" />
+                </div>
+                <div class="col-xs-5 col-xs-offset-2 col-sm-2 col-sm-offset-0 cart-price">
+                  <span class="total">$58</span>
+                </div>
+              </div>                                      
+              
+              <div class="row cart-totals">
+                <div class="cart-secondary-actions">
+                  <a href="#fakelink" class="btn btn-clear coupon">Apply Coupon</a>
+                  <a href="#fakelink" class="btn btn-default btn-wide continue">
+                    <i class="fui-arrow-left"></i>Continue Shopping
+                  </a>
+                </div>
+                <div class="col-sm-5 col-sm-offset-7">
+                  <ol class="receipt">
+                    <li>
+                      <p>Subtotal</p>
+                      <span>$118</span>
+                    </li>
+                    <li>
+                      <p>Tax</p>
+                      <span>$8</span>
+                    </li>
+                    <li class="total">
+                      <p>Total</p>
+                      <span>$126</span>
+                    </li>
+                    <li>
+                      <a href="#fakelink" class="btn btn-primary btn-block">Checkout</a>
+                    </li>
+                  </ol>
+
+                </div>
               </div>
             </div>
           </div>
@@ -1109,7 +1180,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-sidebar" class="component">
           <h2>Sidebar</h2>
           <hr />
@@ -1188,7 +1259,7 @@
                 </ul>
 
                 <div class="actions">
-                  <a href="#fakelink" class="btn btn-small btn-inverse">New Item</a>
+                  <a href="#fakelink" class="btn btn-sm btn-inverse">New Item</a>
                 </div>
               </nav> 
 
@@ -1211,7 +1282,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-top-100" class="component">
           <h2>Top 100</h2>
           <hr />
@@ -1309,7 +1380,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-video" class="component">
           <h2>Video</h2>
           <hr />
@@ -1366,7 +1437,7 @@
 
 
     <div class="row">
-      <div class="span8 offset2">
+      <div class="col-sm-8 col-sm-offset-2">
         <article id="sg-wizard" class="component">
           <h2>Wizard</h2>
           <hr />
@@ -1380,7 +1451,7 @@
           <div class="component-preview">
             <div class="progress-steps four-steps">
               <div class="progress">
-                <div class="bar step-2"></div>
+                <div class="progress-bar step-2"></div>
               </div>
               <ol class="steps">
                 <li class="step-1 step-complete fui-check">
@@ -1419,30 +1490,30 @@
   <footer class="footer-3">
     <div class="container">
       <div class="row v-center">
-        <div class="span3 brand">
+        <div class="col-sm-3 brand">
           <strong>Career </strong>Builder <em>UX</em>
           <div class="copyright">
             made with <span class="fui-heart pulse"></span> by 
             <a href="mailto:zachary.welch@careerbuilder.com?Subject=Style%20Guide" target="_top">Zachary Welch</a>
           </div>
         </div>
-        <div class="span7">
+        <div class="col-sm-6">
         </div>
-        <div class="span3">
-          <div class="span3">
-            <h6>CareerBuilder LLC</h6>
-            <div class="address">
-              5550 Peachtree Pkwy<br>Norcross, GA, 30092
-            </div>
-            <div class="version">
-              Version 0.1. Last Updated on 02/14/2014.
-            </div>
+        <div class="col-sm-3">
+          <h6>CareerBuilder LLC</h6>
+          <div class="address">
+            5550 Peachtree Pkwy<br>Norcross, GA, 30092
+          </div>
+          <div class="version">
+            Version 2. Last Updated on 03/16/2014.
           </div>
         </div>
       </div>
     </div>
   </footer>
+  
 
+  </div><!-- ./page-wrapper -->
     
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="framework/flat-ui/js/jquery-1.8.3.min.js"></script>
@@ -1461,7 +1532,7 @@
   <script src="framework/flat-ui/js/flatui-radio.js"></script>
   <script src="framework/flat-ui/js/jquery.tagsinput.js"></script>
   <script src="framework/flat-ui/js/jquery.placeholder.js"></script>
-  <script src="framework/flat-ui/js/jquery.stacktable.js"></script>
+  <script src="framework/flat-ui/js/typeahead.js"></script>
   <script src="framework/ui-kit/js/sidebar.js"></script>
   <script src="framework/common-files/js/startup-kit.js"></script>
   <script src="js/components.js"></script>

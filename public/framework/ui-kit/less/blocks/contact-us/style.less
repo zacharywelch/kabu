@@ -1,63 +1,55 @@
-.contact-us {
-  background: @base;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: left;  
+/**
+ * Contact Us stylesheet  
+ * */
+ .contact-us {
+    padding: 50px 0;
+    h3 {
+        font-size: 30px;
+        margin: 0 0 15px;
+        font-weight: 300px;
+    }
+    h6 {
+        margin: 9px 0 15px;
+        font-family: @font-family-demo;
+        font-weight: 500;
+        font-size: 18px;
+        text-transform: none;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 
-  h3 {
-    font-size: 33px;
-    color: #fff;
-    font-weight: 300;
-    margin: 14px 0;
-  }
+    form {
+        margin-top: 25px;
+    }
 
-  p {
-    font-size: 16px;
-    font-weight: normal;
-    color: @silver;
-  }
+    .map {
+        height: 255px;
+        margin: 35px 0 60px;
+        .border-radius(6px);
+        overflow: hidden;
+    }
 
-  form {
-    margin-top: 40px;
-  }
-
-  .btn {
-    padding-top: 11px;
-    padding-bottom: 11px;
-  }
-
-  input[type="text"],
-  textarea {
-    border-color: #fff !important;
-  }
-
-  h6 {
-    color: #fff;
-    font-weight: 300;
-    font-size: 18px;
-    margin-top: 30px;
-  }
-
-  big {
-    margin-top: 10px;
-    display: block;
-    font-size: 24px;
-    letter-spacing: normal;
-    white-space: nowrap;
-    color: #fff;
-    font-weight: 300;
-    word-spacing: 5px;
-  }
-
-  .contact-us-hours {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    line-height: 1.2;
-    color: @concrete;
-    display: block;
-    text-transform: uppercase;
-  }
+    .links {
+        margin: 20px 0 40px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #ebedee;
+        a {
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        [class*="fui-"] {
+            font-size: 26px;
+            vertical-align: middle;
+            margin: -3px 23px 0 0;
+        }
+    }
+    @media (max-width: 767px) {
+        > .container > .row > * + * {
+            margin-top: 55px;
+        }
+    }
 }
