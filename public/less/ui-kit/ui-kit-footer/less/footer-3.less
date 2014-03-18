@@ -61,11 +61,19 @@
 
   a {
     color: inherit;
+    text-decoration: underline;
   }
 
-  .version {
-    font-size: .85em;
-    margin-top: 10px;
+  .versions {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: .9em;
+
+    > li {
+      display: inline-block;
+      margin-right: 5px;
+    }
   }
 
   @media (max-width: 767px) {

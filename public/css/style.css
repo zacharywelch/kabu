@@ -1743,10 +1743,17 @@ section * {
 }
 .footer-3 a {
   color: inherit;
+  text-decoration: underline;
 }
-.footer-3 .version {
-  font-size: .85em;
-  margin-top: 10px;
+.footer-3 .versions {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: .9em;
+}
+.footer-3 .versions > li {
+  display: inline-block;
+  margin-right: 5px;
 }
 @media (max-width: 767px) {
   .footer-3 .row > [class*="span"] {
