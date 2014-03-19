@@ -58,7 +58,7 @@ $(function() {
 
   // Custom Selects
   if ($(".form-group select").length > 0)
-    $(".form-group select").selectpicker({style: 'btn-default'});  
+    $(".form-group select").selectpicker({style: 'btn-clear'});  
   
   if ($("select").length > 0)
     $("select").selectpicker({style: 'btn-wide btn-primary', menuStyle: 'dropdown-inverse'});  

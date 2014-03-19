@@ -1457,6 +1457,33 @@ fieldset[disabled] .btn-link:focus {
   top: 50%;
   margin-top: -3px;
 }
+.select .btn.btn-clear {
+  color: inherit;
+  line-height: 1.467;
+  padding: 8px 12px;
+  height: 42px;
+  border: 2px solid #bdc3c7;
+  background: none;
+}
+.form-group.focus .select .btn.btn-clear,
+.select .btn.btn-clear:focus {
+  border-color: #3498db;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.select .btn.btn-clear .filter-option {
+  position: static;
+  font-size: 16px;
+}
+.select .btn.btn-clear .caret {
+  border-bottom-color: #bdc3c7;
+  border-top-color: #bdc3c7;
+}
+.select .btn.btn-clear:focus .caret {
+  border-bottom-color: #3498db;
+  border-top-color: #3498db;
+}
 .select .btn .dropdown-toggle {
   border-radius: 6px;
 }
@@ -1578,6 +1605,11 @@ fieldset[disabled] .form-control {
 }
 .form-control.flat:focus {
   border-color: #3498db;
+}
+.form-control.select {
+  padding: 0;
+  margin-bottom: 0;
+  border: none;
 }
 .input-sm {
   height: 35px;
@@ -2617,6 +2649,12 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
 .twitter-typeahead .tt-query.flat:focus,
 .twitter-typeahead .tt-hint.flat:focus {
   border-color: #3498db;
+}
+.twitter-typeahead .tt-query.select,
+.twitter-typeahead .tt-hint.select {
+  padding: 0;
+  margin-bottom: 0;
+  border: none;
 }
 .twitter-typeahead .tt-query + .input-icon,
 .twitter-typeahead .tt-hint + .input-icon {

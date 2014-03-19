@@ -82,7 +82,7 @@
         right: 13px;
       }
     }
-    
+
     .filter-option {
       height: 26px;
       left: 13px;
@@ -92,12 +92,39 @@
       text-align: left;
       top: 10px;
     }
+
     .caret {
       position: absolute;
       right: 16px;
       top: 50%;
       margin-top: -3px;
     }
+
+    &.btn-clear {
+      color: inherit;
+      line-height: 1.467;
+      padding: 8px 12px;
+      height: 42px;
+      border: 2px solid @gray-light;
+      background: none;
+      .form-control-focus();
+
+      .filter-option {
+        position: static;    
+        font-size: 16px;
+      }
+
+      .caret {
+        border-bottom-color: @gray-light;
+        border-top-color: @gray-light;
+      }
+
+      &:focus .caret {
+        border-bottom-color: @brand-secondary;
+        border-top-color: @brand-secondary;
+      }
+    }
+
     .dropdown-toggle {
       border-radius: @border-radius-large;
     }
