@@ -5,29 +5,22 @@
 }
 // Typography
 // --------------------------------------------------
+
 body {
-  color: @base;
-  font-family: @font-family-base;
   font-size: @font-size-base;
-  line-height: @line-height-base;
+  overflow-x:hidden;
+  line-height: 1.29;
+  @media (max-width: 767px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 input,
 button,
 select,
 textarea {
-  font-family: @font-family-base;
   font-size: @font-size-base;
-}
-
-a {
-  color: @link-color;
-  text-decoration: none;
-  .transition(0.25s);
-  &:hover {
-    color: @link-hover-color;
-    text-decoration: none;
-  }
 }
 
 // Heading sizes
@@ -44,6 +37,8 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+  font-family: @font-family-base;
+  color: #2c3e50;  
   line-height: 1.2em;
 }
 
@@ -73,6 +68,14 @@ h5 {
 }
 
 h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h3 {
   font-weight: normal;
 }
 
@@ -125,12 +128,12 @@ blockquote {
     bottom: 0;
     background-color: #ebedee;
     content: "";
-    .border-radius(2px);
+    border-radius: 2px;
   }
 }
 
 .img-rounded {
-  .border-radius(5px);
+  border-radius: 5px;
 }
 
 .img-comment {
@@ -154,7 +157,7 @@ footer{
 }
 
 .input-append input{
-  .border-radius(6px 0 0 6px);
+  border-radius: 6px 0 0 6px;
 }
 
 // background styles
@@ -216,32 +219,9 @@ footer{
 
 // common styles
 
-body {
-  overflow-x:hidden;
-  color: @asbestos;
-  line-height: 1.29;
-  @media (max-width: 767px) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 li {
   line-height: 20px;
 }
-
-// .btn {
-//   .border-radius(6px);
-//   line-height: 22px;
-//   -webkit-transition: 0.25s;
-//   -moz-transition: 0.25s;
-//   -o-transition: 0.25s;
-//   transition: 0.25s;
-//   &.btn-large {
-//     font-size: 17px;
-//     padding: 12px 18px;
-//   }
-// }
 
 .btn > [class^="fui-"] {
   margin-left: 4px;
@@ -250,21 +230,6 @@ li {
   display: inline-block;
   vertical-align: top;
 }
-
-// .input-group-btn .btn {
-//   background: #bdc3c7;
-//   line-height: 9px 12px 10px;
-//   line-height: 22px;
-//   border: 0;
-//   margin: 0;
-//   color: #fff;
-//   margin-left: 0 !important;
-//   padding-left: 10px;
-//   padding-right: 12px;
-//   &:hover {
-//     background: #cacfd2;
-//   }
-// }
 
 textarea,
 input[type="text"],
@@ -283,19 +248,9 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   outline: none;
+  font-family: @font-family-base;
+  .font(16px);
 }
-
-// .form-group {
-//   margin-bottom: 10px;
-// }
-
-// label {
-//   line-height: 20px;
-// }
-
-// .carousel {
-//   line-height: 1;
-// }
 
 .hero-unit h1 {
   margin-bottom: 0;
@@ -329,11 +284,6 @@ p {
 .page-wrapper,
 .header-antiflicker,
 body > header .header-background {
-  // -webkit-transform: translate3d(0, 0, 0);
-  // -moz-transform: translate3d(0, 0, 0);
-  // -ms-transform: translate3d(0, 0, 0);
-  // -o-transform: translate3d(0, 0, 0);
-  // transform: translate3d(0, 0, 0);
   -webkit-transition: all .33s cubic-bezier(.694, .0482, .335, 1);
   -moz-transition: all .33s cubic-bezier(.694, .0482, .335, 1);
   -o-transition: all .33s cubic-bezier(.694, .0482, .335, 1);
@@ -368,15 +318,6 @@ body > header .header-background {
   }
 }
 
-// .carousel-indicators {
-//   width: 100%;
-// }
-
-// [class^="fui-"] {
-//     display: inline-block;
-//     vertical-align: middle;
-// }
-
 body > section,
 header,
 footer {
@@ -397,34 +338,11 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: @font-family-base;
-  color: #2c3e50;
-}
-
-h1 {
-  font-weight: normal;
-}
-
-h3 {
-  font-weight: normal;
-}
-
 // force best img interpolation in Chrome
 img {
   -webkit-backface-visibility: hidden;
 }
 
-
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
-  font-family: @font-family-base;
-  .font(16px);
-}
 
 a, button{
   &:hover, &:focus, &:active{

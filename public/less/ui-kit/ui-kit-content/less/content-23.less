@@ -1,9 +1,20 @@
 .content-23 {
     position:relative;
     height:800px;
-    .background-size(cover);
+    overflow: hidden;
+    background-color: @midnight-blue;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
     color: white;
+    .background-size(cover);
     .v-center;
+
+    &.v-center > div {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .control-btn {
         width: 53px;
         height: 53px;
@@ -62,4 +73,8 @@
             }
         }
     }
+
+    @media (max-width: 767px) { 
+        background-image: none !important;
+    }  
 }

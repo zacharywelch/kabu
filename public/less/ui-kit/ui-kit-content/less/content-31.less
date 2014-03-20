@@ -1,9 +1,13 @@
 .content-31 {
     position:relative;
-    @media (max-width: 767px) {
-        padding-left: 20px;
-        padding-right: 20px;
+    .ticket img {
+        margin-top: 30px;
     }
+
+    #pt-2 .pt-controls {
+        bottom: 195px;
+    }
+
     .container {
         position: relative;
         padding: 50px 0;
@@ -33,7 +37,7 @@
             margin-top: 4px;
             width: 40px;
             height: 40px;
-            .border-radius(50%);
+            border-radius: 50%;
             overflow: hidden;
             background: #ebedee;
             text-align: center;
@@ -141,7 +145,7 @@
                 .box-sizing(border-box);
                 width: 15px;
                 height: 15px;
-                .border-radius(50%);
+                border-radius: 50%;
                 background: @brand-danger;
             }
         }
@@ -196,4 +200,16 @@
             }
         }
     }
+
+    @media (max-width: 767px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }    
+
+    @media (max-width: @screen-sm-min) {
+        .container > * {  
+            .opacity(100);
+        }
+    }
+
 }
