@@ -2121,6 +2121,8 @@ fieldset[disabled] .input-group.focus .input-group-btn .btn-default.active {
   border: 2px solid #bdc3c7;
   color: #bdc3c7;
   line-height: 18px;
+  -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+  transition: border .25s linear, color .25s linear, background-color .25s linear;
 }
 .input-group-btn .btn-default {
   color: #ffffff;
