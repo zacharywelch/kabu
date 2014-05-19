@@ -2470,6 +2470,12 @@ section * {
 #sg-product .component-preview {
   background: #bdc3c7;
 }
+#sg-profile .component-preview {
+  min-height: 400px;
+}
+#sg-profile .component-preview .dropdown-profile {
+  display: block;
+}
 .mac {
   box-sizing: border-box;
   position: relative;

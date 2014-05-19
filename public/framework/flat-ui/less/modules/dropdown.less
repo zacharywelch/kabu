@@ -3,37 +3,35 @@
 // --------------------------------------------------
 
 .dropdown-menu {
-  background-color: @dropdown-background;
-  border: none;
-  display: block;
-  margin-top: 8px;
-  opacity: 0;
-  padding: 0;
-  visibility: hidden;
-  .box-shadow(none);
-  .transition(.25s);
+  margin: 8px 0 0 0;
+  right: -4px;
+  min-width: 144px;
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  text-align: left;
 
-  // Opened state
-  .open > & {
-    margin-top: 18px !important;
-    opacity: 1;
-    visibility: visible;
-  }
   li {
-    &:first-child {
-      dt + a {
-        border-radius: 0;
-      }
-      > a {
-        border-radius: @border-radius-large @border-radius-large 0 0;
-        padding-top: 8px;
-      }
-    }
+    border-bottom: 1px solid #ebedef;
 
-    &:last-child {
-      > a {
-        border-radius: 0 0 @border-radius-large @border-radius-large;
-        padding-bottom: 10px;
+    > a {
+      display: block;
+      padding: 0 15px;
+      line-height: 40px;
+      clear: both;
+      font-weight: normal;
+      text-decoration: none;
+      color: @text-color;
+      white-space: nowrap;
+      font-size: 13px;
+      -webkit-font-smoothing: initial;
+      .transition(none);
+
+      &:hover,
+      &:focus {
+        background: @clouds;
+        color: @link-hover-color;
       }
     }
 
@@ -50,174 +48,6 @@
           color: @inverse;
         }
       }
-    }
-    > a {
-      color: fade(@brand-primary, 75%);
-      padding: 6px 15px 8px;
-      text-decoration: none;
-      .clearfix();
-      .transition(background-color .25s);
-
-      &:hover,
-      &:active,
-      &:focus {
-        background: mix(@inverse, @brand-primary, 85%);
-        color: inherit;
-        outline: none;
-      }
-
-      &.highlighted {
-        background: mix(@inverse, @brand-primary, 73.5%);
-        color: @inverse;
-
-        &:hover,
-        &:focus {
-          background: mix(@inverse, @brand-primary, 66%);
-          color: @inverse;
-        }
-      }
-
-      &:before {
-        float: right;
-        margin-top: 3px;
-      }
-    }
-
-    // Submenu title
-    dt {
-      font-weight: 300;
-      margin-bottom: 3px;
-      margin-top: 12px;
-      padding: 0 15px;
-    }
-  }
-  @media (max-width: @screen-xs-max) {
-    border-radius: 0 0 @border-radius-large @border-radius-large !important;
-  }
-  .divider {
-    margin-top: 3px;
-    margin-bottom: 3px;
-  }
-}
-
-// Dropdown expands to top
-.dropup,
-.navbar-fixed-bottom .dropdown {
-  .dropdown-menu {
-    margin-bottom: 8px;
-  }
-  .dropdown-arrow {
-    border-bottom: none;
-    border-top: 8px outset mix(@inverse, @brand-primary, 94%);
-    bottom: 100%;
-    top: auto;
-  }
-}
-
-// Second level nav
-.navbar-fixed-bottom .nav > li > ul:before {
-  border-bottom: none;
-  border-top: 9px outset @brand-primary;
-  bottom: 4px;
-  top: auto;
-}
-
-.open {
-  &.dropup {
-    > .dropdown-menu {
-      margin-bottom: 18px;
-    }
-    > .dropdown-arrow {
-      margin-bottom: 10px;
-
-      &.dropdown-arrow-inverse {
-        border-top-color: @brand-primary;
-      }
-    }
-  }
-  > .dropdown-arrow {
-    margin-top: 11px;
-    opacity: 1;
-  }
-}
-
-// Arrows
-// --------------------------------------------------
-.dropdown-arrow {
-  border-style: solid;
-  border-width: 0 8px 7px;
-  border-color: transparent transparent mix(@inverse, @brand-primary, 94%) transparent;
-  height: 0;
-  margin-top: 0;
-  opacity: 0;
-  position: absolute;
-  right: 19px;
-  top: 100%;
-  width: 0;
-  z-index: 10;
-  -webkit-transform: rotate(360deg); // Make corners smooth
-  .transition(.25s);
-}
-
-// Alternate Color
-// --------------------------------------------------
-.dropdown-inverse {
-  background-color: @brand-primary;
-  color: mix(@inverse, black, 80%);
-  padding: 4px 0 6px;
-
-  li {
-    margin: 0 4px -2px;
-    &:first-child,
-    &:last-child {
-      > a {
-        border-radius: 2px;
-        padding-bottom: 7px;
-        padding-top: 5px;
-      }
-      dt + a {
-        border-radius: 2px;
-      }
-    }
-
-    &.active,
-    &.selected {
-      > a {
-        background: @brand-secondary;
-        color: @inverse;
-        position: relative;
-        z-index: 1;
-      }
-    }
-    dt {
-      padding-left: 11px;
-      padding-right: 11px;
-    }
-    .divider {
-      margin-left: 11px;
-      margin-right: 11px;
-    }
-    > a {
-      border-radius: 2px;
-      color: @inverse;
-      padding: 5px 11px 7px;
-
-      &:hover,
-      &:active,
-      &:focus {
-        background: mix(@brand-primary, black, 85%);
-      }
-      &.highlighted {
-        background: mix(@brand-primary, @inverse, 85%);
-        &:hover,
-        &:focus {
-          background: mix(@brand-primary, @inverse, 75%);
-        }
-      }
-    }
-    .divider {
-      background-color: mix(@brand-primary, white, 85%);
-      border-bottom-color: mix(@brand-primary, white, 85%);
     }
   }
 }

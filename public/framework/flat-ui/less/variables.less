@@ -65,7 +65,10 @@
 //## Settings for some of the most global styles.
 
 @body-bg:                   #fff;
-@text-color:                @asbestos;
+// @text-color:                @asbestos;
+//## Modified text color to meet WCAG contrast guidelines 
+//## http://webaim.org/resources/contrastchecker
+@text-color:                #626d6e; 
 
 //** Global textual link color.
 @link-color:                @belize-hole;
@@ -226,7 +229,7 @@
 @input-height-large:        45px;
 @input-height-huge:         53px;
 
-@input-border-radius:       @border-radius-base;
+@input-border-radius:       @border-radius-small;
 
 // @legend-color:              inherit;
 @legend-color:              @midnight-blue;
@@ -298,7 +301,7 @@
 // Basics of a navbar
 @zindex-navbar:              1000;
 @zindex-navbar-fixed:        1030;
-@navbar-height-base:         53px;
+@navbar-height-base:         60px;
 @navbar-height-large:        76px;
 @navbar-input-line-height:   1.4; // ~21px
 @navbar-margin-bottom:       @line-height-computed;

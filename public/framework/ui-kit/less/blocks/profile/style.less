@@ -1,0 +1,42 @@
+.dropdown-profile {
+  .profile-header {
+    padding: 5px 15px 15px;    
+  }
+
+  .avatar {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 4px;
+  }
+
+  .media-heading {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 8px;
+    text-transform: lowercase;
+  }
+}
+
+.navbar-inverse .navbar-nav > .open > .dropdown-profile {
+  background-color: #fff;
+  padding: 10px 0;
+
+  > li > a {
+    color: inherit;
+    padding: 0 15px;
+    border-radius: 0;
+    background-color: #f9fafb;
+
+    &:hover,
+    &:focus {
+      background: @clouds;
+      color: @link-hover-color;
+    }
+  }
+}
+
+.navbar-nav > li > .dropdown-profile {
+  min-width: 264px;
+  border-radius: 6px 0 6px 6px;
+}
+

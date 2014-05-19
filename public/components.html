@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="framework/flat-ui/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="framework/flat-ui/bootstrap/css/prettify.css">
   <link rel="stylesheet" href="framework/flat-ui/css/flat-ui.css">
-    <link rel="stylesheet" href="framework/common-files/css/icon-font.css">
+  <link rel="stylesheet" href="framework/common-files/css/icon-font.css">
   <link rel="stylesheet" href="framework/common-files/css/animations.css">
   <link rel="stylesheet" href="css/style.css">
   
@@ -943,7 +943,7 @@ $(datepickerSelector).datepicker('widget').css({'margin-left': -$(datepickerSele
       &lt;/div&gt;
 
       &lt;div class="modal-footer"&gt;
-        &lt;a href="#" class="btn"&gt;OK&lt;/a&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;OK&lt;/a&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;  
@@ -1484,13 +1484,13 @@ $(datepickerSelector).datepicker('widget').css({'margin-left': -$(datepickerSele
 
             <hr />
 
-            <div class="btn-group">            
+            <div class="btn-group">
               <button class="btn btn-primary">Dropdown</button>
               <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
               </button>
-              <span class="dropdown-arrow dropdown-arrow-inverse"></span>
-              <ul class="dropdown-menu dropdown-inverse">
+              <span class="dropdown-arrow"></span>
+              <ul class="dropdown-menu">
                 <li><a href="#fakelink">View email</a></li>
                 <li><a href="#fakelink">Share report</a></li>
                 <li><a href="#fakelink">Download</a></li>
@@ -1516,8 +1516,8 @@ $(datepickerSelector).datepicker('widget').css({'margin-left': -$(datepickerSele
 
 &lt;!-- split button select --&gt;
 &lt;div class=&quot;btn-group&quot;&gt;
-  &lt;button class=&quot;btn&quot;&gt;Action&lt;/button&gt;
-  &lt;button class=&quot;btn dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+  &lt;button class=&quot;btn btn-primary&quot;&gt;Action&lt;/button&gt;
+  &lt;button class=&quot;btn btn-primary dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
     &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
   &lt;/button&gt;
   &lt;ul class=&quot;dropdown-menu&quot;&gt;
@@ -1732,7 +1732,9 @@ if ($slider2.length > 0) {
           <h2>Table</h2>
           <hr />
           <p>
-            Tables are useful for diplaying relationships between categories and their quantitative values. Information is arranged in columns and rows, making lookup and comparison of values easier. <em>Table</em> is a restyled <a href="http://getbootstrap.com/css/#tables">Bootstrap table</a>.
+            Tables are useful for diplaying relationships between categories and their quantitative values. Information is arranged in columns and rows, making lookup and comparison of values easier. To make tables 
+            responsive wrap them in a container with the class "table-responsive".
+            <em>Table</em> is a restyled <a href="http://getbootstrap.com/css/#tables">Bootstrap table</a>.
           </p>
           <p>
             Follow these guidelines when designing tables:
@@ -1918,6 +1920,11 @@ if ($slider2.length > 0) {
 &lt;!-- bordered --&gt;
 &lt;table class="table table-bordered"&gt;
 &lt;/table&gt;
+
+&lt;!-- responsive --&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;&lt;/table&gt;
+&lt;/div&gt;
 </pre>
 
         </article>
@@ -1966,7 +1973,7 @@ if ($slider2.length > 0) {
           </div>
 
 <pre class="prettyprint">
-&lt;textarea rows=&quot;3&quot; placeholder=&quot;Add comment...&quot;&gt;&lt;/textarea&gt;
+&lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot; placeholder=&quot;Add comment...&quot;&gt;&lt;/textarea&gt;
 </pre>
 
         </article>
@@ -2030,28 +2037,26 @@ if ($slider2.length > 0) {
           </div>
 
 <pre class="prettyprint">
-&lt;input type="text" /&gt;
-&lt;input type="text" class="huge" /&gt;
-&lt;input type="text" class="large" /&gt;
-&lt;input type="text" class="small" /&gt;
+&lt;input type="text" class="form-control" placeholder="Default" /&gt;
+&lt;input type="text" class="form-control input-hg" placeholder="Huge" /&gt;
+&lt;input type="text" class="form-control input-lg" placeholder="Large" /&gt;
+&lt;input type="text" class="form-control input-sm" placeholder="Small" /&gt;
 
 &lt;!-- prepend --&gt;
-&lt;div class=&quot;control-group&quot;&gt;
-  &lt;div class=&quot;input-prepend&quot;&gt;
-    &lt;span class=&quot;add-on&quot;&gt;@&lt;/span&gt;
-    &lt;input class=&quot;span3&quot; type=&quot;text&quot; /&gt;
-  &lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;div class="input-group"&gt;
+    &lt;span class="input-group-addon"&gt;@&lt;/span&gt;
+    &lt;input type="text" class="form-control" placeholder="Prepend" /&gt;
+  &lt;/div&gt;  
 &lt;/div&gt;
 
 &lt;!-- append --&gt;
-&lt;div class=&quot;control-group&quot;&gt;
-  &lt;div class=&quot;input-append&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;span3&quot; placeholder=&quot;Append&quot;&gt;
-    &lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;
-      &lt;span class=&quot;fui-mail&quot;&gt;&lt;/span&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;                     
-&lt;/div&gt;       
+&lt;div class="form-group"&gt;
+  &lt;div class="input-group"&gt;
+    &lt;input type="text" class="form-control" placeholder="Append" /&gt;
+    &lt;span class="input-group-addon"&gt;@&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </pre>
 
         </article>

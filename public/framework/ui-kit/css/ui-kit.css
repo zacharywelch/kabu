@@ -749,6 +749,39 @@ section * {
     margin-top: 55px;
   }
 }
+.dropdown-profile .profile-header {
+  padding: 5px 15px 15px;
+}
+.dropdown-profile .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+.dropdown-profile .media-heading {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 8px;
+  text-transform: lowercase;
+}
+.navbar-inverse .navbar-nav > .open > .dropdown-profile {
+  background-color: #fff;
+  padding: 10px 0;
+}
+.navbar-inverse .navbar-nav > .open > .dropdown-profile > li > a {
+  color: inherit;
+  padding: 0 15px;
+  border-radius: 0;
+  background-color: #f9fafb;
+}
+.navbar-inverse .navbar-nav > .open > .dropdown-profile > li > a:hover,
+.navbar-inverse .navbar-nav > .open > .dropdown-profile > li > a:focus {
+  background: #ecf0f1;
+  color: #3498db;
+}
+.navbar-nav > li > .dropdown-profile {
+  min-width: 264px;
+  border-radius: 6px 0 6px 6px;
+}
 /* project gallery styles
 --------------------------------------------- */
 .projects {
