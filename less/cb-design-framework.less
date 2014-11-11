@@ -1,0 +1,64 @@
+/* CB Design Framework is a lightweight version of 
+ * Bootstrap 3. Any unused Bootstrap files or scripts 
+ * are excluded during the build. Where Bootstrap 
+ * has good defaults we've tried to reuse its 
+ * LESS file and create overrides in a separate file 
+ * under the same name. If the defaults weren't close 
+ * to meeting our needs we replaced Bootstrap's LESS 
+ * file with our own. In both cases we try to conform 
+ * with Bootstrap's markup conventions. 
+ *
+ * For more information on our approach see 
+ * http://www.smashingmagazine.com/2013/03/12/customizing-bootstrap/ 
+------------------------------------------------------- */
+
+// Path to original Bootstrap less files
+@bootstrap-path: '../bootstrap/less/';
+
+// Core variables and mixins
+@import '@{bootstrap-path}variables.less';
+@import 'variables.less';
+@import 'mixins.less';
+
+// Reset and dependencies
+@import 'reset.less';
+@import 'print.less';
+@import 'glyphicons.less';
+
+// Core CSS
+@import 'scaffolding.less';
+@import 'type.less';
+@import 'prose.less';
+@import 'code.less';
+@import '@{bootstrap-path}grid.less';
+@import 'grid.less';
+@import 'tables.less';
+@import 'forms.less';
+@import 'buttons.less';
+
+// Components
+@import '@{bootstrap-path}component-animations.less';
+@import 'component-animations.less';
+@import '@{bootstrap-path}dropdowns.less';
+@import 'dropdowns.less';
+@import '@{bootstrap-path}button-groups.less';
+@import 'button-groups.less';
+@import 'input-groups.less';
+@import 'input-icons.less';
+@import 'tabs.less';
+@import 'navbar.less';
+@import 'alerts.less';
+@import '@{bootstrap-path}close.less';
+@import 'close.less';
+@import 'popup.less';
+@import 'rounded-toggle.less';
+
+// Components w/ JavaScript
+@import 'modals.less';
+@import 'file-input.less';
+
+// Utility classes
+@import '@{bootstrap-path}utilities.less';
+@import '@{bootstrap-path}responsive-utilities.less';
+@import 'spaces.less';
+@import 'utilities.less';

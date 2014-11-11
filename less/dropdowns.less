@@ -1,0 +1,28 @@
+/* Dropdowns
+------------------------------------------------------- */
+
+.caret {
+  border-top-width: @caret-width-base + 2;
+}
+
+.dropdown-menu {
+  .box-shadow(0 6px 12px rgba(0,0,0,.15));
+
+  > li > a {
+    padding: 5px 20px;
+  }
+}
+
+.open > a:focus { box-shadow: none; }
+
+/* Dropdown Form
+------------------------------------------------------- */
+
+.dropdown-form {
+  padding: 5px 0 0;
+
+  // todo: remove
+  .form-group > .form-control {
+    float: none;
+  }
+}

@@ -1,0 +1,262 @@
+/* Forms
+------------------------------------------------------- */
+
+form fieldset {
+  margin: 0 0 20px;
+}
+
+form fieldset:last-child {
+  margin-bottom: 0;
+}
+
+form fieldset label {
+  font: 12px/20px @font-family-bold;
+  display: block;
+  margin: 0 0 5px;
+}
+
+.dark label {
+  color: #f0f0f0;
+  color: rgba(255,255,255,0.75);
+}
+
+form fieldset label.inline { margin-bottom: 0; }
+
+/* Form controls */
+
+input,
+select,
+button {
+  vertical-align: top;
+}
+
+textarea,
+input[type=password],
+input[type=text],
+input[type=email],
+input[type=number],
+select,
+.form-control {
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  color: @fill-quiet;
+  padding: 10px;
+  -webkit-appearance: none;
+  border-radius: @input-border-radius;
+}
+
+textarea.code,
+input.code,
+input[type=password].code,
+input[type=text].code,
+input[type=email].code,
+input[type=number].code,
+select.code {
+  font-family: @font-family-monospace;
+  white-space: pre;
+}
+
+textarea,
+input[type=password],
+input[type=text],
+input[type=email],
+input[type=number],
+select,
+.form-control {
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  .box-shadow(none);
+  .transition(border-color .05s);
+
+  &:focus {
+    outline: thin dotted\8; /* ie8 below */
+    border-color: rgba(0,0,0,0.25);
+    color: @text-color;
+    .box-shadow(none);
+  }
+
+  &:disabled {
+    border-color: rgba(0,0,0,0.125);
+    color: rgba(0,0,0,0.5);    
+  }
+
+  &.short {
+    height: 30px;
+    padding: 5px;
+    -webkit-appearance: none;
+  }
+}
+  
+.dark textarea,
+.dark input[type=password],
+.dark input[type=text],
+.dark input[type=email],
+.dark input[type=number],
+.dark select,
+.dark .form-control {
+  background: @fill-dark;
+  background: rgba(0,0,0,0.25);
+  border-color: @fill-gray;
+  border-color:rgba(255,255,255,0.25);
+  color: #fff;
+  .box-shadow(none);
+
+  &:focus {
+    border-color: rgba(255,255,255,0.75);
+    color: #fff;    
+  }
+
+  &:disabled {
+    border-color: rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.5);    
+  }
+}
+  
+textarea.short { height: 60px; }
+
+textarea.stretch,
+input.stretch[type=text],
+input.stretch[type=email],
+input.stretch[type=number],
+input.stretch[type=password],
+select.stretch { width:100%; }
+
+
+/* Special Form Components */
+
+textarea {
+  height: 80px;
+  max-width: none;
+  overflow: auto;
+  resize: none;
+}
+  
+textarea.resize { resize:both; }
+
+select {
+  border-radius: @border-radius-base;
+  font: @font-size-base / 18px @font-family-base; 
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  padding-right: 40px;
+  position: relative;
+  z-index: 1;
+  background: transparent;  
+  
+  // moz fix to remove dropdown arrow
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';  
+
+  + .icon {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}
+
+
+/* Checkboxes
+------------------------------------------------------- */
+
+.checkbox input[type=checkbox] { 
+  display:none; 
+
+  &:checked + label { background: rgba(0,0,0,0.05); }
+  &:not(:checked) + .icon:before { color: transparent; }
+}
+
+.checkbox label {
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+
+  &:hover { background: rgba(0,0,0,0.025); }
+}
+
+.checkbox .icon {
+  font-family: inherit;
+  &:before {
+    font-family: 'CB Icons';
+    background-color: #fff;
+    margin-right: 5px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    .opacity(75);
+    text-align: center;
+  }
+}
+
+.dark.checkbox .icon:before,
+.dark .checkbox .icon:before {
+  background-color: rgba(0,0,0,0.25);  
+}
+  
+
+/* Radios
+------------------------------------------------------- */
+
+.radio { position: relative; }
+
+.radio input[type=radio] {
+  display: none;
+
+  &:checked + .icon-radio-checked:after { 
+    position: absolute;
+    content: "";
+    left: 8px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    background: @text-color;
+    border-radius: 6px;
+  }
+}
+
+.radio .icon-radio-checked:before { 
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 4px;
+  width: 14px;
+  height: 14px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+}
+
+.radio label { 
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer; 
+}
+
+.dark.radio,
+.dark .radio {
+  .icon-radio-checked:before { border-color: rgba(255, 255, 255, 0.25) }
+  input[type=radio]:checked + .icon-radio-checked:after { 
+    background: rgba(255, 255, 255, 0.75); 
+  }
+} 
+
+
+/* Form control Sizing */
+
+.input-sm {
+  height: @input-height-small;
+  padding: @padding-small-vertical @padding-small-horizontal;
+}
+
+.input-lg {}
+
+
+/* Responsive
+------------------------------------------------------- */
+@media (max-width: @screen-xs-max) {
+  form fieldset {
+    &.pad0l, &.pad1l, &.pad0x, &.pad1x { padding-left: 0; }
+    &.pad0r, &.pad1r, &.pad0x, &.pad1x { padding-right: 0; }
+  }
+}

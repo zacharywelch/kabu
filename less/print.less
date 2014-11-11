@@ -1,0 +1,24 @@
+/* Print
+------------------------------------------------------- */
+
+@media print {
+
+  /* Inline rules */
+  body, input, textarea, p {
+    color:#000;
+    font: 12px / @line-height-computed @font-family-base; 
+  } 
+  .prose a:after { content:' [' attr(href) '] '; }
+
+  /* Cut pad rules in half, matches mobile rules */
+  .pad4   { padding:20px; }
+  .pad8   { padding:40px 20px; }
+  .pad4y  { padding-top:20px; padding-bottom:20px; }
+  .pad4x  { padding-left:20px; padding-right:20px; }
+  .pad2   { padding:10px; }
+  .pad2y  { padding-top:10px; padding-bottom:10px; }
+  .pad2x  { padding-right:10px; padding-left:10px; }
+
+  /* TODO Depreciate */
+  .noprint { display:none; }
+}

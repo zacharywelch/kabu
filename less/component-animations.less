@@ -1,0 +1,105 @@
+/* Component Animations
+------------------------------------------------------- */
+
+.animate                  { .transition(all .125s); }
+
+.offcanvas-top            { .translateY(-100%); }
+.offcanvas-right          { .translateX(100%); }
+.offcanvas-bottom         { .translateY(100%); }
+.offcanvas-left           { .translateX(-100%); }
+
+.offcanvas-top.active,
+.offcanvas-bottom.active,
+.offcanvas-top:target,
+.offcanvas-bottom:target  { .translateY(0); } 
+
+.offcanvas-left.active,
+.offcanvas-right.active,
+.offcanvas-left:target,
+.offcanvas-right:target   { .translateX(0); }
+
+.btn.animate              { 
+  .transition(0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all);
+}
+
+/* Sliding panes */
+
+.sliding                  { position:relative; }
+.sliding > *              { position:absolute; width: 100%; }
+.sliding.h > *            { .translateX(-100%); }
+.sliding.v > *            { .translateY(-100%); }
+
+.sliding.h > .active      { .translateX(0%); }
+.sliding.h > .active ~ *  { .translateX(100%); }
+.sliding.v > .active      { .translateY(0%); }
+.sliding.v > .active ~ *  { .translateY(100%); }
+
+.tab-content.sliding > .tab-pane { display: block; }
+
+.slidelink {
+  cursor: pointer;
+  .user-select(none);
+}
+
+//todo: rename to expand
+.slidedown {
+  display: none;
+
+  &.active {
+    display: block;
+    .animation-name(slidedown);
+    .animation-duration(.125s);
+  }
+}
+
+@-webkit-keyframes slidedown { 
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  40% { opacity: 0.3; }
+  60% { opacity: 0.5; }
+  80% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+@keyframes slidedown {
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  40% { opacity: 0.3; }
+  60% { opacity: 0.5; }
+  80% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+/* Slide down
+------------------------------------------------------- */
+
+.slideDown{
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;  
+
+  animation-duration: 1s; 
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;           
+}
+
+@keyframes slideDown {
+  0%   { .translateY(-100%); }
+  50%  { .translateY(8%); }
+  65%  { .translateY(-4%); }
+  80%  { .translateY(4%); }
+  95%  { .translateY(-2%); }     
+  100% { .translateY(0%); }   
+}
+
+@-webkit-keyframes slideDown {
+  0%   { .translateY(-100%); }
+  50%  { .translateY(8%); }
+  65%  { .translateY(-4%); }
+  80%  { .translateY(4%); }
+  95%  { .translateY(-2%); }
+  100% { .translateY(0%); }
+}

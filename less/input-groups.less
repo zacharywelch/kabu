@@ -1,0 +1,31 @@
+/* Input Groups
+------------------------------------------------------- */
+
+.input-group { 
+  position: relative; 
+  display: table;
+}
+
+.input-group-btn { 
+  display: table-cell; 
+  vertical-align: middle;
+  width: 1%; 
+  font-size: 0;
+  white-space: nowrap;
+
+  > .btn { float: none; position: relative; }
+}
+
+.input-group > input[type='text'],
+.input-group > .form-control {
+  display: table-cell;
+  width: 100%;
+  
+  &, &:focus { border-right-width: 0; }  
+  + .btn,
+  + .input-group-btn > .btn {
+    border-left-width: 0;
+    border-radius: 0 3px 3px 0;    
+  }
+  + .input-group-btn > .btn + .dropdown-toggle { border-left-width: 1px; }
+}

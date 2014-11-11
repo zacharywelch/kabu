@@ -1,0 +1,75 @@
+/* Keylines
+------------------------------------------------------- */
+.keyline-all    { border:1px solid rgba(0,0,0,0.10); }
+.keyline-top    { border-top:1px solid rgba(0,0,0,0.10); }
+.keyline-right  { border-right:1px solid rgba(0,0,0,0.10); }
+.keyline-bottom { border-bottom:1px solid rgba(0,0,0,0.10); }
+.keyline-left   { border-left:1px solid rgba(0,0,0,0.10); }
+
+.dark .keyline-all    { border:1px solid rgba(255,255,255,0.25); }
+.dark .keyline-top    { border-top:1px solid rgba(255,255,255,0.25); }
+.dark .keyline-right  { border-right:1px solid rgba(255,255,255,0.25); }
+.dark .keyline-bottom { border-bottom:1px solid rgba(255,255,255,0.25); }
+.dark .keyline-left   { border-left:1px solid rgba(255,255,255,0.25); }
+
+
+/* Box
+------------------------------------------------------- */
+.box {
+  margin-bottom:@lg;
+  .keyline-all;
+
+  &:last-child          { margin-bottom: 0; }
+  figure, .box-heading  { .keyline-bottom; }
+  figure:last-child     { border-bottom: none; }
+}
+  
+
+/* Rounded corners
+------------------------------------------------------- */
+.round                  { border-radius: @border-radius-base; }
+.round-top              { border-radius: @border-radius-base @border-radius-base 0 0; }
+.round-right            { border-radius: 0 @border-radius-base @border-radius-base 0; }
+.round-bottom           { border-radius: 0 0 @border-radius-base @border-radius-base; }
+.round-left             { border-radius: @border-radius-base 0 0 @border-radius-base; }
+.unround                { border-radius: 0; }
+
+
+/* Fixed containers
+------------------------------------------------------- */
+
+.pin-top,
+.pin-right,
+.pin-bottom,
+.pin-left,
+.pin-topleft,
+.pin-topright,
+.pin-bottomleft,
+.pin-bottomright {
+  position:absolute;
+}
+  
+.pin-bottom { right:0; bottom:0; left:0; }
+.pin-top    { top:0; right:0; left:0; }
+.pin-left   { top:0; bottom:0; left:0; }
+.pin-right  { top:0; right:0; bottom:0; }
+.pin-bottomright { bottom:0; right:0; }
+.pin-bottomleft  { bottom:0; left:0; }
+.pin-topright    { top:0; right:0; }
+.pin-topleft     { top:0; left:0; }
+
+
+/* Additional Utility Classes
+------------------------------------------------------- */
+.truncate {
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.clip    { overflow: hidden; }
+.contain { position: relative; }
+
+// Consider removing these 
+img.inline, .inline   { display: inline-block; }
+.block                { display: block; }

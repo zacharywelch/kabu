@@ -1,0 +1,47 @@
+/* Tabs
+------------------------------------------------------- */
+
+// Use tabs with btn-group
+.tabs > .btn {
+  border: 1px solid rgba(0,0,0,0.25);
+  border-left-width: 0px;
+  background: transparent;
+  color: rgba(0,0,0,.5);
+
+  &:first-child { border-left-width: 1px; }
+  &.active { background: rgba(0,0,0,0.1); }
+  &:hover { background: rgba(0,0,0,0.05); }
+}
+
+// Dark styles
+.dark.tabs > .btn,
+.dark .tabs > .btn {
+  border-color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,1);  
+
+  &.active {
+    background-color: rgba(225,255,255,0.15);
+    color: rgba(255,255,255,1);    
+  }
+}
+
+
+/* Tab content
+------------------------------------------------------- */
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content > .tab-pane { display: none; }
+.tab-content > .active { display: block; }
+
+@media (max-width: @screen-xs-max) {
+  .tabs:not(.mobile-cols) { display: block; }    
+  .tabs:not(.mobile-cols) > .btn {
+    display: block;
+    float: none;
+    border-radius: @border-radius-base !important;
+    border-left-width: 1px;
+    margin-bottom: 5px;
+
+    &:last-child { margin-bottom: 0px; }
+  }
+}

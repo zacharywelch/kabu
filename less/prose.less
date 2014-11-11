@@ -1,0 +1,145 @@
+/* Prose: Formatted for read content
+------------------------------------------------------- */
+
+// Note: Commented ul and ol styles until a solution is found for dropdown menus
+
+.prose, .breathe { line-height:25px; }
+.prose section   { margin-bottom:20px; }
+
+.title,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose p,
+/* .prose ul,
+ .prose ol,*/
+.prose img,
+.prose blockquote,
+.prose pre,
+.prose iframe,
+.prose object,
+.prose div.highlight {
+  display:block;
+  margin-bottom:20px;
+  word-wrap:break-word;
+}
+
+.prose h1:last-child,
+.prose h2:last-child,
+.prose h3:last-child,
+.prose h4:last-child,
+.prose h5:last-child,
+.prose h6:last-child,
+.prose p:last-child,
+/* .prose ul:last-child,
+ .prose ol:last-child, */
+.prose img:last-child,
+.prose blockquote:last-child,
+.prose pre:last-child,
+.prose iframe:last-child,
+.prose object:last-child  {
+  margin-bottom: 0;
+}
+
+.prose h2 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.prose h1,
+.prose h2 {
+  padding-top: 40px;
+}
+
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  padding-top: 20px;
+}
+
+.prose h1:first-child,
+.prose h2:first-child,
+.prose h3:first-child,
+.prose h4:first-child,
+.prose h5:first-child,
+.prose h6:first-child {
+  padding-top: 0;
+}
+
+
+.prose blockquote {
+  padding: 20px;
+  margin: 0 0 20px 0;
+  background-color: @fill-light;
+  background-color: rgba(0,0,0,.05);
+}
+
+.prose blockquote p:last-child {
+  margin: 0;
+}
+
+.prose p > video,
+.prose p > iframe,
+.prose p a > iframe,
+.prose p > img,
+.prose p a > img,
+.prose li > video,
+.prose li > iframe,
+.prose li a > iframe,
+.prose li > img,
+.prose li a > img {
+  max-width:100%;
+  max-height:600px;
+  margin-right:auto;
+  margin-left:auto;
+  background:rgba(0,0,0,.025);
+}
+
+table.prose,
+.prose table {
+  border:1px solid #ddd;
+}
+
+table.prose th,
+table.prose td,
+.prose table th,
+.prose table td {
+  padding:8px;
+  border:1px solid #ddd;
+}
+
+table.prose th,
+.prose table th {
+  background-color: @fill-light;
+  background-color:rgba(0,0,0,0.05);
+}
+
+/* .prose ul {
+//   list-style:disc;
+//   margin-left:40px;
+// }
+// .prose ol {
+//   list-style:decimal;
+//   margin-left:40px;
+// }
+
+// .prose ul li,
+// .prose ol li {
+//   margin-bottom:10px;
+// }
+
+.prose pre,
+.prose code {
+  border-radius:3px;
+}*/
+
+/* Dark read content styling */
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3 {
+  color:#fff;
+}

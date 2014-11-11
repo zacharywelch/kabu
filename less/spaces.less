@@ -1,0 +1,43 @@
+/* Spaces
+------------------------------------------------------- */
+
+// Should be used to modify the default spacing between objects
+// padding and margin classes range from 0 to 4
+// 0,1,2,4 = small(@sm),medium(@md),large(@lg),extra-large(@xl)
+// x,y,l,r = left+right,top+bottom,left,right
+@sm: 5px;
+@md: 10px;
+@lg: 20px;
+@xl: 40px;
+
+
+/* Padding
+------------------------------------------------------- */
+.pad0     { padding:@sm; }
+.pad0x    { padding-right:@sm; padding-left:@sm; }
+.pad0y    { padding-top:@sm; padding-bottom:@sm; }
+
+.pad1     { padding:@md; }
+.pad1x    { padding-left: @md; padding-right: @md;}
+.pad1y    { padding-top: @md; padding-bottom: @md;}
+
+.pad2     { padding:@lg; }
+.pad2x    { padding-left: @lg; padding-right: @lg;}
+.pad2y    { padding-top: @lg; padding-bottom: @lg;}
+
+.pad4     { padding:@xl; }
+.pad4x    { padding-left: @xl; padding-right: @xl;}
+.pad4y    { padding-top: @xl; padding-bottom: @xl;}
+
+.pad0l    { padding-left:@sm; }
+.pad0r    { padding-right:@sm; }
+.pad1l    { padding-left:@md; }
+.pad1r    { padding-right:@md; }
+
+/* Margin
+------------------------------------------------------- */
+.space-bottom0  { margin-bottom:@sm;}
+.space-bottom1  { margin-bottom:@md; }
+.space-bottom,
+.space-bottom2  { margin-bottom:@lg; }
+.space-bottom4  { margin-bottom:@xl; }

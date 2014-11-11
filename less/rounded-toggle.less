@@ -1,0 +1,87 @@
+/* Rounded toggle for filtering/modifying lists
+------------------------------------------------------- */
+
+.rounded-toggle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px;
+  border-radius: 20px;
+  vertical-align: middle;
+  background: rgba(0,0,0,.1);
+
+  &:hover { background: rgba(0,0,0,.15); }
+
+  input[type=radio] + label,
+  a {
+    font-family: @font-family-sans-serif;
+    cursor:pointer;
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 16px;
+    padding: 3px 10px;
+    font-size: 12px;
+    color: rgba(0,0,0,0.5);
+    line-height: 20px;
+    margin: 0;
+  }
+
+  input[type=radio] { display:none; }  
+
+  input[type=radio]:checked + label,
+  a.active { 
+    background: white; 
+    color: rgba(0,0,0,.5); 
+  }
+
+  &.short {
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    input[type=radio] + label,
+    a {
+      font-size: 10px;
+      padding: 0 7px;
+    }    
+  }
+}
+
+.dark .rounded-toggle { 
+  background: rgba(255,255,255,.1); 
+
+  &:hover { background: rgba(255,255,255,.25); }
+
+  input[type=radio] + label,
+  a { color: white; }  
+
+  input[type=radio]:checked + label,
+  a.active { color: white; }
+}
+
+.fill-dark .rounded-toggle input[type=radio]:checked + label,
+.fill-dark .rounded-toggle a.active        { background-color: @fill-dark; }
+.fill-gray  .rounded-toggle input[type=radio]:checked + label,
+.fill-gray .rounded-toggle a.active,
+.fill-grey .rounded-toggle input[type=radio]:checked + label,
+.fill-grey .rounded-toggle a.active        { background: @fill-gray; }
+.fill-grey-dark .rounded-toggle input[type=radio]:checked + label,
+.fill-grey-dark .rounded-toggle a.active,
+.fill-gray-dark .rounded-toggle input[type=radio]:checked + label,
+.fill-gray-dark .rounded-toggle a.active   { background: @fill-dark; }
+.fill-white .rounded-toggle input[type=radio]:checked + label,
+.fill-white .rounded-toggle a.active       { background: #fff; }
+.fill-light .rounded-toggle input[type=radio]:checked + label,
+.fill-light .rounded-toggle a.active       { background: @fill-light; }
+.fill-blue .rounded-toggle input[type=radio]:checked + label,
+.fill-blue .rounded-toggle a.active        { background: @fill-blue; }
+.fill-denim .rounded-toggle input[type=radio]:checked + label,
+.fill-denim .rounded-toggle a.active       { background: @fill-denim; }
+.fill-navy .rounded-toggle input[type=radio]:checked + label,
+.fill-navy .rounded-toggle a.active        { background: @fill-navy; }
+.fill-navy-dark .rounded-toggle input[type=radio]:checked + label,
+.fill-navy-dark .rounded-toggle a.active   { background: @fill-navy-dark; }
+.fill-purple .rounded-toggle input[type=radio]:checked + label,
+.fill-purple .rounded-toggle a.active      { background: @fill-purple; }
+.fill-green .rounded-toggle input[type=radio]:checked + label,
+.fill-green .rounded-toggle a.active       { background: @fill-green; }
+.fill-yellow .rounded-toggle input[type=radio]:checked + label,
+.fill-yellow .rounded-toggle a.active      { background: @fill-yellow; }

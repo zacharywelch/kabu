@@ -1,0 +1,36 @@
+/* Input icons
+------------------------------------------------------- */
+
+fieldset.with-icon {
+  position:relative;
+
+  &, 
+  > .input-group {
+    > input[type=text],
+    > input[type=email],
+    > input[type=number] {
+      padding-left: 35px; 
+
+      &.short {
+        padding-left: 30px;
+        font-size: 12px;      
+      }
+    }
+  }
+  
+  > .icon,
+  .input-group > .icon {
+    position:absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -10px;
+    line-height: 20px;
+    z-index: 1;
+  }
+
+  .icon.clear { 
+    left: initial; 
+    right: 12px;
+    cursor: pointer;
+  }
+}

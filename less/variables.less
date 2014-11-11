@@ -1,0 +1,238 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Rather than copy the original +variables.less+ and override its values we 
+// only include the variables that are different from the original. This should 
+// help us compare our changes w/ the original when a new version of 
+// Bootstrap is released
+
+// == Colors
+//
+//##
+
+// Color swatch
+@fill-dark:             #404040;
+@fill-quiet:            #7f7f7f;
+@fill-button:           #bfbfbf;
+@fill-gray:             #eee;
+@fill-light:            #f8f8f8;
+@fill-white:            #fff;
+@fill-blue:             #3887be;
+@fill-light-blue:       #f0f8fc;
+@fill-turquoise:        #3bb2d0;
+@fill-denim:            #3c4e5a;
+@fill-navy:             #28353d;
+@fill-navy-dark:        #222b30;
+@fill-purple:           #8a8acb;
+@fill-green:            #56b881;
+@fill-yellow:           #f1f075;
+@fill-red:              #EE6565;
+@fill-orange:           #ee8a65;
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+@gray-dark:             @fill-dark;
+@gray:                  @fill-quiet;
+
+@brand-primary:         @fill-blue;
+@brand-success:         @fill-green;
+@brand-info:            @fill-light-blue;
+@brand-warning:         @fill-yellow;
+@brand-danger:          @fill-red;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Link hover color
+@link-hover-color:      #63b6e5;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-sans-serif:  'Open Sans', sans-serif;
+@font-family-serif:       'Lobster', 'Georgia', serif;
+@font-family-bold:        'Open Sans Bold', sans-serif;
+@font-family-italic:      'Open Sans Italic', sans-serif;
+@font-family-italic-bold: 'Open Sans Bold Italic', sans-serif;
+@font-family-monospace:   Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
+
+@font-size-base:          15px;
+
+@font-size-h1:            30px;
+@font-size-h2:            22px;
+@font-size-h3:            20px;
+@font-size-h4:            15px;
+@font-size-h5:            12px;
+@font-size-h6:            12px;
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.3334;
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    @font-family-bold;
+
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+//** Load fonts from this directory.
+@icon-font-path:          "../fonts/glyphicons/";
+//** Load alternate fonts from this directory.
+@icon-alt-font-path:      "../fonts/icons/";
+//** File name for all font files.
+@icon-alt-font-name:      "icomoon";
+//** Element ID within SVG icon file.
+@icon-alt-font-svg-id:    "icomoon";
+
+
+//== Images
+//
+//## Specify custom location of framework images
+
+//** Load images from this directory.
+@image-path:              "../img/";
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+@padding-base-vertical:     10px;
+@padding-base-horizontal:   10px;
+
+@padding-small-vertical:    5px;
+@padding-small-horizontal:  5px;
+
+@border-radius-base:        3px;
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+@btn-font-weight:             normal;
+
+@btn-default-color:           #fff;
+@btn-default-bg:              @fill-button;
+@btn-default-hover:           @fill-quiet;
+
+@btn-primary-color:           #fff;
+@btn-primary-bg:              @brand-primary;
+@btn-primary-hover:           @fill-turquoise;
+
+@btn-success-color:           #fff;
+@btn-success-bg:              @brand-success;
+@btn-success-hover:           #4eca85;
+
+@btn-danger-color:            #fff;
+@btn-danger-bg:               @brand-danger;
+@btn-danger-hover:            darken(@btn-danger-bg, 5%);
+
+@btn-loud-color:              #fff;
+@btn-loud-bg:                 #8889cc;
+@btn-loud-hover:              #bd93e5; 
+
+
+//== Forms
+//
+//##
+
+//** `<input>` border color
+@input-border:                rgba(0,0,0,0.1);
+//** `<input>` border radius
+@input-border-radius:         0;
+
+//** Large `.form-control` height
+@input-height-large:          40px;
+//** Small `.form-control` height
+@input-height-small:          30px;
+
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Dropdown menu `border-color`.
+@dropdown-border:                rgba(0,0,0,.1);
+//** Dropdown menu `border-color` **for IE8**.
+@dropdown-fallback-border:       #e6e6e6;
+//** Divider color for between dropdown items.
+@dropdown-divider-bg:            @dropdown-fallback-border;
+
+//** Dropdown link text color.
+@dropdown-link-color:            @gray-dark;
+//** Hover color for dropdown links.
+@dropdown-link-hover-color:      @gray-dark;
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg:         @fill-gray;
+
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+@state-success-text:             @brand-success;
+@state-danger-text:              @brand-danger;
+
+
+//== Modals
+//
+//##
+
+@modal-md:                    437px;
+
+
+//== Alerts
+//
+//## Define alert colors and padding.
+
+@alert-padding:               20px;
+@alert-success-bg:            @brand-success;
+@alert-info-bg:               @brand-info;
+@alert-warning-bg:            @brand-warning;
+@alert-danger-bg:             #ee8a65;
+
+
+//== Close
+//
+//##
+
+@close-color:                 @fill-quiet;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:         0px;
+
+
+//== Code
+//
+//##
+
+@code-color:                  @fill-quiet;
+@code-bg:                     @fill-light;
+
+@kbd-color:                   @fill-quiet;
+@kbd-bg:                      @fill-light;
+
+@pre-bg:                      @fill-light;
+@pre-scrollable-max-height:   300px;
+
+//== Type
+//
+//##
+
+//** Text muted color
+@text-muted:                  @fill-quiet;
+//** Abbreviations and acronyms border color
+@abbr-border-color:           #000;

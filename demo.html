@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <title>CB Styleguide</title>
+  <link href='css/cb-design-framework.css' rel='stylesheet' />
+</head>
+<body>
+  <div class='container-fluid'>
+    <div class='col-sm-8 col-sm-offset-2 pad4'>
+      <h1 class='small quiet'>AXIOM STYLING</h1>
+      <h2 class='space-bottom'>Forms</h2>
+      <section class='space-bottom4'>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Text input</h3>
+          </div>
+          <figure>
+            <div class='pad2'>
+              <form>
+                <fieldset>
+                  <label>Enter your name</label>
+                  <input type='text'>
+                </fieldset>
+              </form>
+            </div>
+          </figure>
+          <figure>
+            <div class='pad2 dark fill-dark contain'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .dark input
+              </div>
+              <form>
+                <fieldset>
+                  <label>Enter your name</label>
+                  <input type='text'>
+                </fieldset>
+              </form>
+            </div>
+          </figure>        
+          <figure>
+            <div class='pad2 contain'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                input.stretch
+              </div>
+              <form>
+                <fieldset>
+                  <label>Enter your name</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+                <fieldset>
+                  <label>Enter your mother's maiden name</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+              </form>
+            </div>
+          </figure>  
+          <figure>
+            <div class='pad2 contain'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                input.short
+              </div>
+              <form>
+                <fieldset>
+                  <label>Enter your age</label>
+                  <input type='text' class='short'>
+                </fieldset>
+                <fieldset>
+                  <label>Enter your date of birth</label>
+                  <input type='text' class='short'>
+                </fieldset>
+              </form>
+            </div>
+          </figure>     
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Input with icon</h3>
+          </div>
+          <figure>
+            <div class='pad2'>
+              <form>
+                <fieldset class='with-icon'>
+                  <span class='icon icon-search'></span>
+                  <input type='text' />
+                </fieldset>                
+              </form>
+            </div>
+          </figure>          
+          <figure>
+            <div class='pad2 contain'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                input.short
+              </div>
+              <form>
+                <fieldset class='with-icon'>
+                  <span class='icon icon-search small'></span>
+                  <input type='text' class='short' />
+                </fieldset>                
+              </form>
+            </div>
+          </figure>          
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Text Area</h3>
+          </div>
+          <figure>
+            <div class='pad2'>
+              <form>
+                <fieldset>
+                  <label>Enter a description</label>
+                  <textarea class='stretch'></textarea>
+                </fieldset>
+              </form>
+            </div>
+          </figure>
+          <figure>
+            <div class='pad2 dark fill-dark contain round-bottom'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .dark textarea
+              </div>
+              <form>
+                <fieldset>
+                  <label>Enter a description</label>
+                  <textarea class='stretch'></textarea>
+                </fieldset>
+              </form>
+            </div>
+          </figure>
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Selects</h3>
+          </div>
+          <figure>
+            <div class='pad2 clearfix'>
+              <form>
+                <fieldset>
+                  <div class='input-group'>
+                    <select class='stretch'>
+                      <option>
+                        Please select a security question...
+                      </option>
+                      <option>
+                        What was the model of your first car?
+                      </option>
+                      <option>
+                        What was the name of your first childhood pet?
+                      </option>
+                      <option>
+                        What is your mother's maiden name?
+                      </option>
+                      <option>
+                        What is the name of the high school you attended?
+                      </option>
+                    </select>
+                    <i class='icon icon-chevron-down'></i>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </figure>
+          <figure>
+            <div class='pad2 dark fill-dark contain round-bottom'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .dark select
+              </div>
+              <form>
+                <fieldset>
+                  <div class='input-group'>
+                    <select class='stretch'>
+                      <option>
+                        Please select a security question...
+                      </option>
+                      <option>
+                        What was the model of your first car?
+                      </option>
+                      <option>
+                        What was the name of your first childhood pet?
+                      </option>
+                      <option>
+                        What is your mother's maiden name?
+                      </option>
+                      <option>
+                        What is the name of the high school you attended?
+                      </option>
+                    </select>
+                    <i class='icon icon-chevron-down'></i>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </figure>          
+        </div>        
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Horizontal form</h3>
+          </div>
+          <figure>
+            <div class='pad2 contain'>
+              <form>
+                <fieldset>
+                  <label class='inline pad1y col-sm-3'>Enter your name</label>
+                  <input type='text' class='col-sm-9'>
+                </fieldset>
+                <fieldset>
+                  <label class='inline pad1y col-sm-3'>Enter your age</label>
+                  <input type='text' class='col-sm-9'>
+                </fieldset>
+              </form>
+            </div>
+          </figure>     
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Column sizing</h3>
+          </div>
+          <figure>
+            <div class='pad2 contain clearfix'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                2 column
+              </div>
+              <form>
+                <fieldset class='col-sm-6 pad0r'>
+                  <label>.col-sm-6</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+                <fieldset class='col-sm-6 pad0l'>
+                  <label>.col-sm-6</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+              </form>
+            </div>
+          </figure>        
+          <figure>
+            <div class='pad2 contain clearfix'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                3 column
+              </div>
+              <form>
+                <fieldset class='col-sm-4 pad0r'>
+                  <label>.col-sm-4</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+                <fieldset class='col-sm-4 pad0x'>
+                  <label>.col-sm-4</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+                <fieldset class='col-sm-4 pad0l'>
+                  <label>.col-sm-4</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+              </form>
+            </div>
+          </figure>        
+          <figure>
+            <div class='pad2 contain clearfix'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                4 column
+              </div>
+              <form>
+                <fieldset class='col-sm-3 pad0r'>
+                  <label>.col-sm-3</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+                <fieldset class='col-sm-3 pad0x'>
+                  <label>.col-sm-3</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+                <fieldset class='col-sm-3 pad0x'>
+                  <label>.col-sm-3</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+                <fieldset class='col-sm-3 pad0l'>
+                  <label>.col-sm-3</label>
+                  <input type='text' class='stretch'>
+                </fieldset>
+              </form>
+            </div>
+          </figure>        
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Checkboxes</h3>
+          </div>
+          <figure>
+            <div class='pad2 checkbox'>
+              <input type='checkbox' id='agree' checked='checked'>
+              <label for='agree' class='small icon icon-ok'>I agree</label>
+            </div>
+          </figure>
+          <figure>
+            <div class='fill-dark dark pad2 contain checkbox round-bottom'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .dark.checkbox
+              </div>
+              <input type='checkbox' id='agree-dark' checked='checked'>
+              <label for='agree-dark' class='small icon icon-ok'>I agree</label>
+            </div>
+          </figure>          
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Radios</h3>
+          </div>
+          <figure>
+            <fieldset class='pad2'>
+              <div class='radio space-bottom1'>
+                <input type='radio' name='radios' id='radio1' value='option1' checked>
+                <label for='radio1' class='icon-radio-checked'>
+                  Option one is this and that
+                </label>
+              </div>
+              <div class='radio space-bottom1'>
+                <input type='radio' name='radios' id='radio2' value='option2'>
+                <label for='radio2' class='icon-radio-checked'>
+                  Option two is this and that
+                </label>
+              </div>
+              <div class='radio'>
+                <input type='radio' name='radios' id='radio3' value='option3'>
+                <label for='radio3' class='icon-radio-checked'>
+                  Option three is this and that
+                </label>
+              </div>
+            </fieldset>
+          </figure>
+          <figure>
+            <div class='pad2 dark fill-dark contain round-bottom'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .dark .radio
+              </div>
+              <fieldset>
+                <div class='radio space-bottom1'>
+                  <input type='radio' name='dark-radios' id='darkradio1' value='option1' checked>
+                  <label for='darkradio1' class='icon-radio-checked'>
+                    Option one is this and that
+                  </label>
+                </div>
+                <div class='radio space-bottom1'>
+                  <input type='radio' name='dark-radios' id='darkradio2' value='option2'>
+                  <label for='darkradio2' class='icon-radio-checked'>
+                    Option two is this and that
+                  </label>
+                </div>
+                <div class='radio'>
+                  <input type='radio' name='dark-radios' id='darkradio3' value='option3'>
+                  <label for='darkradio3' class='icon-radio-checked'>
+                    Option three is this and that
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+          </figure>          
+        </div>
+      </section>
+
+      <h2 class='space-bottom'>Buttons</h2>
+      <section class='space-bottom4'>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Buttons</h3>
+          </div>
+          <div class='pad2'>
+            <a href='#fakelink' class='btn btn-primary'>.btn.btn-primary</a>
+            <a href='#fakelink' class='btn btn-loud'>.btn.btn-loud</a>
+            <a href='#fakelink' class='btn btn-default'>.btn.btn-default</a>
+            <a href='#fakelink' class='btn btn-danger'>.btn.btn-danger</a>
+          </div>
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Icon buttons</h3>
+          </div>
+          <div class='pad2'>
+            <a href='#fakelink' class='btn btn-primary'>
+              <i class='icon icon-inbox pad0r'></i>Inbox
+            </a>
+            <a href='#fakelink' class='btn btn-primary'>
+              <i class='icon icon-home pad0x'></i>
+            </a>
+            <a href='#fakelink' class='btn btn-primary'>
+              More<i class='icon icon-arrow-right pad0l'></i>
+            </a>
+            <a href='#fakelink' class='btn btn-loud'>
+              <i class='icon icon-plus pad0r'></i>Add
+            </a>
+            <a href='#fakelink' class='btn btn-default'>
+              <i class='icon icon-arrow-left pad0r'></i>Back
+            </a>
+          </div>
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Button groups</h3>
+          </div>
+          <figure>
+            <div class='pad2 clearfix'>
+              <div class='btn-group clearfix'>
+                <a href='#fakelink' class='btn btn-primary active'>Home</a>
+                <a href='#fakelink' class='btn btn-primary'>Profile</a>
+                <a href='#fakelink' class='btn btn-primary'>Messages</a>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Input with button</h3>
+          </div>
+          <figure>
+            <div class='pad2 clearfix'>
+              <fieldset class='with-icon'>
+                <div class='input-group'>
+                  <i class='icon icon-envelope quiet'></i>
+                  <input type='text' placeholder='Email address'>
+                  <div class='input-group-btn'>
+                    <input type='submit' value='Subscribe' class='btn btn-primary'>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </figure>
+          
+          <figure>
+            <div class='pad2x pad4y clearfix contain'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                dropdown
+              </div>
+              <div class='input-group'>
+                <input type='text'>
+                <div class='input-group-btn btn-group'>
+                  <a href='#fakelink' class='btn btn-primary dropdown-toggle col-sm-12' data-toggle='dropdown'>
+                    More <span class='caret'></span>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li><a href='#fakelink'>Action</a></li>
+                    <li><a href='#fakelink'>Another action</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </figure> 
+          <figure>
+            <div class='pad2x pad4y clearfix contain'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                split button
+              </div>
+              <div class='input-group'>
+                <input type='text'>
+                <div class='input-group-btn btn-group'>            
+                  <a class='btn btn-primary' href='#fakelink'>Resend</a>
+                  <button class='btn btn-primary dropdown-toggle' data-toggle='dropdown'>
+                    <span class='caret'></span>
+                  </button>
+                  <ul class='dropdown-menu'>
+                    <li><a href='#fakelink'>Action</a></li>
+                    <li><a href='#fakelink'>Another action</a></li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </figure>                   
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>File Input</h3>
+          </div>
+          <figure>
+            <div class='pad2 clearfix'>
+              <fieldset class='fileinput fileinput-new' data-provides='fileinput'>
+                <div class='input-group'>
+                  <div class='form-control uneditable-input' data-trigger='fileinput'>
+                    <i class='icon icon-paperclip fileinput-exists'></i>
+                    <span class='fileinput-filename'></span>
+                  </div>
+                  <span class='input-group-btn btn-file'>
+                    <span class='btn btn-default fileinput-new' data-role='select-file'>
+                      Select file
+                    </span>
+                    <span class='btn btn-default fileinput-exists' data-role='change'>
+                      <i class='icon icon-cog pad0r'></i>Change
+                    </span>
+                    <input type='file'>
+                    <a href='#' class='btn btn-danger fileinput-exists' data-dismiss='fileinput'>
+                      <i class='icon icon-trash pad0r'></i>Remove
+                    </a>               
+                  </span>             
+                </div>
+              </fieldset>
+            </div>
+          </figure>
+        </div>        
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Tabs</h3>
+          </div>
+          <figure>
+            <div class='pad2 clearfix'>
+              <div class='btn-group tabs col-sm-6 col-sm-offset-3'>
+                <a href='#fakelink' class='btn btn-primary active col-sm-4' data-toggle='tab'>Home</a>
+                <a href='#fakelink' class='btn btn-primary col-sm-4' data-toggle='tab'>Profile</a>
+                <a href='#fakelink' class='btn btn-primary col-sm-4' data-toggle='tab'>Messages</a>
+              </div>
+            </div>
+            <div class='pad2 fill-green dark clearfix contain round-bottom'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .dark .tabs
+              </div>
+              <div class='btn-group tabs col-sm-6 col-sm-offset-3'>
+                <a href='#fakelink' class='btn btn-primary active col-sm-4' data-toggle='tab'>Home</a>
+                <a href='#fakelink' class='btn btn-primary col-sm-4' data-toggle='tab'>Profile</a>
+                <a href='#fakelink' class='btn btn-primary col-sm-4' data-toggle='tab'>Messages</a>
+              </div>
+            </div>        
+          </figure>
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Toggle</h3>
+          </div>
+          <figure>
+            <div class='pad2 clearfix'>
+              <div class='rounded-toggle inline'>
+                <input id='no' type='radio' name='rtoggle' value='no' checked='checked'>
+                <label for='no'>No</label>
+                <input id='yes' type='radio' name='rtoggle' value='yes'>
+                <label for='yes' data-toggle='modal' data-target='#myModal'>Yes</label>
+              </div>                  
+            </div>
+          </figure>
+          <figure>
+            <div class='pad2 fill-dark dark contain clearfix round-bottom'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .dark .rounded-toggle
+              </div>              
+              <div class='rounded-toggle inline'>
+                <input id='no2' type='radio' name='rtoggle2' value='no' checked='checked'>
+                <label for='no2'>No</label>
+                <input id='yes2' type='radio' name='rtoggle2' value='yes'>
+                <label for='yes2' data-toggle='modal' data-target='#myModal'>Yes</label>
+              </div>                  
+            </div>
+          </figure>
+        </div>        
+      </section>
+
+      <h2 class='space-bottom'>Animations</h2>
+      <section class='space-bottom4'>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Popup</h3>
+          </div>
+          <figure class='pad2'>
+            <div class='contain'>
+              <strong data-toggle='popup'>
+                <abbr title='insertion order'>IO</abbr> number
+              </strong>
+              <div class='popup with-icon animate col-sm-9 fill-white keyline-all small pad2'>
+                <a href='#fakelink' class='quiet pin-right close' data-dismiss='popup'>
+                  <i class='icon icon-remove'></i>
+                </a>
+                <div class='pad2 pin-left'>
+                  <div class='fill-purple img-circle graphic-md dark'>
+                    <i class='icon icon-lg icon-leaf'></i>
+                  </div>
+                </div>
+                <h4>Insertion Order</h4>
+                Porta pellentesque <strong>pulvinar</strong> pellentesque port, phasellus? Risus egestas et porta, nisi.
+                <div class='text-right'>
+                  <a href='#fakelink' class='strong'>
+                    <i class='icon icon-question-sign'></i>
+                    Learn more
+                  </a>
+                </div>
+              </div>            
+            </div>
+          </figure>
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Horizontal sliding</h3>
+          </div>
+          <figure>
+            <div class='pad2 clearfix col-sm-12'>
+              <div class='btn-group tabs col-sm-8 col-sm-offset-2 space-bottom'>
+                <a href='#home' class='btn btn-primary active col-sm-4' data-toggle='tab'>Home</a>
+                <a href='#profile' class='btn btn-primary col-sm-4' data-toggle='tab'>Profile</a>
+                <a href='#messages' class='btn btn-primary col-sm-4' data-toggle='tab'>Messages</a>
+              </div>
+              <div class='tab-content sliding h col-sm-12 fill-green dark center clip' style='height: 100px;'>
+                <div class='tab-pane active animate col-sm-12 pad4y' id='home'>Home!</div>
+                <div class='tab-pane animate col-sm-12 pad4y fill-darken1' id='profile'>Profile!</div>
+                <div class='tab-pane animate col-sm-12 pad4y fill-darken2' id='messages'>Messages!</div>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Vertical sliding</h3>
+          </div>
+          <figure>
+            <div class='pad2 clearfix col-sm-12'>
+              <div class='btn-group tabs col-sm-8 col-sm-offset-2 space-bottom'>
+                <a href='#home2' class='btn btn-primary active col-sm-4' data-toggle='tab'>Home</a>
+                <a href='#profile2' class='btn btn-primary col-sm-4' data-toggle='tab'>Profile</a>
+                <a href='#messages2' class='btn btn-primary col-sm-4' data-toggle='tab'>Messages</a>
+              </div>
+              <div class='tab-content sliding v col-sm-12 fill-green dark center clip' style='height: 100px;'>
+                <div class='tab-pane active animate col-sm-12 pad4' id='home2'>Home!</div>
+                <div class='tab-pane animate col-sm-12 pad4 fill-darken1' id='profile2'>Profile!</div>
+                <div class='tab-pane animate col-sm-12 pad4 fill-darken2' id='messages2'>Messages!</div>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class='box round'>
+          <div class='pad2 keyline-bottom'>
+            <h3>Off canvas</h3>
+          </div>
+          <figure class='pad2 contain'>
+            <div class='col-sm-12 pad4 center clip contain fill-gray'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .offcanvas-top
+              </div>
+              <a href='#fakelink' class='btn btn-primary' data-toggle='offcanvas' data-target='#target1'>Show</a>
+              <div id='target1' class='animate offcanvas-top pin-top keyline-bottom fill-light pad2'>
+                <a href='#fakelink' class='btn btn-primary' data-dismiss='offcanvas'>
+                  <i class='icon icon-remove'></i>
+                </a>
+              </div>
+            </div>
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='col-sm-12 pad4 center clip contain fill-gray'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .offcanvas-bottom
+              </div>
+              <a href='#fakelink' class='btn btn-primary' data-toggle='offcanvas' data-target='#target2'>Show</a>
+              <div id='target2' class='animate offcanvas-bottom pin-bottom keyline-top fill-light pad2'>
+                <a href='#fakelink' class='btn btn-primary' data-dismiss='offcanvas'>
+                  <i class='icon icon-remove'></i>
+                </a>
+              </div>
+            </div>
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='col-sm-12 pad4 center clip contain fill-gray'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .offcanvas-left
+              </div>
+              <a href='#fakelink' class='btn btn-primary' data-toggle='offcanvas' data-target='#target3'>Show</a>
+              <div id='target3' class='animate offcanvas-left pin-left col-sm-4 keyline-right fill-light pad2 pad4y'>
+                <a href='#fakelink' class='btn btn-primary' data-dismiss='offcanvas'>
+                  <i class='icon icon-remove'></i>
+                </a>
+              </div>
+            </div>
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='col-sm-12 pad4 center clip contain fill-gray'>
+              <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+                .offcanvas-right
+              </div>
+              <a href='#fakelink' class='btn btn-primary' data-toggle='offcanvas' data-target='#target4'>Show</a>
+              <div id='target4' class='animate offcanvas-right pin-right col-sm-4 keyline-left fill-light pad2 pad4y'>
+                <a href='#fakelink' class='btn btn-primary' data-dismiss='offcanvas'>
+                  <i class='icon icon-remove'></i>
+                </a>
+              </div>
+            </div>
+          </figure>
+        </div>        
+      </section>
+
+    </div>
+  </div>
+  
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+  <script src='js/button.js'></script>
+  <script src='js/dropdown.js'></script>
+  <script src='js/modal.js'></script>
+  <script src='js/tab.js'></script>
+  <script src='js/offcanvas.js'></script>
+  <script src='js/popup.js'></script>
+  <script src='js/file-input.js'></script>
+  <script src='js/transition.js'></script>
+</body>
+</html>

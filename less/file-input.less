@@ -1,0 +1,34 @@
+/* File input based on Jasny
+------------------------------------------------------- */
+
+.btn-file {
+  > input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: -25px 0 0;
+    .opacity(0);
+    width: 100%;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  .btn[data-role='change'] { border-radius: 0 !important; }
+  .btn[data-dismiss] { border-left: 1px solid #fff !important; }
+}
+
+.fileinput {
+  cursor: pointer;
+  
+  .uneditable-input {
+    display: inline-block;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    .text-overflow();  
+    
+    [class^="icon-"] { margin-right: .3em; }
+  }
+}
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists { display: none; }
