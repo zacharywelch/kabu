@@ -1,0 +1,21 @@
+{
+  "name": "styleguide",
+  "version": "0.0.1",
+  "description": "A responsive front-end framework for faster and easier web development.",
+  "repository": {
+    "type": "git",
+    "url": "https://cagit.careerbuilder.com/CorpAppsCB/styleguide.git"
+  },
+  "keywords": [
+    "styleguide",
+    "careerbuilder",
+    "design",
+    "ui",
+    "toolkit"
+  ],
+  "author": "careerbuilder",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-less": "~0.12.0"
+  }
+}
