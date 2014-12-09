@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "css/cb-design-framework.css": "less/cb-design-framework.less"
+          "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
         }
       },
       production: {
@@ -14,15 +14,36 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          "css/cb-design-framework.min.css": "less/cb-design-framework.less"
+          "dist/css/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less"
         }
       }
-    }    
+    },
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['js/**/*.js'],
+        dest: 'dist/js/<%= pkg.name %>.js'
+      }
+    },
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+      },
+      dist: {
+        files: {
+          'dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+        }
+      }
+    }        
   });
 
   // Load the plugin that provides the "less" task.
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-concat');  
+  grunt.loadNpmTasks('grunt-contrib-uglify');  
 
   // Default task(s).
-  grunt.registerTask('default', ['less']);
+  grunt.registerTask('default', ['less', 'concat', 'uglify']);
 };

@@ -1,5 +1,5 @@
 {
-  "name": "styleguide",
+  "name": "cb-design-framework",
   "version": "0.0.1",
   "description": "A responsive front-end framework for faster and easier web development.",
   "repository": {
@@ -7,15 +7,16 @@
     "url": "https://cagit.careerbuilder.com/CorpAppsCB/styleguide.git"
   },
   "keywords": [
+    "cb-design-framework",
     "styleguide",
-    "careerbuilder",
     "design",
-    "ui",
-    "toolkit"
+    "ui"
   ],
   "author": "careerbuilder",
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-less": "~0.12.0"
+    "grunt-contrib-less": "~0.12.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-uglify": "~0.6.0"
   }
 }
