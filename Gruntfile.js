@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     },
     copy: {
       fonts: {
-        src: 'fonts/*',
+        src: 'fonts/*/*',
         dest: 'dist/'
       },
       images: {
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         dest: 'dist/'        
       },
       docs: {
-        src: 'dist/*/*',
+        src: 'dist/**/*',
         dest: 'docs/'
       }
     },    
