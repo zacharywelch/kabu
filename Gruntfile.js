@@ -3,11 +3,28 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    clean: {
+      dist: 'dist',
+      docs: 'docs/dist'
+    },
+    copy: {
+      fonts: {
+        src: 'fonts/*',
+        dest: 'dist/'
+      },
+      images: {
+        src: 'img/*',
+        dest: 'dist/'        
+      },
+      docs: {
+        src: 'dist/*/*',
+        dest: 'docs/'
+      }
+    },    
     less: {
       development: {
         files: {
-          "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less",
-          "docs/dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
+          "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
         }
       },
       production: {
@@ -36,14 +53,11 @@ module.exports = function(grunt) {
       dist: {
         src: ['js/**/*.js'],
         dest: 'dist/js/<%= pkg.name %>.js'
-      },
-      docs: {
-        src: ['js/**/*.js'],
-        dest: 'docs/dist/js/<%= pkg.name %>.js'
       }
     },
     uglify: {
       options: {
+        mangle: false,
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
       },
       dist: {
@@ -51,15 +65,23 @@ module.exports = function(grunt) {
           'dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
-    }
+    }    
   });
 
   // Load the plugin that provides the "less" task.
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');  
-  grunt.loadNpmTasks('grunt-contrib-uglify');  
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  // Default task(s).
-  grunt.registerTask('default', ['less', 'coffee', 'concat', 'uglify']);
+  // CSS task
+  grunt.registerTask('css', ['less']);
+
+  // JS task
+  grunt.registerTask('js', ['coffee', 'concat', 'uglify']);
+
+  // Default task
+  grunt.registerTask('default', ['clean', 'css', 'js', 'copy']);
 };
