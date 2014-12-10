@@ -73,35 +73,3 @@ body { padding-top: 60px; }
   .sidenav + .container-fluid > .pad2y { padding: 0; }
   .sidenav + .container-fluid .box { border: none; }
 }
-
-
-/* Visualization styles */
-
-.outline { 
-  fill: #bfbfbf;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-.outline .active { fill: #FB896B; }
-.zoom {
-  fill: none;
-  pointer-events: all;
-}
-.outline .zoom + g path { cursor: pointer; }
-.bubble {
-  fill: #3887be;
-  stroke: none;
-  opacity: 0.8;
-}
-.bubble:hover { fill: #3bb2d0; }
-
-/* Quantized scale */
-.q0-9 { fill:rgb(247,251,255); }
-.q1-9 { fill:rgb(222,235,247); }
-.q2-9 { fill:rgb(198,219,239); }
-.q3-9 { fill:rgb(158,202,225); }
-.q4-9 { fill:rgb(107,174,214); }
-.q5-9 { fill:rgb(66,146,198); }
-.q6-9 { fill:rgb(33,113,181); }
-.q7-9 { fill:rgb(8,81,156); }
-.q8-9 { fill:rgb(8,48,107); }
