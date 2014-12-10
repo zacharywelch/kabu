@@ -6,7 +6,8 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
+          "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less",
+          "docs/dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
         }
       },
       production: {
@@ -35,6 +36,10 @@ module.exports = function(grunt) {
       dist: {
         src: ['js/**/*.js'],
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      docs: {
+        src: ['js/**/*.js'],
+        dest: 'docs/dist/js/<%= pkg.name %>.js'
       }
     },
     uglify: {
