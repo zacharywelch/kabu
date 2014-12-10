@@ -5,8 +5,8 @@
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>  
   <title>title goes here</title>
-  <link href='/docs/dist/css/cb-design-framework.min.css' rel='stylesheet' />
   <link href='/docs/css/prettify.css' rel='stylesheet' />
+  <link href='/docs/dist/css/cb-design-framework.min.css' rel='stylesheet' />
   <link href='/docs/css/site.css' rel='stylesheet' />
 </head>
 <body class='fill-light'>
@@ -100,28 +100,66 @@
 
     <div class='container-fluid clearfix'>
       <div class='pad2y contain col-sm-9 col-sm-offset-3'>
-        <div class='col-sm-12 box round clearfix contain fill-white'>
-
-          <div class='pad2 keyline-bottom prose'>
-            <h4>Lorem ipsum dolor</h4>
-            <p>
-              Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta tenderloin cow meatloaf. Bresaola bacon frankfurter t-bone. Chicken jerky pancetta andouille tail ball tip sirloin fatback. Doner short ribs boudin swine ham hock biltong tongue frankfurter alcatra. Brisket tri-tip alcatra, ribeye tenderloin jowl kevin boudin pork loin shankle beef corned beef strip steak drumstick sirloin. Strip steak ground round cow pork belly capicola picanha beef ribs biltong.
-            </p>
-            <p>
-              Pork loin corned beef ham cow t-bone ham hock. Kielbasa pork chop tenderloin tri-tip pancetta flank shoulder t-bone landjaeger. Pork belly ribeye jerky cow. Swine ball tip bresaola meatloaf, ham hamburger pork chop fatback.
-            </p>
+        <div class='box round contain fill-white pad2 prose'>
+          <p>
+            Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta tenderloin cow meatloaf. Bresaola bacon frankfurter t-bone. Chicken jerky pancetta andouille tail ball tip sirloin fatback.
+          </p>
+          <h4>How it works</h4>
+          <p>
+            Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta tenderloin cow meatloaf.
+          </p>
+<pre class='prettyprint'>
+&lt;div class='col-sm-12 clearfix'&gt;
+&lt;div class='col-sm-6'&gt;&lt;/div&gt;
+&lt;div class='col-sm-6'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          <div class='space-bottom fill-light-blue pad2'>
+            <h4>Grid rows, we hardly knew ye</h4>
+            <p>Because gutters have been removed from grid columns, Bootstrap <code>row</code>s are no longer needed to create horizontal groups of columns. Use <a href='#fakelink'>padding helpers</a> like <code>pad0</code> and <code>pad2x</code> to create padding within columns.</p>
           </div>
-          <button id='copy' class='btn btn-primary btn-block round-bottom js-clipboard' 
-                  data-ref-id='code'>
-            <i class='icon icon-clipboard pad0r'></i>Copy example
-          </button>
         </div>
 
+        <div class='box round contain fill-white prose'>
+          <header class='box-heading pad2'>
+            <h4>Example: 12 column grid</h4>
+          </header>
+          <div class='pad2'>
+            <div class='fill-denim dark clearfix space-bottom'>
+              <div class='col-md-1 pad0y center keyline-right'>1</div>
+              <div class='col-md-1 pad0y center keyline-right'>2</div>
+              <div class='col-md-1 pad0y center keyline-right'>3</div>
+              <div class='col-md-1 pad0y center keyline-right'>4</div>
+              <div class='col-md-1 pad0y center keyline-right'>5</div>
+              <div class='col-md-1 pad0y center keyline-right'>6</div>
+              <div class='col-md-1 pad0y center keyline-right'>7</div>
+              <div class='col-md-1 pad0y center keyline-right'>8</div>
+              <div class='col-md-1 pad0y center keyline-right'>9</div>
+              <div class='col-md-1 pad0y center keyline-right'>10</div>
+              <div class='col-md-1 pad0y center keyline-right'>11</div>
+              <div class='col-md-1 pad0y center'>12</div>
+            </div>
+            <div class='fill-denim dark clearfix space-bottom'>
+              <div class='col-md-8 pad0y center keyline-right'>8</div>
+              <div class='col-md-4 pad0y center'>4</div>
+            </div>
+            <div class='fill-denim dark clearfix space-bottom'>
+              <div class='col-md-4 pad0y center keyline-right'>4</div>
+              <div class='col-md-4 pad0y center keyline-right'>4</div>
+              <div class='col-md-4 pad0y center'>4</div>
+            </div>
+            <div class='fill-denim dark clearfix space-bottom'>
+              <div class='col-md-6 pad0y center keyline-right'>6</div>
+              <div class='col-md-6 pad0y center'>6</div>
+            </div>
+          </div>
+        </div>
+        
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>
-    </div>
+    </div><!-- ./content -->
 
-  </div><!-- ./content -->
+  </div>
   
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
   <script src='/docs/dist/js/cb-design-framework.min.js'></script>
