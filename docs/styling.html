@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>  
+  <title>CSS and styling</title>
+  <link href='dist/css/cb-design-framework.min.css' rel='stylesheet' />
+  <link href='css/prettify.css' rel='stylesheet' />
+  <link href='css/site.css' rel='stylesheet' />
+</head>
+<body class='fill-light'>
+  <div class='navbar fill-white keyline-bottom col-sm-12 animate clearfix'>
+    <div class='container-fluid contain'>
+      <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+        <a class='logo pad1y pull-left text-left' href='/'>
+          CareerBuilder
+        </a>
+
+        <div class='primary row2'>
+          <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+            quiet round animate pull-right center'>
+            <i class='icon icon-list'></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div><!-- ./navbar -->
+
+  <div>
+    
+    <div class='sidenav hidden-xs'>
+      <div class='container-fluid'>
+        <div class='col-sm-3 contain'>
+          <nav class='scroll-styled quiet-scroll'>
+            <div class='space-bottom'>
+              <a class='block quiet active strong small truncate' href='#fakelink'>Data Visualizations</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>Geomapping</strong>
+              <a href='/geomapping/simple.html' class='block small truncate active'>A simple map</a>
+              <a href='/geomapping/counties.html' class='block small truncate'>US counties TopoJSON</a>
+              <a href='/geomapping/zoom.html' class='block small truncate'>Click to zoom</a>
+              <a href='/geomapping/zoomtransitions.html' class='block small truncate'>Zoom transitions with panning</a>
+              <a href='/geomapping/tooltip.html' class='block small truncate'>Adding tooltips on hover</a>
+              <a href='/geomapping/bubble.html' class='block small truncate'>Creating a bubble map</a>
+              <a href='/geomapping/choropleth.html' class='block small truncate'>Creating a choropleth</a>
+              <a href='/geomapping/statezoom.html' class='block small truncate'>Adding a county-level zoom</a>
+              <a href='/geomapping/unemployment.html' class='block small truncate'>Telling a story</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>Heading</strong>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+            </div>            
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>Heading</strong>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+            </div>            
+            
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>Force layouts</strong>
+              <a href='/force/collision.html' class='block small truncate'>Collision detection</a>
+              <a href='/force/tree.html' class='block small truncate'>Visualizing Corp Apps Infrastructure</a>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+              <a href='#fakelink' class='block small truncate'>Lorem ipsum dolor sit amet</a>
+            </div>              
+          </nav>
+        </div>
+      </div>  
+    </div><!-- ./sidenav -->
+
+    <div class='container-fluid clearfix'>
+      <div class='pad2y contain col-sm-9 col-sm-offset-3'>
+        <div class='col-sm-12 box round clearfix contain fill-white'>
+
+          <div class='pad2 keyline-bottom'>
+            <h4>A simple map</h4>
+            <p class='prose'>
+              This map uses a standard Albers USA projection with US states 
+              encoded as <a href='https://github.com/mbostock/topojson'>TopoJSON</a>. Albers USA is a composite projection that 
+              nicely tucks Alaska and Hawaii beneath the Southwest.
+            </p>
+          </div>
+          <button id='copy' class='btn btn-primary btn-block round-bottom js-clipboard' 
+                  data-ref-id='code'>
+            <i class='icon icon-clipboard pad0r'></i>Copy example
+          </button>
+        </div>
+
+        <div class='center quiet small pad1y'>CareerBuilder UX</div>        
+      </div>
+    </div>
+
+  </div><!-- ./content -->
+  
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
+  <script src='js/prettify.js'></script>
+  <script src='js/zeroclipboard/ZeroClipboard.min.js'></script>
+  <script src='js/site.js'></script>
+</body>
+</html>

@@ -6,7 +6,8 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
+          "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less",
+          "docs/dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
         }
       },
       production: {
@@ -18,6 +19,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    coffee: {
+      glob_to_multiple: {
+        expand: true,
+        flatten: true,
+        cwd: 'coffee/',
+        src: ['*.coffee'],
+        dest: 'js/',
+        ext: '.js'
+      }
+    },
     concat: {
       options: {
         separator: ';'
@@ -25,6 +36,10 @@ module.exports = function(grunt) {
       dist: {
         src: ['js/**/*.js'],
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      docs: {
+        src: ['js/**/*.js'],
+        dest: 'docs/dist/js/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -36,14 +51,15 @@ module.exports = function(grunt) {
           'dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
-    }        
+    }
   });
 
   // Load the plugin that provides the "less" task.
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');  
   grunt.loadNpmTasks('grunt-contrib-uglify');  
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 
   // Default task(s).
-  grunt.registerTask('default', ['less', 'concat', 'uglify']);
+  grunt.registerTask('default', ['less', 'coffee', 'concat', 'uglify']);
 };
