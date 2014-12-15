@@ -170,10 +170,34 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
+            <h4>Links</h4>
+            <p class='prose'>
+              Links are styled globally using the styleguide's <a href='colors.html'>primary color</a>. Customize this variable and others within <code>variables.less</code>.
+            </p>                
+          </header>
+          <div class='pad2'>
+            The five boxing <a href='#'>wizards</a> jump quickly.
+          </div>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='links'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='links'>
+The five boxing &lt;a href='#'&gt;wizards&lt;/a&gt; jump quickly.
+</pre>          
+          </div>
+        </div>   
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
             <h4>Body copy</h4>
             <p class='prose'>
               Our default font-size is 15px with a line-height of 20px. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. As expected the <code>&lt;p&gt;</code> tag receives a bottom margin to create space.
             </p>                
+            <div class='space-bottom fill-light-blue pad2'>
+              <h4>Text alignment</h4>
+              <p>Need to align some text? Visit our <a href='helpers.html'>helpers</a> page to see some of the slick classes we've added.</p>
+            </div>
           </header>
           <div class='pad2'>
             <h4>Premium Leather Journal</h4>
@@ -181,7 +205,7 @@
               Each handcrafted journal is made from <a href='#fakelink'>premium natural</a> raw leather. This buttery soft vegetable-tanned leather will <strong>darken</strong> over time and look even <em>better</em> as it ages. The more you use it, the better it looks. Each journal comes in a handy cotton pouch.
             </p>
             <p>
-              <img src='/docs/img/desk.jpg'>
+              <img src='/docs/img/desk.jpg' width='500'>
             </p>
             <ul>
               <li>7.5" x 5" and 1" thick</li>
@@ -205,7 +229,7 @@
   Each handcrafted journal is made from &lt;a href='#fakelink'&gt;premium natural&lt;/a&gt; raw leather. This buttery soft vegetable-tanned leather will &lt;strong&gt;darken&lt;/strong&gt; over time and look even &lt;em&gt;better&lt;/em&gt; as it ages. The more you use it, the better it looks. Each journal comes in a handy cotton pouch.
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;img src='/docs/img/desk.jpg'&gt;
+  &lt;img src='/docs/img/desk.jpg' width='500'&gt;
 &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;7.5&quot; x 5&quot; and 1&quot; thick&lt;/li&gt;
@@ -218,6 +242,124 @@
 &lt;p class='small quiet'&gt;
   *Please note: each piece of leather will have slight variations and markings, making each journal truly one of a kind.
 &lt;/p&gt;
+</pre>          
+          </div>
+        </div>   
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Formatted text and readability</h4>
+            <p class='prose'>
+              To add exaggerated heirarchy and breathing space for content like blogs and articles, use the <code>prose</code> class on a containing element. 
+            </p>                
+          </header>
+          <div class='pad2 prose'>
+            <h4>Premium Leather Journal</h4>
+            <p>
+              Each handcrafted journal is made from <a href='#fakelink'>premium natural</a> raw leather. This buttery soft vegetable-tanned leather will <strong>darken</strong> over time and look even <em>better</em> as it ages. The more you use it, the better it looks. Each journal comes in a handy cotton pouch.
+            </p>
+            <p>
+              <img src='/docs/img/desk.jpg' width='500'>
+            </p>
+            <ul>
+              <li>7.5" x 5" and 1" thick</li>
+              <li>192 blank white pages (7" x 4.75")</li>
+              <li>Sturdy Longstitch hand binding</li>
+              <li>Knotted thread place holder</li>
+              <li>Finished edges and rounded corners</li>
+              <li>Handmade in the USA</li>
+            </ul>
+            <p class='small quiet'>
+              *Please note: each piece of leather will have slight variations and markings, making each journal truly one of a kind.
+            </p>
+          </div>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='body-copy'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='body-copy'>
+&lt;div class='prose'&gt;
+  &lt;h4&gt;Premium Leather Journal&lt;/h4&gt;
+  &lt;p&gt;
+    Each handcrafted journal is made from &lt;a href='#fakelink'&gt;premium natural&lt;/a&gt; raw leather. This buttery soft vegetable-tanned leather will &lt;strong&gt;darken&lt;/strong&gt; over time and look even &lt;em&gt;better&lt;/em&gt; as it ages. The more you use it, the better it looks. Each journal comes in a handy cotton pouch.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;img src='/docs/img/desk.jpg' width='500'&gt;
+  &lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;7.5&quot; x 5&quot; and 1&quot; thick&lt;/li&gt;
+    &lt;li&gt;192 blank white pages (7&quot; x 4.75&quot;)&lt;/li&gt;
+    &lt;li&gt;Sturdy Longstitch hand binding&lt;/li&gt;
+    &lt;li&gt;Knotted thread place holder&lt;/li&gt;
+    &lt;li&gt;Finished edges and rounded corners&lt;/li&gt;
+    &lt;li&gt;Handmade in the USA&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p class='small quiet'&gt;
+    *Please note: each piece of leather will have slight variations and markings, making each journal truly one of a kind.
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre>          
+          </div>
+        </div>          
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Dark themed text</h4>
+            <p class='prose'>
+              To add white text on a dark background combine the <code>dark</code> class with a <code>fill-*</code> from the <a href='colors.html'>colors</a> palette on a containing element.
+            </p>
+            <div class='space-bottom fill-light-blue pad2'>
+              <h4>Light Text on Dark Backgrounds</h4>
+              <p>
+                Use caution when choosing dark themed text. Studies have shown that having light text on a dark background harms readibility and is generally <a href='http://blog.tatham.oddie.com.au/2008/10/13/why-light-text-on-dark-background-is-a-bad-idea/'>a bad idea</a>. 
+              </p>
+            </div>            
+          </header>
+          <div class='pad2 fill-denim dark'>
+            <h4>Premium Leather Journal</h4>
+            <p>
+              Each handcrafted journal is made from <a href='#fakelink'>premium natural</a> raw leather. This buttery soft vegetable-tanned leather will <strong>darken</strong> over time and look even <em>better</em> as it ages. The more you use it, the better it looks. Each journal comes in a handy cotton pouch.
+            </p>
+            <p>
+              <img src='/docs/img/desk.jpg' width='500'>
+            </p>
+            <ul>
+              <li>7.5" x 5" and 1" thick</li>
+              <li>192 blank white pages (7" x 4.75")</li>
+              <li>Sturdy Longstitch hand binding</li>
+              <li>Knotted thread place holder</li>
+              <li>Finished edges and rounded corners</li>
+              <li>Handmade in the USA</li>
+            </ul>
+            <p class='small quiet'>
+              *Please note: each piece of leather will have slight variations and markings, making each journal truly one of a kind.
+            </p>
+          </div>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='body-copy'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='body-copy'>
+&lt;div class='fill-denim dark'&gt;
+  &lt;h4&gt;Premium Leather Journal&lt;/h4&gt;
+  &lt;p&gt;
+    Each handcrafted journal is made from &lt;a href='#fakelink'&gt;premium natural&lt;/a&gt; raw leather. This buttery soft vegetable-tanned leather will &lt;strong&gt;darken&lt;/strong&gt; over time and look even &lt;em&gt;better&lt;/em&gt; as it ages. The more you use it, the better it looks. Each journal comes in a handy cotton pouch.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;img src='/docs/img/desk.jpg' width='500'&gt;
+  &lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;7.5&quot; x 5&quot; and 1&quot; thick&lt;/li&gt;
+    &lt;li&gt;192 blank white pages (7&quot; x 4.75&quot;)&lt;/li&gt;
+    &lt;li&gt;Sturdy Longstitch hand binding&lt;/li&gt;
+    &lt;li&gt;Knotted thread place holder&lt;/li&gt;
+    &lt;li&gt;Finished edges and rounded corners&lt;/li&gt;
+    &lt;li&gt;Handmade in the USA&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p class='small quiet'&gt;
+    *Please note: each piece of leather will have slight variations and markings, making each journal truly one of a kind.
+  &lt;/p&gt;
+&lt;/div&gt;
 </pre>          
           </div>
         </div>   
