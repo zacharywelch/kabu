@@ -159,7 +159,7 @@
             <a href='#fakelink' class='btn btn-danger'>.btn.btn-danger</a>
           </div>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='buttons'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='buttons'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint' id='buttons'>
@@ -199,7 +199,7 @@
             </a>
           </div>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-icons'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-icons'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint' id='button-icons'>
@@ -247,7 +247,7 @@
             </div>            
           </figure>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-groups'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-groups'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint' id='button-groups'>
@@ -268,44 +268,171 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
-            <h4>Button groups</h4>
+            <h4>Button dropdowns</h4>
             <p>
-              Group a series of buttons together on a single line with the <code>btn-group</code> class.
+              Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.
             </p>                
           </header>
           <figure class='pad2'>
-            <div class='btn-group clearfix'>
-              <a href='#fakelink' class='btn btn-primary active'>Home</a>
-              <a href='#fakelink' class='btn btn-primary'>Profile</a>
-              <a href='#fakelink' class='btn btn-primary'>Messages</a>
+            <div class='btn-group'>
+              <a href='#fakelink' class='btn btn-primary dropdown-toggle col-sm-12' data-toggle='dropdown'>
+                More <span class='caret'></span>
+              </a>
+              <ul class='dropdown-menu' role='menu'>
+                <li><a href='#fakelink'>Action</a></li>
+                <li><a href='#fakelink'>Another action</a></li>
+              </ul>
             </div>
           </figure>
-          <figure class='pad2'>
-            <div class='btn-group clearfix'>
-              <a href='#fakelink' class='btn btn-default active'>Home</a>
-              <a href='#fakelink' class='btn btn-default'>Profile</a>
-              <a href='#fakelink' class='btn btn-default'>Messages</a>
-            </div>            
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              split
+            </div>
+            <div class='btn-group'>
+              <a href='#fakelink' class='btn btn-primary'>Action</a>
+              <button class='btn btn-primary dropdown-toggle' data-toggle='dropdown'>
+                <span class='caret'></span>
+                <span class='sr-only'>Toggle Dropdown</span>
+              </button>
+              <ul class='dropdown-menu' role='menu'>
+                <li><a href='#fakelink'>Action</a></li>
+                <li><a href='#fakelink'>Another action</a></li>
+                <li><a href='#fakelink'>Something else here</a></li>
+                <li class='divider'></li>
+                <li><a href='#fakelink'>Separated link</a></li>
+              </ul>
+            </div>
           </figure>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-groups'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-dropdown'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
-<pre class='prettyprint' id='button-groups'>
-&lt;div class='btn-group clearfix'&gt;
-  &lt;a href='#fakelink' class='btn btn-primary active'&gt;Home&lt;/a&gt;
-  &lt;a href='#fakelink' class='btn btn-primary'&gt;Profile&lt;/a&gt;
-  &lt;a href='#fakelink' class='btn btn-primary'&gt;Messages&lt;/a&gt;
+<pre class='prettyprint' id='button-dropdown'>
+&lt;div class='btn-group'&gt;
+  &lt;a href='#fakelink' class='btn btn-primary dropdown-toggle col-sm-12' data-toggle='dropdown'&gt;
+    More &lt;span class='caret'&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class='dropdown-menu' role='menu'&gt;
+    &lt;li&gt;&lt;a href='#fakelink'&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href='#fakelink'&gt;Another action&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div class='btn-group clearfix'&gt;
-  &lt;a href='#fakelink' class='btn btn-default active'&gt;Home&lt;/a&gt;
-  &lt;a href='#fakelink' class='btn btn-default'&gt;Profile&lt;/a&gt;
-  &lt;a href='#fakelink' class='btn btn-default'&gt;Messages&lt;/a&gt;
+&lt;div class='btn-group'&gt;
+  &lt;a href='#fakelink' class='btn btn-primary'&gt;Action&lt;/a&gt;
+  &lt;button class='btn btn-primary dropdown-toggle' data-toggle='dropdown'&gt;
+    &lt;span class='caret'&gt;&lt;/span&gt;
+    &lt;span class='sr-only'&gt;Toggle Dropdown&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class='dropdown-menu' role='menu'&gt;
+    &lt;li&gt;&lt;a href='#fakelink'&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href='#fakelink'&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href='#fakelink'&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li class='divider'&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href='#fakelink'&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>          
           </div>
         </div>           
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Inputs with buttons</h4>
+            <p>
+              Buttons in input groups are a bit different and require one extra level of nesting. You'll need to wrap the input in an <code>.input-group</code> class and assign <code>.input-group-btn</code> to the button.
+            </p>                
+          </header>
+          <figure class='pad2 contain clearfix'>
+            <fieldset class='with-icon col-sm-6 col-xs-9'>
+              <div class='input-group'>
+                <i class='icon icon-envelope quiet'></i>
+                <input type='text' placeholder='Email address'>
+                <div class='input-group-btn'>
+                  <input type='submit' value='Subscribe' class='btn btn-primary'>
+                </div>
+              </div>
+            </fieldset>
+          </figure>
+          <figure class='pad2 contain clearfix'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              dropdown
+            </div>
+            <div class='input-group col-sm-6 col-xs-9'>
+              <input type='text'>
+              <div class='input-group-btn btn-group'>
+                <a href='#fakelink' class='btn btn-primary dropdown-toggle col-sm-12' data-toggle='dropdown'>
+                  More <span class='caret'></span>
+                </a>
+                <ul class='dropdown-menu' role='menu'>
+                  <li><a href='#fakelink'>Action</a></li>
+                  <li><a href='#fakelink'>Another action</a></li>
+                </ul>
+              </div>
+            </div>
+          </figure>
+          <figure class='pad2 contain clearfix'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              split
+            </div>
+            <div class='input-group col-sm-6 col-xs-9'>
+              <input type='text'>
+              <div class='input-group-btn btn-group'>            
+                <a class='btn btn-primary' href='#fakelink'>Action</a>
+                <button class='btn btn-primary dropdown-toggle' data-toggle='dropdown'>
+                  <span class='caret'></span>
+                </button>
+                <ul class='dropdown-menu'>
+                  <li><a href='#fakelink'>Action</a></li>
+                  <li><a href='#fakelink'>Another action</a></li>
+                </ul>
+              </div>          
+            </div>
+          </figure>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='input-buttons'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='input-buttons'>
+&lt;fieldset class='with-icon col-sm-6 col-xs-9'&gt;
+  &lt;div class='input-group'&gt;
+    &lt;i class='icon icon-envelope quiet'&gt;&lt;/i&gt;
+    &lt;input type='text' placeholder='Email address'&gt;
+    &lt;div class='input-group-btn'&gt;
+      &lt;input type='submit' value='Subscribe' class='btn btn-primary'&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+
+&lt;div class='input-group col-sm-6 col-xs-9'&gt;
+  &lt;input type='text'&gt;
+  &lt;div class='input-group-btn btn-group'&gt;
+    &lt;a href='#fakelink' class='btn btn-primary dropdown-toggle col-sm-12' data-toggle='dropdown'&gt;
+      More &lt;span class='caret'&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class='dropdown-menu' role='menu'&gt;
+      &lt;li&gt;&lt;a href='#fakelink'&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href='#fakelink'&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class='input-group col-sm-6 col-xs-9'&gt;
+  &lt;input type='text'&gt;
+  &lt;div class='input-group-btn btn-group'&gt;            
+    &lt;a class='btn btn-primary' href='#fakelink'&gt;Action&lt;/a&gt;
+    &lt;button class='btn btn-primary dropdown-toggle' data-toggle='dropdown'&gt;
+      &lt;span class='caret'&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class='dropdown-menu'&gt;
+      &lt;li&gt;&lt;a href='#fakelink'&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href='#fakelink'&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;          
+&lt;/div&gt;
+</pre>          
+          </div>
+        </div>  
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>
