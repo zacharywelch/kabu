@@ -4,6 +4,20 @@
       return e.preventDefault()
     });
 
+    $('a.droplink').click(function(e) {
+      var $drop, $link;
+      $link = $(e.currentTarget);
+      $drop = $link.siblings('.dropdown');
+      if ($link.is('.active') || $drop.is('.active')) {
+        $link.removeClass('active');
+        $drop.removeClass('active');
+      } else {
+        $link.addClass('active');
+        $drop.addClass('active');
+      }
+      return false;
+    });
+
     $('.js-clipboard').each(function() {
       var $btn = $(this)
       if (!$btn.data('zeroclipboard-bound')) {

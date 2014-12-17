@@ -5,15 +5,15 @@
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>  
   <title>Grid system</title>
-  <link href='/docs/css/prettify.css' rel='stylesheet' />
-  <link href='/docs/dist/css/cb-design-framework.min.css' rel='stylesheet' />
-  <link href='/docs/css/site.css' rel='stylesheet' />
+  <link href='../css/prettify.css' rel='stylesheet' />
+  <link href='../dist/css/cb-design-framework.min.css' rel='stylesheet' />
+  <link href='../css/site.css' rel='stylesheet' />
 </head>
 <body class='fill-light'>
   <div class='navbar fill-white keyline-bottom col-sm-12 animate clearfix'>
     <div class='container-fluid contain'>
       <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
-        <a class='logo pad1y pull-left text-left' href='/docs/'>
+        <a class='logo pad1y pull-left text-left' href='/'>
           CareerBuilder
         </a>
 
@@ -22,6 +22,27 @@
             quiet round animate pull-right center'>
             <i class='icon icon-list'></i>
           </a>
+
+          <div class='visible-xs dropdown fill-denim dark keyline-all round animate'>
+            <div class='pad1 keyline-bottom'>
+              <a href='grid.html'>CSS and styling</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../animation.html'>Animation</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../writing-copy.html'>Writing Copy</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../branding.html'>Brand assets</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../tutorials.html'>Tutorials</a>
+            </div>
+            <div class='pad1'>
+              <a href='../templates.html'>Templates</a>
+            </div>
+          </div><!-- ./dropdown menu -->  
         </div>
       </nav>
     </div>
@@ -34,42 +55,42 @@
         <div class='col-sm-3 contain'>
           <nav class='scroll-styled quiet-scroll'>
             <div class='space-bottom'>
-              <a class='block quiet active strong small truncate' href='/docs/'>Overview</a>
+              <a class='block quiet active strong small truncate' href=''>Overview</a>
             </div>
 
             <div class='space-bottom1'>
               <strong class='block quiet small'>CSS and styling</strong>
-              <a href='/docs/styling/grid.html' class='block small truncate active'>
+              <a href='grid.html' class='block small truncate active'>
                 Grid system
               </a>
-              <a href='/docs/styling/typography.html' class='block small truncate'>
+              <a href='typography.html' class='block small truncate'>
                 Typography
               </a>
-              <a href='/docs/styling/colors.html' class='block small truncate'>
+              <a href='colors.html' class='block small truncate'>
                 Colors
               </a>
-              <a href='/docs/styling/tables.html' class='block small truncate'>
+              <a href='tables.html' class='block small truncate'>
                 Tables
               </a>
-              <a href='/docs/styling/forms.html' class='block small truncate'>
+              <a href='forms.html' class='block small truncate'>
                 Forms
               </a>
-              <a href='/docs/styling/buttons.html' class='block small truncate'>
+              <a href='buttons.html' class='block small truncate'>
                 Buttons
               </a>
-              <a href='/docs/styling/navigation.html' class='block small truncate'>
+              <a href='navigation.html' class='block small truncate'>
                 Navigation
               </a>
-              <a href='/docs/styling/components.html' class='block small truncate'>
+              <a href='components.html' class='block small truncate'>
                 Components
               </a>
-              <a href='/docs/styling/icons.html' class='block small truncate'>
+              <a href='icons.html' class='block small truncate'>
                 Icons
               </a>
-              <a href='/docs/styling/mobile.html' class='block small truncate'>
+              <a href='mobile.html' class='block small truncate'>
                 Mobile
               </a>
-              <a href='/docs/styling/helpers.html' class='block small truncate'>
+              <a href='helpers.html' class='block small truncate'>
                 Helper classes
               </a>
             </div>
@@ -100,6 +121,30 @@
 
     <div class='container-fluid clearfix'>
       <div class='pad2y contain col-sm-9 col-sm-offset-3'>
+        <nav class='pad2 visible-xs'>
+          <div class='fill-light small strong round pad1 clearfix'>
+            <div class='col-xs-4'>
+              <a class='space-bottom0 block active' href='grid.html'>Grid system</a>
+              <a class='space-bottom0 block' href='typography.html'>Typography</a>
+              <a class='space-bottom0 block' href='colors.html'>Colors</a>
+              <a class='space-bottom0 block' href='tables.html'>Tables</a>
+            </div>
+
+            <div class='col-xs-4'>
+              <a class='space-bottom0 block' href='forms.html'>Forms</a>
+              <a class='space-bottom0 block' href='buttons.html'>Buttons</a>
+              <a class='space-bottom0 block' href='navigation.html'>Navigation</a>
+              <a class='space-bottom0 block' href='components.html'>Components</a>
+            </div>
+
+            <div class='col-xs-4'>
+              <a class='space-bottom0 block' href='icons.html'>Icons</a>
+              <a class='space-bottom0 block' href='mobile.html'>Mobile</a>
+              <a class='space-bottom0 block' href='helpers.html'>Helpers</a>
+            </div>
+          </div>
+        </nav>
+
         <div class='box round contain fill-white pad2 prose'>
           <p>
             Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta <a href='http://getbootstrap.com/css/#grid'>Bootstrap grid system</a>. Bresaola bacon frankfurter t-bone. Chicken jerky pancetta andouille tail ball tip sirloin fatback amet short ribs.
@@ -116,7 +161,7 @@
 </pre>
           <div class='space-bottom fill-light-blue pad2'>
             <h4>Grid rows, we hardly knew ye</h4>
-            <p>Because gutters have been removed, Bootstrap <code>row</code>s are no longer needed to create horizontal groups of columns. Use <a href='#fakelink'>padding helpers</a> like <code>pad0</code> and <code>pad2x</code> to create padding within columns.</p>
+            <p>Because gutters have been removed, Bootstrap's <code>.row</code> is no longer needed to create horizontal groups of columns. Use <a href='#fakelink'>padding helpers</a> like <code>.pad0</code> and <code>.pad2x</code> to create padding within columns.</p>
           </div>
         </div>
 
@@ -192,7 +237,7 @@
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
             <h4>Simple 2 column layout</h4>
-            <p class='prose'>
+            <p>
               Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. Note the use of <code>.col-md-offset-1</code> on the main content div to give spacing from the sidebar.
             </p>                
           </header>
@@ -218,7 +263,7 @@
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
             <h4>Centering content using offset</h4>
-            <p class='prose'>
+            <p>
               <code>.col-md-offset-*</code> classes can be used to center columns. Determine the offset using the formula <strong>12 - width / 2</strong>.
             </p>                
           </header>
@@ -242,7 +287,7 @@
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
             <h4>Padding</h4>
-            <p class='prose'>
+            <p>
               Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta frankfurter. Bresaola bacon frankfurter t-bone. Chicken jerky pancetta andouille tail ball tip sirloin fatback amet short ribs.
             </p>                
           </header>
@@ -348,7 +393,7 @@
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
             <h4>Controlling height</h4>
-            <p class='prose'>
+            <p>
               Elements can be given consistent heights using the <code>rowN</code> classes. <code>rowN</code> classes range from <code>row0</code> to <code>row15</code> and specify height in increments of 20px.
             </p>                
           </header>
@@ -380,14 +425,14 @@
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
             <h4>Fluid width containers</h4>
-            <p class='prose'>
+            <p>
               Use <code>.container-fluid</code> to wrap content and center a page to the grid. Though rare, <code>.container-fluid</code> can be nested as well.
             </p>                
           </header>
           <div class='pad2'>
             <div class='container-fluid keyline-all clearfix'>
               <div class='col-md-8 col-md-offset-2 pad2 fill-green dark center'>
-                Content wrapped in parent with a <code>.container-fluid</code> class.
+                Content wrapped in a <code>.container-fluid</code> class.
               </div>
             </div>
           </div>
@@ -411,10 +456,10 @@
 
   </div>
   
-  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
-  <script src='/docs/dist/js/cb-design-framework.min.js'></script>
-  <script src='/docs/js/prettify.js'></script>
-  <script src='/docs/js/zeroclipboard/ZeroClipboard.min.js'></script>
-  <script src='/docs/js/site.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
+  <script src='../dist/js/cb-design-framework.min.js'></script>
+  <script src='../js/prettify.js'></script>
+  <script src='../js/zeroclipboard/ZeroClipboard.min.js'></script>
+  <script src='../js/site.js'></script>
 </body>
 </html>
