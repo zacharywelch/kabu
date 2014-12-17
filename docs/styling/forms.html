@@ -573,10 +573,10 @@
             </form>
           </figure>
           <div class='contain'>
-            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='basic-example'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='selects'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
-<pre class='prettyprint' id='basic-example'>
+<pre class='prettyprint' id='selects'>
 &lt;form&gt;
   &lt;fieldset&gt;
     &lt;label&gt;Select Box&lt;/label&gt;
@@ -623,7 +623,11 @@
             <form>
               <fieldset class='with-icon'>
                 <span class='icon icon-search'></span>
-                <input type='text' />
+                <input type='text' placeholder='Search' />
+              </fieldset>                
+              <fieldset class='with-icon'>
+                <span class='icon icon-envelope'></span>
+                <input type='text' placeholder='Email address' />
               </fieldset>                
             </form>
           </figure>
@@ -634,7 +638,7 @@
             <form>
               <fieldset class='with-icon'>
                 <span class='icon icon-search small'></span>
-                <input type='text' class='short' />
+                <input type='text' class='short' placeholder='' />
               </fieldset>                
             </form>
           </figure>
@@ -814,6 +818,128 @@
 </pre>          
           </div>
         </div>                            
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Dark variants</h4>
+            <p>
+              Each form control includes a <em>dark</em> version that is styled automatically when its container includes the <code>.dark</code> class. Be sure to combine a <code>.fill-[color]</code> from our <a href='colors.html'>colors</a> section.
+            </p>                
+          </header>
+          <div class='pad2 fill-navy dark'>
+            <form class='col-sm-9 col-xs-12'>
+              <fieldset>
+                <label>Input Label</label>
+                <input type='text' class='stretch' placeholder='.stretch' />
+              </fieldset>
+              <fieldset class='col-sm-6 pad0r'>
+                <label>.col-sm-6</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset class='col-sm-6 pad0l'>
+                <label>.col-sm-6</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset>
+                <label>Select Box</label>
+                <div class='input-group col-xs-12'>
+                  <select class='stretch'>
+                    <option>
+                      Please select a security question...
+                    </option>
+                    <option>
+                      What's your password?
+                    </option>
+                  </select>
+                  <i class='icon icon-chevron-down'></i>
+                </div>
+              </fieldset>
+              <div class='checkbox space-bottom'>
+                <input id='agree-dark' type='checkbox' checked='checked'>
+                <label for='agree-dark' class='small icon icon-ok col-xs-12'>I agree with the terms and conditions</label>
+              </div>              
+              <fieldset>
+                <label>Will you go out with me? Circle yes or no.</label>
+                <div class='radio space-bottom1'>
+                  <input type='radio' name='radios' id='radio1-dark' value='yes'>
+                  <label for='radio1-dark' class='icon-radio-checked'>
+                    Yes
+                  </label>
+                </div>
+                <div class='radio space-bottom1'>
+                  <input type='radio' name='radios' id='radio2-dark' value='no' checked='checked'>
+                  <label for='radio2-dark' class='icon-radio-checked'>
+                    No
+                  </label>
+                </div>            
+              </fieldset>              
+              <fieldset>
+                <label>What is love?</label>
+                <textarea class='stretch'></textarea>
+              </fieldset>              
+            </form>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='dark-example'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='dark-example'>
+&lt;div class='pad2 fill-navy dark'&gt;
+  &lt;form class='col-sm-9 col-xs-12'&gt;
+    &lt;fieldset&gt;
+      &lt;label&gt;Input Label&lt;/label&gt;
+      &lt;input type='text' class='stretch' placeholder='.stretch' /&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset class='col-sm-6 pad0r'&gt;
+      &lt;label&gt;.col-sm-6&lt;/label&gt;
+      &lt;input type='text' class='stretch'&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset class='col-sm-6 pad0l'&gt;
+      &lt;label&gt;.col-sm-6&lt;/label&gt;
+      &lt;input type='text' class='stretch'&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+      &lt;label&gt;Select Box&lt;/label&gt;
+      &lt;div class='input-group col-xs-12'&gt;
+        &lt;select class='stretch'&gt;
+          &lt;option&gt;
+            Please select a security question...
+          &lt;/option&gt;
+          &lt;option&gt;
+            What's your password?
+          &lt;/option&gt;
+        &lt;/select&gt;
+        &lt;i class='icon icon-chevron-down'&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;div class='checkbox space-bottom'&gt;
+      &lt;input id='agree-dark' type='checkbox' checked='checked'&gt;
+      &lt;label for='agree-dark' class='small icon icon-ok col-xs-12'&gt;I agree with the terms and conditions&lt;/label&gt;
+    &lt;/div&gt;              
+    &lt;fieldset&gt;
+      &lt;label&gt;Will you go out with me? Circle yes or no.&lt;/label&gt;
+      &lt;div class='radio space-bottom1'&gt;
+        &lt;input type='radio' name='radios' id='radio1-dark' value='yes'&gt;
+        &lt;label for='radio1-dark' class='icon-radio-checked'&gt;
+          Yes
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class='radio space-bottom1'&gt;
+        &lt;input type='radio' name='radios' id='radio2-dark' value='no' checked='checked'&gt;
+        &lt;label for='radio2-dark' class='icon-radio-checked'&gt;
+          No
+        &lt;/label&gt;
+      &lt;/div&gt;            
+    &lt;/fieldset&gt;              
+    &lt;fieldset&gt;
+      &lt;label&gt;What is love?&lt;/label&gt;
+      &lt;textarea class='stretch'&gt;&lt;/textarea&gt;
+    &lt;/fieldset&gt;              
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+          </div>
+        </div>         
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>

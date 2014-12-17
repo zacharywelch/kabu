@@ -147,31 +147,165 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
-            <h4>Fluid width containers</h4>
+            <h4>Buttons</h4>
             <p>
-              Use <code>.container-fluid</code> to wrap content and center a page to the grid. Though rare, <code>.container-fluid</code> can be nested as well.
+              Buttons are convenient tools when you need more traditional actions. Contextual classes like <code>btn-primary</code> are used to maintain consistency and create visual heirarchy.
             </p>                
           </header>
           <div class='pad2'>
-            <div class='container-fluid keyline-all clearfix'>
-              <div class='col-md-8 col-md-offset-2 pad2 fill-green dark center'>
-                Content wrapped in a <code>.container-fluid</code> class.
-              </div>
-            </div>
+            <a href='#fakelink' class='btn btn-primary'>.btn.btn-primary</a>
+            <a href='#fakelink' class='btn btn-loud'>.btn.btn-loud</a>
+            <a href='#fakelink' class='btn btn-default'>.btn.btn-default</a>
+            <a href='#fakelink' class='btn btn-danger'>.btn.btn-danger</a>
           </div>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='fluid-containers'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='buttons'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
-<pre class='prettyprint' id='fluid-containers'>
-&lt;div class='container-fluid keyline-all clearfix'&gt;
-  &lt;div class='col-md-8 col-md-offset-2 pad2 fill-green dark center'&gt;
-    Content wrapped in parent with a &lt;code&gt;.container-fluid&lt;/code&gt; class.
-  &lt;/div&gt;
-&lt;/div&gt;
+<pre class='prettyprint' id='buttons'>
+&lt;a href='#fakelink' class='btn btn-primary'&gt;.btn.btn-primary&lt;/a&gt;
+&lt;a href='#fakelink' class='btn btn-loud'&gt;.btn.btn-loud&lt;/a&gt;
+&lt;a href='#fakelink' class='btn btn-default'&gt;.btn.btn-default&lt;/a&gt;
+&lt;a href='#fakelink' class='btn btn-danger'&gt;.btn.btn-danger&lt;/a&gt;
 </pre>          
           </div>
         </div>        
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Buttons with icons</h4>
+            <p>
+              Glyphs from our <a href='icons.html'>icons</a> set can be assigned to buttons to convey meaning or as a visual scanning aid. 
+            </p>                
+          </header>
+          <div class='pad2'>
+            <a href='#fakelink' class='btn btn-primary'>
+              <i class='icon icon-inbox pad0r'></i>Inbox
+            </a>
+            <a href='#fakelink' class='btn btn-primary'>
+              <i class='icon icon-home pad0x'></i>
+            </a>
+            <a href='#fakelink' class='btn btn-primary'>
+              More<i class='icon icon-arrow-right pad0l'></i>
+            </a>
+            <a href='#fakelink' class='btn btn-loud'>
+              <i class='icon icon-credit-card pad0r'></i>Pay $25
+            </a>
+            <a href='#fakelink' class='btn btn-danger'>
+              <i class='icon icon-trash pad0r'></i>Delete
+            </a>
+            <a href='#fakelink' class='btn btn-default'>
+              <i class='icon icon-arrow-left pad0r'></i>Back
+            </a>
+          </div>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-icons'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='button-icons'>
+&lt;a href='#fakelink' class='btn btn-primary'&gt;
+  &lt;i class='icon icon-inbox pad0r'&gt;&lt;/i&gt;Inbox
+&lt;/a&gt;
+&lt;a href='#fakelink' class='btn btn-primary'&gt;
+  &lt;i class='icon icon-home pad0x'&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href='#fakelink' class='btn btn-primary'&gt;
+  More&lt;i class='icon icon-arrow-right pad0l'&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;a href='#fakelink' class='btn btn-loud'&gt;
+  &lt;i class='icon icon-credit-card pad0r'&gt;&lt;/i&gt;Pay $25
+&lt;/a&gt;
+&lt;a href='#fakelink' class='btn btn-danger'&gt;
+  &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Delete
+&lt;/a&gt;
+&lt;a href='#fakelink' class='btn btn-default'&gt;
+  &lt;i class='icon icon-arrow-left pad0r'&gt;&lt;/i&gt;Back
+&lt;/a&gt;
+</pre>          
+          </div>
+        </div>        
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Button groups</h4>
+            <p>
+              Group a series of buttons together on a single line with the <code>btn-group</code> class.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <div class='btn-group clearfix'>
+              <a href='#fakelink' class='btn btn-primary active'>Home</a>
+              <a href='#fakelink' class='btn btn-primary'>Profile</a>
+              <a href='#fakelink' class='btn btn-primary'>Messages</a>
+            </div>
+          </figure>
+          <figure class='pad2'>
+            <div class='btn-group clearfix'>
+              <a href='#fakelink' class='btn btn-default active'>Home</a>
+              <a href='#fakelink' class='btn btn-default'>Profile</a>
+              <a href='#fakelink' class='btn btn-default'>Messages</a>
+            </div>            
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-groups'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='button-groups'>
+&lt;div class='btn-group clearfix'&gt;
+  &lt;a href='#fakelink' class='btn btn-primary active'&gt;Home&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-primary'&gt;Profile&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-primary'&gt;Messages&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class='btn-group clearfix'&gt;
+  &lt;a href='#fakelink' class='btn btn-default active'&gt;Home&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-default'&gt;Profile&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-default'&gt;Messages&lt;/a&gt;
+&lt;/div&gt;
+</pre>          
+          </div>
+        </div>          
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Button groups</h4>
+            <p>
+              Group a series of buttons together on a single line with the <code>btn-group</code> class.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <div class='btn-group clearfix'>
+              <a href='#fakelink' class='btn btn-primary active'>Home</a>
+              <a href='#fakelink' class='btn btn-primary'>Profile</a>
+              <a href='#fakelink' class='btn btn-primary'>Messages</a>
+            </div>
+          </figure>
+          <figure class='pad2'>
+            <div class='btn-group clearfix'>
+              <a href='#fakelink' class='btn btn-default active'>Home</a>
+              <a href='#fakelink' class='btn btn-default'>Profile</a>
+              <a href='#fakelink' class='btn btn-default'>Messages</a>
+            </div>            
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='button-groups'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='button-groups'>
+&lt;div class='btn-group clearfix'&gt;
+  &lt;a href='#fakelink' class='btn btn-primary active'&gt;Home&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-primary'&gt;Profile&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-primary'&gt;Messages&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class='btn-group clearfix'&gt;
+  &lt;a href='#fakelink' class='btn btn-default active'&gt;Home&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-default'&gt;Profile&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-default'&gt;Messages&lt;/a&gt;
+&lt;/div&gt;
+</pre>          
+          </div>
+        </div>           
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>
