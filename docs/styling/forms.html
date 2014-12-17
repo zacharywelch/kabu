@@ -154,9 +154,10 @@
             <div class='space-bottom fill-light-blue pad2'>
               <h4>Forms need love too</h4>
               <p>
-                Forms are everywhere. We like good forms, and we dislike bad forms even more. A lot goes into designing good forms and a bad form can ruin user experience. For tips and information on designing better forms we recommend <a href='http://www.lukew.com/resources/web_form_design.asp'>Web Form Design</a> and <a href='http://www.amazon.com/Defensive-Design-Web-improve-messages/dp/073571410X'>Defensive Design for the Web</a>.
+                Forms are everywhere. We <strong>love</strong> good forms, and we dislike bad ones even more. A lot goes into designing good forms and a bad form can ruin user experience. For tips and information on designing better forms we recommend <a href='http://www.lukew.com/resources/web_form_design.asp'>Web Form Design</a> and <a href='http://www.amazon.com/Defensive-Design-Web-improve-messages/dp/073571410X'>Defensive Design for the Web</a>.
               </p>
             </div>            
+            <h4>Basic example</h4>
           </header>
           <div class='pad2'>
             <form class='col-sm-9 col-xs-12'>
@@ -212,10 +213,10 @@
             </form>
           </div>
           <div class='contain'>
-            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='forms'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='basic-example'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
-<pre class='prettyprint' id='forms'>
+<pre class='prettyprint' id='basic-example'>
 &lt;form class='col-sm-9 col-xs-12'&gt;
   &lt;fieldset&gt;
     &lt;label&gt;Input Label&lt;/label&gt;
@@ -269,7 +270,550 @@
 &lt;/form&gt;
 </pre>
           </div>
+        </div>   
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Text Input</h4>
+            <p>
+              Text inputs support a wide variety of types and sizes. Combine them with <code>label</code> and <code>fieldset</code> elements to pick up additional styling.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <form>
+              <fieldset>
+                <label>First Name</label>
+                <input type='text'>
+              </fieldset>
+            </form>
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              input.stretch
+            </div>
+            <form>
+              <fieldset>
+                <label>Name</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+            </form>
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              input.short
+            </div>
+            <form>
+              <fieldset>
+                <label>Age</label>
+                <input type='text' class='short'>
+              </fieldset>
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='text-input'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='text-input'>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label&gt;First Name&lt;/label&gt;
+    &lt;input type='text'&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label&gt;Name&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label&gt;Age&lt;/label&gt;
+    &lt;input type='text' class='short'&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>          
+          </div>
+        </div>
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Text Area</h4>
+            <p>
+              Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <form>
+              <fieldset>
+                <label>Enter a description</label>
+                <textarea class='stretch'></textarea>
+              </fieldset>
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='text-area'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='text-area'>
+&lt;fieldset&gt;
+  &lt;label&gt;Enter a description&lt;/label&gt;
+  &lt;textarea class='stretch'&gt;&lt;/textarea&gt;
+&lt;/fieldset&gt;
+</pre>          
+          </div>
         </div>        
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Checkboxes</h4>
+            <p>
+              Checkboxes are visual representations of a boolean field, where the value is either <em>true</em> or <em>false</em>. They can be stacked using the <a href='grid.html'>grid system</a> to add a nice visual effect.
+            </p>                
+          </header>
+          <figure>
+            <div class='pad2 checkbox'>
+              <input type='checkbox' id='gift' checked='checked'>
+              <label for='gift' class='small icon icon-ok'>This is a gift</label>
+            </div>
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              stacked
+            </div>
+            <form>
+              <fieldset>
+                <label>Which games do you want to play?</label>                
+                <div class='checkbox'>
+                  <input type='checkbox' id='football' checked='checked'>
+                  <label for='football' class='small icon icon-ok col-sm-6 col-xs-12'>
+                    Football
+                  </label>
+                </div>            
+                <div class='checkbox'>
+                  <input type='checkbox' id='basketball' checked='checked'>
+                  <label for='basketball' class='small icon icon-ok col-sm-6 col-xs-12'>
+                    Basketball
+                  </label>
+                </div>            
+                <div class='checkbox'>
+                  <input type='checkbox' id='baseball' checked='checked'>
+                  <label for='baseball' class='small icon icon-ok col-sm-6 col-xs-12'>
+                    Baseball
+                  </label>
+                </div>                            
+                <div class='checkbox'>
+                  <input type='checkbox' id='soccer' checked='checked'>
+                  <label for='soccer' class='small icon icon-ok col-sm-6 col-xs-12'>
+                    Soccer
+                  </label>
+                </div>            
+                <div class='checkbox'>
+                  <input type='checkbox' id='wow' checked='checked'>
+                  <label for='wow' class='small icon icon-ok col-sm-6 col-xs-12'>
+                    World of Warcraft
+                  </label>
+                </div>            
+              </fieldset>
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='checkbox'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='checkbox'>
+&lt;div class='pad2 checkbox'&gt;
+  &lt;input type='checkbox' id='gift' checked='checked'&gt;
+  &lt;label for='gift' class='small icon icon-ok'&gt;This is a gift&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label&gt;Which games do you want to play?&lt;/label&gt;                
+    &lt;div class='checkbox'&gt;
+      &lt;input type='checkbox' id='football' checked='checked'&gt;
+      &lt;label for='football' class='small icon icon-ok col-sm-6 col-xs-12'&gt;
+        Football
+      &lt;/label&gt;
+    &lt;/div&gt;            
+    &lt;div class='checkbox'&gt;
+      &lt;input type='checkbox' id='basketball' checked='checked'&gt;
+      &lt;label for='basketball' class='small icon icon-ok col-sm-6 col-xs-12'&gt;
+        Basketball
+      &lt;/label&gt;
+    &lt;/div&gt;            
+    &lt;div class='checkbox'&gt;
+      &lt;input type='checkbox' id='baseball' checked='checked'&gt;
+      &lt;label for='baseball' class='small icon icon-ok col-sm-6 col-xs-12'&gt;
+        Baseball
+      &lt;/label&gt;
+    &lt;/div&gt;                            
+    &lt;div class='checkbox'&gt;
+      &lt;input type='checkbox' id='soccer' checked='checked'&gt;
+      &lt;label for='soccer' class='small icon icon-ok col-sm-6 col-xs-12'&gt;
+        Soccer
+      &lt;/label&gt;
+    &lt;/div&gt;            
+    &lt;div class='checkbox'&gt;
+      &lt;input type='checkbox' id='wow' checked='checked'&gt;
+      &lt;label for='wow' class='small icon icon-ok col-sm-6 col-xs-12'&gt;
+        World of Warcraft
+      &lt;/label&gt;
+    &lt;/div&gt;            
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>          
+          </div>
+        </div>
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Radios</h4>
+            <p>
+              Radios are for selecting one option from many. They are given a large click radius to make selection easier on small devices.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <form>
+              <fieldset>
+                <label>Can you make it to my birthday party?</label>
+                <div class='radio space-bottom1'>
+                  <input type='radio' name='birthday' id='birthday-yes' value='yes' checked>
+                  <label for='birthday-yes' class='icon-radio-checked'>
+                    Yeah!
+                  </label>
+                </div>
+                <div class='radio space-bottom1'>
+                  <input type='radio' name='birthday' id='birthday-no' value='no'>
+                  <label for='birthday-no' class='icon-radio-checked'>
+                    Nah bruh
+                  </label>
+                </div>
+                <div class='radio space-bottom1'>
+                  <input type='radio' name='birthday' id='birthday-maybe' value='maybe' checked>
+                  <label for='birthday-maybe' class='icon-radio-checked'>
+                    Maybe?
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='radios'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='radios'>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label&gt;Can you make it to my birthday party?&lt;/label&gt;
+    &lt;div class='radio space-bottom1'&gt;
+      &lt;input type='radio' name='birthday' id='birthday-yes' value='yes' checked&gt;
+      &lt;label for='birthday-yes' class='icon-radio-checked'&gt;
+        Yeah!
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class='radio space-bottom1'&gt;
+      &lt;input type='radio' name='birthday' id='birthday-no' value='no'&gt;
+      &lt;label for='birthday-no' class='icon-radio-checked'&gt;
+        Nah bruh
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class='radio space-bottom1'&gt;
+      &lt;input type='radio' name='birthday' id='birthday-maybe' value='maybe' checked&gt;
+      &lt;label for='birthday-maybe' class='icon-radio-checked'&gt;
+        Maybe?
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>          
+          </div>
+        </div>             
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Selects</h4>
+            <p>
+              Use <code>select</code> when there are more than 6 options to choose from. 
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <form>
+              <fieldset>
+                <label>Accommodation Status</label>
+                <div class='input-group'>                  
+                  <select>
+                    <option>
+                      Single
+                    </option>
+                    <option>
+                      Group
+                    </option>
+                    <option>
+                      Couple
+                    </option>
+                    <option>
+                      Family
+                    </option>
+                    <option>
+                      Roommate selected
+                    </option>
+                    <option>
+                      Need roommate
+                    </option>
+                    <option>
+                      Without accommodations
+                    </option>
+                  </select>
+                  <i class='icon icon-chevron-down'></i>
+                </div>
+              </fieldset>
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='selects'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='selects'>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label&gt;Accommodation Status&lt;/label&gt;
+    &lt;div class='input-group'&gt;                  
+      &lt;select&gt;
+        &lt;option&gt;
+          Single
+        &lt;/option&gt;
+        &lt;option&gt;
+          Group
+        &lt;/option&gt;
+        &lt;option&gt;
+          Couple
+        &lt;/option&gt;
+        &lt;option&gt;
+          Family
+        &lt;/option&gt;
+        &lt;option&gt;
+          Roommate selected
+        &lt;/option&gt;
+        &lt;option&gt;
+          Need roommate
+        &lt;/option&gt;
+        &lt;option&gt;
+          Without accommodations
+        &lt;/option&gt;
+      &lt;/select&gt;
+      &lt;i class='icon icon-chevron-down'&gt;&lt;/i&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>          
+          </div>
+        </div>
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Inputs with icons</h4>
+            <p>
+              Icons can be added to inputs to assist with the form process.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <form>
+              <fieldset class='with-icon'>
+                <span class='icon icon-search'></span>
+                <input type='text' />
+              </fieldset>                
+            </form>
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              input.short
+            </div>
+            <form>
+              <fieldset class='with-icon'>
+                <span class='icon icon-search small'></span>
+                <input type='text' class='short' />
+              </fieldset>                
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='with-icon'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='with-icon'>
+&lt;form&gt;
+  &lt;fieldset class='with-icon'&gt;
+    &lt;span class='icon icon-search'&gt;&lt;/span&gt;
+    &lt;input type='text' /&gt;
+  &lt;/fieldset&gt;                
+&lt;/form&gt;
+
+&lt;form&gt;
+  &lt;fieldset class='with-icon'&gt;
+    &lt;span class='icon icon-search small'&gt;&lt;/span&gt;
+    &lt;input type='text' class='short' /&gt;
+  &lt;/fieldset&gt;                
+&lt;/form&gt;
+</pre>          
+          </div>
+        </div>   
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Column sizing</h4>
+            <p>
+              Control form layout using the <a href='grid.html'>grid system</a>. Use <a href='grid.html'>padding helpers</a> to create consistent spacing between columns.
+            </p>                
+          </header>
+          <figure class='pad2 contain clearfix'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              2 column
+            </div>
+            <form>
+              <fieldset class='col-sm-6 pad0r'>
+                <label>.col-sm-6</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset class='col-sm-6 pad0l'>
+                <label>.col-sm-6</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+            </form>
+          </figure>
+          <figure class='pad2 contain clearfix'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              3 column
+            </div>
+            <form>
+              <fieldset class='col-sm-4 pad0r'>
+                <label>.col-sm-4</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset class='col-sm-4 pad0x'>
+                <label>.col-sm-4</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset class='col-sm-4 pad0l'>
+                <label>.col-sm-4</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+            </form>
+          </figure>
+          <figure class='pad2 contain clearfix'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              4 column
+            </div>
+            <form>
+              <fieldset class='col-sm-3 pad0r'>
+                <label>.col-sm-3</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset class='col-sm-3 pad0x'>
+                <label>.col-sm-3</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset class='col-sm-3 pad0x'>
+                <label>.col-sm-3</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset class='col-sm-3 pad0l'>
+                <label>.col-sm-3</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='column-sizing'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='column-sizing'>
+&lt;form&gt;
+  &lt;fieldset class='col-sm-6 pad0r'&gt;
+    &lt;label&gt;.col-sm-6&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-6 pad0l'&gt;
+    &lt;label&gt;.col-sm-6&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;form&gt;
+  &lt;fieldset class='col-sm-4 pad0r'&gt;
+    &lt;label&gt;.col-sm-4&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-4 pad0x'&gt;
+    &lt;label&gt;.col-sm-4&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-4 pad0l'&gt;
+    &lt;label&gt;.col-sm-4&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;form&gt;
+  &lt;fieldset class='col-sm-3 pad0r'&gt;
+    &lt;label&gt;.col-sm-3&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-3 pad0x'&gt;
+    &lt;label&gt;.col-sm-3&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-3 pad0x'&gt;
+    &lt;label&gt;.col-sm-3&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-3 pad0l'&gt;
+    &lt;label&gt;.col-sm-3&lt;/label&gt;
+    &lt;input type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>          
+          </div>
+        </div> 
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Horizontal forms</h4>
+            <p>
+              Use our <a href='grid.html'>grid system</a> and <a href='helpers.html'>helper classes</a> to align labels and groups of form controls in a horizontal layout.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <form>
+              <fieldset>
+                <label class='inline pad1y col-sm-3 col-xs-4'>Enter your name</label>
+                <input type='text' class='col-sm-9 col-xs-8'>
+              </fieldset>
+              <fieldset>
+                <label class='inline pad1y col-sm-3 col-xs-4'>Enter your age</label>
+                <input type='text' class='col-sm-9 col-xs-8'>
+              </fieldset>
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='horizontal-form'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='horizontal-form'>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label class='inline pad1y col-sm-3 col-xs-4'&gt;Enter your name&lt;/label&gt;
+    &lt;input type='text' class='col-sm-9 col-xs-8'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;label class='inline pad1y col-sm-3 col-xs-4'&gt;Enter your age&lt;/label&gt;
+    &lt;input type='text' class='col-sm-9 col-xs-8'&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>          
+          </div>
+        </div>                            
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>
