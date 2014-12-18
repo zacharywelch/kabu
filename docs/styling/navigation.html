@@ -196,7 +196,52 @@
               Navbars have little styling by themselves. They pick up most of their look and feel by combining <a href='helpers.html'>helpers</a> and the <a href='gird.html'>grid system</a>. A navbar begins collapsed on smaller devices and becomes horizontal as the viewport width increases. Choose a <a href='colors.html'>background fill</a> to use as background color.
             </p>
           </header>
-          <figure class='pad2 clearfix'>
+          <figure class='pad2x pad4y clearfix fill-light'>
+            <div class='navbar fill-white keyline-all col-sm-12 animate clearfix round'>
+              <div class='container-fluid contain'>
+                <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+                  <a class='logo pad1y pull-left text-left' href='#fakelink'>Axiom</a>
+                  <div class='primary small strong row2'>                    
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 
+                      truncate inline'>Help</a>
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 
+                      truncate inline'>Tools</a>
+                    <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+                      quiet round animate pull-right center'>
+                      <i class='icon icon-list'></i>
+                    </a>
+                    <a href='#dropdown' class='hidden-xs authmenu droplink quiet pad1 block round animate pull-right'>
+                      <img class='avatar round' src='../img/regularshow.jpg'>
+                      zwelch
+                    </a>
+                    <div class='dropdown fill-white keyline-all round animate'>
+                      <div class='profile contain keyline-bottom pad1'>
+                        <a href='#fakelink' class='profile-icon'>
+                          <img class='avatar' src='../img/regularshow.jpg'>
+                        </a>
+                        <a href='#fakelink' class='truncate'>
+                          Lorem<br>
+                          <span class='quiet'>(ipsum dolor)</span>
+                        </a>
+                      </div>
+                      <div class='keyline-bottom pad1'>
+                        <a href='#fakelink'>Account</a>
+                        <a href='#fakelink' id='signout'>Sign out</a>
+                      </div>
+                      <div class='visible-xs keyline-bottom pad1'>
+                        <a href='#fakelink'>Help</a>
+                        <a href='#fakelink'>Tools</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>            
+          </figure>
+          <figure class='pad2x pad4y clearfix contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              .fill-denim
+            </div>            
             <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
               <div class='container-fluid contain'>
                 <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
@@ -243,6 +288,47 @@
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint' id='navbar'>
+&lt;div class='navbar fill-white keyline-all col-sm-12 animate clearfix round'&gt;
+  &lt;div class='container-fluid contain'&gt;
+    &lt;nav class='col-sm-12 text-right pad1y contain clearfix noprint'&gt;
+      &lt;a class='logo pad1y pull-left text-left' href='#fakelink'&gt;Axiom&lt;/a&gt;
+      &lt;div class='primary small strong row2'&gt;                    
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 
+          truncate inline'&gt;Help&lt;/a&gt;
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 
+          truncate inline'&gt;Tools&lt;/a&gt;
+        &lt;a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+          quiet round animate pull-right center'&gt;
+          &lt;i class='icon icon-list'&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a href='#dropdown' class='hidden-xs authmenu droplink quiet pad1 block round animate pull-right'&gt;
+          &lt;img class='avatar round' src='../img/regularshow.jpg'&gt;
+          zwelch
+        &lt;/a&gt;
+        &lt;div class='dropdown fill-white keyline-all round animate'&gt;
+          &lt;div class='profile contain keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink' class='profile-icon'&gt;
+              &lt;img class='avatar' src='../img/regularshow.jpg'&gt;
+            &lt;/a&gt;
+            &lt;a href='#fakelink' class='truncate'&gt;
+              Lorem&lt;br&gt;
+              &lt;span class='quiet'&gt;(ipsum dolor)&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class='keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink'&gt;Account&lt;/a&gt;
+            &lt;a href='#fakelink' id='signout'&gt;Sign out&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class='visible-xs keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink'&gt;Help&lt;/a&gt;
+            &lt;a href='#fakelink'&gt;Tools&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  
 &lt;div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'&gt;
   &lt;div class='container-fluid contain'&gt;
     &lt;nav class='col-sm-12 text-right pad1y contain clearfix noprint'&gt;
