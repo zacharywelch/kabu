@@ -34,4 +34,4 @@ Start an HTTP Server
 python -m SimpleHTTPServer 8888
 ```
 
-Visit localhost:8888
+Visit localhost:8888/home.html
