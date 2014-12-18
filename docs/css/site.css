@@ -1,7 +1,6 @@
 /* Site styles
 ------------------------------------------------------- */
-
-body { padding-top: 60px; }
+body {padding-top: 60px; }
 
 .navbar-fixed {
   position: fixed;
@@ -792,6 +791,20 @@ Main components
     display: none;
   }
 }
+.cb-triggers a{ 
+    margin-right: 20px; 
+    margin-bottom: 20px;
+}
+
+
+.cb-more-info h4 {
+    position:relative;
+    top: -20px;
+}
+
+.cb-product-container {
+    width:100%;
+}
 
 /* Responsive styles
 ------------------------------------------------------- */
@@ -802,24 +815,4 @@ Main components
   .sidenav + .container-fluid > .pad2y { padding: 0; }
   .sidenav + .container-fluid .box { border: none; }
   .colors .row7 { height: 125px; }
-}
-
-
-}}
-.cb-triggers a{ 
-    margin-right: 20px; 
-    margin-bottom: 20px;
-}
-
-
-
-
-
-.cb-more-info h4 {
-    position:relative;
-    top: -20px;
-}
-
-.cb-product-container {
-    width:100%;
 }
