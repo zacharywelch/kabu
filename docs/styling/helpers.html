@@ -146,31 +146,252 @@
         </nav>
 
         <div class='box round contain fill-white'>
-          <header class='box-heading pad2'>
-            <h4>Fluid width containers</h4>
-            <p>
-              Use <code>.container-fluid</code> to wrap content and center a page to the grid. Though rare, <code>.container-fluid</code> can be nested as well.
-            </p>                
-          </header>
-          <div class='pad2'>
-            <div class='container-fluid keyline-all clearfix'>
-              <div class='col-md-8 col-md-offset-2 pad2 fill-green dark center'>
-                Content wrapped in a <code>.container-fluid</code> class.
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.img-rounded</h4>
+              <p>
+                Gives rounded borders to images 
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <img src='../img/regularshow.jpg' class='img-rounded'>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.img-circle</h4>
+              <p>
+                Turns images into circles by adding 50% border-radius
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <img src='../img/regularshow.jpg' class='img-circle'>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.space-bottom0, .space-bottom1, .space-bottom2, .space-bottom4</h4>
+              <p>
+                Adds bottom margins in increments of 5, 10, 20 and 40, respectively. <code>.space-bottom</code> is an alias for <code>.space-bottom2</code>
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <div class='pad2 fill-darken0 space-bottom0'>.space-bottom0</div>
+              <div class='pad2 fill-darken1 space-bottom1'>.space-bottom1</div>
+              <div class='pad2 fill-darken2 dark space-bottom2'>.space-bottom2 or .space-bottom</div>
+              <div class='pad2 fill-darken3 dark space-bottom4'>.space-bottom4</div>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.small</h4>
+              <p>
+                Sets text to 12px and headings to 12px with all caps.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <h5 class='small'>I don't know what we're yelling about</h5>
+              <p class='small'><strong>Warning</strong> Do not eat iPod shuffle</p>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.micro</h4>
+              <p>
+                Sets fine print to 10px.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <p class='micro'><strong>Warning</strong> Do not try to read this</p>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.strong</h4>
+              <p>
+                Sets font weight on elements to bold.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <a href='#fakelink' class='strong'>I'm stronger</a>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.text-left, .text-right, .text-center, .text-justify</h4>
+              <p>
+                Aligns text. <code>.center</code> is an alias for <code>.text-center</code>.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <p class='text-left fill-gray pad1'>.text-left</p>
+              <p class='text-right fill-gray pad1'>.text-right</p>
+              <p class='text-center fill-gray pad1'>.text-center or .center</p>
+              <p class='text-justify fill-gray pad1'>.text-justify .text-justify .text-justify .text-justify</p>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.quiet</h4>
+              <p>
+                Mutes text to <code>#7f7f7f</code>.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <p class='quiet'>I just don't have anything to say.</p>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.success and .danger</h4>
+              <p>
+                Contextual colors for good and bad
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <p class='success'>Research complete</p>
+              <p class='danger'>Not enough minerals</p>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>Borders</h4>
+              <p>
+                Control where borders are set on an element
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <div class='pad1 keyline-top space-bottom'>.keyline-top</div>
+              <div class='pad1 keyline-right space-bottom'>.keyline-right</div>
+              <div class='pad1 keyline-bottom space-bottom'>.keyline-bottom</div>
+              <div class='pad1 keyline-left space-bottom'>.keyline-left</div>
+              <div class='pad1 keyline-all space-bottom'>.keyline-all</div>
+            </div>
+          </figure>                
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.box</h4>
+              <p>
+                Creates a stylized box.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <div class='pad1 box'>I'm boxy</div>
+            </div>
+          </figure>                
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>Rounded corners</h4>
+              <p>
+                Round the corners of an element. <code>.unround</code> will take off rounded corners if they exist.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <div class='pad1 fill-gray round space-bottom'>.round</div>
+              <div class='pad1 fill-gray round-top space-bottom'>.round-top</div>
+              <div class='pad1 fill-gray round-right space-bottom'>.round-right</div>
+              <div class='pad1 fill-gray round-bottom space-bottom'>.round-bottom</div>
+              <div class='pad1 fill-gray round-left space-bottom'>.round-left</div>
+              <a href='#fakelink' class='btn btn-primary unround'>.btn.unround</a>
+            </div>
+          </figure>  
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.contain</h4>
+              <p>
+                Quick way to set position to relative.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-topright pad0y pad1x fill-green dark small'>
+                  .pin-topright
+                </div>
+              </div>
+              <p>
+                Element is positioned in parent with <code>.contain</code> class.
+              </p>
+            </div>
+          </figure>          
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>Absolute positioning</h4>
+              <p>
+                Pin elements to the side or corners of an element. Be sure <code>.contain</code> is included on the parent element. 
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-top pad0y pad1x fill-green dark small'>
+                  .pin-top
+                </div>
+              </div>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-right pad0y pad1x fill-green dark small'>
+                  .pin-right
+                </div>
+              </div>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-bottom pad0y pad1x fill-green dark small'>
+                  .pin-bottom
+                </div>
+              </div>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-left pad0y pad1x fill-green dark small'>
+                  .pin-left
+                </div>
+              </div>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-topleft pad0y pad1x fill-green dark small'>
+                  .pin-topleft
+                </div>
+              </div>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-topright pad0y pad1x fill-green dark small'>
+                  .pin-topright
+                </div>
+              </div>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-bottomleft pad0y pad1x fill-green dark small'>
+                  .pin-bottomleft
+                </div>
+              </div>
+              <div class='keyline-all row3 contain space-bottom'>
+                <div class='pin-bottomright pad0y pad1x fill-green dark small'>
+                  .pin-bottomright
+                </div>
               </div>
             </div>
-          </div>
-          <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='fluid-containers'>
-              <i class='icon icon-clipboard pad0r'></i>Copy
-            </a>          
-<pre class='prettyprint' id='fluid-containers'>
-&lt;div class='container-fluid keyline-all clearfix'&gt;
-  &lt;div class='col-md-8 col-md-offset-2 pad2 fill-green dark center'&gt;
-    Content wrapped in parent with a &lt;code&gt;.container-fluid&lt;/code&gt; class.
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>          
-          </div>
+          </figure>                                        
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.truncate</h4>
+              <p>
+                Clip text and show an ellipsis for overflow.
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <p class='truncate'>
+                Hey Jim, this is Louie down at the fish market. You going to pick up these halibut or what?
+              </p>
+            </div>
+          </figure>
+          <figure class='clearfix'>
+            <div class='col-sm-6 pad2'>
+              <h4>.inline and .block</h4>
+              <p>
+                Change the display of an element. 
+              </p>
+            </div>
+            <div class='col-sm-6 pad2'>
+              <div class='inline keyline-all'>
+                I'm an <code>.inline</code> div
+              </div>
+              <a href='#fakelink' class='block'>
+                I'm a <code>.block</code> link
+              </a>
+            </div>
+          </figure>
         </div>        
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
