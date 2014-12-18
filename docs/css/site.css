@@ -30,7 +30,7 @@ body { padding-top: 60px; }
 }
 
 .sidenav .active,
-nav .active {
+.mobile-nav .active {
   color: #404040;
   color: rgba(0,0,0,0.75);
 }
