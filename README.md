@@ -4,7 +4,7 @@ A responsive front-end framework for faster and easier web development.
 
 ## Getting Started
 
-To view the styleguide locally you'll need a quick web server running. Python's SimpleHTTPServer is super easy to setup.
+To view the styleguide locally you'll need a quick web server running. Python's `SimpleHTTPServer` is super easy to setup.
 
 ```ruby
 git clone git@cagit.careerbuilder.com:CorpAppsCB/styleguide.git
