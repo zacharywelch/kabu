@@ -4018,10 +4018,12 @@ button.close {
   outline: 0;
 }
 .modal-backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  bottom: 0;
+  z-index: 1040;
   background-color: #000000;
 }
 .modal-backdrop.fade {
@@ -4086,6 +4088,11 @@ button.close {
   }
   .modal-sm {
     width: 300px;
+  }
+  .modal-sm .modal-header,
+  .modal-sm .modal-body,
+  .modal-sm .modal-footer {
+    padding: 10px 20px;
   }
 }
 @media (min-width: 992px) {

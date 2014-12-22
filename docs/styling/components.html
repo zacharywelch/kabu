@@ -221,10 +221,10 @@
             <img src='../img/regularshow.jpg' class='img-rounded' width='40'>
           </figure>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='helpers'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='avatars'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>
-<pre class='prettyprint' id='helpers'>
+<pre class='prettyprint' id='avatars'>
 &lt;img src='../img/regularshow.jpg' class='img-circle' width='20'&gt;
 &lt;img src='../img/regularshow.jpg' class='img-circle' width='32'&gt;
 &lt;img src='../img/regularshow.jpg' class='img-circle' width='40'&gt;
@@ -246,7 +246,7 @@
               <code>Show More</code> is ideal for situations where users don't want to cycle back and forth between pages. <code>Next/Previous</code> works great for blogs or when the experience is more like browsing than searching. <code>Numbered</code> pagination is helpful when there are many results and users need quick access to a specific page.
             </p>
           </header>
-          <figure class='pad4y pad2x contain'>
+          <figure class='pad2 contain'>
             <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
               show more
             </div>            
@@ -254,11 +254,11 @@
               <a class='btn btn-success btn-wide'>Show more</a>
             </section>
           </figure>
-          <figure class='pad4y pad2x contain'>
+          <figure class='pad2 contain'>
             <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
               next / previous
             </div>            
-            <section class='text-right'>
+            <section class='center'>
               <a href='#fakelink' class='btn btn-primary'>
                 <i class='icon icon-arrow-left pad0r'></i>prev
               </a>
@@ -267,7 +267,7 @@
               </a>
             </section>
           </figure>
-          <figure class='pad4y pad2x contain'>
+          <figure class='pad2 contain'>
             <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
               numbered
             </div>            
@@ -276,10 +276,10 @@
             </section>
           </figure>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='helpers'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='pagination'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>
-<pre class='prettyprint' id='helpers'>
+<pre class='prettyprint' id='pagination'>
 &lt;section class='center'&gt;
   &lt;a class='btn btn-success btn-wide'&gt;Show more&lt;/a&gt;
 &lt;/section&gt;
@@ -298,7 +298,63 @@
 &lt;/section&gt;
 </pre>          
           </div>
-        </div>         
+        </div>  
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Modals</h4>
+            <p>
+              Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults. We based <code>modal</code> on <a href='http://getbootstrap.com/javascript/#modals'>Bootstrap</a> and customized its animation to be quick and responsive.
+            </p>
+          </header>
+          <figure class='pad2'>
+            <a href='#fakelink' class='btn btn-primary' data-toggle='modal' data-target='#modal'>
+              Launch modal
+            </a>          
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              .modal-sm
+            </div>                        
+            <a href='#fakelink' class='btn btn-primary' data-toggle='modal' data-target='#small-modal'>
+              Launch small modal
+            </a>          
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='modals'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='modals'>
+&lt;a href='#fakelink' class='btn btn-primary' data-toggle='modal' data-target='#modal'&gt;
+  Launch modal
+&lt;/a&gt;          
+
+&lt;div id='modal' class='modal fade' tabindex='-1'&gt;
+  &lt;div class='modal-dialog'&gt;
+    &lt;form class='modal-content'&gt;
+      &lt;div class='modal-header'&gt;
+        &lt;button type='button' class='close' data-dismiss='modal'&gt;&#215;&lt;/button&gt;
+        &lt;h2 class='center'&gt;Sign in&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;div class='modal-body'&gt;
+        &lt;fieldset&gt;
+          &lt;label for='email'&gt;Email&lt;/label&gt;
+          &lt;input class='stretch' id='email' type='email'&gt;
+        &lt;/fieldset&gt;          
+        &lt;fieldset&gt;
+          &lt;label for='password'&gt;Password&lt;/label&gt;
+          &lt;input class='stretch' id='password' type='password'&gt;
+        &lt;/fieldset&gt;          
+      &lt;/div&gt;
+      &lt;div class='modal-footer'&gt;
+        &lt;button type='button' class='btn btn-primary btn-block' data-dismiss='modal'&gt;Log in&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>          
+          </div>
+        </div>                       
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>
@@ -306,6 +362,51 @@
 
   </div>
   
+  <div id='modal' class='modal fade' tabindex='-1'>
+    <div class='modal-dialog'>
+      <form class='modal-content'>
+        <div class='modal-header'>
+          <button type='button' class='close' data-dismiss='modal'>×</button>
+          <h2 class='center'>Sign in</h2>
+        </div>
+        <div class='modal-body'>
+          <fieldset>
+            <label for='email'>Email</label>
+            <input class='stretch' id='email' type='email'>
+          </fieldset>          
+          <fieldset>
+            <label for='password'>Password</label>
+            <input class='stretch' id='password' type='password'>
+          </fieldset>          
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-primary btn-block' data-dismiss='modal'>Log in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id='small-modal' class='modal fade' tabindex='-1'>
+    <div class='modal-dialog modal-sm'>
+      <form class='modal-content'>
+        <div class='modal-header center'>
+          <button type='button' class='close' data-dismiss='modal'>×</button>
+          <h3>Join our mailing list</h3>
+          <p>Stay up to date!</p>
+        </div>
+        <div class='modal-body'>
+          <fieldset>
+            <label for='contact-email'>Your email address</label>
+            <input class='stretch' id='contact-email' type='email'>
+          </fieldset>          
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-primary btn-block' data-dismiss='modal'>Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
   <script src='../dist/js/cb-design-framework.min.js'></script>
   <script src='../js/prettify.js'></script>

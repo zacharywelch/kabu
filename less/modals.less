@@ -58,10 +58,12 @@
 
 // Modal background
 .modal-backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  bottom: 0;
+  z-index: @zindex-modal-background;
   background-color: @modal-backdrop-bg;
   // Fade for backdrop
   &.fade { .opacity(0); }
@@ -141,7 +143,11 @@
   }
 
   // Modal sizes
-  .modal-sm { width: @modal-sm; }
+  .modal-sm { 
+    width: @modal-sm; 
+
+    .modal-header, .modal-body, .modal-footer { padding: 10px 20px; }
+  }
 }
 
 @media (min-width: @screen-md-min) {
