@@ -461,14 +461,14 @@
           <header class='box-heading pad2'>
             <h4>Notices</h4>
             <p>
-              Provide contextual feedback messages for typical user actions.
+              Provide contextual feedback messages for typical user actions. Add dismiss functionality by using a <code>.close</code> button.
             </p>                
           </header>
           <figure class='pad2 contain'>
             <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
               info
             </div>
-            <div class='space-bottom fill-light-blue pad2'>
+            <div class='fill-light-blue pad2'>
               <h4>Mordecai</h4>
               <p>
                 I don't mean to brag, I don't mean to boast, but I have some hummus for these mini toast!
@@ -479,7 +479,7 @@
             <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
               warning
             </div>
-            <div class='space-bottom fill-yellow pad2'>
+            <div class='fill-yellow pad2'>
               <h4>Rigby</h4>
               <p>
                 If you buy that cologne, then I'm gonna lose all respect for you.
@@ -490,13 +490,27 @@
             <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
               danger
             </div>
-            <div class='space-bottom fill-red dark pad2'>
+            <div class='fill-red dark pad2'>
               <h4>Rigby</h4>
               <p>
-                NOOOOOOOO! CURSE YOU, "TRIPLE THREAT"!
+                NOOOOOOOO! CURSE YOU, 'TRIPLE THREAT'!
               </p>
             </div>
           </figure>
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              data-dismiss
+            </div>
+            <div class='fill-light-blue pad2'>
+              <button type='button' class='close' data-dismiss='alert'>
+                <span>&times;</span>
+              </button>
+              <h4>Mordecai</h4>
+              <p>
+                I don't mean to brag, I don't mean to boast, but I have some hummus for these mini toast!
+              </p>
+            </div>
+          </figure>          
           <div class='contain'>
             <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='notices'>
               <i class='icon icon-clipboard pad0r'></i>Copy
@@ -512,6 +526,16 @@
 
 &lt;div class='space-bottom fill-red dark pad2'&gt;
   NOOOOOOOO! CURSE YOU, &quot;TRIPLE THREAT&quot;!
+&lt;/div&gt;
+
+&lt;div class='fill-light-blue pad2'&gt;
+  &lt;button type='button' class='close' data-dismiss='alert'&gt;
+    &lt;span&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;h4&gt;Mordecai&lt;/h4&gt;
+  &lt;p&gt;
+    I don't mean to brag, I don't mean to boast, but I have some hummus for these mini toast!
+  &lt;/p&gt;
 &lt;/div&gt;
 </pre>          
           </div>

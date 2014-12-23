@@ -3820,13 +3820,9 @@ button.close {
 /* Close icons
 ------------------------------------------------------- */
 .close {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-.close:hover,
-.close:focus {
-  opacity: 0.75;
-  filter: alpha(opacity=75);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  font-family: 'Open Sans Bold', sans-serif;
 }
 .pin-right.close {
   height: 40px;
