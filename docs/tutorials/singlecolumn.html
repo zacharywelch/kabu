@@ -4,7 +4,7 @@
   <meta charset='UTF-8'/>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>  
-  <title>Grid system</title>
+  <title>Single column list</title>
   <link href='../css/prettify.css' rel='stylesheet' />
   <link href='../dist/css/cb-design-framework.min.css' rel='stylesheet' />
   <link href='../css/site.css' rel='stylesheet' />
@@ -60,7 +60,7 @@
 
             <div class='space-bottom1'>
               <strong class='block quiet small'>CSS and styling</strong>
-              <a href='../styling/grid.html' class='block small truncate active'>
+              <a href='../styling/grid.html' class='block small truncate'>
                 Grid system
               </a>
               <a href='../styling/typography.html' class='block small truncate'>
@@ -158,11 +158,11 @@
         <div class='box round contain fill-white pad2'>
           <div class='prose'>
             <p>
-              In this example let's create a single column to-do list.
+              In this example we'll create a single column to-do list.
             </p>
             <h4>1. Create a container</h4>
             <p>
-              Start by creating a container for our to-do list. Let's use the <code>.box</code> class and center it to the grid with an <code>*-offset</code> class. <code>.round</code> takes care of rounding its corners and softening the edges.
+              Start by creating a container for our to-do list. Let's use a <a href='../styling/helpers.html'>box</a> and center it to the grid with an <a href='../styling/grid.html'>offset</a>. The <a href='../styling/helpers.html'>round</a> class takes care of rounding corners and softening the edges.
             </p>
           </div>
           <div class='clearfix pad2y'>
@@ -185,7 +185,7 @@
           <div class='prose'>
             <h4>2. Add our to-do items</h4>
             <p>
-              To-do items need space to breathe and a bottom border to separate them from other items in the list. To accomplish this we'll use the <code>.padx</code>, <code>.pady</code> and <code>.keyline-bottom</code> classes. Learn more about padding and keyline helpers by visiting our <a href='../styling/grid.html'>grid</a> and <a href='../styling/helpers.html'>helpers</a> sections.
+              To-do items need space to breathe and a bottom border to separate them from other items in the list. To accomplish this we'll use <a href='../styling/grid.html'>padding helpers</a> and a <a href='../styling/helpers.html'>keyline</a> on each item.
             </p>
           </div>
 
@@ -217,7 +217,7 @@
           <div class='prose'>
             <h4>3. Include some icons</h4>
             <p>
-              We want to easily distinguish which items in our list have been completed. To do that let's use the <code>.icon-ok</code> icon.
+              We want to easily distinguish which items in our list have been completed. Let's use the check-mark from our list of <a href='../styling/icons.html'>icons</a>.
             </p>
           </div>
 
@@ -267,9 +267,9 @@
           </div>
 
           <div class='prose'>
-            <h4>4. Fix the spacing</h4>
+            <h4>4. Fix spacing</h4>
             <p>
-              Let's line up our to-do items using the <a href='grid.html'>grid system</a>. We'll make the icon one column with <code>.col-xs-1</code>. Finally we'll add a <code>.clearfix</code> class to clear floats on each item. 
+              That's better, but items in our list aren't lining up! Let's reserve one column for the icon by using our <a href='../styling/grid.html'>grid system</a>. We also need to clear floats on each item by using the <a href='../styling/helpers.html'>clearfix</a> helper.
             </p>
           </div>
 
@@ -329,9 +329,9 @@
           </div>                   
 
           <div class='prose'>
-            <h4>5. Adding items to list</h4>
+            <h4>5. Adding items to the list</h4>
             <p>
-              We also need to add items to our to-do list. Let's position an <a href='buttons.html'>input with button</a> above our list so users can quickly add new items. 
+              We're almost there! We just need a way to add items to the list. Let's position an <a href='../styling/buttons.html'>input with button</a> above our list so users can quickly add to-do items. 
             </p>
           </div>
 
