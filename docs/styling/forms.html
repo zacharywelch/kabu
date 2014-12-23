@@ -180,21 +180,21 @@
           <div class='pad2'>
             <form class='col-sm-9 col-xs-12'>
               <fieldset>
-                <label>Input Label</label>
-                <input type='text' class='stretch' placeholder='.stretch' />
+                <label for='input1'>Input Label</label>
+                <input id='input1' type='text' class='stretch' placeholder='.stretch' />
               </fieldset>
               <fieldset class='col-sm-6 pad0r'>
-                <label>.col-sm-6</label>
-                <input type='text' class='stretch'>
+                <label for='input2'>.col-sm-6</label>
+                <input id='input2' type='text' class='stretch'>
               </fieldset>
               <fieldset class='col-sm-6 pad0l'>
-                <label>.col-sm-6</label>
-                <input type='text' class='stretch'>
+                <label for='input3'>.col-sm-6</label>
+                <input id='input3' type='text' class='stretch'>
               </fieldset>
               <fieldset>
-                <label>Select Box</label>
+                <label for='input4'>Select Box</label>
                 <div class='input-group col-xs-12'>
-                  <select class='stretch'>
+                  <select id='input4' class='stretch'>
                     <option>
                       Please select a security question...
                     </option>
@@ -225,8 +225,8 @@
                 </div>            
               </fieldset>              
               <fieldset>
-                <label>What is love?</label>
-                <textarea class='stretch'></textarea>
+                <label for='input5'>What is love?</label>
+                <textarea id='input5' class='stretch'></textarea>
               </fieldset>              
             </form>
           </div>
@@ -237,21 +237,21 @@
 <pre class='prettyprint' id='basic-example'>
 &lt;form class='col-sm-9 col-xs-12'&gt;
   &lt;fieldset&gt;
-    &lt;label&gt;Input Label&lt;/label&gt;
-    &lt;input type='text' class='stretch' placeholder='.stretch' /&gt;
+    &lt;label for='input1'&gt;Input Label&lt;/label&gt;
+    &lt;input id='input1' type='text' class='stretch' placeholder='.stretch' /&gt;
   &lt;/fieldset&gt;
   &lt;fieldset class='col-sm-6 pad0r'&gt;
-    &lt;label&gt;.col-sm-6&lt;/label&gt;
-    &lt;input type='text' class='stretch'&gt;
+    &lt;label for='input2'&gt;.col-sm-6&lt;/label&gt;
+    &lt;input id='input2' type='text' class='stretch'&gt;
   &lt;/fieldset&gt;
   &lt;fieldset class='col-sm-6 pad0l'&gt;
-    &lt;label&gt;.col-sm-6&lt;/label&gt;
-    &lt;input type='text' class='stretch'&gt;
+    &lt;label for='input3'&gt;.col-sm-6&lt;/label&gt;
+    &lt;input id='input3' type='text' class='stretch'&gt;
   &lt;/fieldset&gt;
   &lt;fieldset&gt;
-    &lt;label&gt;Select Box&lt;/label&gt;
+    &lt;label for='input4'&gt;Select Box&lt;/label&gt;
     &lt;div class='input-group col-xs-12'&gt;
-      &lt;select class='stretch'&gt;
+      &lt;select id='input4' class='stretch'&gt;
         &lt;option&gt;
           Please select a security question...
         &lt;/option&gt;
@@ -282,8 +282,8 @@
     &lt;/div&gt;            
   &lt;/fieldset&gt;              
   &lt;fieldset&gt;
-    &lt;label&gt;What is love?&lt;/label&gt;
-    &lt;textarea class='stretch'&gt;&lt;/textarea&gt;
+    &lt;label for='input5'&gt;What is love?&lt;/label&gt;
+    &lt;textarea id='input5' class='stretch'&gt;&lt;/textarea&gt;
   &lt;/fieldset&gt;              
 &lt;/form&gt;
 </pre>
@@ -839,6 +839,58 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
+            <h4>Validations</h4>
+            <p>
+              Call attention to form errors by adding <code>.with-error</code> to a fieldset and including an <code>.error-message</code> underneath the invalid field. Displaying messages next to fields lets users spot corrections and move on quickly.
+            </p>
+          </header>
+          <div class='pad2'>
+            <form class='col-sm-9 col-xs-12 clearfix'>
+              <fieldset class='with-error'>
+                <label for='error1'>Input Label</label>
+                <input id='error1' type='text' class='stretch' placeholder='.stretch' />
+                <small class='error-message'>field is required</small>
+              </fieldset>
+              <fieldset class='col-sm-6 pad0r with-error'>
+                <label for='error2'>.col-sm-6</label>
+                <input id='error2' type='text' class='stretch'>
+                <small class='error-message'>field is required</small>
+              </fieldset>
+              <fieldset class='col-sm-6 pad0l with-error'>
+                <label for='error3'>.col-sm-6</label>
+                <input id='error3' type='text' class='stretch'>
+                <small class='error-message'>field is required</small>
+              </fieldset>
+            </form>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='validations'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='validations'>
+&lt;form class='col-sm-9 col-xs-12 clearfix'&gt;
+  &lt;fieldset class='with-error'&gt;
+    &lt;label for='error1'&gt;Input Label&lt;/label&gt;
+    &lt;input id='error1' type='text' class='stretch' placeholder='.stretch' /&gt;
+    &lt;small class='error-message'&gt;field is required&lt;/small&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-6 pad0r with-error'&gt;
+    &lt;label for='error2'&gt;.col-sm-6&lt;/label&gt;
+    &lt;input id='error2' type='text' class='stretch'&gt;
+    &lt;small class='error-message'&gt;field is required&lt;/small&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-6 pad0l with-error'&gt;
+    &lt;label for='error3'&gt;.col-sm-6&lt;/label&gt;
+    &lt;input id='error3' type='text' class='stretch'&gt;
+    &lt;small class='error-message'&gt;field is required&lt;/small&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
+          </div>
+        </div>                    
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
             <h4>Dark variants</h4>
             <p>
               Each form control includes a <em>dark</em> version that is styled automatically when its container includes the <code>.dark</code> class. Be sure to combine a <code>.fill-[color]</code> from our <a href='colors.html'>colors</a> section.
@@ -957,7 +1009,7 @@
 &lt;/div&gt;
 </pre>
           </div>
-        </div>         
+        </div>
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>

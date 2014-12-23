@@ -2592,6 +2592,15 @@ select + .icon {
   height: 30px;
   padding: 5px 5px;
 }
+/* Validations */
+form fieldset.with-error > label {
+  color: #ee6565;
+}
+.error-message {
+  padding: 5px 10px;
+  background: #ee6565;
+  color: #fff;
+}
 /* Responsive
 ------------------------------------------------------- */
 @media (max-width: 767px) {
