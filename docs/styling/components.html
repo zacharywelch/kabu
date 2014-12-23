@@ -207,6 +207,64 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
+            <h4>File input</h4>
+            <p>
+              Based on <a href='http://jasny.github.io/bootstrap/javascript/#Fileinput'>Jasny</a> control, <code>file input</code> lets users select a file to upload.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <fieldset class='fileinput fileinput-new' data-provides='fileinput'>
+              <div class='input-group'>
+                <div class='form-control uneditable-input' data-trigger='fileinput'>
+                  <i class='icon icon-paperclip fileinput-exists'></i>
+                  <span class='fileinput-filename'></span>
+                </div>
+                <span class='input-group-btn btn-file'>
+                  <span class='btn btn-default fileinput-new' data-role='select-file'>
+                    Select file
+                  </span>
+                  <span class='btn btn-default fileinput-exists' data-role='change'>
+                    <i class='icon icon-cog pad0r'></i>Change
+                  </span>
+                  <input type='file'>
+                  <a href='#' class='btn btn-danger fileinput-exists' data-dismiss='fileinput'>
+                    <i class='icon icon-trash pad0r'></i>Remove
+                  </a>               
+                </span>             
+              </div>
+            </fieldset>            
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='file'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='file'>
+&lt;fieldset class='fileinput fileinput-new' data-provides='fileinput'&gt;
+  &lt;div class='input-group'&gt;
+    &lt;div class='form-control uneditable-input' data-trigger='fileinput'&gt;
+      &lt;i class='icon icon-paperclip fileinput-exists'&gt;&lt;/i&gt;
+      &lt;span class='fileinput-filename'&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class='input-group-btn btn-file'&gt;
+      &lt;span class='btn btn-default fileinput-new' data-role='select-file'&gt;
+        Select file
+      &lt;/span&gt;
+      &lt;span class='btn btn-default fileinput-exists' data-role='change'&gt;
+        &lt;i class='icon icon-cog pad0r'&gt;&lt;/i&gt;Change
+      &lt;/span&gt;
+      &lt;input type='file'&gt;
+      &lt;a href='#' class='btn btn-danger fileinput-exists' data-dismiss='fileinput'&gt;
+        &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Remove
+      &lt;/a&gt;               
+    &lt;/span&gt;             
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</pre>          
+          </div>
+        </div>   
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
             <h4>Hovercard</h4>
             <p>
               Use <code>hovercard</code> for displaying a person's bio or contact information. Information can be made actionable by including links and call to action buttons. Composition is used to create <code>hovercard</code>. Use the <a href='grid.html'>grid system</a> or a separate css class to assign a width to its container.
@@ -222,7 +280,7 @@
               <h5 class='quiet'>Squarespace</h5>
               <h5 class='quiet'>Creative Director</h5>
               <div class='pad2 space-bottom1'>
-                <a href='#' class='btn btn-primary'>Become</a>
+                <a href='#fakelink' class='btn btn-primary'>Become</a>
               </div>
               <a href='#fakelink' class='block quiet col-xs-6 pad1y pad2x keyline-top keyline-right fill-light'>
                 <i class='icon icon-phone pad0r'></i>Call
@@ -248,7 +306,7 @@
   &lt;h5 class='quiet'&gt;Squarespace&lt;/h5&gt;
   &lt;h5 class='quiet'&gt;Creative Director&lt;/h5&gt;
   &lt;div class='pad2 space-bottom1'&gt;
-    &lt;a href='#' class='btn btn-primary'&gt;Become&lt;/a&gt;
+    &lt;a href='#fakelink' class='btn btn-primary'&gt;Become&lt;/a&gt;
   &lt;/div&gt;
   &lt;a href='#fakelink' class='block quiet col-xs-6 pad1y pad2x keyline-top keyline-right fill-light'&gt;
     &lt;i class='icon icon-phone pad0r'&gt;&lt;/i&gt;Call
