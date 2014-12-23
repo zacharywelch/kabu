@@ -168,6 +168,40 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
+            <h4>Labels and badges</h4>
+            <p>
+              Composition is used to create labels and badges. Choose a <a href='colors.html'>fill</a> for background color.
+            </p>                
+          </header>
+          <div class='pad2'>
+            <span class='fill-gray pad0 small quiet round inline'>Default</span>
+            <span class='fill-blue dark pad0 small round inline'>Primary</span>
+            <span class='fill-green dark pad0 small round inline'>Success</span>
+            <span class='fill-red dark pad0 small round inline'>Danger</span>
+            <span class='fill-yellow pad0 small round inline'>Warning</span>
+            <span class='fill-light-blue pad0 small round inline'>Info</span>
+            <span class='fill-purple dark pad0 small img-circle inline'>42</span>
+            <span class='fill-turquoise dark pad0y pad1x small img-rounded inline'>42</span>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='labels'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='labels'>
+&lt;span class='fill-gray pad0 small quiet round inline'&gt;Default&lt;/span&gt;
+&lt;span class='fill-blue dark pad0 small round inline'&gt;Primary&lt;/span&gt;
+&lt;span class='fill-green dark pad0 small round inline'&gt;Success&lt;/span&gt;
+&lt;span class='fill-red dark pad0 small round inline'&gt;Danger&lt;/span&gt;
+&lt;span class='fill-yellow pad0 small round inline'&gt;Warning&lt;/span&gt;
+&lt;span class='fill-light-blue pad0 small round inline'&gt;Info&lt;/span&gt;
+&lt;span class='fill-purple dark pad0 small img-circle inline'&gt;42&lt;/span&gt;
+&lt;span class='fill-turquoise dark pad0y pad1x small img-rounded inline'&gt;42&lt;/span&gt;
+</pre>          
+          </div>
+        </div>        
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
             <h4>Avatars</h4>
             <p>
               Create avatars by using the <code>.img-circle</code> and <code>.img-rounded</code> <a href='helpers.html'>helpers</a> with a set width.
@@ -190,7 +224,7 @@
             <img src='../img/regularshow.jpg' class='img-rounded' width='40'>
           </figure>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='avatars'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='avatars'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>
 <pre class='prettyprint' id='avatars'>
@@ -203,69 +237,11 @@
 &lt;img src='../img/regularshow.jpg' class='img-rounded' width='40'&gt;
 </pre>          
           </div>
-        </div>   
+        </div>  
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
-            <h4>File input</h4>
-            <p>
-              Based on <a href='http://jasny.github.io/bootstrap/javascript/#Fileinput'>Jasny</a> control, <code>file input</code> lets users select a file to upload.
-            </p>                
-          </header>
-          <figure class='pad2'>
-            <fieldset class='fileinput fileinput-new' data-provides='fileinput'>
-              <div class='input-group'>
-                <div class='form-control uneditable-input' data-trigger='fileinput'>
-                  <i class='icon icon-paperclip fileinput-exists'></i>
-                  <span class='fileinput-filename'></span>
-                </div>
-                <span class='input-group-btn btn-file'>
-                  <span class='btn btn-default fileinput-new' data-role='select-file'>
-                    Select file
-                  </span>
-                  <span class='btn btn-default fileinput-exists' data-role='change'>
-                    <i class='icon icon-cog pad0r'></i>Change
-                  </span>
-                  <input type='file'>
-                  <a href='#' class='btn btn-danger fileinput-exists' data-dismiss='fileinput'>
-                    <i class='icon icon-trash pad0r'></i>Remove
-                  </a>               
-                </span>             
-              </div>
-            </fieldset>            
-          </figure>
-          <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='file'>
-              <i class='icon icon-clipboard pad0r'></i>Copy
-            </a>
-<pre class='prettyprint' id='file'>
-&lt;fieldset class='fileinput fileinput-new' data-provides='fileinput'&gt;
-  &lt;div class='input-group'&gt;
-    &lt;div class='form-control uneditable-input' data-trigger='fileinput'&gt;
-      &lt;i class='icon icon-paperclip fileinput-exists'&gt;&lt;/i&gt;
-      &lt;span class='fileinput-filename'&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;span class='input-group-btn btn-file'&gt;
-      &lt;span class='btn btn-default fileinput-new' data-role='select-file'&gt;
-        Select file
-      &lt;/span&gt;
-      &lt;span class='btn btn-default fileinput-exists' data-role='change'&gt;
-        &lt;i class='icon icon-cog pad0r'&gt;&lt;/i&gt;Change
-      &lt;/span&gt;
-      &lt;input type='file'&gt;
-      &lt;a href='#' class='btn btn-danger fileinput-exists' data-dismiss='fileinput'&gt;
-        &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Remove
-      &lt;/a&gt;               
-    &lt;/span&gt;             
-  &lt;/div&gt;
-&lt;/fieldset&gt;
-</pre>          
-          </div>
-        </div>   
-
-        <div class='box round contain fill-white'>
-          <header class='box-heading pad2'>
-            <h4>Hovercard</h4>
+            <h4>hovercard</h4>
             <p>
               Use <code>hovercard</code> for displaying a person's bio or contact information. Information can be made actionable by including links and call to action buttons. Composition is used to create <code>hovercard</code>. Use the <a href='grid.html'>grid system</a> or a separate css class to assign a width to its container.
             </p>                
@@ -291,7 +267,7 @@
             </div>
           </figure>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='avatars'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='avatars'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>
 <pre class='prettyprint' id='avatars'>
@@ -321,40 +297,6 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
-            <h4>Labels and badges</h4>
-            <p>
-              Composition is used to create labels and badges. Choose a <a href='colors.html'>fill</a> for background color.
-            </p>                
-          </header>
-          <div class='pad2'>
-            <span class='fill-gray pad0 small quiet round inline'>Default</span>
-            <span class='fill-blue dark pad0 small round inline'>Primary</span>
-            <span class='fill-green dark pad0 small round inline'>Success</span>
-            <span class='fill-red dark pad0 small round inline'>Danger</span>
-            <span class='fill-yellow pad0 small round inline'>Warning</span>
-            <span class='fill-light-blue pad0 small round inline'>Info</span>
-            <span class='fill-purple dark pad0 small img-circle inline'>42</span>
-            <span class='fill-turquoise dark pad0y pad1x small img-rounded inline'>42</span>
-          </div>
-          <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='labels'>
-              <i class='icon icon-clipboard pad0r'></i>Copy
-            </a>          
-<pre class='prettyprint' id='labels'>
-&lt;span class='fill-gray pad0 small quiet round inline'&gt;Default&lt;/span&gt;
-&lt;span class='fill-blue dark pad0 small round inline'&gt;Primary&lt;/span&gt;
-&lt;span class='fill-green dark pad0 small round inline'&gt;Success&lt;/span&gt;
-&lt;span class='fill-red dark pad0 small round inline'&gt;Danger&lt;/span&gt;
-&lt;span class='fill-yellow pad0 small round inline'&gt;Warning&lt;/span&gt;
-&lt;span class='fill-light-blue pad0 small round inline'&gt;Info&lt;/span&gt;
-&lt;span class='fill-purple dark pad0 small img-circle inline'&gt;42&lt;/span&gt;
-&lt;span class='fill-turquoise dark pad0y pad1x small img-rounded inline'&gt;42&lt;/span&gt;
-</pre>          
-          </div>
-        </div>        
-
-        <div class='box round contain fill-white'>
-          <header class='box-heading pad2'>
             <h4>Modals</h4>
             <p>
               Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults. We based <code>modal</code> on <a href='http://getbootstrap.com/javascript/#modals'>Bootstrap</a> and customized its animation to be quick and responsive.
@@ -374,7 +316,7 @@
             </a>          
           </figure>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='modals'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='modals'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint' id='modals'>
@@ -408,6 +350,101 @@
 </pre>          
           </div>
         </div>    
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Media</h4>
+            <p>
+              Abstract object styles for building various types of components (like blog comments, Tweets, etc) that feature a left-aligned image alongside textual content.
+            </p>                
+          </header>
+          <div class='pad2'>
+            <div class='media'>
+              <a class='media-left pad1r' href='#fakelink'>
+                <img src='../img/mordecai.png' class='img-rounded' width='50'>
+              </a>
+              <div class='media-body'>
+                <h4>Mordecai</h4>
+                <p>
+                  Dude, you've gotta stop pulling stuff out of the trash. It's unnatural!
+                </p>
+              </div>
+            </div>
+            <div class='media'>
+              <a class='media-left pad1r' href='#fakelink'>
+                <img src='../img/rigby.png' class='img-rounded' width='50'>
+              </a>
+              <div class='media-body'>
+                <h4>Rigby</h4>
+                <p>
+                  You're unnatural!
+                </p>
+              </div>
+            </div>
+            <div class='media'>
+              <a class='media-left pad1r' href='#fakelink'>
+                <img src='../img/mordecai.png' class='img-rounded' width='50'>
+              </a>
+              <div class='media-body'>
+                <h4>Mordecai</h4>
+                <p>
+                  Don't touch that cake.
+                </p>
+              </div>
+            </div>
+            <div class='media'>
+              <a class='media-left pad1r' href='#fakelink'>
+                <img src='../img/rigby.png' class='img-circle' width='50'>
+              </a>
+              <div class='media-body'>
+                <h4>Rigby</h4>
+                <p>
+                  It's a medical emergency!
+                </p>
+              </div>
+            </div>
+            <div class='media'>
+              <a class='media-left pad1r' href='#fakelink'>
+                <img src='../img/mordecai.png' class='img-rounded' width='50'>
+              </a>
+              <div class='media-body'>
+                <h4>Mordecai</h4>
+                <p>
+                  You just ate a sandwich.
+                </p>
+              </div>
+            </div>
+            <div class='media'>
+              <a class='media-left pad1r' href='#fakelink'>
+                <img src='../img/rigby.png' class='img-rounded' width='50'>
+              </a>
+              <div class='media-body'>
+                <h4>Rigby</h4>
+                <p>
+                  Are you a doctor now? Did you go to medical school in the last five seconds?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='media'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='media'>
+&lt;div class='media'&gt;
+  &lt;a class='media-left pad1r' href='#fakelink'&gt;
+    &lt;img src='../img/mordecai.png' class='img-rounded' width='50'&gt;
+  &lt;/a&gt;
+  &lt;div class='media-body'&gt;
+    &lt;h4&gt;Mordecai&lt;/h4&gt;
+    &lt;p&gt;
+      Dude, you've gotta stop pulling stuff out of the trash. It's unnatural!
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>          
+          </div>
+        </div>   
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
@@ -449,7 +486,7 @@
             </section>
           </figure>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='pagination'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='pagination'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>
 <pre class='prettyprint' id='pagination'>
@@ -472,6 +509,64 @@
 </pre>          
           </div>
         </div>  
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>File input</h4>
+            <p>
+              Based on <a href='http://jasny.github.io/bootstrap/javascript/#Fileinput'>Jasny</a> control, <code>file input</code> lets users select a file to upload.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <fieldset class='fileinput fileinput-new' data-provides='fileinput'>
+              <div class='input-group'>
+                <div class='form-control uneditable-input' data-trigger='fileinput'>
+                  <i class='icon icon-paperclip fileinput-exists'></i>
+                  <span class='fileinput-filename'></span>
+                </div>
+                <span class='input-group-btn btn-file'>
+                  <span class='btn btn-default fileinput-new' data-role='select-file'>
+                    Select file
+                  </span>
+                  <span class='btn btn-default fileinput-exists' data-role='change'>
+                    <i class='icon icon-cog pad0r'></i>Change
+                  </span>
+                  <input type='file'>
+                  <a href='#' class='btn btn-danger fileinput-exists' data-dismiss='fileinput'>
+                    <i class='icon icon-trash pad0r'></i>Remove
+                  </a>               
+                </span>             
+              </div>
+            </fieldset>            
+          </figure>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='file'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='file'>
+&lt;fieldset class='fileinput fileinput-new' data-provides='fileinput'&gt;
+  &lt;div class='input-group'&gt;
+    &lt;div class='form-control uneditable-input' data-trigger='fileinput'&gt;
+      &lt;i class='icon icon-paperclip fileinput-exists'&gt;&lt;/i&gt;
+      &lt;span class='fileinput-filename'&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class='input-group-btn btn-file'&gt;
+      &lt;span class='btn btn-default fileinput-new' data-role='select-file'&gt;
+        Select file
+      &lt;/span&gt;
+      &lt;span class='btn btn-default fileinput-exists' data-role='change'&gt;
+        &lt;i class='icon icon-cog pad0r'&gt;&lt;/i&gt;Change
+      &lt;/span&gt;
+      &lt;input type='file'&gt;
+      &lt;a href='#' class='btn btn-danger fileinput-exists' data-dismiss='fileinput'&gt;
+        &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Remove
+      &lt;/a&gt;               
+    &lt;/span&gt;             
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</pre>          
+          </div>
+        </div>           
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>
