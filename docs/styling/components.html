@@ -545,8 +545,11 @@
           <header class='box-heading pad2'>
             <h4>Popup</h4>
             <p>
-              Show important notifications and additional information using <code>popup</code>. Popup lets the user view relevant information without losing their current place in the UI.
-            </p>                
+              Show important notifications and additional information using <code>popup</code>. Motion is used to communicate secondary information by guiding the user's eye in a logical direction. A <code>.down</code> option is available for transitioning below the point of contact.
+            </p>
+            <p>
+
+            </p>
           </header>
           <figure class='pad2'>
             <div class='contain'>
@@ -573,6 +576,34 @@
               </div>            
             </div>
           </figure>
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              .down
+            </div>            
+            <div class='contain'>
+              <strong data-toggle='popup'>
+                <abbr title='insertion order'>IO</abbr> number
+              </strong>
+              <div class='popup with-icon animate down col-sm-9 fill-white keyline-all small pad2'>
+                <a href='#fakelink' class='quiet pin-right close' data-dismiss='popup'>
+                  <i class='icon icon-remove'></i>
+                </a>
+                <div class='pad2 pin-left'>
+                  <div class='fill-purple img-circle graphic-md dark'>
+                    <i class='icon icon-lg icon-leaf'></i>
+                  </div>
+                </div>
+                <h4>Insertion Order</h4>
+                Porta pellentesque <strong>pulvinar</strong> pellentesque port, phasellus? Risus egestas et porta, nisi.
+                <div class='text-right'>
+                  <a href='#fakelink' class='strong'>
+                    <i class='icon icon-question-sign'></i>
+                    Learn more
+                  </a>
+                </div>
+              </div>            
+            </div>
+          </figure>          
           <div class='contain'>
             <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='popup'>
               <i class='icon icon-clipboard pad0r'></i>Copy

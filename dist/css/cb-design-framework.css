@@ -3858,6 +3858,8 @@ button.close {
   padding-left: 100px;
 }
 .popup.down {
+  bottom: initial;
+  top: 120%;
   -webkit-transform: translate(-25%, -40px) scale(0.5);
   -moz-transform: translate(-25%, -40px) scale(0.5);
   -ms-transform: translate(-25%, -40px) scale(0.5);
