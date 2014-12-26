@@ -299,21 +299,13 @@
           <header class='box-heading pad2'>
             <h4>Modals</h4>
             <p>
-              Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults. We based <code>modal</code> on <a href='http://getbootstrap.com/javascript/#modals'>Bootstrap</a> and customized its animation to be quick and responsive.
+              Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults. We loosely based <code>modal</code> on <a href='http://getbootstrap.com/javascript/#modals'>Bootstrap</a> and customized its animation to be quick and subtle. On smaller devices <code>modal</code> becomes fullscreen.
             </p>
           </header>
           <figure class='pad2'>
             <a href='#fakelink' class='btn btn-primary' data-toggle='modal' data-target='#modal'>
               Launch modal
-            </a>          
-          </figure>
-          <figure class='pad2 contain'>
-            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
-              .modal-sm
-            </div>                        
-            <a href='#fakelink' class='btn btn-primary' data-toggle='modal' data-target='#small-modal'>
-              Launch small modal
-            </a>          
+            </a>
           </figure>
           <div class='contain'>
             <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='modals'>
@@ -324,26 +316,37 @@
   Launch modal
 &lt;/a&gt;          
 
-&lt;div id='modal' class='modal fade' tabindex='-1'&gt;
+&lt;div id='modal' class='animate modal'&gt;
   &lt;div class='modal-dialog'&gt;
-    &lt;form class='modal-content'&gt;
-      &lt;div class='modal-header'&gt;
-        &lt;button type='button' class='close' data-dismiss='modal'&gt;&#215;&lt;/button&gt;
-        &lt;h2 class='center'&gt;Sign in&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class='modal-body'&gt;
-        &lt;fieldset&gt;
-          &lt;label for='email'&gt;Email&lt;/label&gt;
-          &lt;input class='stretch' id='email' type='email'&gt;
-        &lt;/fieldset&gt;          
-        &lt;fieldset&gt;
-          &lt;label for='password'&gt;Password&lt;/label&gt;
-          &lt;input class='stretch' id='password' type='password'&gt;
-        &lt;/fieldset&gt;          
-      &lt;/div&gt;
-      &lt;div class='modal-footer'&gt;
-        &lt;button type='button' class='btn btn-primary btn-block' data-dismiss='modal'&gt;Log in&lt;/button&gt;
-      &lt;/div&gt;
+    &lt;form method='post' class='container-fluid'&gt;
+      &lt;div class='col-sm-6 col-xs-12 fill-blue modal-content contain'&gt;
+        &lt;div class='dark'&gt;          
+          &lt;a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'&gt;
+            &lt;i class='icon icon-remove'&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;div class='pad2y pad4x center'&gt;
+            &lt;h3&gt;Sign in to Paddle&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div class='space-bottom2 pad4x'&gt;
+            &lt;fieldset&gt;
+              &lt;label&gt;Username or email&lt;/label&gt;
+              &lt;input type='text' class='stretch'&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label&gt;Password&lt;/label&gt;
+              &lt;input type='password' class='stretch'&gt;
+            &lt;/fieldset&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class='modal-actions fill-gray pad2y pad4x clearfix'&gt;
+          &lt;div class='col-xs-6'&gt;
+            &lt;a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'&gt;Sign in&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;small class='col-xs-6 pad1y center'&gt;
+            &lt;a class='quiet' href='#fakelink'&gt;Need an account?&lt;i class='icon icon-arrow-right icon-sm'&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;      
     &lt;/form&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -764,47 +767,37 @@
 
   </div>
   
-  <div id='modal' class='modal fade' tabindex='-1'>
+  <div id='modal' class='animate modal'>
     <div class='modal-dialog'>
-      <form class='modal-content'>
-        <div class='modal-header'>
-          <button type='button' class='close' data-dismiss='modal'>×</button>
-          <h2 class='center'>Sign in</h2>
-        </div>
-        <div class='modal-body'>
-          <fieldset>
-            <label for='email'>Email</label>
-            <input class='stretch' id='email' type='email'>
-          </fieldset>          
-          <fieldset>
-            <label for='password'>Password</label>
-            <input class='stretch' id='password' type='password'>
-          </fieldset>          
-        </div>
-        <div class='modal-footer'>
-          <button type='button' class='btn btn-primary btn-block' data-dismiss='modal'>Log in</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div id='small-modal' class='modal fade' tabindex='-1'>
-    <div class='modal-dialog modal-sm'>
-      <form class='modal-content'>
-        <div class='modal-header center'>
-          <button type='button' class='close' data-dismiss='modal'>×</button>
-          <h3>Join our mailing list</h3>
-          <p>Stay up to date!</p>
-        </div>
-        <div class='modal-body'>
-          <fieldset>
-            <label for='contact-email'>Your email address</label>
-            <input class='stretch' id='contact-email' type='email'>
-          </fieldset>          
-        </div>
-        <div class='modal-footer'>
-          <button type='button' class='btn btn-primary btn-block' data-dismiss='modal'>Submit</button>
-        </div>
+      <form method='post' class='container-fluid'>
+        <div class='col-sm-6 col-xs-12 fill-blue modal-content contain'>
+          <div class='dark'>          
+            <a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'>
+              <i class='icon icon-remove'></i>
+            </a>
+            <div class='pad2y pad4x center'>
+              <h3>Sign in to Paddle</h3>
+            </div>
+            <div class='space-bottom2 pad4x'>
+              <fieldset>
+                <label>Username or email</label>
+                <input type='text' class='stretch'>
+              </fieldset>
+              <fieldset>
+                <label>Password</label>
+                <input type='password' class='stretch'>
+              </fieldset>
+            </div>
+          </div>
+          <div class='modal-actions fill-gray pad2y pad4x clearfix'>
+            <div class='col-xs-6'>
+              <a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'>Sign in</a>
+            </div>
+            <small class='col-xs-6 pad1y center'>
+              <a class='quiet' href='#fakelink'>Need an account?<i class='icon icon-arrow-right icon-sm'></i></a>
+            </small>
+          </div>
+        </div>      
       </form>
     </div>
   </div>
