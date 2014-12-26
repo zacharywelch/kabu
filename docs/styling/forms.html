@@ -228,6 +228,15 @@
                 <label for='input5'>What is love?</label>
                 <textarea id='input5' class='stretch'></textarea>
               </fieldset>              
+              <fieldset>
+                <label for='privacy-off'>Airplane Mode</label>
+                <div class='rounded-toggle inline'>
+                  <input id='privacy-off' type='radio' name='rtoggle' value='off' checked='checked'>
+                  <label for='privacy-off'>Off</label>
+                  <input id='privacy-on' type='radio' name='rtoggle' value='on'>
+                  <label for='privacy-on'>On</label>
+                </div>                  
+              </fieldset>              
             </form>
           </div>
           <div class='contain'>
@@ -285,6 +294,15 @@
     &lt;label for='input5'&gt;What is love?&lt;/label&gt;
     &lt;textarea id='input5' class='stretch'&gt;&lt;/textarea&gt;
   &lt;/fieldset&gt;              
+  &lt;fieldset&gt;
+    &lt;label for='privacy-off'&gt;Airplane Mode&lt;/label&gt;
+    &lt;div class='rounded-toggle inline'&gt;
+      &lt;input id='privacy-off' type='radio' name='rtoggle' value='off' checked='checked'&gt;
+      &lt;label for='privacy-off'&gt;Off&lt;/label&gt;
+      &lt;input id='privacy-on' type='radio' name='rtoggle' value='on'&gt;
+      &lt;label for='privacy-on'&gt;On&lt;/label&gt;
+    &lt;/div&gt;                  
+  &lt;/fieldset&gt;
 &lt;/form&gt;
 </pre>
           </div>
@@ -548,7 +566,53 @@
 &lt;/form&gt;
 </pre>          
           </div>
-        </div>             
+        </div> 
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Switches</h4>
+            <p>
+              Switches are toggle elements that switch between an Off and On state on tap or click. They make use of radio buttons and require no javascript.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <div class='rounded-toggle inline'>
+              <input id='no' type='radio' name='rtoggle' value='no' checked='checked'>
+              <label for='no'>No</label>
+              <input id='yes' type='radio' name='rtoggle' value='yes'>
+              <label for='yes'>Yes</label>
+            </div>                  
+          </figure>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='switches'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='switches'>
+&lt;fieldset class='with-icon col-sm-6 col-xs-12'&gt;
+  &lt;div class='input-group'&gt;
+    &lt;i class='icon icon-envelope quiet'&gt;&lt;/i&gt;
+    &lt;input type='text' placeholder='Email address'&gt;
+    &lt;div class='input-group-btn'&gt;
+      &lt;input type='submit' value='Subscribe' class='btn btn-primary'&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+
+&lt;div class='input-group col-sm-6 col-xs-9'&gt;
+  &lt;input type='text'&gt;
+  &lt;div class='input-group-btn btn-group'&gt;
+    &lt;a href='#fakelink' class='btn btn-primary dropdown-toggle col-sm-12' data-toggle='dropdown'&gt;
+      More &lt;span class='caret'&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class='dropdown-menu' role='menu'&gt;
+      &lt;li&gt;&lt;a href='#fakelink'&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href='#fakelink'&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>
+        </div>                       
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
@@ -946,7 +1010,16 @@
               <fieldset>
                 <label>What is love?</label>
                 <textarea class='stretch'></textarea>
-              </fieldset>              
+              </fieldset> 
+              <fieldset>
+                <label>Airplane Mode</label>
+                <div class='rounded-toggle inline'>
+                  <input id='privacy-off-dark' type='radio' name='rtoggle-dark' value='off' checked='checked'>
+                  <label for='privacy-off-dark'>Off</label>
+                  <input id='privacy-on-dark' type='radio' name='rtoggle-dark' value='on'>
+                  <label for='privacy-on-dark'>On</label>
+                </div>                  
+              </fieldset>                           
             </form>
           </div>
           <div class='contain'>
@@ -1005,6 +1078,15 @@
       &lt;label&gt;What is love?&lt;/label&gt;
       &lt;textarea class='stretch'&gt;&lt;/textarea&gt;
     &lt;/fieldset&gt;              
+    &lt;fieldset&gt;
+      &lt;label&gt;Airplane Mode&lt;/label&gt;
+      &lt;div class='rounded-toggle inline'&gt;
+        &lt;input id='privacy-off-dark' type='radio' name='rtoggle-dark' value='off' checked='checked'&gt;
+        &lt;label for='privacy-off-dark'&gt;Off&lt;/label&gt;
+        &lt;input id='privacy-on-dark' type='radio' name='rtoggle-dark' value='on'&gt;
+        &lt;label for='privacy-on-dark'&gt;On&lt;/label&gt;
+      &lt;/div&gt;                  
+    &lt;/fieldset&gt;    
   &lt;/form&gt;
 &lt;/div&gt;
 </pre>

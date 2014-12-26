@@ -57,8 +57,10 @@
   a.active { color: white; }
 }
 
-.fill-dark .rounded-toggle input[type=radio]:checked + label,
-.fill-dark .rounded-toggle a.active        { background-color: @fill-dark; }
+.fill-white .rounded-toggle input[type=radio]:checked + label,
+.fill-white .rounded-toggle a.active       { background: #fff; }
+.fill-light .rounded-toggle input[type=radio]:checked + label,
+.fill-light .rounded-toggle a.active       { background: @fill-light; }
 .fill-gray  .rounded-toggle input[type=radio]:checked + label,
 .fill-gray .rounded-toggle a.active,
 .fill-grey .rounded-toggle input[type=radio]:checked + label,
@@ -67,10 +69,8 @@
 .fill-grey-dark .rounded-toggle a.active,
 .fill-gray-dark .rounded-toggle input[type=radio]:checked + label,
 .fill-gray-dark .rounded-toggle a.active   { background: @fill-dark; }
-.fill-white .rounded-toggle input[type=radio]:checked + label,
-.fill-white .rounded-toggle a.active       { background: #fff; }
-.fill-light .rounded-toggle input[type=radio]:checked + label,
-.fill-light .rounded-toggle a.active       { background: @fill-light; }
+.fill-dark .rounded-toggle input[type=radio]:checked + label,
+.fill-dark .rounded-toggle a.active        { background-color: @fill-dark; }
 .fill-blue .rounded-toggle input[type=radio]:checked + label,
 .fill-blue .rounded-toggle a.active        { background: @fill-blue; }
 .fill-denim .rounded-toggle input[type=radio]:checked + label,

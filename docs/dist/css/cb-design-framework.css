@@ -3938,9 +3938,13 @@ button.close {
 .dark .rounded-toggle a.active {
   color: white;
 }
-.fill-dark .rounded-toggle input[type=radio]:checked + label,
-.fill-dark .rounded-toggle a.active {
-  background-color: #404040;
+.fill-white .rounded-toggle input[type=radio]:checked + label,
+.fill-white .rounded-toggle a.active {
+  background: #fff;
+}
+.fill-light .rounded-toggle input[type=radio]:checked + label,
+.fill-light .rounded-toggle a.active {
+  background: #f8f8f8;
 }
 .fill-gray .rounded-toggle input[type=radio]:checked + label,
 .fill-gray .rounded-toggle a.active,
@@ -3954,13 +3958,9 @@ button.close {
 .fill-gray-dark .rounded-toggle a.active {
   background: #404040;
 }
-.fill-white .rounded-toggle input[type=radio]:checked + label,
-.fill-white .rounded-toggle a.active {
-  background: #fff;
-}
-.fill-light .rounded-toggle input[type=radio]:checked + label,
-.fill-light .rounded-toggle a.active {
-  background: #f8f8f8;
+.fill-dark .rounded-toggle input[type=radio]:checked + label,
+.fill-dark .rounded-toggle a.active {
+  background-color: #404040;
 }
 .fill-blue .rounded-toggle input[type=radio]:checked + label,
 .fill-blue .rounded-toggle a.active {
@@ -3989,6 +3989,175 @@ button.close {
 .fill-yellow .rounded-toggle input[type=radio]:checked + label,
 .fill-yellow .rounded-toggle a.active {
   background: #f1f075;
+}
+.circular {
+  animation: rotate 2s linear infinite;
+  -webkit-animation: rotate 2s linear infinite;
+  height: 100px;
+  position: relative;
+  width: 100px;
+}
+.path {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
+  -webkit-animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+.path.large {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation: bigdash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
+  -webkit-animation: bigdash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+.path.loud {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+.path.dark {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite, fades 6s ease-in-out infinite;
+  -webkit-animation: dash 1.5s ease-in-out infinite, fades 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -16;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -62;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -16;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -62;
+  }
+}
+@-webkit-keyframes bigdash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes bigdash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@-webkit-keyframes color {
+  100%,
+  1% {
+    stroke: #ee6565;
+  }
+  40% {
+    stroke: #3887be;
+  }
+  66% {
+    stroke: #56b881;
+  }
+  80%,
+  90% {
+    stroke: #f1f075;
+  }
+}
+@keyframes color {
+  100%,
+  1% {
+    stroke: #ee6565;
+  }
+  40% {
+    stroke: #3887be;
+  }
+  66% {
+    stroke: #56b881;
+  }
+  80%,
+  90% {
+    stroke: #f1f075;
+  }
+}
+@keyframes blues {
+  0%,
+  100% {
+    stroke: #5a9fcf;
+  }
+  50% {
+    stroke: #3bb2d0;
+  }
+}
+@-webkit-keyframes blues {
+  0%,
+  100% {
+    stroke: #5a9fcf;
+  }
+  50% {
+    stroke: #3bb2d0;
+  }
+}
+@keyframes fades {
+  0%,
+  100% {
+    stroke: #5a5a5a;
+  }
+  50% {
+    stroke: #7f7f7f;
+  }
+}
+@-webkit-keyframes fades {
+  0%,
+  100% {
+    stroke: #5a5a5a;
+  }
+  50% {
+    stroke: #7f7f7f;
+  }
 }
 .modal-open {
   overflow: hidden;
