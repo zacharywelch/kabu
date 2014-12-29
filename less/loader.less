@@ -4,40 +4,23 @@
   .animation(rotate 2s linear infinite);
 }
 
-.loader-lg {
-  height: 50px;
-  width: 50px;
-}
-
 .loader circle {
-  stroke-dasharray: 1,200;
-  stroke-dashoffset: 0;
-  stroke-linecap: round;
-  stroke-width: 2;
-  stroke-miterlimit: 10;
   fill: none;
-  -webkit-animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
-  animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;  
-}
-
-.loader-lg circle {
-  -webkit-animation: bigdash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
-  animation: bigdash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 1,200;
+  .animation(dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;);
 }
 
 .dark .loader circle {
-  -webkit-animation: dash 1.5s ease-in-out infinite, fades 6s ease-in-out infinite;
-  animation: dash 1.5s ease-in-out infinite, fades 6s ease-in-out infinite;
+  .animation(dash 1.5s ease-in-out infinite, grays 6s ease-in-out infinite;);
 }
 
-@-webkit-keyframes rotate {
-  100% { transform: rotate(360deg); }
-}
-@keyframes rotate {
-  100% { transform: rotate(360deg); }
-}
+.keyframes(rotate; {
+  100% { transform: rotate(360deg); }  
+});
 
-@-webkit-keyframes dash  {
+.keyframes(dash; {
   0% {
     stroke-dasharray: 1,200;
     stroke-dashoffset: 0;
@@ -51,91 +34,14 @@
   100% {
     stroke-dashoffset: -62;
   }
-}
-@keyframes dash {
-  0% {
-    stroke-dasharray: 1,200;
-    stroke-dashoffset: 0;
-  }
+});
 
-  50% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -16;
-  }
+.keyframes(blues; {
+  0%, 100% { stroke: lighten(@fill-blue, 10%); }
+  50% { stroke: @fill-turquoise; }
+});
 
-  100% {
-    stroke-dashoffset: -62;
-  }
-}
-
-// Big dash keyframes
-@-webkit-keyframes bigdash  {
-  0% {
-    stroke-dasharray: 1,200;
-    stroke-dashoffset: 0;
-  }
-
-  50% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -35;
-  }
-
-  100% {
-    stroke-dashoffset: -124;
-  }
-}
-@keyframes bigdash {
-  0% {
-    stroke-dasharray: 1,200;
-    stroke-dashoffset: 0;
-  }
-
-  50% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -35;
-  }
-
-  100% {
-    stroke-dashoffset: -124;
-  }
-}
-
-// Keyframes white stroke's opacity
-@-webkit-keyframes blues {
-  0%,100% {
-    stroke: lighten(@fill-blue, 10%);
-  }
-
-  50% {
-    stroke: @fill-turquoise;
-  }
-}
-@keyframes blues {
-  0%,100% {
-    stroke: lighten(@fill-blue, 10%);
-  }
-
-  50% {
-    stroke: @fill-turquoise;
-  }
-}
-
-// Keyframes gray stroke colors
-@-webkit-keyframes fades {
-  0%,100% {
-    stroke: lighten(@fill-dark, 10%);
-  }
-
-  50% {
-    stroke: @fill-quiet;
-  }
-}
-@keyframes fades {
-  0%,100% {
-    stroke: lighten(@fill-dark, 10%);
-  }
-
-  50% {
-    stroke: @fill-quiet;
-  }
-}
+.keyframes(grays; {
+  0%,100% { stroke: lighten(@fill-dark, 10%); }
+  50% { stroke: @fill-quiet; }
+});

@@ -20,3 +20,10 @@
       -ms-transform:@transformation;
           transform:@transformation;
 }
+
+.keyframes(@name, @frames) {
+  @-webkit-keyframes @name { @frames(); }
+     @-moz-keyframes @name { @frames(); }
+      @-ms-keyframes @name { @frames(); }
+          @keyframes @name { @frames(); }
+}
