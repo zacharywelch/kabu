@@ -12,7 +12,11 @@
   
   &.with-icon { padding-left: 100px; }
   
-  &.down { .transform(translate(-25%, -40px) scale(0.5)); }
+  &.down { 
+    bottom: initial;
+    top: 120%;
+    .transform(translate(-25%, -40px) scale(0.5)); 
+  }
 }
 
 .popup.active {
