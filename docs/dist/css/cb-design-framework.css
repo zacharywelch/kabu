@@ -3992,40 +3992,34 @@ button.close {
 .fill-yellow .rounded-toggle a.active {
   background: #f1f075;
 }
-.circular {
-  animation: rotate 2s linear infinite;
+.loader {
+  width: 30px;
+  height: 30px;
   -webkit-animation: rotate 2s linear infinite;
-  height: 100px;
-  position: relative;
-  width: 100px;
+  -o-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
 }
-.path {
+.loader-lg {
+  height: 50px;
+  width: 50px;
+}
+.loader circle {
   stroke-dasharray: 1,200;
   stroke-dashoffset: 0;
-  animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  fill: none;
   -webkit-animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
-  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
 }
-.path.large {
-  stroke-dasharray: 1,200;
-  stroke-dashoffset: 0;
-  animation: bigdash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
+.loader-lg circle {
   -webkit-animation: bigdash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
-  stroke-linecap: round;
+  animation: bigdash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
 }
-.path.loud {
-  stroke-dasharray: 1,200;
-  stroke-dashoffset: 0;
-  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
-  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
-  stroke-linecap: round;
-}
-.path.dark {
-  stroke-dasharray: 1,200;
-  stroke-dashoffset: 0;
-  animation: dash 1.5s ease-in-out infinite, fades 6s ease-in-out infinite;
+.dark .loader circle {
   -webkit-animation: dash 1.5s ease-in-out infinite, fades 6s ease-in-out infinite;
-  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite, fades 6s ease-in-out infinite;
 }
 @-webkit-keyframes rotate {
   100% {
@@ -4047,7 +4041,6 @@ button.close {
     stroke-dashoffset: -16;
   }
   100% {
-    stroke-dasharray: 89,200;
     stroke-dashoffset: -62;
   }
 }
@@ -4061,7 +4054,6 @@ button.close {
     stroke-dashoffset: -16;
   }
   100% {
-    stroke-dasharray: 89,200;
     stroke-dashoffset: -62;
   }
 }
@@ -4075,7 +4067,6 @@ button.close {
     stroke-dashoffset: -35;
   }
   100% {
-    stroke-dasharray: 89,200;
     stroke-dashoffset: -124;
   }
 }
@@ -4089,49 +4080,7 @@ button.close {
     stroke-dashoffset: -35;
   }
   100% {
-    stroke-dasharray: 89,200;
     stroke-dashoffset: -124;
-  }
-}
-@-webkit-keyframes color {
-  100%,
-  1% {
-    stroke: #ee6565;
-  }
-  40% {
-    stroke: #3887be;
-  }
-  66% {
-    stroke: #56b881;
-  }
-  80%,
-  90% {
-    stroke: #f1f075;
-  }
-}
-@keyframes color {
-  100%,
-  1% {
-    stroke: #ee6565;
-  }
-  40% {
-    stroke: #3887be;
-  }
-  66% {
-    stroke: #56b881;
-  }
-  80%,
-  90% {
-    stroke: #f1f075;
-  }
-}
-@keyframes blues {
-  0%,
-  100% {
-    stroke: #5a9fcf;
-  }
-  50% {
-    stroke: #3bb2d0;
   }
 }
 @-webkit-keyframes blues {
@@ -4143,7 +4092,16 @@ button.close {
     stroke: #3bb2d0;
   }
 }
-@keyframes fades {
+@keyframes blues {
+  0%,
+  100% {
+    stroke: #5a9fcf;
+  }
+  50% {
+    stroke: #3bb2d0;
+  }
+}
+@-webkit-keyframes fades {
   0%,
   100% {
     stroke: #5a5a5a;
@@ -4152,7 +4110,7 @@ button.close {
     stroke: #7f7f7f;
   }
 }
-@-webkit-keyframes fades {
+@keyframes fades {
   0%,
   100% {
     stroke: #5a5a5a;
@@ -4254,6 +4212,104 @@ button.close {
 .fileinput-exists .fileinput-new,
 .fileinput-new .fileinput-exists {
   display: none;
+}
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 3px;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
 }
 .clearfix:before,
 .clearfix:after,
