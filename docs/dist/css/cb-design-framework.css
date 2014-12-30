@@ -3999,6 +3999,15 @@ button.close {
   -o-animation: rotate 2s linear infinite;
   animation: rotate 2s linear infinite;
 }
+.spinner {
+  background: url('../img/spinner.gif');
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.dark .spinner {
+  background: url('../img/spinner_dark.gif');
+}
 .loader circle {
   fill: none;
   stroke-width: 2;
