@@ -195,6 +195,39 @@
 &lt;/div&gt;
 </pre>          
           </div>
+          <div class='box-heading pad2'>
+            <h4>Progress Fallbacks</h4>
+            <p>
+              Animated SVG are not supported in IE8 or IE9. If you need to support legacy browsers use the <code>.spinner</code> class instead. 
+            </p>
+          </div>
+          <figure class='pad2 contain'>
+            <span class='spinner'></span>
+          </figure>
+          <figure class='pad2 contain fill-dark dark'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              .dark
+            </div>
+            <span class='spinner'></span>
+          </figure>
+          <figure class='pad2 contain fill-blue blend'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              .blend
+            </div>
+            <span class='spinner'></span>
+          </figure>
+          <div class='contain'>
+            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='fallback-spinner'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='fallback-spinner'>
+&lt;span class='spinner'&gt;&lt;/span&gt;
+
+&lt;div class='fill-dark dark'&gt;
+  &lt;span class='spinner'&gt;&lt;/span&gt; 
+&lt;/div&gt;
+</pre>          
+          </div>
         </div> 
         
         <div class='box round contain fill-white'>
