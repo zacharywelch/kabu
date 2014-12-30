@@ -3999,10 +3999,6 @@ button.close {
   -o-animation: rotate 2s linear infinite;
   animation: rotate 2s linear infinite;
 }
-.loader-lg {
-  height: 50px;
-  width: 50px;
-}
 .loader circle {
   fill: none;
   stroke-width: 2;
@@ -4011,11 +4007,6 @@ button.close {
   -webkit-animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
   -o-animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
   animation: dash 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
-}
-.loader-lg circle {
-  -webkit-animation: dash-lg 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
-  -o-animation: dash-lg 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
-  animation: dash-lg 1.5s ease-in-out infinite, blues 6s ease-in-out infinite;
 }
 .dark .loader circle {
   -webkit-animation: dash 1.5s ease-in-out infinite, grays 6s ease-in-out infinite;
@@ -4094,58 +4085,6 @@ button.close {
     stroke-dashoffset: -62;
   }
 }
-@-webkit-keyframes dash-lg {
-  0% {
-    stroke-dasharray: 1,200;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -35;
-  }
-  100% {
-    stroke-dashoffset: -124;
-  }
-}
-@-moz-keyframes dash-lg {
-  0% {
-    stroke-dasharray: 1,200;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -35;
-  }
-  100% {
-    stroke-dashoffset: -124;
-  }
-}
-@-ms-keyframes dash-lg {
-  0% {
-    stroke-dasharray: 1,200;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -35;
-  }
-  100% {
-    stroke-dashoffset: -124;
-  }
-}
-@keyframes dash-lg {
-  0% {
-    stroke-dasharray: 1,200;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 89,200;
-    stroke-dashoffset: -35;
-  }
-  100% {
-    stroke-dashoffset: -124;
-  }
-}
 @-webkit-keyframes blues {
   0%,
   100% {
@@ -4217,6 +4156,15 @@ button.close {
   50% {
     stroke: #7f7f7f;
   }
+}
+/* Typeahead
+------------------------------------------------------- */
+.twitter-typeahead .tt-dropdown-menu {
+  margin-top: 5px;
+}
+.twitter-typeahead .tt-is-under-cursor {
+  color: #fff;
+  background: #3887be;
 }
 /* Modals
 ------------------------------------------------------- */
