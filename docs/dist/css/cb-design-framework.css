@@ -4157,15 +4157,6 @@ button.close {
     stroke: #7f7f7f;
   }
 }
-/* Typeahead
-------------------------------------------------------- */
-.twitter-typeahead .tt-dropdown-menu {
-  margin-top: 5px;
-}
-.twitter-typeahead .tt-is-under-cursor {
-  color: #fff;
-  background: #3887be;
-}
 /* Modals
 ------------------------------------------------------- */
 .modal {
