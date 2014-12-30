@@ -768,31 +768,26 @@
               Based on <a href='https://github.com/jaz303/tipsy'>TIpsy</a>, <code>tooltip</code> lets users create a tooltip message. Tipsy supports calling tooltips via <code>data-toggle</code> attributes as well as local title storage. 
             </p>
             <div class='space-bottom pad2 fill-light-blue'>
-            <p>
-            Please note that due to performance concerns Tipsy needs to be initialized on the page. One way to initialize all the tooltips on the page is to select them by their <code>data-toggle</code> attribute.
-            </p>
+              <p>
+                Please note that due to performance concerns Tipsy needs to be initialized on the page. One way to initialize all the tooltips on the page is to select them by their <code>data-toggle</code> attribute.
+              </p>
             </div>
             <div class='contain'>
-            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='tooltip-init'>
-              <i class='icon icon-clipboard pad0r'></i>Copy
-            </a>
-            <pre class='prettyprint' id='tooltip-init'>
-            <code data-lang='js'>
-$(function () {
+              <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='tooltip-init'>
+                <i class='icon icon-clipboard pad0r'></i>Copy
+              </a>
+<pre class='prettyprint' id='tooltip-init'>
+<code class='language-javascript'>$(function () {
   $('[data-toggle="tooltip"]').tooltip()
-})
-            </code>
-            </pre>
+})</code>
+</pre>
             </div><!--./contain-->               
           </header>
           <figure class='pad2 contain center'>
-           <button type='button' class='btn btn-primary' data-toggle='tooltip' data-placement='left' title='Tooltip on left'>Tooltip on left</button>
-
-<button type='button' class='btn btn-default' data-toggle='tooltip' data-placement='top' title='Tooltip on top'>Tooltip on top</button>
-
-<button type='button' class='btn btn-danger' data-toggle='tooltip' data-placement='bottom' title='Tooltip on bottom'>Tooltip on bottom</button>
-
-<button type='button' class='btn btn-loud' data-toggle='tooltip' data-placement='right' title='Tooltip on right'>Tooltip on right</button>
+            <button type='button' class='btn btn-primary' data-toggle='tooltip' data-placement='left' title='Tooltip on left'>Tooltip on left</button>
+            <button type='button' class='btn btn-default' data-toggle='tooltip' data-placement='top' title='Tooltip on top'>Tooltip on top</button>
+            <button type='button' class='btn btn-danger' data-toggle='tooltip' data-placement='bottom' title='Tooltip on bottom'>Tooltip on bottom</button>
+            <button type='button' class='btn btn-loud' data-toggle='tooltip' data-placement='right' title='Tooltip on right'>Tooltip on right</button>
           </figure>
           <div class='contain'>
             <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='tooltips'>
@@ -806,9 +801,35 @@ $(function () {
 &lt;button type='button' class='btn btn-danger' data-toggle='tooltip' data-placement='bottom' title='Tooltip on bottom'&gt;Tooltip on bottom&lt;/button&gt;
 
 &lt;button type='button' class='btn btn-loud' data-toggle='tooltip' data-placement='right' title='Tooltip on right'&gt;Tooltip on right&lt;/button&gt;
-</pre>          
+</pre>
           </div>
         </div>           
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Typeahead</h4>
+            <p>
+              Restyled <a href="http://twitter.github.io/typeahead.js">Twitter Typeahead</a>. Use <code>typeahead</code> for autocomplete search functionality.
+            </p>
+          </header>
+          <div class='pad2'>
+            <input id='typeahead' type='text' class='stretch' placeholder='States in USA' />
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='typeahead'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='typeahead'>
+&lt;input id='typeahead' type='text' class='stretch' placeholder='States in USA' /&gt;
+
+$('#typeahead').typeahead({
+  name: 'states',
+  limit: 4,
+  local: ["Alabama","Alaska",...]
+});
+</pre>
+          </div>
+        </div>          
 
         <div class='center quiet small pad1y'>CareerBuilder UX</div>        
       </div>
