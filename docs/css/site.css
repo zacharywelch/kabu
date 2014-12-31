@@ -72,8 +72,8 @@ body { padding-top: 60px; }
   body.fill-light { background: #fff; }
   .sidenav + .container-fluid { padding: 0; }
   .sidenav + .container-fluid > .pad2y { padding: 0; }
-  .sidenav + .container-fluid .box,
-  .sidenav + .container-fluid .keyline-all { border: none; }
   .colors .row7 { height: 125px; }
-  .splash { border-radius: 0; }
+  .sidenav + .container-fluid .box,
+  .splash,
+  .splah + .keyline-all { border: none; }
 }
