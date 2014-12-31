@@ -53,15 +53,17 @@ body { padding-top: 60px; }
 }
 
 .prettyprint {
-  /*background: #fff;*/
   border: none;
-  /*border-top: 1px solid rgba(0,0,0,0.1);*/
-  /*border-radius: 0;*/
   padding: 10px;
 }
 
 .btn.zeroclipboard-is-hover { background:#3bb2d0!important; }
 .js-clipboard:hover { cursor:pointer; }
+
+.splash { 
+  background: #3bb2d0 url(/img/splash.jpg) no-repeat center center;
+  background-size: 800px 533px;
+}
 
 /* Landing Figure Styles
 http://codyhouse.co/gem/3d-animated-mockup/
