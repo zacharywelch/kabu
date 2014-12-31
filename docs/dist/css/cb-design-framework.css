@@ -3709,7 +3709,7 @@ fieldset.with-icon .icon.clear {
   max-height: 0;
 }
 .navbar .dropdown.active {
-  max-height: 360px;
+  max-height: 460px;
   opacity: 1;
 }
 .navbar .drop {
