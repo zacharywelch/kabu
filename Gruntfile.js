@@ -65,7 +65,25 @@ module.exports = function(grunt) {
           'dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
-    }    
+    },
+    compress: {
+      main: {
+        options: {
+          archive: 'archive/<%= pkg.name %>-<%= pkg.version %>-dist.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: '<%= pkg.name %>-<%= pkg.version %>-dist'
+          }
+        ]
+      }
+    }
   });
 
   // Load the plugin that provides the "less" task.
@@ -75,7 +93,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
+  grunt.loadNpmTasks('grunt-contrib-compress');
+  
   // CSS task
   grunt.registerTask('css', ['less']);
 
@@ -83,5 +102,5 @@ module.exports = function(grunt) {
   grunt.registerTask('js', ['coffee', 'concat', 'uglify']);
 
   // Default task
-  grunt.registerTask('default', ['clean', 'css', 'js', 'copy']);
+  grunt.registerTask('default', ['clean', 'css', 'js', 'copy', 'compress']);
 };
