@@ -890,9 +890,15 @@ table {
   line-height: 40px;
   font-size: 22px;
 }
+.graphic-lg,
 .graphic-md,
 .graphic-sm {
   text-align: center;
+}
+.graphic-lg {
+  height: 140px;
+  width: 140px;
+  line-height: 140px;
 }
 .graphic-md {
   height: 60px;
