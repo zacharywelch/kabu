@@ -89,7 +89,11 @@ body { padding-top: 60px; }
 }
 
 .axiom .laptop { background-image: url('/img/axiom-laptop.png'); }
-.axiom .phone  { background-image: url('/img/axiom-laptop.png'); }
+.axiom .phone  { 
+  background-image: url('/img/axiom-phone.png'); 
+  background-size: 40%;
+  background-position: 40% 20px;
+}
 .axiom .tablet { 
   background-image: url('/img/axiom-tablet.png'); 
   background-size: 60%;
