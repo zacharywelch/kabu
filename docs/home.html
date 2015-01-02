@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>CareerBuilder Styleguide</title>
-    <link href='dist/css/cb-design-framework.min.css' rel='stylesheet' />
-    <link href='css/prettify.css' rel='stylesheet' />
-    <link href='css/site.css' rel='stylesheet' />
-    <link href='css/landing.css' rel='stylesheet' />
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>  
+  <title>Getting Started</title>
+  <link href='css/prettify.css' rel='stylesheet' />
+  <link href='dist/css/cb-design-framework.min.css' rel='stylesheet' />
+  <link href='css/site.css' rel='stylesheet' />
+  <link href='css/landing.css' rel='stylesheet' />
 </head>
-
-<body class='fill-light'>
-    <div class='navbar navbar-fixed fill-white keyline-bottom col-sm-12 animate clearfix'>
+<body class='landing fill-turquoise'>
+  <div class='navbar dark col-sm-12 animate clearfix'>
     <div class='container-fluid contain'>
       <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
-        <a class='logo pad1y pull-left text-left' href='#fakelink'>
+        <a class='logo pad1y pull-left text-left' href='/'>
           CareerBuilder
         </a>
 
         <div class='primary row2'>
-        <a href='getting-started.html' class='hidden-xs quiet animate round pad1 
-          truncate inline'>Docs</a>
+          <a href='getting-started.html' class='hidden-xs quiet animate round pad1 
+            truncate inline strong small'>Getting started
+          </a>
+          <a href='styling/grid.html' class='hidden-xs quiet animate round pad1 
+            truncate inline strong small'>
+            CSS
+          </a>
+          <a href='animation.html' class='hidden-xs quiet animate round pad1 
+            truncate inline strong small'>
+            Animation
+          </a>
+          <a href='tutorials/singlecolumn.html' class='hidden-xs quiet animate round pad1 
+            truncate inline strong small'>
+            Tutorials
+          </a>
+          <a href='templates.html' class='hidden-xs quiet animate round pad1 
+            truncate inline strong small'>
+            Templates
+          </a>
           <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
             quiet round animate pull-right center'>
             <i class='icon icon-list'></i>
@@ -30,210 +45,242 @@
 
           <div class='visible-xs dropdown fill-denim dark keyline-all round animate'>
             <div class='pad1 keyline-bottom'>
-              <a href='getting-started.html'>Docs</a>
+              <a href='getting-started.html'>Getting started</a>
             </div>
           </div><!-- ./dropdown menu -->  
         </div>
       </nav>
     </div>
   </div><!-- ./navbar -->
-    <section class='cb-product clip'>
-        <div class='quiet cb-product-intro'>
-            <h1 class='prose space-bottom'>One of the ones that became nothing.</h1>
-            <p class='prose'>Inescapable warriors hunter me to the ends of the galaxy thinking me an exotic Earth elephant.<a href='#credit'>*</a>
-            </p>
-            <div class='cb-triggers space-bottom'>
-                <a href='#fakelink' class='btn btn-loud pad4x'>Download</a>
-                <a href='#fakelink' id='cb-start' class='btn btn-primary pad4x'>Learn More</a><a class='quiet block pad2y' href='#styleguidefakelink'><i class='icon icon-star'></i>&nbsp; <span id='star-count'> 1000</span> stargazers. </a>
+
+  <section class='cb-product clip'>
+    <div class='container-fluid contain'>
+
+      <header class='cb-product-intro col-xs-6 prose dark pin-left'>        
+        <h1 class='fancy'>Taka</h1>
+        <p class='col-xs-10 lead'>
+          The most advanced responsive front-end framework in the galaxy.
+        </p>
+        <ul>
+          <li class='inline'>
+            <a href='#fakelink' class='btn fill-denim pad4x'>Download</a>
+          </li>
+          <li class='inline pad1l'>
+            <a href='#fakelink' class='btn btn-inverse pad4x'>Download</a>
+          </li>
+        </ul>  
+      </header>
+
+      <figure id='cb-product-tour' class='cb-product-mockup contain'>
+        <img src='img/app-sample.png' alt='Preview image'>
+        <ul class='cb-points-container'>
+          <li class='cb-single-point'>
+            <a class='cb-img-replace' href='#fakelink'>More info</a>
+            <div class='cb-more-info cb-left'>
+              <h4>Consistent</h4>
+              <p>Consistent styling across Corp Apps gives a continuity to the experience of end users.</p>
+              <a href='#fakelink' class='cb-close-info cb-img-replace'>Close</a>
             </div>
+          </li>
+          <li class='cb-single-point'>
+            <a class='cb-img-replace' href='#fakelink'>More info</a>
+            <div class='cb-more-info cb-left'>
+              <h4>Responsive</h4>
+              <p>Modern tools work across all screen sizes.</p>
+              <a href='#fakelink' class='cb-close-info cb-img-replace'>Close</a>
+            </div>
+          </li>
+          <li class='cb-single-point'>
+            <a class='cb-img-replace' href='#fakelink'>More info</a>
+            <div class='cb-more-info cb-left'>
+              <h4>Point Title #3</h4>
+              <p></p>
+              <a href='#fakelink' class='cb-close-info cb-img-replace'>Close</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class='cb-3d-right-side'></div>
+        <div class='cb-3d-bottom-side'></div>
+      </figure>
+      <a href='#fakelink' class='cb-close-product-tour cb-img-replace'></a>      
+
+    </div>
+  </section>
+
+  <div class='keyline-bottom fill-white hidden-xs'>
+    <div class='container-fluid clearfix pad1y'>
+      <ul class='localnav'>
+        <li class='small inline pad2x'>
+          <a href='#modern' class='quiet'>Modern framework</a>
+        </li>
+        <li class='pad2x small inline'>
+          <a href='#customization' class='quiet'>Customization</a>
+        </li>
+        <li class='pad2x small inline'>
+          <a href='#rapid' class='quiet'>Rapid prototypes</a>
+        </li>
+        <li class='pad2x small inline'>
+          <a href='#training' class='quiet'>Training</a>
+        </li>
+        <li class='small inline pad2x keyline-left'>
+          <a href='#fakelink' class='quiet'>
+            <i class='icon icon-envelope pad0r'></i>ux.it@careerbuilder.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>  
+
+  <section class='fill-white center keyline-bottom'>
+    <div class='container-fluid clearfix pad4y'>
+      <p class='lead quiet col-sm-8 col-sm-offset-2 space-bottom4'>
+        Bacon ipsum dolor amet short <a href='#fakelink'>ribs ribeye hamburger</a> ham hock turkey salami pancetta frankfurter. Bresaola bacon frankfurter t-bone.
+      </p>
+      <ul class='clearfix'>
+        <li class='col-sm-4 space-bottom'>
+          <div class='graphic-lg img-circle fill-denim space-bottom inline'></div>
+          <h4>Bacon ipsum dolor amet</h4>
+          <p class='prose quiet pad2x'>
+            Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta frankfurter.
+          </p>
+        </li>
+        <li class='col-sm-4 space-bottom'>
+          <div class='graphic-lg img-circle fill-denim space-bottom inline'></div>
+          <h4>Bacon ipsum dolor amet</h4>
+          <p class='prose quiet pad2x'>
+            Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta frankfurter.
+          </p>
+        </li>
+        <li class='col-sm-4 space-bottom'>
+          <div class='graphic-lg img-circle fill-denim space-bottom inline'></div>
+          <h4>Bacon ipsum dolor amet</h4>
+          <p class='prose quiet pad2x'>
+            Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta frankfurter.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class='row15 fill-light'>
+  </section>
+
+  <div class='col-sm-12 clearfix axiom'>
+    <div class='col-sm-4 fill-turquoise row10 laptop'></div>
+    <div class='col-sm-4 fill-purple row10 tablet'></div>
+    <div class='col-sm-4 fill-blue row10 phone'></div>
+  </div>
+
+  <section class='row15 fill-white'>
+  </section>
+
+  <section class='row15 fill-blue'>
+  </section>
+
+  <section class='row15 fill-light'>
+  </section>
+
+  <section class='row15 fill-navy-dark'>
+  </section>
+
+  <section class='row15 fill-turquoise'>
+  </section>
+
+  <section class='row15 fill-light'>
+  </section>
+
+  <section id='contact' class='dark clearfix prose contain'>
+    <div class='fill-blue pin-left col-sm-6'></div>
+    <div class='container-fluid'>
+      <div class='fill-blue col-sm-6 pad4'>
+        <h2>Get started now!</h2>
+        <p>
+          Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta frankfurter.
+        </p>
+        <a href='https://cagit.careerbuilder.com/CorpAppsCB/styleguide/releases/download/v3.0.0/cb-design-framework-3.0.0-dist.zip' class='btn fill-denim'>Download Taka<i class='icon icon-download-alt pad0l'></i></a>        
+      </div>
+      <div class='fill-turquoise col-sm-6 pad4'>
+        <h2>Get in touch!</h2>
+        <p>
+          Bacon ipsum dolor amet short ribs ribeye hamburger ham hock turkey salami pancetta frankfurter.
+        </p>
+        <a class='btn fill-denim' href='mailto:ux.it@careerbuilder.com?subject=Styleguide'>ux.it@careerbuilder.com</a>
+      </div>
+    </div>
+  </section>  
+
+  <div class='footer pad4y fill-white clearfix small hide-mobile'>
+    <div class='container-fluid'>
+      <div class='col-sm-6 mobile-cols'>
+        <div class='col-sm-3'>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Lorem</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Team</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Ispum</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Dolor</a>
+          
         </div>
-        <figure id='cb-product-tour' class='cb-product-mockup'>
-            <img src='img/app-sample.png' alt='Preview image'>
-            <ul class='cb-points-container'>
-                <li class='cb-single-point'>
-                    <a class='cb-img-replace' href='#fakelink'>More info</a>
-                    <div class='cb-more-info cb-left'>
-                        <h4>Consistent</h4>
-                        <p>Consistent styling across Corp Apps gives a continuity to the experience of end users.</p>
-                        <a href='#fakelink' class='cb-close-info cb-img-replace'>Close</a>
-                    </div>
-                </li>
-                <!-- /.cb-single-point -->
-                <li class='cb-single-point'>
-                    <a class='cb-img-replace' href='#fakelink'>More info</a>
-                    <div class='cb-more-info cb-left'>
-                        <h4>Responsive</h4>
-                        <p>Modern tools work across all screen sizes.</p>
-                        <a href='#fakelink' class='cb-close-info cb-img-replace'>Close</a>
-                    </div>
-                </li>
-                <!-- /.cb-single-point -->
-                <li class='cb-single-point'>
-                    <a class='cb-img-replace' href='#fakelink'>More info</a>
-                    <div class='cb-more-info cb-left'>
-                        <h4>Point Title #3</h4>
-                        <p></p>
-                        <a href='#fakelink' class='cb-close-info cb-img-replace'>Close</a>
-                    </div>
-                </li>
-                <!-- /.cb-single-point -->
-            </ul>
-            <!-- /.cb-points-container-->
-
-            <!--The following two divs are used to make the 3D sides of the mockup image.-->
-            <div class='cb-3d-right-side'></div>
-            <div class='cb-3d-bottom-side'></div>
-
-        </figure>
-        <!-- /.cb-product-mockup-->
-        <a href="#fakelink" class="cb-close-product-tour cb-img-replace"></a>
-    </section>
-    <!-- /.cb-product-->
-    <section class='pad4y keyline-bottom clearfix fill-white'>
-        <div class='container-fluid clearfix'>
-            <div class='col-md-6'>
-                <img src='http://placekitten.com/g/300/300'>
-            </div>
-            <div class='col-md-6'>
-                <h1 class='pad4y'>Rapidly create prototypes</h1>
-                <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
-            </div>
+        <div class='col-sm-3'>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Sit</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Amet</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Consecter</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Epsidem</a>
+          
         </div>
-    </section>
-    <section class='pad4y keyline-bottom clearfix'>
-        <div class='container-fluid clearfix'>
-            <div class='col-md-6'>
-                <h1 class='pad4y'>Optimize for all screen sizes</h1>
-                <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
-            </div>
-            <div class='col-md-6'>
-                <img src='http://placekitten.com/g/300/300' class='pull-right'>
-            </div>
+        <div class='col-sm-3'>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Help</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Lorem</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Status</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Contact</a>
+          
         </div>
-    </section>
-    <section class='pad4y keyline-bottom clearfix'>
-        <div class='container-fluid clearfix'>
-            <div class='col-md-6'>
-                <img src='http://placekitten.com/g/300/300'>
-            </div>
-            <div class='col-md-6'>
-                <h1 class='pad4y'>Learn from rich examples</h1> 
-                <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
-            </div>
+        <div class='col-sm-3'>
+          <p>
+            <span style='padding-bottom:10px;' class='keyline-bottom'>Tools</span>
+          </p>
+
+          <a class='col-sm-12 strong' href='#fakelink'>Ipsum</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Dolor</a>
+          
         </div>
-    </section>
-    <section class='pad4y keyline-bottom clearfix'>
-        <div class='container-fluid clearfix'>
-            <div class='col-md-6'>
-                <h1 class='pad4y'>Add personality with animations</h1>
-                <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
+      </div>
+      <div class='col-sm-6 newsletter'>
+        <form class='space-bottom'>
+          <fieldset class='with-icon'>
+            <div class='input-group'>
+              <i class='icon icon-envelope quiet'></i>
+              <input type='text' placeholder='Email address'>
+              <div class='input-group-btn'>
+                <input type='submit' value='Subscribe' class='btn btn-default pad4x'>
+              </div>
             </div>
-            <div class='col-md-6'>
-                <img src='http://placekitten.com/g/300/300' class='pull-right'>
-            </div>
-        </div>
-    </section>
-    <section class='pad4y keyline-bottom clearfix fill-white'>
-        <div class='container-fluid clearfix'>
-            <div class='col-md-6'>
-                <img src='http://placekitten.com/g/300/300'>
-            </div>
-            <div class='col-md-6'>
-                <h1 class='pad4y'>Learn with the UX Resource Library</h1>
-                <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
-            </div>
-        </div>
-    </section>
-    <section class='pad4y keyline-bottom clearfix fill-denim'>
-        <div class='container-fluid clearfix dark'>
-            <div class='col-md-4 pad2x'>
-                <h1 class='pad4y'>Responsive Design</h1>
-                <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
-            </div>
-            <div class='col-md-4 pad2x'>
-                <h1 class='pad4y'>Responsive Design</h1>
-                <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
-            </div>
-            <div class='col-md-4 pad2x'>
-                <h1 class='pad4y'>Responsive Design</h1>
-                <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
-            </div>
-        </div>
-    </section>
-    <section class='footer keyline-top pad4y fill-white clearfix small hide-mobile'>
-        <div class='container-fluid'>
-            <div class='col-sm-6 mobile-cols'>
-                <div class='col-sm-3'>
+          </fieldset>
+        </form>
+        Lorem ipsum dolor <a href='#fakelink' class='strong'>Sit</a> amet <a href='#fakelink' class='strong'>Consecutor</a>
+      </div>
+    </div>
+  </div><!-- ./footer -->
 
-                    <a class='col-sm-12 strong' href='#fakelink'>Lorem</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Team</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Ispum</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Dolor</a>
-
-                </div>
-                <div class='col-sm-3'>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Sit</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Amet</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Consecter</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Epsidem</a>
-
-                </div>
-                <div class='col-sm-3'>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Help</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Lorem</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Status</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Contact</a>
-
-                </div>
-                <div class='col-sm-3'>
-                    <p>
-                        <span style='padding-bottom:10px;' class='keyline-bottom'>Tools</span>
-                    </p>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Ipsum</a>
-
-                    <a class='col-sm-12 strong' href='#fakelink'>Dolor</a>
-
-                </div>
-            </div>
-            <div class='col-sm-6 newsletter'>
-                <form class='space-bottom'>
-                    <fieldset class='with-icon'>
-                        <div class='input-group'>
-                            <i class='icon icon-envelope quiet'></i>
-                            <input type='text' placeholder='Email address'>
-                            <div class='input-group-btn'>
-                                <input type='submit' value='Subscribe' class='btn btn-default pad4x'>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-                Lorem ipsum dolor <a href='#fakelink' class='strong'>Sit</a> amet <a href='#fakelink' class='strong'>Consecutor</a>
-            </div>
-        </div>
-    </section>
-    <!-- resources -->
-    <footer class='fill-dark pad4y dark quiet center'>
-        Made with &hearts; in Norcross by the <a href='#fakelink'>UX Team.</a>
-    </footer>
-
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
-    <script src='dist/js/cb-design-framework.min.js'></script>
-    <script src='js/prettify.js'></script>
-    <script src='js/zeroclipboard/ZeroClipboard.min.js'></script>
-    <script src='js/site.js'></script>
-    <script src='js/main.js'></script>
+<!--   <footer class='fill-light pad4y quiet center'>
+    Made with &hearts; in Norcross by the <a href='#fakelink'>UX Team.</a>
+  </footer>
+ -->
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+  <script src='dist/js/cb-design-framework.min.js'></script>
+  <script src='js/site.js'></script>
+  <script src='js/main.js'></script>
 </body>
-
 </html>
