@@ -71,12 +71,29 @@ body { padding-top: 60px; }
   background-size: 800px 533px;
 }
 
+/* Landing page
+------------------------------------------------------- */
+
 .landing { padding-top: 0; }
 .landing .logo { color: #fff; }
 
 .dark .btn-inverse {
   background: #fff;
   color: #3BB2D0;  
+}
+
+.axiom .row10 { 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.axiom .laptop { background-image: url('/img/axiom-laptop.png'); }
+.axiom .phone  { background-image: url('/img/axiom-laptop.png'); }
+.axiom .tablet { 
+  background-image: url('/img/axiom-tablet.png'); 
+  background-size: 60%;
+  background-position: center 40px;
 }
 
 /* Responsive styles
