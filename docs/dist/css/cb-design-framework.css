@@ -1172,9 +1172,8 @@ p:last-child {
   margin-bottom: 0;
 }
 .lead {
-  font-size: 25.1px;
-  margin-bottom: 0;
-  line-height: 1.45;
+  font-size: 18px;
+  line-height: 30px;
 }
 small,
 .prose.small,
@@ -4213,6 +4212,7 @@ button.close {
   .modal .modal-content {
     border-radius: 0;
     height: 100%;
+    width: 100%;
     position: absolute;
     margin-top: 0;
   }

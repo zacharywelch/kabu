@@ -10,6 +10,10 @@ body { padding-top: 60px; }
   z-index: 1000;  
 }
 
+.navbar.dark .primary a {
+  color: rgba(255,255,255,.75);  
+}
+
 .sidenav {
   position: fixed;
   top: 60px;
@@ -33,6 +37,8 @@ body { padding-top: 60px; }
   color: #404040;
   color: rgba(0,0,0,0.75);
 }
+
+.localnav li:first-child { padding-left: 0; }
 
 .scroll-styled { overflow: auto; }
 
@@ -63,6 +69,14 @@ body { padding-top: 60px; }
 .splash { 
   background: #3bb2d0 url(/img/splash.jpg) no-repeat center center;
   background-size: 800px 533px;
+}
+
+.landing { padding-top: 0; }
+.landing .logo { color: #fff; }
+
+.dark .btn-inverse {
+  background: #fff;
+  color: #3BB2D0;  
 }
 
 /* Responsive styles
