@@ -83,17 +83,21 @@ body { padding-top: 60px; }
 }
 
 .axiom .row10 { 
-  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 80%;
 }
 
-.axiom .laptop { background-image: url('/img/axiom-laptop.png'); }
+.axiom .laptop { 
+  background-image: url('/img/axiom-laptop.png'); 
+  background-size: 80%;
+  background-position: center center;
+}
+
 .axiom .phone  { 
   background-image: url('/img/axiom-phone.png'); 
   background-size: 40%;
   background-position: 40% 20px;
 }
+
 .axiom .tablet { 
   background-image: url('/img/axiom-tablet.png'); 
   background-size: 60%;
