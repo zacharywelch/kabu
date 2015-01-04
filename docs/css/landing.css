@@ -481,6 +481,10 @@ http://codyhouse.co/gem/3d-animated-mockup/
   .cb-product-intro .btn { padding-left: 40px; padding-right: 40px; }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .cb-product-intro { text-align: center; }
+}
+
 @media only screen and (min-width: 992px) {
   
   .cb-product {
@@ -498,7 +502,6 @@ http://codyhouse.co/gem/3d-animated-mockup/
     top:0; 
     bottom:0; 
     left:0;
-    text-align: left;
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
