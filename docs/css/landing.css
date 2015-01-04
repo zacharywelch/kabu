@@ -11,7 +11,7 @@ http://codyhouse.co/gem/3d-animated-mockup/
 }
 
 .cb-product-mockup {
-  width: 90%;
+  /*width: 90%;*/
   max-width: 450px;
   margin: 30px auto 30px;
   cursor: pointer;
@@ -130,7 +130,7 @@ http://codyhouse.co/gem/3d-animated-mockup/
 
 .cb-single-point .cb-more-info {
   position: fixed;
-  top:60px;
+  top: 0;
   left: 0;
   z-index: 3;
   width: 100%;
@@ -140,7 +140,6 @@ http://codyhouse.co/gem/3d-animated-mockup/
   text-align: left;
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 2em 1em 1em;
   visibility: hidden;
   opacity: 0;
   -webkit-transform: scale(0.8);
@@ -207,12 +206,6 @@ http://codyhouse.co/gem/3d-animated-mockup/
 .cb-triggers a { 
   margin-right: 20px; 
   margin-bottom: 20px;
-}
-
-
-.cb-more-info h4 {
-  position:relative;
-  top: -20px;
 }
 
 /* Animations
@@ -421,6 +414,11 @@ http://codyhouse.co/gem/3d-animated-mockup/
 
   .cb-product-intro {
     padding-top: 100px;
+    position: absolute;
+    top:0; 
+    bottom:0; 
+    left:0;
+    text-align: left;
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -535,7 +533,7 @@ http://codyhouse.co/gem/3d-animated-mockup/
     -o-transform: translateZ(-100px) translateX(226px) translateY(216px);
     transform: translateZ(-100px) translateX(226px) translateY(216px);
   }
-  
+
   .cb-3d-right-side, 
   .cb-3d-bottom-side {
     position: absolute;
