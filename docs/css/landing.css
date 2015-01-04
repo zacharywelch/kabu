@@ -1,3 +1,79 @@
+/* Landing page
+------------------------------------------------------- */
+
+.landing { padding-top: 0; }
+.landing .logo { color: #fff; }
+
+.dark .btn-inverse {
+  background: #fff;
+  color: #3BB2D0;  
+}
+
+.axiom .row10 { 
+  background-repeat: no-repeat;
+}
+
+.axiom .laptop { 
+  background-image: url('/img/axiom-laptop.png'); 
+  background-size: 80%;
+  background-position: center center;
+}
+
+.axiom .phone  { 
+  background-image: url('/img/axiom-phone.png'); 
+  background-size: 40%;
+  background-position: 40% 20px;
+}
+
+.axiom .tablet { 
+  background-image: url('/img/axiom-tablet.png'); 
+  background-size: 60%;
+  background-position: center 40px;
+}
+
+/* iphone
+------------------------------------------------------- */
+
+.iphone {
+  display: inline-block;
+  position: relative;
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  border-right: 25px solid #3c4e5a;
+  border-left: 25px solid #3c4e5a;
+  border-top: 70px solid #3c4e5a;
+  border-bottom: 70px solid #3c4e5a;
+}
+
+.iphone .iphone-content {
+  max-height: 400px;
+}
+
+.iphone:before,
+.iphone:after {
+  content: '';
+  z-index: 10;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -35px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.25);
+}
+
+.iphone:after {
+  top: auto;
+  bottom: -50px;
+  height: 30px;
+  width: 30px;
+}
+
 /* Landing Figure Styles
 http://codyhouse.co/gem/3d-animated-mockup/
 ------------------------------------------------------- */
@@ -399,6 +475,10 @@ http://codyhouse.co/gem/3d-animated-mockup/
   .cb-single-point .cb-more-info h2 { margin-bottom: 0; }  
   .cb-single-point .cb-more-info p { font-size: 1 rem; }  
   .cb-close-info { display: none; }  
+}
+
+@media only screen and (min-width: 768px) {
+  .cb-product-intro .btn { padding-left: 40px; padding-right: 40px; }
 }
 
 @media only screen and (min-width: 992px) {
