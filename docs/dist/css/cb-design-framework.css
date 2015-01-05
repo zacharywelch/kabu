@@ -1087,6 +1087,13 @@ hr {
   font-style: normal;
 }
 @font-face {
+  font-family: 'Bitter Bold';
+  src: url('../fonts/bitter/bitter-bold.eot');
+  src: url('../fonts/bitter/bitter-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bitter/bitter-bold.woff') format('woff'), url('../fonts/bitter/bitter-bold.ttf') format('truetype'), url('../fonts/bitter/bitter-bold.svg#bitter_bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Open Sans Bold';
   src: url('../fonts/opensans/opensans-semibold.eot');
   src: url('../fonts/opensans/opensans-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-semibold.woff') format('woff'), url('../fonts/opensans/opensans-semibold.ttf') format('truetype');
@@ -1214,7 +1221,7 @@ em {
 h1.fancy,
 h2.fancy,
 h3.fancy {
-  font-family: 'Lobster', 'Georgia', serif;
+  font-family: 'Bitter Bold', 'Georgia', serif;
 }
 h1.fancy {
   font-size: 60px;
@@ -1371,6 +1378,24 @@ blockquote:after,
 q:before,
 q:after {
   content: '';
+}
+@media only screen and (max-width: 767px) {
+  h1.fancy {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  h2.fancy {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  h3.fancy {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .lead {
+    font-size: 15px;
+    line-height: 25px;
+  }
 }
 /* Prose: Formatted for read content
 ------------------------------------------------------- */
@@ -3667,7 +3692,7 @@ fieldset.with-icon .icon.clear {
 /* Navbar requires markup that's different from Bootstrap
 ------------------------------------------------------- */
 .logo {
-  font-family: 'Lobster', 'Georgia', serif;
+  font-family: 'Lobster', 'Bitter Bold', 'Georgia', serif;
   font-size: 29px;
   color: #3bb2d0;
   display: inline-block;

@@ -1,7 +1,6 @@
  /* Typography
 ------------------------------------------------------- */
 
-
 /* @FontFace */
 
 @font-face {
@@ -11,6 +10,16 @@
        url('../fonts/lobster/lobster_1.3-webfont.woff') format('woff'),
        url('../fonts/lobster/lobster_1.3-webfont.ttf') format('truetype'),
        url('../fonts/lobster/lobster_1.3-webfont.svg#lobster_1.3regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bitter Bold';
+  src: url('../fonts/bitter/bitter-bold.eot');
+  src: url('../fonts/bitter/bitter-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bitter/bitter-bold.woff') format('woff'),
+       url('../fonts/bitter/bitter-bold.ttf') format('truetype'),
+       url('../fonts/bitter/bitter-bold.svg#bitter_bold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -266,4 +275,26 @@ blockquote:after,
 q:before,
 q:after {
   content: '';
+}
+
+@media only screen and (max-width:@screen-xs-max) {
+  h1.fancy { 
+    font-size:40px; 
+    line-height:60px; 
+  }
+  
+  h2.fancy {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  h3.fancy {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .lead { 
+    font-size: 15px;
+    line-height: 25px;
+  }
 }

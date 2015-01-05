@@ -31,6 +31,13 @@
   background-position: center 40px;
 }
 
+@media (max-width:767px) {
+  #contact .container-fluid { padding: 0; }
+  .navbar { border-bottom: 1px solid rgba(0,0,0,.1); }
+  .navbar { border-bottom: 1px solid rgba(0,0,0,.1); }
+  .cb-product-intro { text-align: center; }
+}
+
 /* iphone
 ------------------------------------------------------- */
 
@@ -493,7 +500,7 @@ http://codyhouse.co/gem/3d-animated-mockup/
 
   .cb-product.is-product-tour {
     height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
   }
 
   .cb-product-intro {
