@@ -4,7 +4,8 @@
 .landing { padding-top: 0; }
 .landing .logo { color: #fff; }
 
-.dark .btn-inverse {
+.dark .btn-inverse,
+.dark .btn-inverse:hover {
   background: #fff;
   color: #3BB2D0;  
 }
