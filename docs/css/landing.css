@@ -10,6 +10,10 @@
   color: #3BB2D0;  
 }
 
+/*.bullets i { color: #3bb2d0; }*/
+/*.bullets i { color: #3c4e5a; }*/
+.bullets i { color: #3887be; }
+
 .axiom .row10 { 
   background-repeat: no-repeat;
 }
