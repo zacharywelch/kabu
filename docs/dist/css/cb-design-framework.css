@@ -1563,8 +1563,6 @@ pre {
   border-radius: 3px;
 }
 pre {
-  background: #f8f8f8;
-  color: rgba(0, 0, 0, 0.75);
   display: block;
   padding:  10px;
   word-break: break-all;
@@ -2394,6 +2392,7 @@ input[type=password],
 input[type=text],
 input[type=email],
 input[type=number],
+input[type=email],
 select,
 .form-control {
   display: inline-block;

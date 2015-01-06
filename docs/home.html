@@ -135,7 +135,7 @@
   <section id='modern' class='fill-white center keyline-bottom'>
     <div class='container-fluid clearfix pad4y'>
       <p class='lead quiet col-sm-8 col-sm-offset-2 space-bottom4'>
-        Kabu is packed with a ton of new features and leaner codebase to help you build applications for the modern web.
+        Kabu is packed with a ton of new features and leaner codebase to help you build beautiful applications for the modern web.
       </p>
       <ul class='clearfix'>
         <li class='col-sm-4 space-bottom'>
@@ -168,13 +168,7 @@
       <div class='col-sm-5 prose'>
         <h1>Rapid Prototyping</h1>
         <p class='lead'>
-<!--           Kabu is a complete redesign of our original framework. To make prototyping as quick as possible we overhauled the documentation with all new and more detailed code examples. So far Kabu has been working great for us, and we hope it evolves the way your team builds products. 
- -->
-<!-- We took the best of <a href='http://getbootstrap.com/'>Bootstrap</a> and introduced <a href='http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/'>OOCSS</a> to improve performance and maintenance.           
-
-We want a unifying experience across CareerBuilder products and services and have optimized each to adapt to different devices.   
- -->
-         Kabu is a complete redesign of our original framework. So far it's been working great for us, and we hope it evolves the way your team builds products.          
+          Kabu is a complete redesign of our original framework. So far it's been working great for us, and we hope it evolves the way your team builds products.          
         </p>
         <ul class='clearfix space-bottom bullets'>
           <li>
@@ -251,19 +245,27 @@ We want a unifying experience across CareerBuilder products and services and hav
   <section id='customization' class='fill-purple dark pad4y'>
     <div class='container-fluid pad4y clearfix'>
       <div class='col-sm-5 prose space-bottom'>
-        <h1>Design apps with Kabu</h1>
+        <h1>Built on open source</h1>
         <p class='lead'>
-          Bacon ipsum dolor amet brisket jerky tri-tip ham turducken, pastrami cow kevin biltong. Ribeye ground round pork meatball. Fatback beef ribs landjaeger spare ribs pig turkey t-bone alcatra leberkas meatball.
+          Kabu ships as plain CSS, but its source is developed and maintained on GitHub. Use our LESS configuration files and Grunt task runner to customize Kabu in your project.
         </p>
+<pre class='pad1 round space-bottom2'>
+<span class='comment'>// Change the primary color from blue to red</span>
+@brand-primary: @fill-red;
+</pre>
         <div class='clearfix'>
-          <div class='col-xs-6 pad1r'>
+          <a href='https://cagit.careerbuilder.com/CorpAppsCB/styleguide' class='btn fill-darken1 btn-block'>View GitHub project</a>
+
+<!--           <div class='col-xs-6 pad1r'>
             <a href='https://cagit.careerbuilder.com/CorpAppsCB/styleguide' class='btn fill-darken1 btn-block'>View GitHub project</a>
           </div>
-          <div class='col-xs-6 pad1l'>
+ -->
+<!--           <div class='col-xs-6 pad1l'>
             <a href='https://cagit.careerbuilder.com/CorpAppsCB/styleguide/releases/download/v3.0.0/cb-design-framework-3.0.0-dist.zip' class='btn fill-darken2 btn-block'>
               Download Kabu<i class='icon icon-download-alt pad0l'></i>
             </a>
           </div>
+ -->
         </div>
       </div>      
       <div class='col-sm-6 col-sm-offset-1 center'>
@@ -340,13 +342,13 @@ We want a unifying experience across CareerBuilder products and services and hav
         </div>
       </div>
       <div class='col-sm-6 newsletter'>
-        <form class='space-bottom'>
+        <form action='//careerbuilder.us9.list-manage.com/subscribe/post?u=aa79d74d302e3e2c4f954a3c1&amp;id=52034b9c81' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' target='_blank' novalidate class='space-bottom'>
           <fieldset class='with-icon'>
             <div class='input-group'>
               <i class='icon icon-envelope quiet'></i>
-              <input type='text' placeholder='Email address'>
+              <input type='text' name='EMAIL' id='mce-EMAIL' placeholder='Email address'>
               <div class='input-group-btn'>
-                <input type='submit' value='Subscribe' class='btn btn-default pad4x'>
+                <input type='submit' name='subscribe' value='Subscribe' id='mc-embedded-subscribe' class='btn btn-default pad4x'>
               </div>
             </div>
           </fieldset>
@@ -355,11 +357,6 @@ We want a unifying experience across CareerBuilder products and services and hav
       </div>
     </div>
   </div><!-- ./footer -->
-
-<!--   <footer class='fill-light pad4y quiet center'>
-    Made with &hearts; in Norcross by the <a href='#fakelink'>UX Team.</a>
-  </footer>
- -->
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
   <script src='dist/js/cb-design-framework.min.js'></script>
   <script src='js/site.js'></script>
