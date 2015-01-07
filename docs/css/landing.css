@@ -408,7 +408,7 @@ http://codyhouse.co/gem/3d-animated-mockup/
   
   .cb-single-point .cb-more-info.cb-left, 
   .cb-single-point .cb-more-info.cb-right {
-    top: 50%;
+    top: 140%;
     bottom: auto;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
