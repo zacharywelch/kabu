@@ -1,19 +1,19 @@
 {
-  "name": "cb-design-framework",
-  "version": "3.0.0",
+  "name": "kabu",
+  "version": "1.0.0",
   "description": "A responsive front-end framework for faster and easier web development.",
-  "homepage": "https://cbstyle-v3.herokuapp.com",
+  "homepage": "https://cb-kabu.herokuapp.com",
   "repository": {
     "type": "git",
     "url": "https://cagit.careerbuilder.com/CorpAppsCB/styleguide.git"
   },
   "keywords": [
-    "cb-design-framework",
+    "kabu",
     "styleguide",
     "design",
     "ui"
   ],
-  "author": "careerbuilder",
+  "author": "CareerBuilder UX",
   "license": {
     "type": "MIT",
     "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE"

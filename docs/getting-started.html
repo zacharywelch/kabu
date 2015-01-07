@@ -6,17 +6,16 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>  
   <title>Getting Started</title>
   <link href='css/prettify.css' rel='stylesheet' />
-  <link href='dist/css/cb-design-framework.min.css' rel='stylesheet' />
+  <link href='dist/css/kabu.min.css' rel='stylesheet' />
   <link href='css/site.css' rel='stylesheet' />
 </head>
 <body class='fill-light'>
   <div class='navbar navbar-fixed fill-white keyline-bottom col-sm-12 animate clearfix'>
     <div class='container-fluid contain'>
       <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
-        <a class='logo pad1y pull-left text-left' href='/'>
-          CareerBuilder
+        <a class='logo pull-left text-left' href='/'>
+          <img src='/img/logo-icon.svg' width='40'><span class='pad1 inline'>Kabu</span>
         </a>
-
         <div class='primary row2'>
           <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
             quiet round animate pull-right center'>
@@ -159,18 +158,23 @@
           </div>
         </div>        
 
-        <div class='box fill-darken0 round'>
+        <div id='installation' class='box fill-darken0 round'>
           <div class='pad1y pad2x keyline-bottom strong small clearfix'>
             <div class='pull-right'>
-              <span class='fill-darken1 round-left pad1x dark inline'>Kabu</span><a class='pad1x inline round-right keyline-left quiet dark fill-darken2' href='https://cagit.careerbuilder.com/CorpAppsCB/styleguide/releases'>v3.0.0</a>
+              <span class='fill-darken1 round-left pad1x dark inline'>Kabu</span><a class='pad1x inline round-right keyline-left quiet dark fill-darken2' href='https://cagit.careerbuilder.com/CorpAppsCB/styleguide/releases'>v1.0.0</a>
             </div>
             Installation
           </div>
           <div class='pad2 contain fill-white round-bottom prose'>
+            <div class='pad2r pull-left'>
+              <img src='img/kabu-mascot.png' width='100'>
+            </div>
             <p>
               To get going with Kabu, simply download our default CSS package.
             </p>
-            <a href='https://cagit.careerbuilder.com/CorpAppsCB/styleguide/releases/download/v3.0.0/cb-design-framework-3.0.0-dist.zip' class='btn btn-loud'>Download Kabu<i class='icon icon-download-alt pad0l'></i></a>
+            <a href='https://cagit.careerbuilder.com/CorpAppsCB/styleguide/releases/download/v1.0.0/kabu-1.0.0-dist.zip' class='btn btn-loud'>
+              Download Kabu<i class='icon icon-download-alt pad0l'></i>
+            </a>
           </div>
         </div>  
 
@@ -186,7 +190,7 @@
             </p>
           </div>
           <div class='contain'>
-            <a href="#fakelink" class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='template'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='template'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint space-bottom' id='template'>
@@ -196,12 +200,12 @@
   &lt;meta charset='UTF-8'/&gt;
   &lt;meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' /&gt;
   &lt;title&gt;CareerBuilder&lt;/title&gt;
-  &lt;link href='cbstyle/css/cb-design-framework.min.css' rel='stylesheet' /&gt;
+  &lt;link href='kabu/css/kabu.min.css' rel='stylesheet' /&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;!-- Content goes here --&gt;
   &lt;script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' &gt;&lt;/script&gt;
-  &lt;script src='cbstyle/js/cb-design-framework.min.js'&gt;&lt;/script&gt;  
+  &lt;script src='kabu/js/kabu.min.js'&gt;&lt;/script&gt;  
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>                
@@ -217,7 +221,7 @@
   </div>
   
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
-  <script src='dist/js/cb-design-framework.min.js'></script>
+  <script src='dist/js/kabu.min.js'></script>
   <script src='js/prettify.js'></script>
   <script src='js/zeroclipboard/ZeroClipboard.min.js'></script>
   <script src='js/site.js'></script>
