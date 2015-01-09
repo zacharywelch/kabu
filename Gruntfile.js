@@ -19,6 +19,10 @@ module.exports = function(grunt) {
       docs: {
         src: 'dist/**/*',
         dest: 'docs/'
+      },
+      download: {
+        src: 'archive/<%= pkg.name %>-<%= pkg.version %>-dist.zip',
+        dest: 'docs/download/<%= pkg.name %>.zip'
       }
     },    
     less: {
@@ -101,6 +105,9 @@ module.exports = function(grunt) {
   // JS task
   grunt.registerTask('js', ['coffee', 'concat', 'uglify']);
 
+  // Copy task
+  grunt.registerTask('copy:main', ['copy:fonts', 'copy:images', 'copy:docs']);
+
   // Default task
-  grunt.registerTask('default', ['clean', 'css', 'js', 'copy', 'compress']);
+  grunt.registerTask('default', ['clean', 'css', 'js', 'copy:main', 'compress', 'copy:download']);
 };
