@@ -188,8 +188,8 @@
             </p>
           </div>
           <div class='clearfix pad2y'>
-            <div class='box round fill-darken0'>
-              <header class='pad1y pad2x keyline-bottom'>
+            <div class='box round'>
+              <header class='pad1y pad2x keyline-bottom fill-darken0'>
                 <h3>Basic Information</h3>
               </header>
               content goes here...
@@ -200,8 +200,8 @@
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint space-bottom' id='step2'>
-&lt;div class='box round fill-darken0'&gt;
-  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+&lt;div class='box round'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom fill-darken0'&gt;
     &lt;h3&gt;Basic Information&lt;/h3&gt;
   &lt;/header&gt;
   content goes here...
@@ -212,22 +212,20 @@
           <div class='prose'>
             <h4>3. Create body and footer sections</h4>
             <p>
-              Now that we have a header let's create space for the body and footer sections. We'll need a <a href='../colors.html'>background-fill</a> to make both sections white while our <a href='../styling/grid.html'>padding</a> helpers create consistent spacing for us. A <a href='../styling/helpers.html'>keyline</a> is used to create a border between both sections.
+              Now that we have a header let's create space for the body and footer sections using <a href='../styling/grid.html'>padding helpers</a>. A <a href='../styling/helpers.html'>keyline</a> is used to create a border between both sections.
             </p>
           </div>
           <div class='clearfix pad2y'>
-            <div class='box round fill-darken0'>
-              <header class='pad1y pad2x keyline-bottom'>
+            <div class='box round'>
+              <header class='pad1y pad2x keyline-bottom fill-darken0'>
                 <h3>Basic Information</h3>
               </header>
-              <div class='fill-white round-bottom'>
-                <div class='pad2 keyline-bottom'>
-                  body goes here...
-                </div>
-                <div class='pad2'>
-                  footer goes here...
-                </div>
-              </div>            
+              <div class='pad2 keyline-bottom'>
+                body goes here...
+              </div>
+              <div class='pad2'>
+                footer goes here...
+              </div>
             </div>
           </div>
           <div class='contain'>
@@ -235,18 +233,16 @@
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint space-bottom' id='step3'>
-&lt;div class='box round fill-darken0'&gt;
-  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+&lt;div class='box round'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom fill-darken0'&gt;
     &lt;h3&gt;Basic Information&lt;/h3&gt;
   &lt;/header&gt;
-  &lt;div class='fill-white round-bottom'&gt;
-    &lt;div class='pad2 keyline-bottom'&gt;
-      body goes here...
-    &lt;/div&gt;
-    &lt;div class='pad2'&gt;
-      footer goes here...
-    &lt;/div&gt;
-  &lt;/div&gt;            
+  &lt;div class='pad2 keyline-bottom'&gt;
+    body goes here...
+  &lt;/div&gt;
+  &lt;div class='pad2'&gt;
+    footer goes here...
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
           </div>                    
@@ -258,27 +254,25 @@
             </p>
           </div>     
           <div class='clearfix pad2y'>
-            <div class='box round fill-darken0'>
-              <header class='pad1y pad2x keyline-bottom'>
+            <div class='box round'>
+              <header class='pad1y pad2x keyline-bottom fill-darken0'>
                 <h3>Basic Information</h3>
               </header>
-              <div class='fill-white round-bottom'>
-                <div class='pad2 keyline-bottom'>
-                  <form>
-                    <fieldset>
-                      <label for='name'>Name</label>
-                      <input id='name' type='text' class='stretch' value='Rigby'>
-                    </fieldset>
-                    <fieldset>
-                      <label for='email'>Email</label>
-                      <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
-                    </fieldset>                      
-                  </form>
-                </div>
-                <div class='pad2'>
-                  footer goes here...
-                </div>
-              </div>            
+              <div class='pad2 keyline-bottom'>
+                <form>
+                  <fieldset>
+                    <label for='name'>Name</label>
+                    <input id='name' type='text' class='stretch' value='Rigby'>
+                  </fieldset>
+                  <fieldset>
+                    <label for='email'>Email</label>
+                    <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
+                  </fieldset>                      
+                </form>
+              </div>
+              <div class='pad2'>
+                footer goes here...
+              </div>
             </div>
           </div>
           <div class='contain'>
@@ -286,27 +280,25 @@
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint space-bottom' id='step4'>
-&lt;div class='box round fill-darken0'&gt;
-  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+&lt;div class='box round'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom fill-darken0'&gt;
     &lt;h3&gt;Basic Information&lt;/h3&gt;
   &lt;/header&gt;
-  &lt;div class='fill-white round-bottom'&gt;
-    &lt;div class='pad2 keyline-bottom'&gt;
-      &lt;form&gt;
-        &lt;fieldset&gt;
-          &lt;label for='name'&gt;Name&lt;/label&gt;
-          &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
-        &lt;/fieldset&gt;
-        &lt;fieldset&gt;
-          &lt;label for='email'&gt;Email&lt;/label&gt;
-          &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
-        &lt;/fieldset&gt;                      
-      &lt;/form&gt;
-    &lt;/div&gt;
-    &lt;div class='pad2'&gt;
-      footer goes here...
-    &lt;/div&gt;
-  &lt;/div&gt;            
+  &lt;div class='pad2 keyline-bottom'&gt;
+    &lt;form&gt;
+      &lt;fieldset&gt;
+        &lt;label for='name'&gt;Name&lt;/label&gt;
+        &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;label for='email'&gt;Email&lt;/label&gt;
+        &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
+      &lt;/fieldset&gt;                      
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class='pad2'&gt;
+    footer goes here...
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
           </div>                    
@@ -318,40 +310,38 @@
             </p>
           </div> 
           <div class='clearfix pad2y'>
-            <div class='box round fill-darken0'>
-              <header class='pad1y pad2x keyline-bottom'>
+            <div class='box round'>
+              <header class='pad1y pad2x keyline-bottom fill-darken0'>
                 <h3>Basic Information</h3>
               </header>
-              <div class='fill-white round-bottom'>
-                <div class='pad2 keyline-bottom'>
-                  <form>
-                    <fieldset>
-                      <div class='media'>
-                        <a class='media-left pad1r' href='#fakelink'>
-                          <img src='../img/regularshow.jpg' class='img-rounded' width='70'>
-                        </a>
-                        <div class='media-body pad1l'>
-                          <a href='#fakelink' class='btn btn-default'>Upload new picture</a>
-                          <p class='small quiet pad0y'>
-                            You can also drag and drop a picture from your computer.
-                          </p>
-                        </div>
+              <div class='pad2 keyline-bottom'>
+                <form>
+                  <fieldset>
+                    <div class='media'>
+                      <a class='media-left pad1r' href='#fakelink'>
+                        <img src='../img/regularshow.jpg' class='img-rounded' width='70'>
+                      </a>
+                      <div class='media-body pad1l'>
+                        <a href='#fakelink' class='btn btn-default'>Upload new picture</a>
+                        <p class='small quiet pad0y'>
+                          You can also drag and drop a picture from your computer.
+                        </p>
                       </div>
-                    </fieldset>
-                    <fieldset>
-                      <label for='name'>Name</label>
-                      <input id='name' type='text' class='stretch' value='Rigby'>
-                    </fieldset>
-                    <fieldset>
-                      <label for='email'>Email</label>
-                      <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
-                    </fieldset>                      
-                  </form>
-                </div>
-                <div class='pad2'>
-                  footer goes here...
-                </div>
-              </div>            
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label for='name'>Name</label>
+                    <input id='name' type='text' class='stretch' value='Rigby'>
+                  </fieldset>
+                  <fieldset>
+                    <label for='email'>Email</label>
+                    <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
+                  </fieldset>                      
+                </form>
+              </div>
+              <div class='pad2'>
+                footer goes here...
+              </div>
             </div>
           </div>
           <div class='contain'>
@@ -359,40 +349,38 @@
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint space-bottom' id='step5'>
-&lt;div class='box round fill-darken0'&gt;
-  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+&lt;div class='box round'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom fill-darken0'&gt;
     &lt;h3&gt;Basic Information&lt;/h3&gt;
   &lt;/header&gt;
-  &lt;div class='fill-white round-bottom'&gt;
-    &lt;div class='pad2 keyline-bottom'&gt;
-      &lt;form&gt;
-        &lt;fieldset&gt;
-          &lt;div class='media'&gt;
-            &lt;a class='media-left pad1r' href='#fakelink'&gt;
-              &lt;img src='../img/regularshow.jpg' class='img-rounded' width='70'&gt;
-            &lt;/a&gt;
-            &lt;div class='media-body pad1l'&gt;
-              &lt;a href='#fakelink' class='btn btn-default'&gt;Upload new picture&lt;/a&gt;
-              &lt;p class='small quiet pad0y'&gt;
-                You can also drag and drop a picture from your computer.
-              &lt;/p&gt;
-            &lt;/div&gt;
+  &lt;div class='pad2 keyline-bottom'&gt;
+    &lt;form&gt;
+      &lt;fieldset&gt;
+        &lt;div class='media'&gt;
+          &lt;a class='media-left pad1r' href='#fakelink'&gt;
+            &lt;img src='../img/regularshow.jpg' class='img-rounded' width='70'&gt;
+          &lt;/a&gt;
+          &lt;div class='media-body pad1l'&gt;
+            &lt;a href='#fakelink' class='btn btn-default'&gt;Upload new picture&lt;/a&gt;
+            &lt;p class='small quiet pad0y'&gt;
+              You can also drag and drop a picture from your computer.
+            &lt;/p&gt;
           &lt;/div&gt;
-        &lt;/fieldset&gt;
-        &lt;fieldset&gt;
-          &lt;label for='name'&gt;Name&lt;/label&gt;
-          &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
-        &lt;/fieldset&gt;
-        &lt;fieldset&gt;
-          &lt;label for='email'&gt;Email&lt;/label&gt;
-          &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
-        &lt;/fieldset&gt;                      
-      &lt;/form&gt;
-    &lt;/div&gt;
-    &lt;div class='pad2'&gt;
-      footer goes here...
-    &lt;/div&gt;
-  &lt;/div&gt;            
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;label for='name'&gt;Name&lt;/label&gt;
+        &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;label for='email'&gt;Email&lt;/label&gt;
+        &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
+      &lt;/fieldset&gt;                      
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class='pad2'&gt;
+    footer goes here...
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
           </div>      
@@ -404,40 +392,38 @@
             </p>
           </div> 
           <div class='clearfix pad2y'>
-            <div class='box round fill-darken0'>
-              <header class='pad1y pad2x keyline-bottom'>
+            <div class='box round'>
+              <header class='pad1y pad2x keyline-bottom fill-darken0'>
                 <h3>Basic Information</h3>
               </header>
-              <div class='fill-white round-bottom'>
-                <div class='pad2 keyline-bottom'>
-                  <form>
-                    <fieldset>
-                      <div class='media'>
-                        <a class='media-left pad1r' href='#fakelink'>
-                          <img src='../img/regularshow.jpg' class='img-rounded' width='70'>
-                        </a>
-                        <div class='media-body pad1l'>
-                          <a href='#fakelink' class='btn btn-default'>Upload new picture</a>
-                          <p class='small quiet pad0y'>
-                            You can also drag and drop a picture from your computer.
-                          </p>
-                        </div>
+              <div class='pad2 keyline-bottom'>
+                <form>
+                  <fieldset>
+                    <div class='media'>
+                      <a class='media-left pad1r' href='#fakelink'>
+                        <img src='../img/regularshow.jpg' class='img-rounded' width='70'>
+                      </a>
+                      <div class='media-body pad1l'>
+                        <a href='#fakelink' class='btn btn-default'>Upload new picture</a>
+                        <p class='small quiet pad0y'>
+                          You can also drag and drop a picture from your computer.
+                        </p>
                       </div>
-                    </fieldset>
-                    <fieldset>
-                      <label for='name'>Name</label>
-                      <input id='name' type='text' class='stretch' value='Rigby'>
-                    </fieldset>
-                    <fieldset>
-                      <label for='email'>Email</label>
-                      <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
-                    </fieldset>                      
-                  </form>
-                </div>
-                <div class='pad2 text-right'>
-                  <a href='#fakelink' class='btn btn-primary'>Save changes</a>
-                </div>
-              </div>            
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label for='name'>Name</label>
+                    <input id='name' type='text' class='stretch' value='Rigby'>
+                  </fieldset>
+                  <fieldset>
+                    <label for='email'>Email</label>
+                    <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
+                  </fieldset>                      
+                </form>
+              </div>
+              <div class='pad2 text-right'>
+                <a href='#fakelink' class='btn btn-primary'>Save changes</a>
+              </div>
             </div>
           </div>
           <div class='contain'>
@@ -445,40 +431,38 @@
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>          
 <pre class='prettyprint space-bottom' id='step6'>
-&lt;div class='box round fill-darken0'&gt;
-  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+&lt;div class='box round'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom fill-darken0'&gt;
     &lt;h3&gt;Basic Information&lt;/h3&gt;
   &lt;/header&gt;
-  &lt;div class='fill-white round-bottom'&gt;
-    &lt;div class='pad2 keyline-bottom'&gt;
-      &lt;form&gt;
-        &lt;fieldset&gt;
-          &lt;div class='media'&gt;
-            &lt;a class='media-left pad1r' href='#fakelink'&gt;
-              &lt;img src='../img/regularshow.jpg' class='img-rounded' width='70'&gt;
-            &lt;/a&gt;
-            &lt;div class='media-body pad1l'&gt;
-              &lt;a href='#fakelink' class='btn btn-default'&gt;Upload new picture&lt;/a&gt;
-              &lt;p class='small quiet pad0y'&gt;
-                You can also drag and drop a picture from your computer.
-              &lt;/p&gt;
-            &lt;/div&gt;
+  &lt;div class='pad2 keyline-bottom'&gt;
+    &lt;form&gt;
+      &lt;fieldset&gt;
+        &lt;div class='media'&gt;
+          &lt;a class='media-left pad1r' href='#fakelink'&gt;
+            &lt;img src='../img/regularshow.jpg' class='img-rounded' width='70'&gt;
+          &lt;/a&gt;
+          &lt;div class='media-body pad1l'&gt;
+            &lt;a href='#fakelink' class='btn btn-default'&gt;Upload new picture&lt;/a&gt;
+            &lt;p class='small quiet pad0y'&gt;
+              You can also drag and drop a picture from your computer.
+            &lt;/p&gt;
           &lt;/div&gt;
-        &lt;/fieldset&gt;
-        &lt;fieldset&gt;
-          &lt;label for='name'&gt;Name&lt;/label&gt;
-          &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
-        &lt;/fieldset&gt;
-        &lt;fieldset&gt;
-          &lt;label for='email'&gt;Email&lt;/label&gt;
-          &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
-        &lt;/fieldset&gt;                      
-      &lt;/form&gt;
-    &lt;/div&gt;
-    &lt;div class='pad2 text-right'&gt;
-      &lt;a href='#fakelink' class='btn btn-primary'&gt;Save changes&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;            
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;label for='name'&gt;Name&lt;/label&gt;
+        &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;label for='email'&gt;Email&lt;/label&gt;
+        &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
+      &lt;/fieldset&gt;                      
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class='pad2 text-right'&gt;
+    &lt;a href='#fakelink' class='btn btn-primary'&gt;Save changes&lt;/a&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
           </div>  
