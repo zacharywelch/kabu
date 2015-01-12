@@ -156,8 +156,334 @@
         </nav>
 
         <div class='box round contain fill-white pad2'>
-          Coming soon...
-        </div>        
+          <div class='prose'>
+            <p>
+              Section groups are panels that help organize information into consumable chunks. GitHub does a great job of using section groups to help maintain user profiles. In this example we'll look at creating a similar profile section using only Kabu.
+            </p>
+            <h4>1. Create a container</h4>
+            <p>
+              Start by creating a container for our section. Let's use <a href='../styling/helpers.html'>box</a> for our basic container. The <a href='../styling/helpers.html'>round</a> class takes care of rounding corners and softening the edges.
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            <div class='box round'>
+              container
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step1'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step1'>
+&lt;div class='box round'&gt;
+  container
+&lt;/div&gt;
+</pre>
+          </div>          
+
+          <div class='prose'>
+            <h4>2. Create a title</h4>
+            <p>
+              Section groups normally have a title to help distinguish them from other sections on the page. We're going to give our title a darker background so it stands out by using a <a href='../colors.html'>fill-darken</a> helper from the colors section. We'll also use <a href='../styling/grid.html'>padding helpers</a> to create space around the title.
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            <div class='box round fill-darken0'>
+              <header class='pad1y pad2x keyline-bottom'>
+                <h3>Basic Information</h3>
+              </header>
+              content goes here...
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step2'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step2'>
+&lt;div class='box round fill-darken0'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+    &lt;h3&gt;Basic Information&lt;/h3&gt;
+  &lt;/header&gt;
+  content goes here...
+&lt;/div&gt;
+</pre>
+          </div>          
+
+          <div class='prose'>
+            <h4>3. Create body and footer sections</h4>
+            <p>
+              Now that we have a header let's create space for the body and footer sections. We'll need a <a href='../colors.html'>background-fill</a> to make both sections white while our <a href='../styling/grid.html'>padding</a> helpers create consistent spacing for us. A <a href='../styling/helpers.html'>keyline</a> is used to create a border between both sections.
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            <div class='box round fill-darken0'>
+              <header class='pad1y pad2x keyline-bottom'>
+                <h3>Basic Information</h3>
+              </header>
+              <div class='fill-white round-bottom'>
+                <div class='pad2 keyline-bottom'>
+                  body goes here...
+                </div>
+                <div class='pad2'>
+                  footer goes here...
+                </div>
+              </div>            
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step3'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step3'>
+&lt;div class='box round fill-darken0'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+    &lt;h3&gt;Basic Information&lt;/h3&gt;
+  &lt;/header&gt;
+  &lt;div class='fill-white round-bottom'&gt;
+    &lt;div class='pad2 keyline-bottom'&gt;
+      body goes here...
+    &lt;/div&gt;
+    &lt;div class='pad2'&gt;
+      footer goes here...
+    &lt;/div&gt;
+  &lt;/div&gt;            
+&lt;/div&gt;
+</pre>
+          </div>                    
+
+          <div class='prose'>
+            <h4>4. Add body elements</h4>
+            <p>
+              Next we need to add some form elements so users can update profile name and email. We'll use standard <a href='../styling/forms.html'>text controls</a> and the <code>stretch</code> option to make sure they're full width.
+            </p>
+          </div>     
+          <div class='clearfix pad2y'>
+            <div class='box round fill-darken0'>
+              <header class='pad1y pad2x keyline-bottom'>
+                <h3>Basic Information</h3>
+              </header>
+              <div class='fill-white round-bottom'>
+                <div class='pad2 keyline-bottom'>
+                  <form>
+                    <fieldset>
+                      <label for='name'>Name</label>
+                      <input id='name' type='text' class='stretch' value='Rigby'>
+                    </fieldset>
+                    <fieldset>
+                      <label for='email'>Email</label>
+                      <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
+                    </fieldset>                      
+                  </form>
+                </div>
+                <div class='pad2'>
+                  footer goes here...
+                </div>
+              </div>            
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step4'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step4'>
+&lt;div class='box round fill-darken0'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+    &lt;h3&gt;Basic Information&lt;/h3&gt;
+  &lt;/header&gt;
+  &lt;div class='fill-white round-bottom'&gt;
+    &lt;div class='pad2 keyline-bottom'&gt;
+      &lt;form&gt;
+        &lt;fieldset&gt;
+          &lt;label for='name'&gt;Name&lt;/label&gt;
+          &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+          &lt;label for='email'&gt;Email&lt;/label&gt;
+          &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
+        &lt;/fieldset&gt;                      
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class='pad2'&gt;
+      footer goes here...
+    &lt;/div&gt;
+  &lt;/div&gt;            
+&lt;/div&gt;
+</pre>
+          </div>                    
+
+          <div class='prose'>
+            <h4>5. Add profile picture</h4>
+            <p>
+              Users need to be able to edit profile picture and it would be helpful if they could see the picture that's currently being used. There are several layout options we could use but we're going to use a <a href='../styling/components.html'>media</a> component since it already provides most of the styling we need. We'll also add some help text using <a href='../styling/helpers.html'>small &amp; quiet</a> helpers.
+            </p>
+          </div> 
+          <div class='clearfix pad2y'>
+            <div class='box round fill-darken0'>
+              <header class='pad1y pad2x keyline-bottom'>
+                <h3>Basic Information</h3>
+              </header>
+              <div class='fill-white round-bottom'>
+                <div class='pad2 keyline-bottom'>
+                  <form>
+                    <fieldset>
+                      <div class='media'>
+                        <a class='media-left pad1r' href='#fakelink'>
+                          <img src='../img/regularshow.jpg' class='img-rounded' width='70'>
+                        </a>
+                        <div class='media-body pad1l'>
+                          <a href='#fakelink' class='btn btn-default'>Upload new picture</a>
+                          <p class='small quiet pad0y'>
+                            You can also drag and drop a picture from your computer.
+                          </p>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <label for='name'>Name</label>
+                      <input id='name' type='text' class='stretch' value='Rigby'>
+                    </fieldset>
+                    <fieldset>
+                      <label for='email'>Email</label>
+                      <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
+                    </fieldset>                      
+                  </form>
+                </div>
+                <div class='pad2'>
+                  footer goes here...
+                </div>
+              </div>            
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step5'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step5'>
+&lt;div class='box round fill-darken0'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+    &lt;h3&gt;Basic Information&lt;/h3&gt;
+  &lt;/header&gt;
+  &lt;div class='fill-white round-bottom'&gt;
+    &lt;div class='pad2 keyline-bottom'&gt;
+      &lt;form&gt;
+        &lt;fieldset&gt;
+          &lt;div class='media'&gt;
+            &lt;a class='media-left pad1r' href='#fakelink'&gt;
+              &lt;img src='../img/regularshow.jpg' class='img-rounded' width='70'&gt;
+            &lt;/a&gt;
+            &lt;div class='media-body pad1l'&gt;
+              &lt;a href='#fakelink' class='btn btn-default'&gt;Upload new picture&lt;/a&gt;
+              &lt;p class='small quiet pad0y'&gt;
+                You can also drag and drop a picture from your computer.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+          &lt;label for='name'&gt;Name&lt;/label&gt;
+          &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+          &lt;label for='email'&gt;Email&lt;/label&gt;
+          &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
+        &lt;/fieldset&gt;                      
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class='pad2'&gt;
+      footer goes here...
+    &lt;/div&gt;
+  &lt;/div&gt;            
+&lt;/div&gt;
+</pre>
+          </div>      
+
+          <div class='prose'>
+            <h4>6. Add save button to footer</h4>
+            <p>
+              We're almost there! All we need is a save button. Let's use a <a href='../styling/buttons.html'>primary</a> button to draw attention to <em>Save</em> and create visual heirarchy. We'll also align the button on the right with <a href='../styling/helpers.html'>text-right</a>.
+            </p>
+          </div> 
+          <div class='clearfix pad2y'>
+            <div class='box round fill-darken0'>
+              <header class='pad1y pad2x keyline-bottom'>
+                <h3>Basic Information</h3>
+              </header>
+              <div class='fill-white round-bottom'>
+                <div class='pad2 keyline-bottom'>
+                  <form>
+                    <fieldset>
+                      <div class='media'>
+                        <a class='media-left pad1r' href='#fakelink'>
+                          <img src='../img/regularshow.jpg' class='img-rounded' width='70'>
+                        </a>
+                        <div class='media-body pad1l'>
+                          <a href='#fakelink' class='btn btn-default'>Upload new picture</a>
+                          <p class='small quiet pad0y'>
+                            You can also drag and drop a picture from your computer.
+                          </p>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <label for='name'>Name</label>
+                      <input id='name' type='text' class='stretch' value='Rigby'>
+                    </fieldset>
+                    <fieldset>
+                      <label for='email'>Email</label>
+                      <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
+                    </fieldset>                      
+                  </form>
+                </div>
+                <div class='pad2 text-right'>
+                  <a href='#fakelink' class='btn btn-primary'>Save changes</a>
+                </div>
+              </div>            
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step6'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step6'>
+&lt;div class='box round fill-darken0'&gt;
+  &lt;header class='pad1y pad2x keyline-bottom'&gt;
+    &lt;h3&gt;Basic Information&lt;/h3&gt;
+  &lt;/header&gt;
+  &lt;div class='fill-white round-bottom'&gt;
+    &lt;div class='pad2 keyline-bottom'&gt;
+      &lt;form&gt;
+        &lt;fieldset&gt;
+          &lt;div class='media'&gt;
+            &lt;a class='media-left pad1r' href='#fakelink'&gt;
+              &lt;img src='../img/regularshow.jpg' class='img-rounded' width='70'&gt;
+            &lt;/a&gt;
+            &lt;div class='media-body pad1l'&gt;
+              &lt;a href='#fakelink' class='btn btn-default'&gt;Upload new picture&lt;/a&gt;
+              &lt;p class='small quiet pad0y'&gt;
+                You can also drag and drop a picture from your computer.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+          &lt;label for='name'&gt;Name&lt;/label&gt;
+          &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+          &lt;label for='email'&gt;Email&lt;/label&gt;
+          &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
+        &lt;/fieldset&gt;                      
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class='pad2 text-right'&gt;
+      &lt;a href='#fakelink' class='btn btn-primary'&gt;Save changes&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;            
+&lt;/div&gt;
+</pre>
+          </div>  
+
+        </div>          
 
         <div class='center quiet small pad1y'>
           Made with <i class='icon icon-heart danger pulse'></i> in Norcross by the <a href='../team.html' class='strong'>UX Team</a>. 
