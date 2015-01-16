@@ -984,9 +984,6 @@ body {
 .dark {
   color: #fff;
 }
-::selection {
-  background-color: #f1f075;
-}
 /* Links */
 a,
 a > code {
