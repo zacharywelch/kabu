@@ -830,7 +830,12 @@
 &lt;/fieldset&gt;
 
 $('#typeahead').typeahead({
-  source: ["Alabama","Alaska",...]
+  minLength: 3,
+  highlight: true,
+},
+{
+  name: 'my-dataset',
+  source: mySource
 });
 </pre>
           </div>
