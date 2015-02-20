@@ -746,8 +746,7 @@
             },
             input: {
                 position: "relative",
-                verticalAlign: "top",
-                backgroundColor: "transparent"
+                verticalAlign: "top"
             },
             inputWithNoHint: {
                 position: "relative",
@@ -1330,11 +1329,11 @@
                 return this.$menu.find(".tt-cursor").first();
             },
             _setCursor: function setCursor($el, silent) {
-                $el.first().addClass("tt-cursor");
+                $el.first().addClass("tt-cursor fill-darken0");
                 !silent && this.trigger("cursorMoved");
             },
             _removeCursor: function removeCursor() {
-                this._getCursor().removeClass("tt-cursor");
+                this._getCursor().removeClass("tt-cursor fill-darken0");
             },
             _moveCursor: function moveCursor(increment) {
                 var $suggestions, $oldCursor, newCursorIndex, $newCursor;

@@ -3,7 +3,7 @@
     $('input[data-toggle="clear"]').each(function(e) {
       $input = $(this)
       $clear = $('<i></i>')
-        .addClass('icon icon-remove-sign clear')
+        .addClass('icon icon-remove-sign clear quiet')
         .click(function() {
           $input.val('').focus()
           $(this).hide()
