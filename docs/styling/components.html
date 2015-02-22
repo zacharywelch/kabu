@@ -826,16 +826,17 @@
             </a>
 <pre class='prettyprint' id='typeaheads'>
 &lt;fieldset class='contain'&gt;
-  &lt;input id='typeahead' type='text' class='stretch' placeholder='States in USA' data-provide='typeahead' autocomplete='off' /&gt;
+  &lt;input type='text' class='stretch typeahead' placeholder='States in USA' /&gt;
 &lt;/fieldset&gt;
 
-$('#typeahead').typeahead({
-  minLength: 3,
+$('.typeahead').typeahead({
+  hint: true,
   highlight: true,
 },
 {
-  name: 'my-dataset',
-  source: mySource
+  name: 'states',
+  displayKey: 'value',
+  source: substringMatcher(states)
 });
 </pre>
           </div>
