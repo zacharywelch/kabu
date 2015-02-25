@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>  
+  <title>Templates - Scaffold</title>
+  <link href='../css/prettify.css' rel='stylesheet' />
+  <link href='../dist/css/kabu.min.css' rel='stylesheet' />
+  <link href='../css/site.css' rel='stylesheet' />
+</head>
+<body class='fill-light'>
+  <div class='navbar navbar-fixed fill-white keyline-bottom col-sm-12 animate clearfix'>
+    <div class='container-fluid contain'>
+      <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+        <a class='logo pull-left text-left' href='/'>
+          <img src='/img/logo-icon.svg' width='40'><span class='pad1 inline'>Kabu</span>
+        </a>
+
+        <div class='primary row2'>
+          <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+            quiet round animate pull-right center'>
+            <i class='icon icon-list'></i>
+          </a>
+
+          <div class='visible-xs dropdown fill-denim dark keyline-all round animate'>
+            <div class='pad1 keyline-bottom'>
+              <a href='../styling/grid.html'>CSS and styling</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../animation.html'>Animation</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../writing-copy.html'>Writing Copy</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../branding.html'>Brand assets</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../tutorials/singlecolumn.html'>Tutorials</a>
+            </div>
+            <div class='pad1 active'>
+              <a href='../templates.html'>Templates</a>
+            </div>
+          </div><!-- ./dropdown menu -->  
+        </div>
+      </nav>
+    </div>
+  </div><!-- ./navbar -->
+
+  <div>
+    
+    <div class='sidenav hidden-xs'>
+      <div class='container-fluid'>
+        <div class='col-sm-3 contain'>
+          <nav class='scroll-styled quiet-scroll'>
+            <div class='space-bottom1'>
+              <a href='../getting-started.html' class='strong block small'>Getting started</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>CSS and styling</strong>
+              <a href='../styling/grid.html' class='block small truncate'>
+                Grid system
+              </a>
+              <a href='../styling/typography.html' class='block small truncate'>
+                Typography
+              </a>
+              <a href='../styling/colors.html' class='block small truncate'>
+                Colors
+              </a>
+              <a href='../styling/tables.html' class='block small truncate'>
+                Tables
+              </a>
+              <a href='../styling/forms.html' class='block small truncate'>
+                Forms
+              </a>
+              <a href='../styling/buttons.html' class='block small truncate'>
+                Buttons
+              </a>
+              <a href='../styling/navigation.html' class='block small truncate'>
+                Navigation
+              </a>
+              <a href='../styling/components.html' class='block small truncate'>
+                Components
+              </a>
+              <a href='../styling/icons.html' class='block small truncate'>
+                Icons
+              </a>
+              <a href='../styling/mobile.html' class='block small truncate'>
+                Mobile
+              </a>
+              <a href='../styling/helpers.html' class='block small truncate'>
+                Helper classes
+              </a>
+            </div>
+
+            <div class='space-bottom1'>
+              <a href='../animation.html' class='strong block small'>Animation</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <a href='../writing-copy.html' class='strong block small'>Writing Copy</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <a href='../branding.html' class='strong block small'>Brand assets</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>Tutorials</strong>
+              <a href='/tutorials/singlecolumn.html' class='block small truncate'>
+                Single column list
+              </a>
+              <a href='/tutorials/sectiongroup.html' class='block small truncate'>
+                Section groups
+              </a>
+              <a href='/tutorials/twocolumn.html' class='block small truncate'>
+                Two column layout
+              </a>              
+            </div>
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>Templates</strong>
+              <a href='/templates/users.html' class='block small truncate'>
+                Users
+              </a>
+              <a href='/templates/scaffold.html' class='block small truncate active'>
+                Scaffold
+              </a>
+              <a href='#fakelink' class='block small truncate'>
+                Lorem ipsum
+              </a>              
+            </div>
+          </nav>
+        </div>
+      </div>  
+    </div><!-- ./sidenav -->
+
+    <div class='container-fluid clearfix'>
+      <div class='pad2y contain col-sm-9 col-sm-offset-3'>
+        <nav class='pad2 visible-xs mobile-nav'>
+          <div class='fill-light small strong round pad1 clearfix'>
+            <div class='col-xs-4'>
+              <a class='space-bottom0 block' href='templates/users.html'>Users</a>
+            </div>
+
+            <div class='col-xs-4'>
+              <a class='space-bottom0 block active' href='/templates/scaffold.html'>Scaffold</a>
+            </div>
+
+            <div class='col-xs-4'>
+              <a class='space-bottom0 block' href='#fakelink'>Lorem ipsum</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Scaffolding</h4>
+            <p>
+              Many web frameworks provide <a href='http://en.wikipedia.org/wiki/Scaffold_%28programming%29'>scaffolding</a> as a quick way to generate the major pieces of an application. These usually include an index page and form for creating or updating resources. Just as you would probably want to customize generated code, this template provides a basic interface you'll want to customize for usability.
+            </p>
+          </header>
+          <div class='pad2'>
+            <header class='space-bottom'>
+              <h2>NBA Players</h2>
+            </header>
+            <table class='breathe'>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Nickname</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href='#fakelink'>Charles Barkley</a></td>
+                  <td>The Round Mound of Rebound</td>
+                  <td>
+                    <a href='#fakelink' class='btn btn-danger btn-xs'>
+                      <i class='icon icon-trash pad0r'></i>Delete
+                    </a>
+                  </td>                  
+                </tr>
+                <tr>
+                  <td><a href='#fakelink'>Kobe Bryant</a></td>
+                  <td>Kobe Wan Kenobi</td>
+                  <td>
+                    <a href='#fakelink' class='btn btn-danger btn-xs'>
+                      <i class='icon icon-trash pad0r'></i>Delete
+                    </a>
+                  </td>                  
+                </tr>
+                <tr>
+                  <td><a href='#fakelink'>Tim Duncan</a></td>
+                  <td>Old Man Riverwalk</td>
+                  <td>
+                    <a href='#fakelink' class='btn btn-danger btn-xs'>
+                      <i class='icon icon-trash pad0r'></i>Delete
+                    </a>
+                  </td>                  
+                </tr>
+                <tr>
+                  <td><a href='#fakelink'>Shaquille O'Neal</a></td>
+                  <td>Shaq Fu</td>
+                  <td>
+                    <a href='#fakelink' class='btn btn-danger btn-xs'>
+                      <i class='icon icon-trash pad0r'></i>Delete
+                    </a>
+                  </td>                  
+                </tr>
+                <tr>
+                  <td><a href='#fakelink'>Yao Ming</a></td>
+                  <td>The Great Wall of Yao</td>
+                  <td>
+                    <a href='#fakelink' class='btn btn-danger btn-xs'>
+                      <i class='icon icon-trash pad0r'></i>Delete
+                    </a>
+                  </td>                  
+                </tr>
+              </tbody>
+            </table> 
+            <a href='#fakelink' class='btn btn-primary'>
+              <i class='icon icon-plus icon-sm pad0r'></i>New player
+            </a>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='players-index'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='players-index'>
+&lt;header class='space-bottom'&gt;
+  &lt;h2&gt;NBA Players&lt;/h2&gt;
+&lt;/header&gt;
+&lt;table class='breathe'&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Nickname&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href='#fakelink'&gt;Charles Barkley&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;The Round Mound of Rebound&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href='#fakelink' class='btn btn-danger btn-xs'&gt;
+          &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Delete
+        &lt;/a&gt;
+      &lt;/td&gt;                  
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href='#fakelink'&gt;Kobe Bryant&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Kobe Wan Kenobi&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href='#fakelink' class='btn btn-danger btn-xs'&gt;
+          &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Delete
+        &lt;/a&gt;
+      &lt;/td&gt;                  
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href='#fakelink'&gt;Tim Duncan&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Old Man Riverwalk&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href='#fakelink' class='btn btn-danger btn-xs'&gt;
+          &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Delete
+        &lt;/a&gt;
+      &lt;/td&gt;                  
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href='#fakelink'&gt;Shaquille O'Neal&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Shaq Fu&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href='#fakelink' class='btn btn-danger btn-xs'&gt;
+          &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Delete
+        &lt;/a&gt;
+      &lt;/td&gt;                  
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href='#fakelink'&gt;Yao Ming&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;The Great Wall of Yao&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href='#fakelink' class='btn btn-danger btn-xs'&gt;
+          &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Delete
+        &lt;/a&gt;
+      &lt;/td&gt;                  
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt; 
+&lt;a href='#fakelink' class='btn btn-primary'&gt;
+  &lt;i class='icon icon-plus icon-sm pad0r'&gt;&lt;/i&gt;New player
+&lt;/a&gt;
+</pre>
+          </div>
+        </div>          
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Create and update</h4>
+            <p>
+              A form scaffold for creating or updating resources.
+            </p>
+          </header>
+          <div class='pad2'>
+            <h2 class='space-bottom1'>New player</h2>
+            <form>
+              <fieldset>
+                <label for='name'>Name</label>
+                <input id='name' type='text' class='stretch'>
+              </fieldset>
+              <fieldset>
+                <label for='email'>Nickname</label>
+                <input id='email' type='text' class='stretch'>
+              </fieldset>                      
+              <a href='#fakelink' class='btn btn-primary'>Create player</a>
+              <a href='#fakelink' class='btn btn-default'>Cancel</a>
+            </form>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='players-form'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='players-form'>
+&lt;h2 class='space-bottom1'&gt;New player&lt;/h2&gt;
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label for='name'&gt;Name&lt;/label&gt;
+    &lt;input id='name' type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;label for='email'&gt;Nickname&lt;/label&gt;
+    &lt;input id='email' type='text' class='stretch'&gt;
+  &lt;/fieldset&gt;                      
+  &lt;a href='#fakelink' class='btn btn-primary'&gt;Create player&lt;/a&gt;
+  &lt;a href='#fakelink' class='btn btn-default'&gt;Cancel&lt;/a&gt;
+&lt;/form&gt;
+</pre>
+          </div>
+        </div>
+
+        <div class='center quiet small pad1y'>
+          Made with <i class='icon icon-heart danger pulse'></i> in Norcross by the <a href='../team.html' class='strong'>UX Team</a>. 
+        </div>
+      </div>
+    </div><!-- ./content -->
+
+  </div>
+  
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
+  <script src='../dist/js/kabu.min.js'></script>
+  <script src='../js/prettify.js'></script>
+  <script src='../js/zeroclipboard/ZeroClipboard.min.js'></script>
+  <script src='../js/site.js'></script>
+</body>
+</html>
