@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         dest: 'dist/'
       },
       images: {
-        src: 'img/*',
+        src: 'images/*',
         dest: 'dist/'        
       },
       docs: {
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "dist/css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
+          "dist/stylesheets/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
         }
       },
       production: {
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          "dist/css/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less"
+          "dist/stylesheets/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less"
         }
       }
     },
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
         flatten: true,
         cwd: 'coffee/',
         src: ['*.coffee'],
-        dest: 'js/',
+        dest: 'javascripts/',
         ext: '.js'
       }
     },
@@ -55,8 +55,8 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/**/*.js'],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        src: ['javascripts/**/*.js'],
+        dest: 'dist/javascripts/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'dist/javascripts/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
     },

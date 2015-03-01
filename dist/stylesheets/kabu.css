@@ -913,7 +913,7 @@ table {
 }
 /* Credit card icons */
 .credit-card {
-  background: url('../img/credit-cards@2x.png') 0 0 no-repeat;
+  background: url('../images/credit-cards@2x.png') 0 0 no-repeat;
   height: 30px;
   width: 45px;
   display: inline-block;
