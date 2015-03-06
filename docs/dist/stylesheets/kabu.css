@@ -1094,7 +1094,7 @@ hr {
 @font-face {
   font-family: 'Open Sans Bold';
   src: url('../fonts/opensans/opensans-semibold.eot');
-  src: url('../fonts/opensans/opensans-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-semibold.woff') format('woff'), url('../fonts/opensans/opensans-semibold.ttf') format('truetype');
+  src: url('../fonts/opensans/opensans-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-semibold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
