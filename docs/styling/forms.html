@@ -187,8 +187,8 @@
                 <input id='input1' type='text' class='stretch' placeholder='.stretch' />
               </fieldset>
               <fieldset class='col-sm-6 pad0r'>
-                <label for='input3'>.col-sm-6</label>
-                <input id='input3' type='text' class='stretch'>
+                <label for='input2'>.col-sm-6</label>
+                <input id='input2' type='text' class='stretch'>
               </fieldset>
               <fieldset class='col-sm-6 pad0l'>
                 <label for='input3'>.col-sm-6</label>
@@ -309,6 +309,14 @@
     &lt;label for='input5'&gt;What is love?&lt;/label&gt;
     &lt;textarea id='input5' class='stretch'&gt;&lt;/textarea&gt;
   &lt;/fieldset&gt;              
+  &lt;fieldset class='col-sm-6 pad0r'&gt;
+    &lt;label for='depart'&gt;Depart&lt;/label&gt;
+    &lt;input id='depart' class='datepicker stretch' type='text'&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class='col-sm-6 pad0l'&gt;
+    &lt;label for='arrive'&gt;Arrive&lt;/label&gt;
+    &lt;input id='arrive' class='datepicker stretch' type='text'&gt;
+  &lt;/fieldset&gt;
   &lt;fieldset&gt;
     &lt;label for='privacy-off'&gt;Airplane Mode&lt;/label&gt;
     &lt;div class='rounded-toggle inline'&gt;
@@ -320,16 +328,9 @@
   &lt;/fieldset&gt;
 &lt;/form&gt;
 &lt;script&gt;
-
-  var picker = new Pikaday(
-    {
-        field: document.getElementById('datepicker'),
-        firstDay: 1,
-        minDate: new Date('2000-01-01'),
-        maxDate: new Date('2020-12-31'),
-        yearRange: [2000,2020]
-    });
-
+  $('.datepicker').each(function(index, value) {
+    new Pikaday({ field: value });
+  });
 &lt;/script&gt;
 </pre>
           </div>
@@ -707,6 +708,41 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
+            <h4>Datepickers</h4>
+            <p>
+              Restyled <a href='https://github.com/dbushell/Pikaday'>Pikaday</a>. See its documentation for a complete list of options.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <form>
+              <fieldset>
+                <label for='datepicker'>When can you start?</label>
+                <input id='datepicker' class='datepicker' type='text'>
+              </fieldset>
+            </form>
+          </figure>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='selects'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='selects'>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;label for='datepicker'&gt;When can you start?&lt;/label&gt;
+    &lt;input id='datepicker' class='datepicker' type='text'&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+&lt;script&gt;
+  $('.datepicker').each(function(index, value) {
+    new Pikaday({ field: value });
+  });
+&lt;/script&gt;
+</pre>
+          </div>          
+        </div>        
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
             <h4>Inputs with icons</h4>
             <p>
               Icons can be added to inputs to assist with the form process.
@@ -1022,6 +1058,14 @@
                 <label>What is love?</label>
                 <textarea class='stretch'></textarea>
               </fieldset> 
+              <fieldset class='col-sm-6 pad0r'>
+                <label for='depart-dark'>Depart</label>
+                <input id='depart-dark' class='datepicker stretch' type='text'>
+              </fieldset>
+              <fieldset class='col-sm-6 pad0l'>
+                <label for='arrive-dark'>Arrive</label>
+                <input id='arrive-dark' class='datepicker stretch' type='text'>
+              </fieldset>
               <fieldset>
                 <label>Airplane Mode</label>
                 <div class='rounded-toggle inline'>
@@ -1088,7 +1132,15 @@
     &lt;fieldset&gt;
       &lt;label&gt;What is love?&lt;/label&gt;
       &lt;textarea class='stretch'&gt;&lt;/textarea&gt;
-    &lt;/fieldset&gt;              
+    &lt;/fieldset&gt; 
+    &lt;fieldset class='col-sm-6 pad0r'&gt;
+      &lt;label for='depart-dark'&gt;Depart&lt;/label&gt;
+      &lt;input id='depart-dark' class='datepicker stretch' type='text'&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset class='col-sm-6 pad0l'&gt;
+      &lt;label for='arrive-dark'&gt;Arrive&lt;/label&gt;
+      &lt;input id='arrive-dark' class='datepicker stretch' type='text'&gt;
+    &lt;/fieldset&gt;
     &lt;fieldset&gt;
       &lt;label&gt;Airplane Mode&lt;/label&gt;
       &lt;div class='rounded-toggle inline'&gt;
