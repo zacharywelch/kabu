@@ -708,6 +708,50 @@
 
         <div class='box round contain fill-white'>
           <header class='box-heading pad2'>
+            <h4>Datepicker</h4>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>                
+          </header>
+          <figure class='pad2'>
+            <form>
+              <fieldset>
+                <label for='datepicker'>Depart</label>
+                <input id='datepicker' class='datepicker' type='text'>
+              </fieldset>
+            </form>          
+          </figure>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='file'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>
+<pre class='prettyprint' id='file'>
+&lt;fieldset class='fileinput fileinput-new' data-provides='fileinput'&gt;
+  &lt;div class='input-group'&gt;
+    &lt;div class='form-control uneditable-input' data-trigger='fileinput'&gt;
+      &lt;i class='icon icon-paperclip fileinput-exists'&gt;&lt;/i&gt;
+      &lt;span class='fileinput-filename'&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class='input-group-btn btn-file'&gt;
+      &lt;span class='btn btn-default fileinput-new' data-role='select-file'&gt;
+        Select file
+      &lt;/span&gt;
+      &lt;span class='btn btn-default fileinput-exists' data-role='change'&gt;
+        &lt;i class='icon icon-cog pad0r'&gt;&lt;/i&gt;Change
+      &lt;/span&gt;
+      &lt;input type='file'&gt;
+      &lt;a href='#' class='btn btn-danger fileinput-exists' data-dismiss='fileinput'&gt;
+        &lt;i class='icon icon-trash pad0r'&gt;&lt;/i&gt;Remove
+      &lt;/a&gt;               
+    &lt;/span&gt;             
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</pre>          
+          </div>
+        </div> 
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
             <h4>File input</h4>
             <p>
               Based on <a href='http://jasny.github.io/bootstrap/javascript/#Fileinput'>Jasny</a> control, <code>file input</code> lets users select a file to upload.
@@ -781,7 +825,7 @@
               </a>
 <pre class='prettyprint' id='tooltip-init'>
 <code class='language-javascript'>$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle='tooltip']').tooltip()
 })</code>
 </pre>
             </div><!--./contain-->               
@@ -812,7 +856,7 @@
           <header class='box-heading pad2'>
             <h4>Typeahead</h4>
             <p>
-              Restyled <a href="https://github.com/twitter/typeahead.js">Twitter Typeahead</a>. Use <code>typeahead</code> for autocomplete search functionality. See <a href='https://github.com/twitter/typeahead.js/blob/master/doc/bloodhound.md'>Bloodhound</a> documentation for advanced lookup options.
+              Restyled <a href='https://github.com/twitter/typeahead.js'>Twitter Typeahead</a>. Use <code>typeahead</code> for autocomplete search functionality. See <a href='https://github.com/twitter/typeahead.js/blob/master/doc/bloodhound.md'>Bloodhound</a> documentation for advanced lookup options.
             </p>
           </header>
           <div class='pad2'>

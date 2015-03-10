@@ -1,11 +1,11 @@
 {
   "name": "kabu",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A responsive front-end framework for faster and easier web development.",
   "homepage": "https://cb-kabu.herokuapp.com",
   "repository": {
     "type": "git",
-    "url": "https://cagit.careerbuilder.com/CorpAppsCB/styleguide.git"
+    "url": "https://cagit.careerbuilder.com/CorpAppsCB/kabu.git"
   },
   "keywords": [
     "kabu",

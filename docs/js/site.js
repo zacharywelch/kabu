@@ -72,6 +72,10 @@
 
     $('[data-toggle="tooltip"]').tooltip()
 
+    $('.datepicker').each(function(index, value) {
+      var picker = new Pikaday({ field: value });
+    });
+
     document.body.className += ' animate'
     window.prettyPrint && prettyPrint()
   });

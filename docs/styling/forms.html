@@ -187,8 +187,8 @@
                 <input id='input1' type='text' class='stretch' placeholder='.stretch' />
               </fieldset>
               <fieldset class='col-sm-6 pad0r'>
-                <label for='datepicker'>#datepicker</label>
-                <input id='datepicker' type='text' class='stretch'>
+                <label for='input3'>.col-sm-6</label>
+                <input id='input3' type='text' class='stretch'>
               </fieldset>
               <fieldset class='col-sm-6 pad0l'>
                 <label for='input3'>.col-sm-6</label>
@@ -231,6 +231,14 @@
                 <label for='input5'>What is love?</label>
                 <textarea id='input5' class='stretch'></textarea>
               </fieldset>              
+              <fieldset class='col-sm-6 pad0r'>
+                <label for='depart'>Depart</label>
+                <input id='depart' class='datepicker stretch' type='text'>
+              </fieldset>
+              <fieldset class='col-sm-6 pad0l'>
+                <label for='arrive'>Arrive</label>
+                <input id='arrive' class='datepicker stretch' type='text'>
+              </fieldset>
               <fieldset>
                 <label for='privacy-off'>Airplane Mode</label>
                 <div class='rounded-toggle inline'>
@@ -1109,17 +1117,5 @@
   <script src='../js/prettify.js'></script>
   <script src='../js/zeroclipboard/ZeroClipboard.min.js'></script>
   <script src='../js/site.js'></script>
-    <script>
-
-    var picker = new Pikaday(
-    {
-        field: document.getElementById('datepicker'),
-        firstDay: 1,
-        minDate: new Date('2000-01-01'),
-        maxDate: new Date('2020-12-31'),
-        yearRange: [2000,2020]
-    });
-
-    </script>
 </body>
 </html>

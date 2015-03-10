@@ -2,6 +2,7 @@
  * Pikaday
  *
  * Copyright © 2014 David Bushell | BSD & MIT license | https://github.com/dbushell/Pikaday
+ * Modified for Kabu
  */
 
 (function (root, factory)
@@ -237,7 +238,7 @@
             nextMonth     : 'Next Month',
             months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
             weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-            weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+            weekdaysShort : ['S','M','T','W','T','F','S']
         },
 
         // callback function
@@ -276,10 +277,10 @@
             arr.push('is-selected');
         }
         return '<td data-day="' + d + '" class="' + arr.join(' ') + '">' +
-                 '<button class="pika-button pika-day" type="button" ' +
+                 '<a href="#" class="block pika-button pika-day" ' +
                     'data-pika-year="' + y + '" data-pika-month="' + m + '" data-pika-day="' + d + '">' +
                         d +
-                 '</button>' +
+                 '</a>' +
                '</td>';
     },
 
@@ -307,7 +308,7 @@
             arr.push('<th></th>');
         }
         for (i = 0; i < 7; i++) {
-            arr.push('<th scope="col"><abbr title="' + renderDayName(opts, i) + '">' + renderDayName(opts, i, true) + '</abbr></th>');
+            arr.push('<th>' + renderDayName(opts, i, true) + '</th>');
         }
         return '<thead>' + (opts.isRTL ? arr.reverse() : arr).join('') + '</thead>';
     },
@@ -318,9 +319,10 @@
             opts = instance._o,
             isMinYear = year === opts.minYear,
             isMaxYear = year === opts.maxYear,
-            html = '<div class="pika-title">',
+            html = '<div class="pika-title pad2 round-top fill-blue dark keyline-bottom contain center">',
             monthHtml,
             yearHtml,
+            iconHtml = '',
             prev = true,
             next = true;
 
@@ -330,7 +332,7 @@
                 ((isMinYear && i < opts.minMonth) || (isMaxYear && i > opts.maxMonth) ? 'disabled' : '') + '>' +
                 opts.i18n.months[i] + '</option>');
         }
-        monthHtml = '<div class="pika-label">' + opts.i18n.months[month] + '<select class="pika-select pika-select-month">' + arr.join('') + '</select></div>';
+        monthHtml = '<h4 class="pika-label inline contain truncate">' + opts.i18n.months[month] + '<select class="pika-select pika-select-month inline pin-left">' + arr.join('') + '</select></h4>';
 
         if (isArray(opts.yearRange)) {
             i = opts.yearRange[0];
@@ -345,7 +347,7 @@
                 arr.push('<option value="' + i + '"' + (i === year ? ' selected': '') + '>' + (i) + '</option>');
             }
         }
-        yearHtml = '<div class="pika-label">' + year + opts.yearSuffix + '<select class="pika-select pika-select-year">' + arr.join('') + '</select></div>';
+        yearHtml = '<h4 class="pika-label inline contain truncate">&nbsp;' + year + opts.yearSuffix + '&nbsp;<select class="pika-select pika-select-year inline pin-left">' + arr.join('') + '</select></h4>';
 
         if (opts.showMonthAfterYear) {
             html += yearHtml + monthHtml;
@@ -362,18 +364,20 @@
         }
 
         if (c === 0) {
-            html += '<i class="pika icon icon-chevron-left pull-left' + (prev ? '' : ' is-disabled') + '">' + '</i>';
+            html += '<i class="icon icon-chevron-left pull-left pad0x small' + (prev ? '' : ' is-disabled') + '">' + '</i>';
         }
         if (c === (instance._o.numberOfMonths - 1) ) {
-            html += '<i class="pika icon icon-chevron-right pull-right' + (next ? '' : ' is-disabled') + '">' + '</i>';
+            html += '<i class="icon icon-chevron-right pull-right pad0x small' + (next ? '' : ' is-disabled') + '">' + '</i>';
         }
+
+        // html = iconHtml + html;
 
         return html += '</div>';
     },
 
     renderTable = function(opts, data)
     {
-        return '<table cellpadding="0" cellspacing="0" class="pika-table">' + renderHead(opts) + renderBody(data) + '</table>';
+        return '<div class="pad2"><table class="pika-table fixed small">' + renderHead(opts) + renderBody(data) + '</table></div>';
     },
 
 
@@ -438,7 +442,7 @@
             if (hasClass(target, 'pika-select-month')) {
                 self.gotoMonth(target.value);
             }
-            else if (hasClass(target, 'pika-select-year')) {
+            else if (hasClass(target, 'pika-selected-year')) {
                 self.gotoYear(target.value);
             }
         };
@@ -518,7 +522,7 @@
         };
 
         self.el = document.createElement('div');
-        self.el.className = 'pika-single' + (opts.isRTL ? ' is-rtl' : '');
+        self.el.className = 'pika-single keyline-all fill-white lift round contain clearfix' + (opts.isRTL ? ' is-rtl' : '');
 
         addEvent(self.el, 'mousedown', self._onMouseDown, true);
         addEvent(self.el, 'change', self._onChange);
@@ -557,7 +561,7 @@
 
         if (opts.bound) {
             this.hide();
-            self.el.className += ' is-bound lift';
+            self.el.className += ' is-bound';
             addEvent(opts.trigger, 'click', self._onInputClick);
             addEvent(opts.trigger, 'focus', self._onInputFocus);
             addEvent(opts.trigger, 'blur', self._onInputBlur);
@@ -836,7 +840,7 @@
             }
 
             for (var c = 0; c < opts.numberOfMonths; c++) {
-                html += '<div class="pad1">' + renderTitle(this, c, this.calendars[c].year, this.calendars[c].month, this.calendars[0].year) + this.render(this.calendars[c].year, this.calendars[c].month) + '</div>';
+                html += renderTitle(this, c, this.calendars[c].year, this.calendars[c].month, this.calendars[0].year) + this.render(this.calendars[c].year, this.calendars[c].month)
             }
 
             this.el.innerHTML = html;
@@ -870,7 +874,7 @@
             if (typeof field.getBoundingClientRect === 'function') {
                 clientRect = field.getBoundingClientRect();
                 left = clientRect.left + window.pageXOffset;
-                top = clientRect.bottom + window.pageYOffset;
+                top = clientRect.bottom + window.pageYOffset + 5;
             } else {
                 left = pEl.offsetLeft;
                 top  = pEl.offsetTop + pEl.offsetHeight;
@@ -895,7 +899,7 @@
                     top - height - field.offsetHeight > 0
                 )
             ) {
-                top = top - height - field.offsetHeight;
+                top = top - height - field.offsetHeight - 15;
             }
 
             this.el.style.cssText = [
@@ -959,7 +963,7 @@
         show: function()
         {
             if (!this._v) {
-                removeClass(this.el, 'is-hidden');
+                removeClass(this.el, 'hidden');
                 this._v = true;
                 this.draw();
                 if (this._o.bound) {
@@ -980,7 +984,7 @@
                     removeEvent(document, 'click', this._onClick);
                 }
                 this.el.style.cssText = '';
-                addClass(this.el, 'is-hidden');
+                addClass(this.el, 'hidden');
                 this._v = false;
                 if (v !== undefined && typeof this._o.onClose === 'function') {
                     this._o.onClose.call(this);
