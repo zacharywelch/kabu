@@ -1376,6 +1376,18 @@ q:before,
 q:after {
   content: '';
 }
+ul.bullet {
+  list-style: disc;
+  margin-left: 40px;
+}
+ol.bullet {
+  list-style: decimal;
+  margin-left: 40px;
+}
+ul.bullet li,
+ol.bullet li {
+  margin-bottom: 10px;
+}
 @media only screen and (max-width: 767px) {
   h1.fancy {
     font-size: 40px;
