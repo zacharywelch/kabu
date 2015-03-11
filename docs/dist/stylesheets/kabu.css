@@ -4229,7 +4229,7 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
  * Modified for Kabu
  */
 .pika-single {
-  z-index: 5;
+  z-index: 1000;
   width: 250px;
 }
 .pika-single.is-bound {
