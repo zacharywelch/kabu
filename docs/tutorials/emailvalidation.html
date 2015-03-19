@@ -8,6 +8,11 @@
   <link href='../css/prettify.css' rel='stylesheet' />
   <link href='../dist/stylesheets/kabu.min.css' rel='stylesheet' />
   <link href='../css/site.css' rel='stylesheet' />
+  <style>
+    @media (max-width:767px) {
+      .modal .pad4x { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
 </head>
 <body class='fill-light'>
   <div class='navbar navbar-fixed fill-white keyline-bottom col-sm-12 animate clearfix'>
@@ -214,6 +219,12 @@
               <fieldset>
                 <label for='username'>Username or email</label>
                 <input id='username' type='email' class='stretch'>
+                <div class='fill-darken0 dark pad1'>                  
+                  <p class='small'>
+                    <i class='icon icon-question-sign pad0r'></i>
+                    Did you mean <a href='#fakelink' class='animate'>zwelch154@gmail.com</a>?
+                  </p>
+                </div>
               </fieldset>
               <fieldset>
                 <label for='password'>Password</label>
