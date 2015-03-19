@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>  
+  <title>Email validation</title>
+  <link href='../css/prettify.css' rel='stylesheet' />
+  <link href='../dist/stylesheets/kabu.min.css' rel='stylesheet' />
+  <link href='../css/site.css' rel='stylesheet' />
+</head>
+<body class='fill-light'>
+  <div class='navbar navbar-fixed fill-white keyline-bottom col-sm-12 animate clearfix'>
+    <div class='container-fluid contain'>
+      <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+        <a class='logo pull-left text-left' href='/'>
+          <img src='/img/logo-icon.svg' width='40'><span class='pad1 inline'>Kabu</span>
+        </a>
+
+        <div class='primary row2'>
+          <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+            quiet round animate pull-right center'>
+            <i class='icon icon-list'></i>
+          </a>
+
+          <div class='visible-xs dropdown fill-denim dark keyline-all round animate'>
+            <div class='pad1 keyline-bottom'>
+              <a href='../styling/grid.html'>CSS and styling</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../animation.html'>Animation</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../writing-copy.html'>Writing Copy</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../branding.html'>Brand assets</a>
+            </div>
+            <div class='pad1 keyline-bottom'>
+              <a href='../tutorials/singlecolumn.html'>Tutorials</a>
+            </div>
+            <div class='pad1'>
+              <a href='../templates/scaffold.html'>Templates</a>
+            </div>
+          </div><!-- ./dropdown menu -->  
+        </div>
+      </nav>
+    </div>
+  </div><!-- ./navbar -->
+
+  <div>
+    
+    <div class='sidenav hidden-xs'>
+      <div class='container-fluid'>
+        <div class='col-sm-3 contain'>
+          <nav class='scroll-styled quiet-scroll'>
+            <div class='space-bottom1'>
+              <a href='../getting-started.html' class='strong block small'>Getting started</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>CSS and styling</strong>
+              <a href='../styling/grid.html' class='block small truncate'>
+                Grid system
+              </a>
+              <a href='../styling/typography.html' class='block small truncate'>
+                Typography
+              </a>
+              <a href='../styling/colors.html' class='block small truncate'>
+                Colors
+              </a>
+              <a href='../styling/tables.html' class='block small truncate'>
+                Tables
+              </a>
+              <a href='../styling/forms.html' class='block small truncate'>
+                Forms
+              </a>
+              <a href='../styling/buttons.html' class='block small truncate'>
+                Buttons
+              </a>
+              <a href='../styling/navigation.html' class='block small truncate'>
+                Navigation
+              </a>
+              <a href='../styling/components.html' class='block small truncate'>
+                Components
+              </a>
+              <a href='../styling/icons.html' class='block small truncate'>
+                Icons
+              </a>
+              <a href='../styling/mobile.html' class='block small truncate'>
+                Mobile
+              </a>
+              <a href='../styling/helpers.html' class='block small truncate'>
+                Helper classes
+              </a>
+            </div>
+
+            <div class='space-bottom1'>
+              <a href='../animation.html' class='strong block small'>Animation</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <a href='../writing-copy.html' class='strong block small'>Writing Copy</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <a href='../branding.html' class='strong block small'>Brand assets</a>
+            </div>
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>Tutorials</strong>
+              <a href='singlecolumn.html' class='block small truncate'>
+                Single column list
+              </a>
+              <a href='sectiongroup.html' class='block small truncate'>
+                Section groups
+              </a>
+              <a href='twocolumn.html' class='block small truncate'>
+                Two column layout
+              </a>              
+              <a href='emailvalidation.html' class='block small truncate active'>
+                Email validation w/ Mailgun
+              </a>
+            </div>
+
+            <div class='space-bottom1'>
+              <strong class='block quiet small'>Templates</strong>
+              <a href='/templates/scaffold.html' class='block small truncate'>
+                Scaffold
+              </a>
+              <a href='#fakelink' class='block small truncate'>
+                Lorem ipsum
+              </a>
+              <a href='#fakelink' class='block small truncate'>
+                Lorem ipsum
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>  
+    </div><!-- ./sidenav -->
+
+    <div class='container-fluid clearfix'>
+      <div class='pad2y contain col-sm-9 col-sm-offset-3'>
+        <nav class='pad2 visible-xs mobile-nav'>
+          <div class='fill-light small strong round pad1 clearfix'>
+            <div class='col-xs-6'>
+              <a class='space-bottom0 block' href='singlecolumn.html'>Single column list</a>
+            </div>
+
+            <div class='col-xs-6'>
+              <a class='space-bottom0 block active' href='sectiongroup.html'>Section groups</a>
+            </div>
+
+            <div class='col-xs-6'>
+              <a class='space-bottom0 block' href='twocolumn.html'>Two column layout</a>
+            </div>
+
+            <div class='col-xs-6'>
+              <a class='space-bottom0 block' href='emailvalidation.html'>Email validation w/ Mailgun</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class='box round contain fill-white pad2'>
+
+          <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
+            <div class='container-fluid contain'>
+              <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+                <a class='logo pad1y pull-left text-left' href='#fakelink'>Kabu</a>
+                <div class='primary small strong row2'>                    
+                  <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'>Sign in</a>
+                  <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signup'>Sign up</a>
+                  <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+                    quiet round animate pull-right center dark'>
+                    <i class='icon icon-list'></i>
+                  </a>
+                  <div class='dropdown fill-white keyline-all round animate'>
+                    <div class='visible-xs keyline-bottom pad1'>
+                      <a href='#fakelink' data-toggle='modal' data-target='#signin'>Sign in</a>
+                      <a href='#signup' data-toggle='modal' data-target='#signup'>Sign up</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+        </div>          
+
+        <div class='center quiet small pad1y'>
+          Made with <i class='icon icon-heart danger pulse'></i> in Norcross by the <a href='../team.html' class='strong'>UX Team</a>. 
+        </div>
+      </div>
+    </div><!-- ./content -->
+
+  </div>
+
+  <div id='signup' class='animate modal'>
+    <div class='modal-dialog'>
+      <form method='post' class='container-fluid'>
+        <div class='col-sm-6 col-xs-12 fill-blue modal-content contain'>
+          <div class='dark'>          
+            <a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'>
+              <i class='icon icon-remove'></i>
+            </a>
+            <header class='pad2y pad4x center'>
+              <h3 class='fancy'>Sign up for Kabu</h3>
+              <p class='quiet'>
+                Bacon ipsum dolor amet short ribs ribeye hamburger.
+              </p>
+            </header>
+            <div class='space-bottom2 pad4x'>
+              <fieldset>
+                <label for='username'>Username or email</label>
+                <input id='username' type='email' class='stretch'>
+              </fieldset>
+              <fieldset>
+                <label for='password'>Password</label>
+                <input id='password' type='password' class='stretch'>
+              </fieldset>
+              <p class='quiet small'>
+                You agree to the Kabu <a href='#fakelink'>Terms of Service</a> and <a href='#fakelink'>Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+          <div class='modal-actions fill-gray pad2y pad4x clearfix'>
+            <div class='col-xs-6'>
+              <a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'>Sign up</a>
+            </div>
+            <small class='col-xs-6 pad1y center'>
+              <a class='quiet' href='#fakelink'>Already a Kabu member?<i class='icon icon-arrow-right icon-sm'></i></a>
+            </small>
+          </div>
+        </div>      
+      </form>
+    </div>
+  </div>  
+  
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
+  <script src='../dist/javascripts/kabu.min.js'></script>
+  <script src='../js/prettify.js'></script>
+  <script src='../js/zeroclipboard/ZeroClipboard.min.js'></script>
+  <script src='../js/site.js'></script>
+</body>
+</html>
