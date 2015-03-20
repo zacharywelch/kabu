@@ -169,6 +169,69 @@
 
         <div class='box round contain fill-white pad2'>
 
+          <div class='prose'>
+            <p>
+              Inspired by Luke Wroblewski's <a href='https://www.youtube.com/watch?v=xAKnPtbfNfY&index=1&list=PLg-UKERBljNy2Yem3RJkYL1V70dpzkysC'>How to Reduce E-Mail Input Errors</a>, this tutorial looks at advanced email validation using <a href='http://www.mailgun.com/email-validation'>mailgun</a> and Kabu. Along the way we'll add several enhancements to improve the form process and validation feedback. 
+            </p>
+            <h4>1. Create a navbar</h4>
+            <p>
+              Start by creating a navbar. Let's add links to <strong>Sign in</strong> and <strong>Sign up</strong> and give it a <a href='/styling/colors.html'>background-fill</a> of <code>.fill-denim</code>. In our example we'll only focus on <em>Sign up</em>.
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            
+            <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
+              <div class='container-fluid contain'>
+                <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+                  <a class='logo pad1y pull-left text-left' href='#fakelink'>Kabu</a>
+                  <div class='primary small strong row2'>                    
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark'>Sign in</a>
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark'>Sign up</a>
+                    <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+                      quiet round animate pull-right center dark'>
+                      <i class='icon icon-list'></i>
+                    </a>
+                    <div class='dropdown fill-white keyline-all round animate'>
+                      <div class='visible-xs keyline-bottom pad1'>
+                        <a href='#fakelink'>Sign in</a>
+                        <a href='#fakelink'>Sign up</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step1'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step1'>
+&lt;div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'&gt;
+  &lt;div class='container-fluid contain'&gt;
+    &lt;nav class='col-sm-12 text-right pad1y contain clearfix noprint'&gt;
+      &lt;a class='logo pad1y pull-left text-left' href='#fakelink'&gt;Kabu&lt;/a&gt;
+      &lt;div class='primary small strong row2'&gt;                    
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark'&gt;Sign in&lt;/a&gt;
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark'&gt;Sign up&lt;/a&gt;
+        &lt;a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+          quiet round animate pull-right center dark'&gt;
+          &lt;i class='icon icon-list'&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class='dropdown fill-white keyline-all round animate'&gt;
+          &lt;div class='visible-xs keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink'&gt;Sign in&lt;/a&gt;
+            &lt;a href='#fakelink'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div> 
+
           <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
             <div class='container-fluid contain'>
               <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
@@ -218,12 +281,13 @@
             <div class='space-bottom2 pad4x'>
               <fieldset>
                 <label for='username'>Username or email</label>
-                <input id='username' type='email' class='stretch'>
-                <div class='fill-darken0 dark pad1'>                  
-                  <p class='small'>
-                    <i class='icon icon-question-sign pad0r'></i>
-                    Did you mean <a href='#fakelink' class='animate'>zwelch154@gmail.com</a>?
-                  </p>
+                <div class='contain'>
+                  <input id='username' type='email' autocorrect='off' autocapitalize='off' class='stretch mailgun'>
+                  <div class='pin-right pad1x pad0y'>
+                    <svg class='loader hidden'>
+                      <circle cx='15' cy='15' r='7'></circle>
+                    </svg>
+                  </div>
                 </div>
               </fieldset>
               <fieldset>
@@ -253,5 +317,50 @@
   <script src='../js/prettify.js'></script>
   <script src='../js/zeroclipboard/ZeroClipboard.min.js'></script>
   <script src='../js/site.js'></script>
+  <script src='../js/mailgun_validator.js'></script>
+  <script>
+    $(function() {
+      $('.mailgun').mailgun_validator({
+        api_key: 'pubkey-48f4dfdf2e81bd0628a6331123947d12',
+        in_progress: mailgun_progress,
+        success: mailgun_success
+      });
+
+      function mailgun_progress() {
+        $('.mailgun-feedback').remove();
+      }
+
+      function mailgun_success(data) {        
+        $field = $('.mailgun').closest('fieldset')
+        $field.append(mailgun_suggestion(data['is_valid'], data['did_you_mean']));
+      }
+
+      function mailgun_suggestion(is_valid, alternate) {
+        if (alternate) {
+          $suggestion = $('<a href="#fakelink" class="animate" tabindex=-1>')
+                        .text(alternate)
+                        .click(function(e) {
+                          suggestion = $(this).text();
+                          $('.mailgun').val(suggestion);
+                          $('.mailgun-feedback').remove();
+                        });
+
+          return  $('<div>')
+                  .addClass('mailgun-feedback fill-darken0 dark pad1 slideDown')
+                  .append(
+                    $('<p class="small">')
+                    .append('<i class="icon icon-question-sign pad0r">')
+                    .append(document.createTextNode('Did you mean '))
+                    .append($suggestion)
+                    .append(document.createTextNode('?'))
+                  );
+        } else if (!is_valid) {
+          return  $('<small class="mailgun-feedback error-message slideDown">')
+                  .append('<i class="icon icon-warning-sign pad0r">')
+                  .append('Email is invalid');
+        }
+      }
+    });
+  </script>
 </body>
 </html>

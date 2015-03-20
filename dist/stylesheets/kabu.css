@@ -2639,6 +2639,10 @@ form fieldset.with-error > label {
   background: #ee6565;
   color: #fff;
 }
+.dark .error-message {
+  background: #fff;
+  color: #ee6565;
+}
 /* Responsive
 ------------------------------------------------------- */
 @media (max-width: 767px) {
@@ -4049,13 +4053,13 @@ button.close {
   animation: rotate 2s linear infinite;
 }
 .spinner {
-  background: url('../img/spinner.gif');
+  background: url('../images/spinner.gif');
   display: inline-block;
   width: 30px;
   height: 30px;
 }
 .dark .spinner {
-  background: url('../img/spinner_dark.gif');
+  background: url('../images/spinner_dark.gif');
 }
 .loader circle {
   fill: none;
