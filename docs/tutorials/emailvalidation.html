@@ -178,6 +178,7 @@
               Start by creating a navbar. Let's add links to <strong>Sign in</strong> and <strong>Sign up</strong> and give it a <a href='/styling/colors.html'>background-fill</a> of <code>.fill-denim</code>. In our example we'll only focus on <em>Sign up</em>.
             </p>
           </div>
+          
           <div class='clearfix pad2y'>
             
             <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
@@ -203,6 +204,7 @@
             </div>
 
           </div>
+
           <div class='contain'>
             <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step1'>
               <i class='icon icon-clipboard pad0r'></i>Copy
@@ -232,27 +234,502 @@
 </pre>
           </div> 
 
-          <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
-            <div class='container-fluid contain'>
-              <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
-                <a class='logo pad1y pull-left text-left' href='#fakelink'>Kabu</a>
-                <div class='primary small strong row2'>                    
-                  <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'>Sign in</a>
-                  <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signup'>Sign up</a>
-                  <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
-                    quiet round animate pull-right center dark'>
-                    <i class='icon icon-list'></i>
-                  </a>
-                  <div class='dropdown fill-white keyline-all round animate'>
-                    <div class='visible-xs keyline-bottom pad1'>
-                      <a href='#fakelink' data-toggle='modal' data-target='#signin'>Sign in</a>
-                      <a href='#signup' data-toggle='modal' data-target='#signup'>Sign up</a>
+          <div class='prose'>
+            <h4>2. Create a Sign up modal</h4>
+            <p>
+              Instead of navigating away to a separate sign up page, we'll use a <a href='/styling/components.html'>modal</a> that lets users sign up from anywhere on the site. Let's connect our Sign up link to a modal.
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
+              <div class='container-fluid contain'>
+                <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+                  <a class='logo pad1y pull-left text-left' href='#fakelink'>Kabu</a>
+                  <div class='primary small strong row2'>                    
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'>Sign in</a>
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#step2-modal'>Sign up</a>
+                    <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+                      quiet round animate pull-right center dark'>
+                      <i class='icon icon-list'></i>
+                    </a>
+                    <div class='dropdown fill-white keyline-all round animate'>
+                      <div class='visible-xs keyline-bottom pad1'>
+                        <a href='#fakelink' data-toggle='modal' data-target='#signin'>Sign in</a>
+                        <a href='#step2-modal' data-toggle='modal' data-target='#step2-modal'>Sign up</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step2'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step2'>
+&lt;div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'&gt;
+  &lt;div class='container-fluid contain'&gt;
+    &lt;nav class='col-sm-12 text-right pad1y contain clearfix noprint'&gt;
+      &lt;a class='logo pad1y pull-left text-left' href='#fakelink'&gt;Kabu&lt;/a&gt;
+      &lt;div class='primary small strong row2'&gt;                    
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#step2-modal'&gt;Sign up&lt;/a&gt;
+        &lt;a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+          quiet round animate pull-right center dark'&gt;
+          &lt;i class='icon icon-list'&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class='dropdown fill-white keyline-all round animate'&gt;
+          &lt;div class='visible-xs keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+            &lt;a href='#step2-modal' data-toggle='modal' data-target='#step2-modal'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id='step2-modal' class='animate modal'&gt;
+  &lt;div class='modal-dialog'&gt;
+    &lt;form method='post' class='container-fluid'&gt;
+      &lt;div class='col-sm-6 col-xs-12 fill-white modal-content contain'&gt;
+        &lt;a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'&gt;
+          &lt;i class='icon icon-remove'&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class='pad2y pad4x center'&gt;
+          &lt;h3&gt;Heading goes here...&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class='space-bottom2 pad4x'&gt;
+          content goes here...
+        &lt;/div&gt;
+        &lt;div class='modal-actions fill-gray pad2y pad4x clearfix'&gt;
+          &lt;a href='#fakelink' class='btn btn-primary' data-dismiss='modal'&gt;.btn-primary&lt;/a&gt;
+          &lt;a href='#fakelink' class='btn btn-default' data-dismiss='modal'&gt;.btn-default&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;      
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>          
+
+          <div class='prose'>
+            <h4>3. Create a Sign up form</h4>
+            <p>
+              Now that we have our modal let's create a form for the Sign up process. We'll take several easy steps to make valid inputs easier on mobile devices like turning <code>autocapitalize</code> and <code>autocorrect</code> off. 
+            </p>
+            <p>
+              Our sign up process also needs to stand out so let's add a <code>.fill-blue</code> background and <code>.fancy</code> heading to our modal. Little touches like <em>Terms of Service</em> and <em>Privacy Policy</em> can make all the difference in creating a positive impression on users.
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
+              <div class='container-fluid contain'>
+                <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+                  <a class='logo pad1y pull-left text-left' href='#fakelink'>Kabu</a>
+                  <div class='primary small strong row2'>                    
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'>Sign in</a>
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#step3-modal'>Sign up</a>
+                    <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+                      quiet round animate pull-right center dark'>
+                      <i class='icon icon-list'></i>
+                    </a>
+                    <div class='dropdown fill-white keyline-all round animate'>
+                      <div class='visible-xs keyline-bottom pad1'>
+                        <a href='#fakelink' data-toggle='modal' data-target='#signin'>Sign in</a>
+                        <a href='#step3-modal' data-toggle='modal' data-target='#step3-modal'>Sign up</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step3'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step3'>
+&lt;div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'&gt;
+  &lt;div class='container-fluid contain'&gt;
+    &lt;nav class='col-sm-12 text-right pad1y contain clearfix noprint'&gt;
+      &lt;a class='logo pad1y pull-left text-left' href='#fakelink'&gt;Kabu&lt;/a&gt;
+      &lt;div class='primary small strong row2'&gt;                    
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#step3-modal'&gt;Sign up&lt;/a&gt;
+        &lt;a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+          quiet round animate pull-right center dark'&gt;
+          &lt;i class='icon icon-list'&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class='dropdown fill-white keyline-all round animate'&gt;
+          &lt;div class='visible-xs keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+            &lt;a href='#step3-modal' data-toggle='modal' data-target='#step3-modal'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id='step3-modal' class='animate modal'&gt;
+  &lt;div class='modal-dialog'&gt;
+    &lt;form method='post' class='container-fluid'&gt;
+      &lt;div class='col-sm-6 col-xs-12 fill-blue modal-content contain'&gt;
+        &lt;div class='dark'&gt;          
+          &lt;a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'&gt;
+            &lt;i class='icon icon-remove'&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;header class='pad2y pad4x center'&gt;
+            &lt;h3 class='fancy'&gt;Sign up for Kabu&lt;/h3&gt;
+            &lt;p class='quiet'&gt;
+              Bacon ipsum dolor amet short ribs ribeye hamburger.
+            &lt;/p&gt;
+          &lt;/header&gt;
+          &lt;div class='space-bottom2 pad4x'&gt;
+            &lt;fieldset&gt;
+              &lt;label for='step3-username'&gt;Username or email&lt;/label&gt;
+              &lt;input id='step3-username' type='email' autocorrect='off' autocapitalize='off' class='stretch'&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='step3-password'&gt;Password&lt;/label&gt;
+              &lt;input id='step3-password' type='password' class='stretch'&gt;
+            &lt;/fieldset&gt;
+            &lt;p class='quiet small'&gt;
+              You agree to the Kabu &lt;a href='#fakelink'&gt;Terms of Service&lt;/a&gt; and &lt;a href='#fakelink'&gt;Privacy Policy&lt;/a&gt;.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class='modal-actions fill-gray pad2y pad4x clearfix'&gt;
+          &lt;div class='col-xs-6'&gt;
+            &lt;a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;small class='col-xs-6 pad1y center'&gt;
+            &lt;a class='quiet' href='#fakelink'&gt;Already a Kabu member?&lt;i class='icon icon-arrow-right icon-sm'&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;      
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>          
+
+          <div class='prose'>
+            <h4>4. Creating feedback</h4>
+            <p>
+              One of the great features of Mailgun is that it returns suggestions in case the email was mistyped. We'll be integrating with Mailgun shortly but before that let's design what  feedback should look like when an email has suggestions. 
+            </p>
+            <p>
+              To associate feedback with the input it belongs to we'll position the suggestion below <code>Username</code> and <a href='/styling/colors.html'>darken</a> its background with a subtle <code>.fill-darken</code>. Later we'll add javascript so clicking the suggestion updates the <code>Username</code>.
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
+              <div class='container-fluid contain'>
+                <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+                  <a class='logo pad1y pull-left text-left' href='#fakelink'>Kabu</a>
+                  <div class='primary small strong row2'>                    
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'>Sign in</a>
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#step4-modal'>Sign up</a>
+                    <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+                      quiet round animate pull-right center dark'>
+                      <i class='icon icon-list'></i>
+                    </a>
+                    <div class='dropdown fill-white keyline-all round animate'>
+                      <div class='visible-xs keyline-bottom pad1'>
+                        <a href='#fakelink' data-toggle='modal' data-target='#signin'>Sign in</a>
+                        <a href='#step4-modal' data-toggle='modal' data-target='#step4-modal'>Sign up</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step4'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step4'>
+&lt;div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'&gt;
+  &lt;div class='container-fluid contain'&gt;
+    &lt;nav class='col-sm-12 text-right pad1y contain clearfix noprint'&gt;
+      &lt;a class='logo pad1y pull-left text-left' href='#fakelink'&gt;Kabu&lt;/a&gt;
+      &lt;div class='primary small strong row2'&gt;                    
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#step4-modal'&gt;Sign up&lt;/a&gt;
+        &lt;a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+          quiet round animate pull-right center dark'&gt;
+          &lt;i class='icon icon-list'&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class='dropdown fill-white keyline-all round animate'&gt;
+          &lt;div class='visible-xs keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+            &lt;a href='#step4-modal' data-toggle='modal' data-target='#step4-modal'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id='step4-modal' class='animate modal'&gt;
+  &lt;div class='modal-dialog'&gt;
+    &lt;form method='post' class='container-fluid'&gt;
+      &lt;div class='col-sm-6 col-xs-12 fill-blue modal-content contain'&gt;
+        &lt;div class='dark'&gt;          
+          &lt;a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'&gt;
+            &lt;i class='icon icon-remove'&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;header class='pad2y pad4x center'&gt;
+            &lt;h3 class='fancy'&gt;Sign up for Kabu&lt;/h3&gt;
+            &lt;p class='quiet'&gt;
+              Bacon ipsum dolor amet short ribs ribeye hamburger.
+            &lt;/p&gt;
+          &lt;/header&gt;
+          &lt;div class='space-bottom2 pad4x'&gt;
+            &lt;fieldset&gt;
+              &lt;label for='step4-username'&gt;Username or email&lt;/label&gt;
+              &lt;input id='step4-username' type='email' autocorrect='off' autocapitalize='off' class='stretch'&gt;
+              &lt;div class='fill-darken0 dark pad1'&gt;
+                &lt;p class='small'&gt;
+                  &lt;i class='icon icon-question-sign pad0r'&gt;&lt;/i&gt;
+                  Did you mean &lt;a href='#fakelink' class='animate' tabindex='-1'&gt;zwelch@gmail.com&lt;/a&gt;?
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='step4-password'&gt;Password&lt;/label&gt;
+              &lt;input id='step4-password' type='password' class='stretch'&gt;
+            &lt;/fieldset&gt;
+            &lt;p class='quiet small'&gt;
+              You agree to the Kabu &lt;a href='#fakelink'&gt;Terms of Service&lt;/a&gt; and &lt;a href='#fakelink'&gt;Privacy Policy&lt;/a&gt;.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class='modal-actions fill-gray pad2y pad4x clearfix'&gt;
+          &lt;div class='col-xs-6'&gt;
+            &lt;a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;small class='col-xs-6 pad1y center'&gt;
+            &lt;a class='quiet' href='#fakelink'&gt;Already a Kabu member?&lt;i class='icon icon-arrow-right icon-sm'&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;      
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>
+
+          <div class='prose'>
+            <h4>5. Integrating with Mailgun</h4>
+            <p>
+              Mailgun is a popular email service for developers and used at large companies such as GitHub, Lyft, Stripe and Heroku. We'll use their open-source <a href='https://github.com/mailgun/validator-demo'>jQuery plugin</a> to make our requests and provide feedback for users. See the <a href='http://www.mailgun.com/'>Mailgun</a> website to learn more about this powerful service.
+            </p>
+            <p>
+              Each request to mailgun returns a status of whether the email is <em>valid</em>. If the email is valid, mailgun may also return <em>suggestions</em> in case the user mistyped their email. We'll use our feedback markup from Step 4 and add it dynamically when there's a suggestion. Try typing in example@gnail.com and notice how clicking the suggestion updates <code>Username</code>
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
+              <div class='container-fluid contain'>
+                <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+                  <a class='logo pad1y pull-left text-left' href='#fakelink'>Kabu</a>
+                  <div class='primary small strong row2'>                    
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'>Sign in</a>
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#step5-modal'>Sign up</a>
+                    <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+                      quiet round animate pull-right center dark'>
+                      <i class='icon icon-list'></i>
+                    </a>
+                    <div class='dropdown fill-white keyline-all round animate'>
+                      <div class='visible-xs keyline-bottom pad1'>
+                        <a href='#fakelink' data-toggle='modal' data-target='#signin'>Sign in</a>
+                        <a href='#step5-modal' data-toggle='modal' data-target='#step5-modal'>Sign up</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step5'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step5'>
+&lt;div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'&gt;
+  &lt;div class='container-fluid contain'&gt;
+    &lt;nav class='col-sm-12 text-right pad1y contain clearfix noprint'&gt;
+      &lt;a class='logo pad1y pull-left text-left' href='#fakelink'&gt;Kabu&lt;/a&gt;
+      &lt;div class='primary small strong row2'&gt;                    
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#step5-modal'&gt;Sign up&lt;/a&gt;
+        &lt;a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+          quiet round animate pull-right center dark'&gt;
+          &lt;i class='icon icon-list'&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class='dropdown fill-white keyline-all round animate'&gt;
+          &lt;div class='visible-xs keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+            &lt;a href='#step5-modal' data-toggle='modal' data-target='#step5-modal'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id='step4-modal' class='animate modal'&gt;
+  &lt;div class='modal-dialog'&gt;
+    &lt;form method='post' class='container-fluid'&gt;
+      &lt;div class='col-sm-6 col-xs-12 fill-blue modal-content contain'&gt;
+        &lt;div class='dark'&gt;          
+          &lt;a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'&gt;
+            &lt;i class='icon icon-remove'&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;header class='pad2y pad4x center'&gt;
+            &lt;h3 class='fancy'&gt;Sign up for Kabu&lt;/h3&gt;
+            &lt;p class='quiet'&gt;
+              Bacon ipsum dolor amet short ribs ribeye hamburger.
+            &lt;/p&gt;
+          &lt;/header&gt;
+          &lt;div class='space-bottom2 pad4x'&gt;
+            &lt;fieldset&gt;
+              &lt;label for='step4-username'&gt;Username or email&lt;/label&gt;
+              &lt;input id='step4-username' type='email' autocorrect='off' autocapitalize='off' class='stretch'&gt;
+              &lt;div class='fill-darken0 dark pad1'&gt;
+                &lt;p class='small'&gt;
+                  &lt;i class='icon icon-question-sign pad0r'&gt;&lt;/i&gt;
+                  Did you mean &lt;a href='#fakelink' class='animate' tabindex='-1'&gt;zwelch@gmail.com&lt;/a&gt;?
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='step4-password'&gt;Password&lt;/label&gt;
+              &lt;input id='step4-password' type='password' class='stretch'&gt;
+            &lt;/fieldset&gt;
+            &lt;p class='quiet small'&gt;
+              You agree to the Kabu &lt;a href='#fakelink'&gt;Terms of Service&lt;/a&gt; and &lt;a href='#fakelink'&gt;Privacy Policy&lt;/a&gt;.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class='modal-actions fill-gray pad2y pad4x clearfix'&gt;
+          &lt;div class='col-xs-6'&gt;
+            &lt;a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;small class='col-xs-6 pad1y center'&gt;
+            &lt;a class='quiet' href='#fakelink'&gt;Already a Kabu member?&lt;i class='icon icon-arrow-right icon-sm'&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;      
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>          
+
+          <div class='prose'>
+            <h4>6. One final touch</h4>
+            <p>
+              Our feedback is getting displayed but it's a little jarring to have it suddenly appear and readjust the form. Let's use motion to build meaning into the feedback and communicate its spatial relationship with <code>Username</code>. We'll use <code>.slideDown</code> and have feedback transition from <code>Username</code>, making it clear how the two are associated and the form adjustment smoother. 
+            </p>
+          </div>
+          <div class='clearfix pad2y'>
+            <div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'>
+              <div class='container-fluid contain'>
+                <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+                  <a class='logo pad1y pull-left text-left' href='#fakelink'>Kabu</a>
+                  <div class='primary small strong row2'>                    
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'>Sign in</a>
+                    <a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signup'>Sign up</a>
+                    <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+                      quiet round animate pull-right center dark'>
+                      <i class='icon icon-list'></i>
+                    </a>
+                    <div class='dropdown fill-white keyline-all round animate'>
+                      <div class='visible-xs keyline-bottom pad1'>
+                        <a href='#fakelink' data-toggle='modal' data-target='#signin'>Sign in</a>
+                        <a href='#signup' data-toggle='modal' data-target='#signup'>Sign up</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-all hidden-xs hidden-sm js-clipboard' data-ref-id='step5'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint space-bottom' id='step5'>
+&lt;div class='navbar fill-denim keyline-bottom col-sm-12 animate clearfix round'&gt;
+  &lt;div class='container-fluid contain'&gt;
+    &lt;nav class='col-sm-12 text-right pad1y contain clearfix noprint'&gt;
+      &lt;a class='logo pad1y pull-left text-left' href='#fakelink'&gt;Kabu&lt;/a&gt;
+      &lt;div class='primary small strong row2'&gt;                    
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+        &lt;a href='#fakelink' class='hidden-xs quiet animate round pad1 truncate inline dark' data-toggle='modal' data-target='#signup'&gt;Sign up&lt;/a&gt;
+        &lt;a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+          quiet round animate pull-right center dark'&gt;
+          &lt;i class='icon icon-list'&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;div class='dropdown fill-white keyline-all round animate'&gt;
+          &lt;div class='visible-xs keyline-bottom pad1'&gt;
+            &lt;a href='#fakelink' data-toggle='modal' data-target='#signin'&gt;Sign in&lt;/a&gt;
+            &lt;a href='#signup' data-toggle='modal' data-target='#signup'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id='signup' class='animate modal'&gt;
+  &lt;div class='modal-dialog'&gt;
+    &lt;form method='post' class='container-fluid'&gt;
+      &lt;div class='col-sm-6 col-xs-12 fill-blue modal-content contain'&gt;
+        &lt;div class='dark'&gt;          
+          &lt;a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'&gt;
+            &lt;i class='icon icon-remove'&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;header class='pad2y pad4x center'&gt;
+            &lt;h3 class='fancy'&gt;Sign up for Kabu&lt;/h3&gt;
+            &lt;p class='quiet'&gt;
+              Bacon ipsum dolor amet short ribs ribeye hamburger.
+            &lt;/p&gt;
+          &lt;/header&gt;
+          &lt;div class='space-bottom2 pad4x'&gt;
+            &lt;fieldset&gt;
+              &lt;label for='username'&gt;Username or email&lt;/label&gt;
+              &lt;input id='username' type='email' autocorrect='off' autocapitalize='off' class='stretch mailgun'&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='password'&gt;Password&lt;/label&gt;
+              &lt;input id='password' type='password' class='stretch'&gt;
+            &lt;/fieldset&gt;
+            &lt;p class='quiet small'&gt;
+              You agree to the Kabu &lt;a href='#fakelink'&gt;Terms of Service&lt;/a&gt; and &lt;a href='#fakelink'&gt;Privacy Policy&lt;/a&gt;.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class='modal-actions fill-gray pad2y pad4x clearfix'&gt;
+          &lt;div class='col-xs-6'&gt;
+            &lt;a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'&gt;Sign up&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;small class='col-xs-6 pad1y center'&gt;
+            &lt;a class='quiet' href='#fakelink'&gt;Already a Kabu member?&lt;i class='icon icon-arrow-right icon-sm'&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;      
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>                 
 
         </div>          
 
@@ -263,6 +740,158 @@
     </div><!-- ./content -->
 
   </div>
+
+
+  <div id='step2-modal' class='animate modal'>
+    <div class='modal-dialog'>
+      <form method='post' class='container-fluid'>
+        <div class='col-sm-6 col-xs-12 fill-white modal-content contain'>
+          <a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'>
+            <i class='icon icon-remove'></i>
+          </a>
+          <div class='pad2y pad4x center'>
+            <h3>Heading goes here...</h3>
+          </div>
+          <div class='space-bottom2 pad4x'>
+            content goes here...
+          </div>
+          <div class='modal-actions fill-gray pad2y pad4x clearfix'>
+            <a href='#fakelink' class='btn btn-primary' data-dismiss='modal'>.btn-primary</a>
+            <a href='#fakelink' class='btn btn-default' data-dismiss='modal'>.btn-default</a>
+          </div>
+        </div>      
+      </form>
+    </div>
+  </div>  
+
+  <div id='step3-modal' class='animate modal'>
+    <div class='modal-dialog'>
+      <form method='post' class='container-fluid'>
+        <div class='col-sm-6 col-xs-12 fill-blue modal-content contain'>
+          <div class='dark'>          
+            <a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'>
+              <i class='icon icon-remove'></i>
+            </a>
+            <header class='pad2y pad4x center'>
+              <h3 class='fancy'>Sign up for Kabu</h3>
+              <p class='quiet'>
+                Bacon ipsum dolor amet short ribs ribeye hamburger.
+              </p>
+            </header>
+            <div class='space-bottom2 pad4x'>
+              <fieldset>
+                <label for='step3-username'>Username or email</label>
+                <input id='step3-username' type='email' autocorrect='off' autocapitalize='off' class='stretch'>
+              </fieldset>
+              <fieldset>
+                <label for='step3-password'>Password</label>
+                <input id='step3-password' type='password' class='stretch'>
+              </fieldset>
+              <p class='quiet small'>
+                You agree to the Kabu <a href='#fakelink'>Terms of Service</a> and <a href='#fakelink'>Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+          <div class='modal-actions fill-gray pad2y pad4x clearfix'>
+            <div class='col-xs-6'>
+              <a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'>Sign up</a>
+            </div>
+            <small class='col-xs-6 pad1y center'>
+              <a class='quiet' href='#fakelink'>Already a Kabu member?<i class='icon icon-arrow-right icon-sm'></i></a>
+            </small>
+          </div>
+        </div>      
+      </form>
+    </div>
+  </div>
+
+  <div id='step4-modal' class='animate modal'>
+    <div class='modal-dialog'>
+      <form method='post' class='container-fluid'>
+        <div class='col-sm-6 col-xs-12 fill-blue modal-content contain'>
+          <div class='dark'>          
+            <a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'>
+              <i class='icon icon-remove'></i>
+            </a>
+            <header class='pad2y pad4x center'>
+              <h3 class='fancy'>Sign up for Kabu</h3>
+              <p class='quiet'>
+                Bacon ipsum dolor amet short ribs ribeye hamburger.
+              </p>
+            </header>
+            <div class='space-bottom2 pad4x'>
+              <fieldset>
+                <label for='step4-username'>Username or email</label>
+                <input id='step4-username' type='email' autocorrect='off' autocapitalize='off' class='stretch'>
+                <div class='fill-darken0 dark pad1'>
+                  <p class='small'>
+                    <i class='icon icon-question-sign pad0r'></i>
+                    Did you mean <a href='#fakelink' class='animate' tabindex='-1'>zwelch@gmail.com</a>?
+                  </p>
+                </div>
+              </fieldset>
+              <fieldset>
+                <label for='step4-password'>Password</label>
+                <input id='step4-password' type='password' class='stretch'>
+              </fieldset>
+              <p class='quiet small'>
+                You agree to the Kabu <a href='#fakelink'>Terms of Service</a> and <a href='#fakelink'>Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+          <div class='modal-actions fill-gray pad2y pad4x clearfix'>
+            <div class='col-xs-6'>
+              <a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'>Sign up</a>
+            </div>
+            <small class='col-xs-6 pad1y center'>
+              <a class='quiet' href='#fakelink'>Already a Kabu member?<i class='icon icon-arrow-right icon-sm'></i></a>
+            </small>
+          </div>
+        </div>      
+      </form>
+    </div>
+  </div> 
+
+  <div id='step5-modal' class='animate modal'>
+    <div class='modal-dialog'>
+      <form method='post' class='container-fluid'>
+        <div class='col-sm-6 col-xs-12 fill-blue modal-content contain'>
+          <div class='dark'>          
+            <a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'>
+              <i class='icon icon-remove'></i>
+            </a>
+            <header class='pad2y pad4x center'>
+              <h3 class='fancy'>Sign up for Kabu</h3>
+              <p class='quiet'>
+                Bacon ipsum dolor amet short ribs ribeye hamburger.
+              </p>
+            </header>
+            <div class='space-bottom2 pad4x'>
+              <fieldset>
+                <label for='step5-username'>Username or email</label>
+                <input id='step5-username' type='email' autocorrect='off' autocapitalize='off' class='stretch mailgun'>
+              </fieldset>
+              <fieldset>
+                <label for='step5-password'>Password</label>
+                <input id='step5-password' type='password' class='stretch'>
+              </fieldset>
+              <p class='quiet small'>
+                You agree to the Kabu <a href='#fakelink'>Terms of Service</a> and <a href='#fakelink'>Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+          <div class='modal-actions fill-gray pad2y pad4x clearfix'>
+            <div class='col-xs-6'>
+              <a href='#fakelink' class='btn btn-primary btn-block' data-dismiss='modal'>Sign up</a>
+            </div>
+            <small class='col-xs-6 pad1y center'>
+              <a class='quiet' href='#fakelink'>Already a Kabu member?<i class='icon icon-arrow-right icon-sm'></i></a>
+            </small>
+          </div>
+        </div>      
+      </form>
+    </div>
+  </div>    
 
   <div id='signup' class='animate modal'>
     <div class='modal-dialog'>
@@ -281,14 +910,7 @@
             <div class='space-bottom2 pad4x'>
               <fieldset>
                 <label for='username'>Username or email</label>
-                <div class='contain'>
-                  <input id='username' type='email' autocorrect='off' autocapitalize='off' class='stretch mailgun'>
-                  <div class='pin-right pad1x pad0y'>
-                    <svg class='loader hidden'>
-                      <circle cx='15' cy='15' r='7'></circle>
-                    </svg>
-                  </div>
-                </div>
+                <input id='username' type='email' autocorrect='off' autocapitalize='off' class='stretch mailgun'>
               </fieldset>
               <fieldset>
                 <label for='password'>Password</label>
@@ -318,49 +940,7 @@
   <script src='../js/zeroclipboard/ZeroClipboard.min.js'></script>
   <script src='../js/site.js'></script>
   <script src='../js/mailgun_validator.js'></script>
-  <script>
-    $(function() {
-      $('.mailgun').mailgun_validator({
-        api_key: 'pubkey-48f4dfdf2e81bd0628a6331123947d12',
-        in_progress: mailgun_progress,
-        success: mailgun_success
-      });
-
-      function mailgun_progress() {
-        $('.mailgun-feedback').remove();
-      }
-
-      function mailgun_success(data) {        
-        $field = $('.mailgun').closest('fieldset')
-        $field.append(mailgun_suggestion(data['is_valid'], data['did_you_mean']));
-      }
-
-      function mailgun_suggestion(is_valid, alternate) {
-        if (alternate) {
-          $suggestion = $('<a href="#fakelink" class="animate" tabindex=-1>')
-                        .text(alternate)
-                        .click(function(e) {
-                          suggestion = $(this).text();
-                          $('.mailgun').val(suggestion);
-                          $('.mailgun-feedback').remove();
-                        });
-
-          return  $('<div>')
-                  .addClass('mailgun-feedback fill-darken0 dark pad1 slideDown')
-                  .append(
-                    $('<p class="small">')
-                    .append('<i class="icon icon-question-sign pad0r">')
-                    .append(document.createTextNode('Did you mean '))
-                    .append($suggestion)
-                    .append(document.createTextNode('?'))
-                  );
-        } else if (!is_valid) {
-          return  $('<small class="mailgun-feedback error-message slideDown">')
-                  .append('<i class="icon icon-warning-sign pad0r">')
-                  .append('Email is invalid');
-        }
-      }
-    });
-  </script>
+  <script src='../js/emailvalidation-step5.js'></script>
+  <script src='../js/emailvalidation.js'></script>  
 </body>
 </html>
