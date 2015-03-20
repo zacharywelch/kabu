@@ -171,7 +171,7 @@
 
           <div class='prose'>
             <p>
-              Inspired by Luke Wroblewski's <a href='https://www.youtube.com/watch?v=xAKnPtbfNfY&index=1&list=PLg-UKERBljNy2Yem3RJkYL1V70dpzkysC'>How to Reduce E-Mail Input Errors</a>, this tutorial looks at advanced email validation using <a href='http://www.mailgun.com/email-validation'>Mailgun</a> and Kabu. Along the way we'll add several enhancements to improve the form process and feedback. 
+              Inspired by Luke Wroblewski's <a href='https://www.youtube.com/watch?v=xAKnPtbfNfY&index=1&list=PLg-UKERBljNy2Yem3RJkYL1V70dpzkysC'>How to Reduce E-Mail Input Errors</a>, this tutorial applies advanced email validation using <a href='http://www.mailgun.com/email-validation'>Mailgun</a> and Kabu. Along the way we'll add several enhancements to improve the form process and feedback. 
             </p>
             <h4>1. Create a navbar</h4>
             <p>
@@ -317,10 +317,10 @@
           <div class='prose'>
             <h4>3. Create a Sign up form</h4>
             <p>
-              Now that we have our modal let's create a form for the Sign up process. We'll take several easy steps to make valid inputs easier on mobile devices like turning <code>autocapitalize</code> and <code>autocorrect</code> off. 
+              Now that we have our modal let's create a sign up form. We'll take several easy steps to make email inputs easier on mobile devices like turning <code>autocapitalize</code> and <code>autocorrect</code> off and setting input type to <code>email</code>. 
             </p>
             <p>
-              Our sign up process also needs to stand out so let's add a <code>.fill-blue</code> background and <code>.fancy</code> heading to our modal. Little touches like <em>Terms of Service</em> and <em>Privacy Policy</em> can make all the difference in creating a positive impression on users.
+              Our sign up form also needs to stand out so we'll apply a <code>.fill-blue</code> background and <code>.fancy</code> heading. Little touches like <em>Terms of Service</em> and <em>Privacy Policy</em> can make all the difference in creating a positive impression on users.
             </p>
           </div>
           <div class='clearfix pad2y'>
@@ -401,10 +401,10 @@
           <div class='prose'>
             <h4>4. Creating feedback</h4>
             <p>
-              One of the great features of Mailgun is that it returns suggestions in case the email was mistyped. We'll be integrating with Mailgun shortly but before that let's design what  feedback should look like when an email has suggestions. 
+              One of the great features of Mailgun is that it returns suggestions in case the email was mistyped. We'll be integrating with Mailgun shortly but before that let's design the look and feel of feedback when an email has suggestions. 
             </p>
             <p>
-              To associate feedback with the input it belongs to we'll position the suggestion below <code>Username</code> and <a href='/styling/colors.html'>darken</a> its background with a subtle <code>.fill-darken</code>. Later we'll add javascript so clicking the suggestion updates the <code>Username</code>.
+              To associate feedback with the input it belongs to we'll position the suggestion below <code>Username</code> and <a href='/styling/colors.html'>darken</a> its background with a subtle <code>.fill-darken</code>. Notice the use of <a href='/writing-copy.html'>plain english</a> in asking the user if they meant to use another email. Later we'll add javascript so clicking this suggestion updates the email.
             </p>
           </div>
           <div class='clearfix pad2y'>
@@ -491,10 +491,10 @@
           <div class='prose'>
             <h4>5. Integrating with Mailgun</h4>
             <p>
-              Mailgun is a popular email service for developers and used at large companies such as GitHub, Lyft, Stripe and Heroku. We'll use their open-source <a href='https://github.com/mailgun/validator-demo'>jQuery plugin</a> to make our requests and provide feedback for users. See the <a href='http://www.mailgun.com/'>Mailgun</a> website to learn more about this powerful service.
+              <a href='http://www.mailgun.com/'>Mailgun</a> is a powerful email service for developers and used at large companies such as GitHub, Lyft, Stripe and Heroku. We'll use their open-source <a href='https://github.com/mailgun/validator-demo'>jQuery plugin</a> to validate emails on our sign up form.
             </p>
             <p>
-              Each request to mailgun returns a status of whether the email is <em>valid</em>. If the email is valid, mailgun may also return <em>suggestions</em> in case the user mistyped their email. We'll use our feedback markup from Step 4 and add it dynamically when there's a suggestion. Try typing in <code>example@gnail.com</code> and notice how clicking the suggestion updates <code>Username</code>
+              Each request to mailgun returns an <code>is_valid</code> boolean. Mailgun also returns <em>suggestions</em> for mistyped emails. We'll use our feedback markup from Step 4 and add it dynamically when there's a suggestion. Try typing in example@<strong>gnail</strong>.com and observe how clicking the suggestion updates <code>Username</code>.
             </p>
           </div>
           <div class='clearfix pad2y'>
@@ -618,7 +618,7 @@ $(function() {
           <div class='prose'>
             <h4>6. One final touch</h4>
             <p>
-              Our feedback is getting displayed but it's a little jarring to have it suddenly appear and readjust the form. Let's use motion to build meaning into the feedback and communicate its spatial relationship with <code>Username</code>. We'll use <code>.slideDown</code> and have feedback transition from <code>Username</code>, making it clear how the two are associated and the form adjustment smoother. 
+              Our feedback is getting displayed but it's shown abruptly and feels unnatural. Let's use motion to build meaning and communicate the spatial relationship between our suggestion and <code>Username</code>. We'll add <code>.slideDown</code> and have our suggestion transition from behind the input, making it clear how the two are associated and communicating our intention.
             </p>
           </div>
           <div class='clearfix pad2y'>
