@@ -11,8 +11,7 @@
 
   &:hover { background: rgba(0,0,0,.15); }
 
-  input[type=radio] + label,
-  a {
+  input[type=radio] + label {
     font-family: @font-family-sans-serif;
     cursor:pointer;
     vertical-align: top;
@@ -20,9 +19,13 @@
     border-radius: 16px;
     padding: 3px 10px;
     font-size: 12px;
-    color: rgba(0,0,0,0.5);
     line-height: 20px;
     margin: 0;
+  }
+  
+  input[type=radio] + label,
+  a {
+    color: rgba(0,0,0,0.5);
   }
 
   input[type=radio] { display:none; }  

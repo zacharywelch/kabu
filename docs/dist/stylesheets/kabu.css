@@ -3949,8 +3949,7 @@ button.close {
 .rounded-toggle:hover {
   background: rgba(0, 0, 0, 0.15);
 }
-.rounded-toggle input[type=radio] + label,
-.rounded-toggle a {
+.rounded-toggle input[type=radio] + label {
   font-family: 'Open Sans', sans-serif;
   cursor: pointer;
   vertical-align: top;
@@ -3958,9 +3957,12 @@ button.close {
   border-radius: 16px;
   padding: 3px 10px;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.5);
   line-height: 20px;
   margin: 0;
+}
+.rounded-toggle input[type=radio] + label,
+.rounded-toggle a {
+  color: rgba(0, 0, 0, 0.5);
 }
 .rounded-toggle input[type=radio] {
   display: none;
