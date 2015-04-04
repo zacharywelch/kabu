@@ -3712,6 +3712,11 @@ fieldset.with-icon .icon.clear {
 .media-left {
   float: left;
 }
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+  width: 10000px;
+}
 /* Navbar requires markup that's different from Bootstrap
 ------------------------------------------------------- */
 .logo {
