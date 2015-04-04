@@ -1,12 +1,13 @@
-.media {
-  margin-top: 15px;
-  overflow: hidden;
-  &:first-child { margin-top: 0; }
-}
-.media-left, .media-body { display: table-cell; }
-.media-left { float: left; }
-.media-body {   
-  overflow: hidden;
+/* Media object
+------------------------------------------------------- */
+.media { margin-top: 15px; }
+.media:first-child { margin-top: 0; }
+
+.media, 
+.media-body { 
+  overflow: hidden; 
   zoom: 1;
-  width: 10000px;
 }
+
+.media .media-left { float: left; }
+.media .media-left img { display: block; }

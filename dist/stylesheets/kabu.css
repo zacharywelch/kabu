@@ -3698,24 +3698,24 @@ fieldset.with-icon .icon.clear {
     margin-bottom: 0px;
   }
 }
+/* Media object
+------------------------------------------------------- */
 .media {
   margin-top: 15px;
-  overflow: hidden;
 }
 .media:first-child {
   margin-top: 0;
 }
-.media-left,
-.media-body {
-  display: table-cell;
-}
-.media-left {
-  float: left;
-}
+.media,
 .media-body {
   overflow: hidden;
   zoom: 1;
-  width: 10000px;
+}
+.media .media-left {
+  float: left;
+}
+.media .media-left img {
+  display: block;
 }
 /* Navbar requires markup that's different from Bootstrap
 ------------------------------------------------------- */
