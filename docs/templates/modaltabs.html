@@ -8,6 +8,18 @@
   <link href='../css/prettify.css' rel='stylesheet' />
   <link href='../dist/stylesheets/kabu.min.css' rel='stylesheet' />
   <link href='../css/site.css' rel='stylesheet' />
+  <style>
+    @media (max-width:767px) { 
+      .text-right.tabs { 
+        text-align: left; 
+        padding-top: 10px; 
+      }
+
+      .text-right.tabs a:first-child { padding-left: 0; }
+
+      .modal .pad4x { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
 </head>
 <body class='fill-light'>
   <div class='navbar navbar-fixed fill-white keyline-bottom col-sm-12 animate clearfix'>
@@ -162,20 +174,143 @@
           <header class='box-heading pad2'>
             <h4>Modal tabs</h4>
             <p>
-              Bacon ipsum dolor amet spare ribs pork turkey, pig cow jerky ham. Salami pork turkey ribeye, filet mignon chuck ham chicken pork belly leberkas strip steak drumstick flank tail ground round. Hamburger sirloin tail biltong ground round tenderloin kielbasa fatback flank.              
+              Modals can be used to streamline updates. This template uses a variation of <a href='/styling/navigation.html'>tabs</a> to organize information and <a href='/animation.html'>horizontal sliding</a> for swift animation between panes.
             </p>
           </header>
           <div class='pad2'>
-            <a href='#fakelink' class='btn btn-primary' data-toggle='modal' data-target='#modal'>
-              Edit profile
-            </a>
+            <a href='#fakelink' class='btn btn-primary' data-toggle='modal' data-target='#modal'>Edit profile</a>
           </div>
           <div class='contain'>
-            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='players-index'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='modal-tabs'>
               <i class='icon icon-clipboard pad0r'></i>Copy
             </a>
-<pre class='prettyprint' id='players-index'>
-&lt;h2 class='space-bottom1'&gt;NBA Players&lt;/h2&gt;
+<pre class='prettyprint' id='modal-tabs'>
+&lt;a href='#fakelink' class='btn btn-primary' data-toggle='modal' data-target='#modal'&gt;Edit profile&lt;/a&gt;
+
+&lt;div id='modal' class='animate modal'&gt;
+  &lt;div class='modal-dialog'&gt;
+    &lt;form method='post' class='container-fluid'&gt;
+      &lt;div class='col-sm-6 col-xs-12 fill-white modal-content contain'&gt;
+        &lt;div class='pad2y pad4x keyline-bottom space-bottom clearfix'&gt;
+          &lt;div class='col-sm-3'&gt;
+            &lt;h4&gt;Profile&lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class='col-sm-9 text-right tabs'&gt;
+            &lt;a href='#account' class='small pad0 active' data-toggle='tab'&gt;
+              Account
+            &lt;/a&gt;
+            &lt;a href='#bio' class='small pad0' data-toggle='tab'&gt;
+              Bio
+            &lt;/a&gt;
+            &lt;a href='#location' class='small pad0' data-toggle='tab'&gt;
+              Location
+            &lt;/a&gt;
+            &lt;a href='#notifications' class='small pad0' data-toggle='tab'&gt;
+              Notifications
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class='space-bottom2 row10 tab-content sliding h'&gt;
+          
+          &lt;div class='tab-pane active animate pad4x' id='account'&gt;
+            &lt;fieldset&gt;
+              &lt;div class='media'&gt;
+                &lt;a class='media-left pad1r' href='#fakelink'&gt;
+                  &lt;img src='/img/regularshow.jpg' class='img-rounded' width='70'&gt;
+                &lt;/a&gt;
+                &lt;div class='media-body pad1l'&gt;
+                  &lt;a href='#fakelink' class='btn btn-default'&gt;Upload new picture&lt;/a&gt;
+                  &lt;p class='small quiet pad0y'&gt;
+                    You can also drag and drop a picture from your computer.
+                  &lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='name'&gt;Name&lt;/label&gt;
+              &lt;input id='name' type='text' class='stretch' value='Rigby'&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='email'&gt;Email&lt;/label&gt;
+              &lt;input id='email' type='text' class='stretch' value='rigby@gmail.com'&gt;
+            &lt;/fieldset&gt;
+          &lt;/div&gt;
+          
+          &lt;div class='tab-pane animate pad4x' id='bio'&gt;
+            &lt;fieldset&gt;
+              &lt;label for='website'&gt;Website&lt;/label&gt;
+              &lt;input id='website' type='text' class='stretch' value='rigby.com'&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='rigbybio'&gt;Bio&lt;/label&gt;
+              &lt;textarea id='rigbybio' class='stretch' rows='9'&gt;Rigby is the second of the two lead protagonists of Regular Show, along with his best friend Mordecai.
+              &lt;/textarea&gt;
+            &lt;/fieldset&gt;
+          &lt;/div&gt;
+
+          &lt;div class='tab-pane animate pad4x' id='location'&gt;
+            &lt;fieldset&gt;
+              &lt;label for='business'&gt;Business name&lt;/label&gt;
+              &lt;input id='business' type='text' class='stretch' value='Cartoon Network'&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='street'&gt;Address&lt;/label&gt;
+              &lt;input id='street' type='text' class='stretch'&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='csz'&gt;City, State, Zip&lt;/label&gt;
+              &lt;input id='csz' type='text' class='stretch'&gt;
+            &lt;/fieldset&gt;
+          &lt;/div&gt;            
+
+          &lt;div class='tab-pane animate pad4x' id='notifications'&gt;
+            &lt;p&gt;Email me when&lt;/p&gt;
+            &lt;fieldset&gt;
+              &lt;label for='following'&gt;Someone starts following me&lt;/label&gt;
+              &lt;div class='rounded-toggle inline'&gt;
+                &lt;input id='following-off' type='radio' name='following' value='off'&gt;
+                &lt;label for='following-off'&gt;Off&lt;/label&gt;
+                &lt;input id='following-on' type='radio' name='following' value='on' checked='checked'&gt;
+                &lt;label for='following-on'&gt;On&lt;/label&gt;
+              &lt;/div&gt;                  
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+              &lt;label for='comment'&gt;Someone likes my comment&lt;/label&gt;
+              &lt;div class='rounded-toggle inline'&gt;
+                &lt;input id='comment-off' type='radio' name='comment' value='off'&gt;
+                &lt;label for='comment-off'&gt;Off&lt;/label&gt;
+                &lt;input id='comment-on' type='radio' name='comment' value='on' checked='checked'&gt;
+                &lt;label for='comment-on'&gt;On&lt;/label&gt;
+              &lt;/div&gt;                  
+            &lt;/fieldset&gt;              
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class='modal-actions fill-gray pad2y pad4x text-right'&gt;
+          &lt;a href='#fakelink' class='btn btn-default' data-dismiss='modal'&gt;
+            &lt;i class='icon icon-remove pad0r'&gt;&lt;/i&gt;Cancel
+          &lt;/a&gt;
+          &lt;a href='#fakelink' class='btn btn-primary' data-dismiss='modal'&gt;
+            &lt;i class='icon icon-floppy-disk pad0r'&gt;&lt;/i&gt;Save
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;      
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+// responsive styles
+@media (max-width:767px) { 
+  .text-right.tabs { 
+    text-align: left; 
+    padding-top: 10px; 
+  }
+
+  .text-right.tabs a:first-child { padding-left: 0; }
+
+  .modal .pad4x { padding-left: 20px; padding-right: 20px; }
+}
 </pre>
           </div>
         </div>          
@@ -193,10 +328,10 @@
       <form method='post' class='container-fluid'>
         <div class='col-sm-6 col-xs-12 fill-white modal-content contain'>
           <div class='pad2y pad4x keyline-bottom space-bottom clearfix'>
-            <div class='col-xs-3'>
+            <div class='col-sm-3'>
               <h4>Profile</h4>
             </div>
-            <div class='col-xs-9 text-right tabs'>
+            <div class='col-sm-9 text-right tabs'>
               <a href='#account' class='small pad0 active' data-toggle='tab'>
                 Account
               </a>
