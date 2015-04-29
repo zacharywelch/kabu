@@ -8,6 +8,9 @@
   <link href='../css/prettify.css' rel='stylesheet' />
   <link href='../dist/stylesheets/kabu.min.css' rel='stylesheet' />
   <link href='../css/site.css' rel='stylesheet' />
+  <style>
+    .link-tabs a.active { color: rgba(0,0,0,0.75); }
+  </style>
 </head>
 <body class='fill-light'>
   <div class='navbar navbar-fixed fill-white keyline-bottom col-sm-12 animate clearfix'>
@@ -196,45 +199,98 @@
             <div class='col-sm-3'>
               <h4>Profile</h4>
             </div>
-            <div class='col-sm-9 text-right'>
-              <a href='#fakelink' class='small pad0 active' style='color: rgba(0,0,0,0.75);'>Account</a>
-              <a href='#fakelink' class='small pad0'>Bio</a>
-              <a href='#fakelink' class='small pad0'>Location</a>
-              <a href='#fakelink' class='small pad0'>Subscriptions</a>
+            <div class='col-sm-9 text-right link-tabs'>
+              <a href='#account' class='small pad0 active' data-toggle='tab'>
+                Account
+              </a>
+              <a href='#bio' class='small pad0' data-toggle='tab'>
+                Bio
+              </a>
+              <a href='#location' class='small pad0' data-toggle='tab'>
+                Location
+              </a>
+              <a href='#notifications' class='small pad0' data-toggle='tab'>
+                Notifications
+              </a>
             </div>
           </div>
           
-          <div class='pad4x clearfix hidden'>
-            <div class='btn-group tabs col-xs-12'>
-              <a href='#fakelink' class='btn btn-primary active col-sm-4' data-toggle='tab'>Home</a>
-              <a href='#fakelink' class='btn btn-primary col-sm-4' data-toggle='tab'>Profile</a>
-              <a href='#fakelink' class='btn btn-primary col-sm-4' data-toggle='tab'>Messages</a>
-            </div>
-          </div>
-          
-          <div class='space-bottom2 pad4x row9'>
-            <fieldset>
-              <div class='media'>
-                <a class='media-left pad1r' href='#fakelink'>
-                  <img src='/img/regularshow.jpg' class='img-rounded' width='70'>
-                </a>
-                <div class='media-body pad1l'>
-                  <a href='#fakelink' class='btn btn-default'>Upload new picture</a>
-                  <p class='small quiet pad0y'>
-                    You can also drag and drop a picture from your computer.
-                  </p>
+          <div class='space-bottom2 row9 tab-content sliding h'>
+            
+            <div class='tab-pane active animate pad4x' id='account'>
+              <fieldset>
+                <div class='media'>
+                  <a class='media-left pad1r' href='#fakelink'>
+                    <img src='/img/regularshow.jpg' class='img-rounded' width='70'>
+                  </a>
+                  <div class='media-body pad1l'>
+                    <a href='#fakelink' class='btn btn-default'>Upload new picture</a>
+                    <p class='small quiet pad0y'>
+                      You can also drag and drop a picture from your computer.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </fieldset>
-            <fieldset>
-              <label for='name'>Name</label>
-              <input id='name' type='text' class='stretch' value='Rigby'>
-            </fieldset>
-            <fieldset>
-              <label for='email'>Email</label>
-              <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
-            </fieldset> 
+              </fieldset>
+              <fieldset>
+                <label for='name'>Name</label>
+                <input id='name' type='text' class='stretch' value='Rigby'>
+              </fieldset>
+              <fieldset>
+                <label for='email'>Email</label>
+                <input id='email' type='text' class='stretch' value='rigby@gmail.com'>
+              </fieldset>
+            </div>
+            
+            <div class='tab-pane animate pad4x' id='bio'>
+              <fieldset>
+                <label for='website'>Website</label>
+                <input id='website' type='text' class='stretch' value='rigby.com'>
+              </fieldset>
+              <fieldset>
+                <label for='rigbybio'>Bio</label>
+                <textarea id='rigbybio' class='stretch' rows='9'>Rigby is the second of the two lead protagonists of Regular Show, along with his best friend Mordecai.
+                </textarea>
+              </fieldset>
+            </div>
+
+            <div class='tab-pane animate pad4x' id='location'>
+              <fieldset>
+                <label for='business'>Business name</label>
+                <input id='business' type='text' class='stretch' value='Cartoon Network'>
+              </fieldset>
+              <fieldset>
+                <label for='street'>Address</label>
+                <input id='street' type='text' class='stretch'>
+              </fieldset>
+              <fieldset>
+                <label for='csz'>City, State, Zip</label>
+                <input id='csz' type='text' class='stretch'>
+              </fieldset>
+            </div>            
+
+            <div class='tab-pane animate pad4x' id='notifications'>
+              <p>Email me when</p>
+              <fieldset>
+                <label for='following'>Someone starts following me</label>
+                <div class='rounded-toggle inline'>
+                  <input id='following-off' type='radio' name='following' value='off'>
+                  <label for='following-off'>Off</label>
+                  <input id='following-on' type='radio' name='following' value='on' checked='checked'>
+                  <label for='following-on'>On</label>
+                </div>                  
+              </fieldset>
+              <fieldset>
+                <label for='comment'>Someone likes my comment</label>
+                <div class='rounded-toggle inline'>
+                  <input id='comment-off' type='radio' name='comment' value='off'>
+                  <label for='comment-off'>Off</label>
+                  <input id='comment-on' type='radio' name='comment' value='on' checked='checked'>
+                  <label for='comment-on'>On</label>
+                </div>                  
+              </fieldset>              
+            </div>
           </div>
+
           <div class='modal-actions fill-gray pad2y pad4x text-right'>
             <a href='#fakelink' class='btn btn-default' data-dismiss='modal'>Cancel</a>
             <a href='#fakelink' class='btn btn-primary' data-dismiss='modal'>Save</a>
@@ -245,7 +301,7 @@
   </div>
   
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
-  <script src='../dist/javascripts/kabu.min.js'></script>
+  <script src='../dist/javascripts/kabu.js'></script>
   <script src='../js/prettify.js'></script>
   <script src='../js/zeroclipboard/ZeroClipboard.min.js'></script>
   <script src='../js/site.js'></script>
