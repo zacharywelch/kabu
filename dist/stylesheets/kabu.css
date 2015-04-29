@@ -3665,6 +3665,9 @@ fieldset.with-icon .icon.clear {
 .tabs > .btn:hover {
   background: rgba(0, 0, 0, 0.05);
 }
+.tabs > a:not(.btn).active {
+  color: rgba(0, 0, 0, 0.75);
+}
 .dark.tabs > .btn,
 .dark .tabs > .btn {
   border-color: rgba(255, 255, 255, 0.25);

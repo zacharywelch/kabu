@@ -8,9 +8,6 @@
   <link href='../css/prettify.css' rel='stylesheet' />
   <link href='../dist/stylesheets/kabu.min.css' rel='stylesheet' />
   <link href='../css/site.css' rel='stylesheet' />
-  <style>
-    .link-tabs a.active { color: rgba(0,0,0,0.75); }
-  </style>
 </head>
 <body class='fill-light'>
   <div class='navbar navbar-fixed fill-white keyline-bottom col-sm-12 animate clearfix'>
@@ -199,7 +196,7 @@
             <div class='col-sm-3'>
               <h4>Profile</h4>
             </div>
-            <div class='col-sm-9 text-right link-tabs'>
+            <div class='col-sm-9 text-right tabs'>
               <a href='#account' class='small pad0 active' data-toggle='tab'>
                 Account
               </a>
@@ -292,8 +289,12 @@
           </div>
 
           <div class='modal-actions fill-gray pad2y pad4x text-right'>
-            <a href='#fakelink' class='btn btn-default' data-dismiss='modal'>Cancel</a>
-            <a href='#fakelink' class='btn btn-primary' data-dismiss='modal'>Save</a>
+            <a href='#fakelink' class='btn btn-default' data-dismiss='modal'>
+              <i class='icon icon-remove pad0r'></i>Cancel
+            </a>
+            <a href='#fakelink' class='btn btn-primary' data-dismiss='modal'>
+              <i class='icon icon-floppy-disk pad0r'></i>Save
+            </a>
           </div>
         </div>      
       </form>
