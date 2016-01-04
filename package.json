@@ -2,6 +2,7 @@
   "name": "kabu",
   "version": "1.2.5",
   "description": "A responsive front-end framework for faster and easier web development.",
+  "author": "CareerBuilder UX",
   "homepage": "https://cb-kabu.herokuapp.com",
   "repository": {
     "type": "git",
@@ -13,19 +14,16 @@
     "design",
     "ui"
   ],
-  "author": "CareerBuilder UX",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE"
-  },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-less": "~0.12.0",
-    "grunt-contrib-concat": "~0.5.0",
-    "grunt-contrib-coffee": "~0.12.0",
-    "grunt-contrib-copy": "~0.7.0",
     "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-coffee": "~0.12.0",
+    "grunt-contrib-compress": "~0.13.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-copy": "~0.7.0",
+    "grunt-contrib-less": "~0.12.0",
     "grunt-contrib-uglify": "~0.6.0",
-    "grunt-contrib-compress": "~0.13.0"
-  }
+    "grunt-multi-dest": "^1.0.0"
+  },
+  "license": "MIT"
 }
