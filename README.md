@@ -18,7 +18,7 @@ cd kabu
 
 ## Getting Started
 
-To view kabu locally you'll need a quick web server running. Python's `SimpleHTTPServer` is super easy to setup.
+To view kabu locally any http server will do. Python's `SimpleHTTPServer` is super easy to setup.
 
 ---
 
@@ -35,3 +35,7 @@ python -m SimpleHTTPServer 8888
 ```
 
 Visit localhost:8888/home.html
+
+## Contributing
+
+Design is a team sport. We welcome [contributions](CONTRIBUTING.md).
