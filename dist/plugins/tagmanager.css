@@ -1,0 +1,38 @@
+.tm-tag {
+  margin-right: 5px;
+}
+.tm-tag:first-child {
+  margin-right: 0px;
+}
+.tm-tag .close {
+  font-size: medium;
+  margin-left: 5px;
+}
+.tm-tag.tm-tag-warning {
+  color: #404040;
+  background-color: #f1f075;
+}
+.tm-tag.tm-tag-error {
+  background-color: #ee6565;
+}
+.tm-tag.tm-tag-success {
+  background-color: #56b881;
+}
+.tm-tag.tm-tag-info {
+  color: #404040;
+  background-color: #f0f8fc;
+}
+.tm-tag.tm-tag-inverse {
+  background-color: #404040;
+}
+.tm-tag.tm-tag-plain {
+  color: #404040;
+  background-color: #eeeeee;
+}
+.tm-tag.tm-tag-disabled {
+  color: #7f7f7f;
+  background-color: #eeeeee;
+}
+.tm-tag.tm-tag-disabled .close {
+  display: none;
+}

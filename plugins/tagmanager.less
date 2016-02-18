@@ -1,0 +1,55 @@
+
+@import "./less/variables";
+
+// Base tag class
+// -------------------------
+
+.tm-tag {
+  margin-right: 5px;
+  &:first-child{
+    margin-right: 0px;
+  }
+
+  .close{
+    font-size: medium;
+    margin-left: 5px;
+  }
+
+  // Contextual Colors
+  // -------------------------
+
+  &.tm-tag-warning {
+    color: @text-color;
+    background-color: @fill-yellow;
+  }
+  &.tm-tag-error {
+    background-color: @fill-red;
+  }
+  &.tm-tag-success {
+    background-color: @fill-green;
+  }
+  &.tm-tag-info {
+    color: @text-color;
+    background-color: @fill-light-blue;
+  }
+  &.tm-tag-inverse {
+    background-color: @fill-dark;
+  }
+
+
+  // Miscellaneous Styles
+  // -------------------------
+
+  &.tm-tag-plain {
+    color: @text-color;
+    background-color: @fill-gray;
+  }
+
+  &.tm-tag-disabled {
+    color: @text-muted;
+    background-color: @fill-gray;
+    .close {
+      display: none;
+    }
+  }
+}
