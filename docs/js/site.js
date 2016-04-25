@@ -80,5 +80,3 @@
     window.prettyPrint && prettyPrint()
   });
 }).call(this);
-
-jQuery(".tm-input").tagsManager();

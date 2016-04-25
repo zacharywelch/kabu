@@ -7,7 +7,6 @@
   <title>Components</title>
   <link href='../css/prettify.css' rel='stylesheet' />
   <link href='../dist/stylesheets/kabu.min.css' rel='stylesheet' />
-  <link href='../dist/plugins/tagmanager.min.css' rel='stylesheet' />
   <link href='../css/site.css' rel='stylesheet' />
   <style>
     .hovercard { width: 250px; }
@@ -61,9 +60,6 @@
       <div class='container-fluid'>
         <div class='col-sm-3 contain'>
           <nav class='scroll-styled quiet-scroll'>
-          <div class='space-bottom1'>
-          <!-- <input type="text" class="fill-darken0 stretch st-default-search-input"> -->
-          </div>
             <div class='space-bottom1'>
               <a href='../getting-started.html' class='strong block small'>Getting started</a>
             </div>
@@ -847,48 +843,7 @@ $('.typeahead').typeahead({
 });
 </pre>
           </div>
-        </div>
-
-        <div class='box round contain fill-white'>
-        <a href='../download/plugins.zip' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom  hidden-xs hidden-sm'>
-              <i class='icon icon-download pad0r'></i>Download
-            </a>
-          <header class='box-heading pad2'>
-            <h4>Multi-select</h4>
-            <p>
-              Restyled <a href='https://github.com/max-favilli/tagmanager'>Tagmanager Plugin</a>.  Add <code>.tm-input-[context]</code> to the input for semantic color options. See <a href='https://maxfavilli.com/jquery-tag-manager'>Tagmanager</a> documentation for more advanced options. Works well with Kabu Twitter Typeahead.
-            </p>
-          </header>
-          <div class='pad2'>
-            <form>
-                <fieldset class='pad1r'>
-                  <label>Names</label>
-                  <span class="tm-tag tm-tag-success tm-tag-small dark pad0 small round inline space-bottom0" id="bmrDv_1"><span>.tm-input-success</span></span>
-                  <span class="tm-tag tm-tag-warning tm-tag-small dark pad0 small round inline space-bottom0" id="bmrDv_1"><span>.tm-input-warning</span></span>
-                  <span class="tm-tag tm-tag-error tm-tag-small dark pad0 small round inline space-bottom0" id="bmrDv_1"><span>.tm-input-error</span></span>
-                  <span class="tm-tag tm-tag-info tm-tag-small dark pad0 small round inline space-bottom0" id="bmrDv_1"><span>.tm-input-info</span></span>
-                  <span class="tm-tag tm-tag-plain tm-tag-small dark pad0 small round inline space-bottom0" id="bmrDv_1"><span>.tm-input-plain</span></span>
-                  <span class="tm-tag tm-tag-disabled tm-tag-small dark pad0 small round inline space-bottom0" id="bmrDv_1"><span>.tm-input-disabled</span></span>
-                  <input type='text' id='permission-tag' placeholder='Type and hit enter to add new tag'class='stretch tm-input tm-input-info tm-input-small' value=''/>
-                </fieldset>
-              </form>
-          </div>
-          <div class='contain'>
-            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='typeaheads'>
-              <i class='icon icon-clipboard pad0r'></i>Copy
-            </a>
-<pre class='prettyprint' id='typeaheads'>
-&lt;form&gt;
-  &lt;fieldset class='pad1r'&gt;
-    &lt;label&gt;Names</label>
-    &lt;input type='text' id='name-tag' placeholder='Type and hit enter to add tag'class='stretch tm-input tm-input-info tm-input-small' value=''/&gt;
-  &lt;/fieldset&gt; 
-&lt;/form&gt;
-
-$(".tm-input").tagsManager();
-</pre>
-          </div>
-        </div>         
+        </div>          
 
         <div class='center quiet small pad1y'>
           Made with <i class='icon icon-heart danger pulse'></i> in Norcross by the <a href='../team.html' class='strong'>UX Team</a>. 
@@ -932,10 +887,9 @@ $(".tm-input").tagsManager();
       </form>
     </div>
   </div>
-</script>
+
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
   <script src='../dist/javascripts/kabu.min.js'></script>
-  <script src='../dist/plugins/tagmanager.min.js'></script>
   <script src='../js/prettify.js'></script>
   <script src='../js/zeroclipboard/ZeroClipboard.min.js'></script>
   <script src='../js/site.js'></script>

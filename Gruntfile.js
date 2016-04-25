@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       },
       images: {
         src: 'images/*',
-        dest: 'dist/'
+        dest: 'dist/'        
       },
       docs: {
         src: 'dist/**/*',
@@ -23,28 +23,21 @@ module.exports = function(grunt) {
       download: {
         src: 'archive/<%= pkg.name %>-<%= pkg.version %>-dist.zip',
         dest: 'docs/download/<%= pkg.name %>.zip'
-      },
-      plugin: {
-        nonull: true,
-        src: 'archive/plugins.zip',
-        dest: 'docs/download/plugins.zip'
       }
-    },
+    },    
     less: {
       development: {
         files: {
-          "dist/stylesheets/<%= pkg.name %>.css": "less/<%= pkg.name %>.less",
-          "dist/plugins/tagmanager.css": "plugins/tagmanager.less"
-        },
+          "dist/stylesheets/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
+        }
       },
       production: {
         options: {
           cleancss: true
         },
         files: {
-          "dist/stylesheets/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less",
-          "dist/plugins/tagmanager.min.css": "plugins/tagmanager.less"
-        },
+          "dist/stylesheets/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less"
+        }
       }
     },
     coffee: {
@@ -62,25 +55,19 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: 'javascripts/**/*.js',
-        dest: "dist/javascripts/<%= pkg.name %>.js",
-      },
-      plugins: {
-        src: 'plugins/tagmanager.js',
-        dest: 'dist/plugins/tagmanager.js',
-      },
+        src: ['javascripts/**/*.js'],
+        dest: 'dist/javascripts/<%= pkg.name %>.js'
+      }
     },
     uglify: {
       options: {
         mangle: false,
-        banner: "/*! <%= pkg.name %> <%= grunt.template.today('dd-mm-yyyy') %> */\n"
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
       },
       dist: {
         files: {
-          "dist/javascripts/<%= pkg.name %>.min.js": "<%= concat.dist.dest %>",
-          "dist/plugins/tagmanager.min.js": "plugins/tagmanager.js"
-
-        },
+          'dist/javascripts/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+        }
       }
     },
     compress: {
@@ -95,24 +82,8 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'dist/',
-            src: ['**','!plugins/**'],
+            src: ['**'],
             dest: '<%= pkg.name %>-<%= pkg.version %>-dist'
-          }
-        ]
-      },
-      plugins: {
-        options: {
-          archive: 'archive/plugins.zip',
-          mode: 'zip',
-          level: 9,
-          pretty: true
-        },
-        files: [
-          {
-            expand: true,
-            cwd: 'dist/',
-            src: ['plugins/**'],
-            dest: 'plugins'
           }
         ]
       }
@@ -121,14 +92,13 @@ module.exports = function(grunt) {
 
   // Load the plugin that provides the "less" task.
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-concat');  
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compress');
-  grunt.loadNpmTasks('grunt-multi-dest');
-
+  
   // CSS task
   grunt.registerTask('css', ['less']);
 
@@ -139,7 +109,5 @@ module.exports = function(grunt) {
   grunt.registerTask('copy:main', ['copy:fonts', 'copy:images', 'copy:docs']);
 
   // Default task
-  grunt.registerTask('default', ['clean', 'css', 'js', 'copy:main', 'compress', 'copy:download', 'copy:plugin']);
+  grunt.registerTask('default', ['clean', 'css', 'js', 'copy:main', 'compress', 'copy:download']);
 };
-
-//Add production and development into the download zip
