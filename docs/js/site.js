@@ -70,6 +70,10 @@
       source: substringMatcher(states)
     });
 
+    $('#tags-green').tagsinput({
+      tagClass: 'fill-green'
+    });
+
     $('[data-toggle="tooltip"]').tooltip()
 
     $('.datepicker').each(function(index, value) {

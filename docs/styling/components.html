@@ -843,7 +843,39 @@ $('.typeahead').typeahead({
 });
 </pre>
           </div>
-        </div>          
+        </div>  
+
+        <div class='box round contain fill-white'>
+          <header class='box-heading pad2'>
+            <h4>Tags</h4>
+            <p>
+              Based on <a href='http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/'>Bootstrap Tags Input</a>, <code>tags</code> lets users add or remove tags and validate existing ones. Use <a href='http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/#options'><code>.tagClass</code></a> to assign a different <a href='colors.html'>fill</a> color.
+            </p>
+          </header>
+          <figure class='pad2'>
+            <input class="tagsinput" data-role="tagsinput" value="Clean, Fresh, Modern, Unique" />
+          </figure>
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small'>
+              .fill-green
+            </div>            
+            <input id="tags-green" class="tagsinput" value="Clean, Fresh, Modern, Unique" />
+          </figure>          
+          <div class='contain'>
+            <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='tags'>
+              <i class='icon icon-clipboard pad0r'></i>Copy
+            </a>          
+<pre class='prettyprint' id='tags'>
+&lt;input class=&quot;tagsinput&quot; data-role=&quot;tagsinput&quot; value=&quot;Clean, Fresh, Modern, Unique&quot; /&gt;
+
+&lt;input id=&quot;tags-green&quot; class=&quot;tagsinput&quot; value=&quot;Clean, Fresh, Modern, Unique&quot; /&gt;
+
+$(&#39;#tags-green&#39;).tagsinput({
+  tagClass: &#39;fill-green&#39;
+});
+</pre>
+          </div>
+        </div>
 
         <div class='center quiet small pad1y'>
           Made with <i class='icon icon-heart danger pulse'></i> in Norcross by the <a href='../team.html' class='strong'>UX Team</a>. 

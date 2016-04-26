@@ -70,7 +70,8 @@ select,
   .box-shadow(none);
   .transition(border-color .05s);
 
-  &:focus {
+  &:focus,
+  &.focus {
     outline: thin dotted\8; /* ie8 below */
     border-color: rgba(0,0,0,0.25);
     color: @text-color;
