@@ -74,6 +74,15 @@
       tagClass: 'fill-green'
     });
 
+    $('#tags-typeahead').tagsinput({
+      typeaheadjs: {
+        name: 'states',
+        displayKey: 'value',
+        valueKey: 'value',
+        source: substringMatcher(states)
+      }      
+    });
+
     $('[data-toggle="tooltip"]').tooltip()
 
     $('.datepicker').each(function(index, value) {

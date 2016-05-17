@@ -861,6 +861,14 @@ $('.typeahead').typeahead({
             </div>            
             <input id="tags-green" class="tagsinput" value="Clean, Fresh, Modern, Unique" />
           </figure>          
+          <figure class='pad2 contain'>
+            <div class='pin-topright pad0y pad1x fill-darken3 dark small' style='z-index: 1'>
+              typeahead
+            </div>            
+            <fieldset class='contain'>
+              <input id='tags-typeahead' type='text' class='stretch tagsinput' placeholder='States in USA' />
+            </fieldset>
+          </figure>
           <div class='contain'>
             <a href='#fakelink' class='small strong pad0y pad1x pin-topright fill-white keyline-left keyline-bottom keyline-top hidden-xs hidden-sm js-clipboard' data-ref-id='tags'>
               <i class='icon icon-clipboard pad0r'></i>Copy
@@ -870,8 +878,21 @@ $('.typeahead').typeahead({
 
 &lt;input id=&quot;tags-green&quot; class=&quot;tagsinput&quot; value=&quot;Clean, Fresh, Modern, Unique&quot; /&gt;
 
+&lt;fieldset class=&#39;contain&#39;&gt;
+  &lt;input id=&#39;tags-typeahead&#39; type=&#39;text&#39; class=&#39;stretch tagsinput&#39; placeholder=&#39;States in USA&#39; /&gt;
+&lt;/fieldset&gt;
+
 $(&#39;#tags-green&#39;).tagsinput({
   tagClass: &#39;fill-green&#39;
+});
+
+$(&#39;#tags-typeahead&#39;).tagsinput({
+  typeaheadjs: {
+    name: &#39;states&#39;,
+    displayKey: &#39;value&#39;,
+    valueKey: &#39;value&#39;,
+    source: substringMatcher(states)
+  }      
 });
 </pre>
           </div>
