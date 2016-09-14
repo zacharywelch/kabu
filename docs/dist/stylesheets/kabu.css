@@ -1081,13 +1081,6 @@ hr {
 ------------------------------------------------------- */
 /* @FontFace */
 @font-face {
-  font-family: 'Lobster';
-  src: url('../fonts/lobster/lobster_1.3-webfont.eot');
-  src: url('../fonts/lobster/lobster_1.3-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lobster/lobster_1.3-webfont.woff') format('woff'), url('../fonts/lobster/lobster_1.3-webfont.ttf') format('truetype'), url('../fonts/lobster/lobster_1.3-webfont.svg#lobster_1.3regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Bitter Bold';
   src: url('../fonts/bitter/bitter-bold.eot');
   src: url('../fonts/bitter/bitter-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bitter/bitter-bold.woff') format('woff'), url('../fonts/bitter/bitter-bold.ttf') format('truetype'), url('../fonts/bitter/bitter-bold.svg#bitter_bold') format('svg');
@@ -1096,13 +1089,20 @@ hr {
 }
 @font-face {
   font-family: 'Open Sans Bold';
+  src: url('../fonts/opensans/opensans-bold.eot');
+  src: url('../fonts/opensans/opensans-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-bold.woff') format('woff'), url('../fonts/opensans/opensans-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
   src: url('../fonts/opensans/opensans-semibold.eot');
   src: url('../fonts/opensans/opensans-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-semibold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Open Sans Bold Italic';
+  font-family: 'Open Sans Semibold Italic';
   src: url('../fonts/opensans/opensans-semibolditalic.eot');
   src: url('../fonts/opensans/opensans-semibolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-semibolditalic.woff') format('woff'), url('../fonts/opensans/opensans-semibolditalic.ttf') format('truetype');
   font-weight: bold;
@@ -1129,7 +1129,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
   font-weight: normal;
   margin: 0;
 }
@@ -1140,6 +1140,9 @@ h4.small,
 h5.small,
 h6.small {
   text-transform: uppercase;
+}
+h1 {
+  font-family: 'Open Sans Bold', sans-serif;
 }
 em h1,
 h1 em,
@@ -1153,12 +1156,11 @@ em h5,
 h5 em,
 em h6,
 h6 em {
-  font-family: 'Open Sans Bold Italic', sans-serif;
+  font-family: 'Open Sans Semibold Italic', sans-serif;
 }
 h1 {
   font-size: 30px;
   line-height: 40px;
-  letter-spacing: -1px;
 }
 h2 {
   font-size: 22px;
@@ -1207,12 +1209,12 @@ small {
 }
 .strong,
 strong {
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
   font-weight: normal;
 }
 strong em,
 em strong {
-  font-family: 'Open Sans Bold Italic', sans-serif;
+  font-family: 'Open Sans Semibold Italic', sans-serif;
 }
 address,
 em {
@@ -1221,7 +1223,8 @@ em {
 /* Fancy font style */
 h1.fancy,
 h2.fancy,
-h3.fancy {
+h3.fancy,
+h4.fancy {
   font-family: 'Bitter Bold', 'Georgia', serif;
 }
 h1.fancy {
@@ -1240,6 +1243,10 @@ h3.fancy {
   font-size: 26px;
   letter-spacing: 2px;
   line-height: 40px;
+}
+h4.fancy {
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 /* Alignment */
 .text-left {
@@ -2366,7 +2373,7 @@ table td {
   border-bottom: 1px solid #ddd;
 }
 table th {
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
 }
 table thead th {
   vertical-align: bottom;
@@ -2383,7 +2390,7 @@ form fieldset:last-child {
   margin-bottom: 0;
 }
 form fieldset label {
-  font: 12px/20px 'Open Sans Bold', sans-serif;
+  font: 12px/20px 'Open Sans Semibold', sans-serif;
   display: block;
   margin: 0 0 5px;
 }
@@ -2673,9 +2680,10 @@ form fieldset.with-error > label {
 /* Buttons
 ------------------------------------------------------- */
 .btn,
-.btn-large,
+.btn-lg,
 .btn-sm,
-.btn-group-sm > .btn {
+.btn-group-sm > .btn,
+.btn-group-lg > .btn {
   text-align: center;
   display: inline-block;
   height: 40px;
@@ -2685,7 +2693,7 @@ form fieldset.with-error > label {
   white-space: nowrap;
   text-overflow: ellipsis;
   /* Protects button metrics in .prose context */
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
   padding: 10px 10px;
   font-size: 12px;
   line-height: 20px;
@@ -2699,34 +2707,34 @@ form fieldset.with-error > label {
   -webkit-font-smoothing: antialiased;
 }
 .btn:focus,
-.btn-large:focus,
+.btn-lg:focus,
 .btn-sm:focus,
 .btn:active:focus,
-.btn-large:active:focus,
+.btn-lg:active:focus,
 .btn-sm:active:focus,
 .btn.active:focus,
-.btn-large.active:focus,
+.btn-lg.active:focus,
 .btn-sm.active:focus {
   -webkit-box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 .btn:hover,
-.btn-large:hover,
+.btn-lg:hover,
 .btn-sm:hover,
 .btn:focus,
-.btn-large:focus,
+.btn-lg:focus,
 .btn-sm:focus {
   color: #ffffff;
   text-decoration: none;
 }
 .btn.disabled,
-.btn-large.disabled,
+.btn-lg.disabled,
 .btn-sm.disabled,
 .btn[disabled],
-.btn-large[disabled],
+.btn-lg[disabled],
 .btn-sm[disabled],
 fieldset[disabled] .btn,
-fieldset[disabled] .btn-large,
+fieldset[disabled] .btn-lg,
 fieldset[disabled] .btn-sm {
   background: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.25);
@@ -2734,24 +2742,24 @@ fieldset[disabled] .btn-sm {
   pointer-events: none;
 }
 .btn.disabled:hover,
-.btn-large.disabled:hover,
+.btn-lg.disabled:hover,
 .btn-sm.disabled:hover,
 .btn[disabled]:hover,
-.btn-large[disabled]:hover,
+.btn-lg[disabled]:hover,
 .btn-sm[disabled]:hover,
 fieldset[disabled] .btn:hover,
-fieldset[disabled] .btn-large:hover,
+fieldset[disabled] .btn-lg:hover,
 fieldset[disabled] .btn-sm:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 .btn.disabled:focus,
-.btn-large.disabled:focus,
+.btn-lg.disabled:focus,
 .btn-sm.disabled:focus,
 .btn[disabled]:focus,
-.btn-large[disabled]:focus,
+.btn-lg[disabled]:focus,
 .btn-sm[disabled]:focus,
 fieldset[disabled] .btn:focus,
-fieldset[disabled] .btn-large:focus,
+fieldset[disabled] .btn-lg:focus,
 fieldset[disabled] .btn-sm:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -3734,8 +3742,8 @@ fieldset.with-icon .icon.clear {
 /* Navbar requires markup that's different from Bootstrap
 ------------------------------------------------------- */
 .logo {
-  font-family: 'Lobster', 'Bitter Bold', 'Georgia', serif;
-  font-size: 29px;
+  font-family: 'Bitter Bold', 'Georgia', serif;
+  font-size: 26px;
   color: #3bb2d0;
   display: inline-block;
   vertical-align: top;
@@ -3903,7 +3911,7 @@ button.close {
 .close {
   opacity: 0.3;
   filter: alpha(opacity=30);
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
 }
 .pin-right.close {
   height: 40px;
@@ -3911,6 +3919,9 @@ button.close {
   line-height: 40px;
   text-align: center;
   font-size: 15px;
+}
+.dark .close {
+  color: #fff;
 }
 /* Popup
 -------------------------------------------------- */
@@ -5038,6 +5049,12 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
 .lift {
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 img.inline,
 .inline {
