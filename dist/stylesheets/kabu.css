@@ -3872,7 +3872,15 @@ fieldset.with-icon .icon.clear {
   background: #56b881;
 }
 .alert-danger {
-  background: #ee8a65;
+  background: #ee6565;
+}
+.alert-success,
+.alert-danger,
+.alert-success .close,
+.alert-danger .close,
+.alert-success .close:hover,
+.alert-danger .close:hover {
+  color: #fff;
 }
 .prose .alert,
 .alert.prose {
@@ -4985,7 +4993,7 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
 .unround {
   border-radius: 0;
 }
-/* Fixed containers
+/* Absolute and Fixed containers
 ------------------------------------------------------- */
 .pin-top,
 .pin-right,
@@ -4997,39 +5005,57 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
 .pin-bottomright {
   position: absolute;
 }
-.pin-bottom {
+.fix-top,
+.fix-right,
+.fix-bottom,
+.fix-left,
+.fix-topleft,
+.fix-topright,
+.fix-bottomleft,
+.fix-bottomright {
+  position: fixed;
+}
+.pin-bottom,
+.fix-bottom {
   right: 0;
   bottom: 0;
   left: 0;
 }
-.pin-top {
+.pin-top,
+.fix-top {
   top: 0;
   right: 0;
   left: 0;
 }
-.pin-left {
+.pin-left,
+.fix-left {
   top: 0;
   bottom: 0;
   left: 0;
 }
-.pin-right {
+.pin-right,
+.fix-right {
   top: 0;
   right: 0;
   bottom: 0;
 }
-.pin-bottomright {
+.pin-bottomright,
+.fix-bottomright {
   bottom: 0;
   right: 0;
 }
-.pin-bottomleft {
+.pin-bottomleft,
+.fix-bottomleft {
   bottom: 0;
   left: 0;
 }
-.pin-topright {
+.pin-topright,
+.fix-topright {
   top: 0;
   right: 0;
 }
-.pin-topleft {
+.pin-topleft,
+.fix-topleft {
   top: 0;
   left: 0;
 }
@@ -5039,6 +5065,9 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.strike {
+  text-decoration: line-through;
 }
 .clip {
   overflow: hidden;

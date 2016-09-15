@@ -35,7 +35,7 @@
 .unround                { border-radius: 0; }
 
 
-/* Fixed containers
+/* Absolute and Fixed containers
 ------------------------------------------------------- */
 
 .pin-top,
@@ -48,16 +48,26 @@
 .pin-bottomright {
   position:absolute;
 }
-  
-.pin-bottom { right:0; bottom:0; left:0; }
-.pin-top    { top:0; right:0; left:0; }
-.pin-left   { top:0; bottom:0; left:0; }
-.pin-right  { top:0; right:0; bottom:0; }
-.pin-bottomright { bottom:0; right:0; }
-.pin-bottomleft  { bottom:0; left:0; }
-.pin-topright    { top:0; right:0; }
-.pin-topleft     { top:0; left:0; }
 
+.fix-top,
+.fix-right,
+.fix-bottom,
+.fix-left,
+.fix-topleft,
+.fix-topright,
+.fix-bottomleft,
+.fix-bottomright {
+  position:fixed;
+}
+
+.pin-bottom, .fix-bottom  { right:0; bottom:0; left:0; }
+.pin-top, .fix-top        { top:0; right:0; left:0; }
+.pin-left, .fix-left      { top:0; bottom:0; left:0; }
+.pin-right, .fix-right    { top:0; right:0; bottom:0; }
+.pin-bottomright, .fix-bottomright { bottom:0; right:0; }
+.pin-bottomleft, .fix-bottomleft   { bottom:0; left:0; }
+.pin-topright, .fix-topright       { top:0; right:0; }
+.pin-topleft, .fix-topleft         { top:0; left:0; }
 
 /* Additional Utility Classes
 ------------------------------------------------------- */
@@ -67,9 +77,10 @@
   overflow:hidden;
 }
 
-.clip    { overflow: hidden; }
-.contain { position: relative; }
-.lift { .box-shadow(0 2px 8px rgba(0,0,0,0.15)); }
+.strike    { text-decoration: line-through; }
+.clip      { overflow: hidden; }
+.contain   { position: relative; }
+.lift      { .box-shadow(0 2px 8px rgba(0,0,0,0.15)); }
 .no-select { .user-select(none); }
 
 // Consider removing these 

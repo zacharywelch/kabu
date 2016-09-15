@@ -8,6 +8,13 @@
 .alert-success  { background: @alert-success-bg; }
 .alert-danger   { background: @alert-danger-bg; }
 
+.alert-success, 
+.alert-danger { 
+  &,
+  .close,
+  .close:hover { color: #fff; }
+}
+
 .prose .alert,
 .alert.prose    { margin-bottom:20px; }
 
