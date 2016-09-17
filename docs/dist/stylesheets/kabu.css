@@ -1507,14 +1507,25 @@ ol.bullet li {
 }
 table.prose,
 .prose table {
-  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 table.prose th,
 table.prose td,
 .prose table th,
 .prose table td {
-  padding: 8px;
-  border: 1px solid #ddd;
+  padding: 12px 0;
+}
+table.prose th:first-child,
+table.prose td:first-child,
+.prose table th:first-child,
+.prose table td:first-child {
+  padding-left: 20px;
+}
+table.prose th:last-child,
+table.prose td:last-child,
+.prose table th:last-child,
+.prose table td:last-child {
+  padding-right: 20px;
 }
 table.prose th,
 .prose table th {
