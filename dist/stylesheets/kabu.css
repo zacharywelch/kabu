@@ -2380,14 +2380,11 @@ table th,
 table td {
   padding: 4px 0;
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
   border-bottom: 1px solid #ddd;
 }
 table th {
   font-family: 'Open Sans Semibold', sans-serif;
-}
-table thead th {
-  vertical-align: bottom;
 }
 table.fixed {
   table-layout: fixed;
