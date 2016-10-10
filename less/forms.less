@@ -163,15 +163,10 @@ select {
 ------------------------------------------------------- */
 
 .checkbox input[type=checkbox] { 
-  display:none; 
+  display:none;
 
   &:checked + label { background: rgba(0,0,0,0.05); }
   &:not(:checked) + .icon:before { color: transparent; }
-  &:disabled + label {
-    color: rgba(0,0,0,.25);
-    cursor: not-allowed;
-    pointer-events: none;
-  }
 }
 
 .checkbox label {
@@ -195,6 +190,12 @@ select {
     .opacity(75);
     text-align: center;
   }
+}
+
+.checkbox.disabled {
+  cursor: not-allowed;
+  label { color: rgba(0,0,0,.25); pointer-events: none; }
+  .icon:before { box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset; }
 }
 
 .dark.checkbox .icon:before,

@@ -2583,11 +2583,6 @@ select + .icon {
 .checkbox input[type=checkbox]:not(:checked) + .icon:before {
   color: transparent;
 }
-.checkbox input[type=checkbox]:disabled + label {
-  color: rgba(0, 0, 0, 0.25);
-  cursor: not-allowed;
-  pointer-events: none;
-}
 .checkbox label {
   cursor: pointer;
   padding: 10px;
@@ -2610,6 +2605,16 @@ select + .icon {
   opacity: 75;
   filter: alpha(opacity=7500);
   text-align: center;
+}
+.checkbox.disabled {
+  cursor: not-allowed;
+}
+.checkbox.disabled label {
+  color: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+.checkbox.disabled .icon:before {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
 }
 .dark.checkbox .icon:before,
 .dark .checkbox .icon:before {
