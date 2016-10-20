@@ -916,13 +916,13 @@ table {
 }
 /* Credit card icons */
 .credit-card {
-  background: url('../images/credit-cards@2x.png') 0 0 no-repeat;
+  background: url('../images/credit-cards@2x.png') -440px 0 no-repeat;
   height: 30px;
   width: 45px;
   display: inline-block;
   vertical-align: top;
-  -webkit-background-size: 430px 70px;
-  background-size: 430px 70px;
+  -webkit-background-size: 485px 70px;
+  background-size: 485px 70px;
 }
 .credit-card.visa {
   background-position: 0      0;
@@ -947,6 +947,9 @@ table {
 }
 .credit-card.direct-debit {
   background-position: -385px 0;
+}
+.credit-card.disabled {
+  background-position: -440px -40px;
 }
 .credit-card.disabled.visa {
   background-position: 0 -40px;
