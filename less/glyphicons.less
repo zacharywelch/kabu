@@ -327,13 +327,13 @@
 
 /* Credit card icons */
 .credit-card {
-  background:~"url('@{image-path}credit-cards@2x.png')" 0 0 no-repeat;
+  background:~"url('@{image-path}credit-cards@2x.png')" -440 0 no-repeat;
   height:30px;
   width:45px;
   display:inline-block;
   vertical-align:top;
-  -webkit-background-size:430px 70px;
-          background-size:430px 70px;
+  -webkit-background-size:485px 70px;
+          background-size:485px 70px;
 
   &.visa                       { background-position:0      0; }
   &.master-card                 { background-position:-55px  0; }
@@ -344,6 +344,7 @@
   &.check                      { background-position:-330px 0; }
   &.direct-debit               { background-position:-385px 0; }
 
+  &.disabled                   { background-position:-440px -40px; }
   &.disabled.visa              { background-position:0      -40px; }
   &.disabled.master-card        { background-position:-55px  -40px; }
   &.disabled.american-express  { background-position:-110px -40px; }
