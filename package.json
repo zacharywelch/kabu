@@ -16,7 +16,7 @@
   "author": "CareerBuilder UX",
   "license": {
     "type": "MIT",
-    "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE"
+    "url": "https://github.com/zacharywelch/kabu/blob/master/LICENSE"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
