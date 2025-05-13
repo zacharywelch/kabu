@@ -2,14 +2,12 @@
 
 A responsive front-end framework for faster and easier web development. 
 
-http://cb-kabu.herokuapp.com/
-
 ## Installation
 
 Clone the repo
 
 ```ruby
-git clone git@cagit.careerbuilder.com:CorpAppsCB/kabu.git
+git clone git@github.com:zacharywelch/kabu.git
 ```
 
 Switch to the new directory
@@ -20,7 +18,7 @@ cd kabu
 
 ## Getting Started
 
-To view kabu locally any http server will do. Python's `SimpleHTTPServer` is super easy to setup.
+To view kabu locally any http server will do. Python's built-in server is super easy to setup.
 
 ---
 
@@ -33,10 +31,12 @@ cd docs
 Start an HTTP Server
 
 ```ruby
-python -m SimpleHTTPServer 8888
+python3 -m http.server 8888 
 ```
 
-Visit localhost:8888/home.html
+Visit http://localhost:8888/home.html
+
+![image](https://github.com/user-attachments/assets/05a14a92-9235-4326-8e68-f7e1e12d2b98)
 
 ## Contributing
 
